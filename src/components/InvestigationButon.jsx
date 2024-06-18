@@ -1,11 +1,10 @@
 // En el componente InvestigationButton.jsx
 import { Link } from 'react-router-dom';
-import InvestigationShape from './InvestigationShape';
 
+// eslint-disable-next-line react/prop-types
 const InvestigationButton = ({ nombre, dominio }) => {
   return (
     <Link to={`/${dominio}`} className="investigation-link">
-      <InvestigationShape />
       {nombre}
     </Link>
   );
