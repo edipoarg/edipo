@@ -9,9 +9,12 @@ import {
 import "./index.css";
 
 import App from "./App";
-import Investigations from './components/Investigaciones.jsx';
-import Recursos from './components/Recursos.jsx';
-import Investigacion from './components/Investigacion.jsx';
+import Investigations from './components/Investigaciones/Investigaciones.jsx';
+import Recursos from './components/Recursos/Recursos.jsx';
+import Investigacion from './components/Investigaciones/Investigacion.jsx';
+import Landing from './components/Landing/Landing.jsx';
+import Talleres from './components/Talleres/Talleres.jsx';
+
 
 
 const router = createHashRouter([
@@ -23,6 +26,8 @@ const router = createHashRouter([
       { path:"/recursos", element:<Recursos/>},
       { path:"/lista", element:<Investigations/>},
       { path: "/:dominio", element: <Investigacion /> }, // Asume que aquí se mostrará la información completa de una investigación
+      { path: "/landing", element: <Landing /> }, 
+      { path: "/talleres", element: <Talleres /> },
 
 
     
