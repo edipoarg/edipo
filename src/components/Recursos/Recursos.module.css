@@ -1,0 +1,47 @@
+.header{}
+
+.recursos {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr; /* Disposición vertical por defecto */
+    grid-template-rows: auto auto auto; /* Asegura que los elementos se apilen */
+    height: 96vh;
+}
+
+.seguridad, .busqueda, .guiaMapa {
+    height: 27vh;
+    padding-top: 5vh;
+}
+
+.seguridad {
+    background-color: black;
+    color: white;
+}
+
+.busqueda {
+    background-color: white;
+    color: black;
+}
+
+.guiaMapa {
+    background-color: blue;
+    color: aliceblue;
+}
+
+.item {
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .recursos {
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+
+    .seguridad, .busqueda, .guiaMapa {
+        height: 86vh; 
+        padding-top: 10vh;
+    }
+}
