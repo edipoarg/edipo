@@ -8,7 +8,7 @@ function Navbar() {
   <div className={styles.logo}><h3 className={styles.title}>[ ] EdIPo</h3></div>
   <section className={styles.menu}>
   <Link to='./lista'>
-<h5 className={styles.item}>Invesigaciones</h5>
+<h5 className={styles.item}>Investigaciones</h5>
 </Link>  
 <Link to='./recursos'>
 <h5 className={styles.item}>Recursos</h5>
