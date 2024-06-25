@@ -26,27 +26,63 @@ const Autocuidado = () => {
         ))}
       </div>
       <section className={styles.mapa}>
-        <div>
-        <Barco className={styles.barco}/>
+      <Link to={`/recursos/autocuidado/BARCO`} >
+        <div className={styles.barco}>
+        <Barco className={styles.barcoIcon}/>
+        <h4 className={styles.nombre}>ANONIMATO</h4>
         </div>
-        <div>
-        <Nube className={styles.nube} />
+        </Link>
+
+        <Link to={`/recursos/autocuidado/NUBE`} >
+        <div className={styles.nube}>
+        <Nube className={styles.nubeIcon} />
+        <h4 className={styles.nombre}>ALMACENAMIENTO</h4>
+
         </div>
-        <div>
-        <Remolino className={styles.remolino}/>
+        </Link>
+
+        <Link to={`/recursos/autocuidado/REMOLINO`} >
+
+        <div className={styles.remolino}>
+        <Remolino className={styles.remolinoIcon}/>
+        <h4 className={styles.nombre}>WORMHOLE</h4>
+
         </div>
-        <div>
-        <Llave className={styles.llave}/>
+        <div className={styles.llave}>
+        <Llave className={styles.llaveIcon}/>
+        <h4 className={styles.nombre}>KEEPASS</h4>
+
         </div>
-        <div>
-        <Cofre className={styles.cofre}/>
+        </Link>
+
+        <Link to={`/recursos/autocuidado/COFRE`} >
+
+        <div className={styles.cofre}>
+        <Cofre className={styles.cofreIcon}/>
+        <h4 className={styles.nombre}>VERACRYPT</h4>
+
         </div>
-        <div>
-        <Botella className={styles.botella}/>
+        </Link>
+
+        <Link to={`/recursos/autocuidado/BOTELLA`} >
+
+        <div className={styles.botella}>
+        <Botella className={styles.botellaIcon}/>
+        <h4 className={styles.nombre}>PROTONMAIL
+        </h4>
+
         </div>
-        <div>
-        <Camping className={styles.camping}/>
+        </Link>
+
+        <Link to={`/recursos/autocuidado/CAMPING`} >
+
+        <div className={styles.camping}>
+        <Camping className={styles.campingIcon}/>
+        <h4 className={styles.nombre}>TAILS</h4>
+
         </div>
+        </Link>
+
       </section>
     </div>
   );
