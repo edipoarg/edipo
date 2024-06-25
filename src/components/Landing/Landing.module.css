@@ -1,0 +1,28 @@
+.landing{
+position: absolute;
+height: 93vh;
+background-color: #808080;
+width: 100vw;
+bottom: 0;
+left: 0;
+}
+
+.news{
+    background-color: blue;
+    height: 15vh;
+}
+
+.title{margin: 0}
+
+.mainBoard{
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    padding: 2vh 10vw;
+    height: 70vh;
+}
+
+.recursos{
+    background-color: black;
+    color: white;
+    padding-top: 8vh;
+}

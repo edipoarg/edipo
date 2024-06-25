@@ -1,0 +1,23 @@
+.container{
+
+}
+.ficha{
+    background-color: black;
+    color: white;
+    padding: 5vh 10vw;
+}
+
+.link{
+    border: solid 1px blue;
+    border-radius: 1px;
+    color: blue;
+    padding: 1vh 2vw;
+}
+
+.iconContainer{font-size: 4rem;}
+
+.info{
+    padding: 0vh 15vw;
+    text-align: justify;
+    padding-bottom: 3vw;
+}
