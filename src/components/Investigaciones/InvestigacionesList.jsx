@@ -28,20 +28,12 @@ export const investigationsData = [
 
     },
     {
-      nombre: "AHORA",
+      nombre: "A.H.O.R.A.",
       aclaracion: "Ahrchivo historico organizado de la represion argentina",
       textoLargo: "Información detallada sobre la composición del suelo y su importancia.",
       enlace: "http://archivo.ar",
       dominio: 'ahora',
 
-    },
-    {
-      nombre: "Recursos",
-      aclaracion: "texto sobre recursos",
-      textoLargo: "Información detallada sobre los recursos.",
-      enlace: "https://ejemplo.com/carbono",
-      dominio: 'recursos',
-
-    },
+    }
   ];
   
