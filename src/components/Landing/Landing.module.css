@@ -26,3 +26,32 @@ left: 0;
     color: white;
     padding-top: 8vh;
 }
+
+.boxList{
+    padding: 10vh 4vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1vw;
+
+}
+
+.box{
+    background-color: black;
+    color: white;
+    border-radius: 14px;
+    height: 20vh;
+    margin: 0;
+}
+.button{
+    background-color: blue;
+    color: white;
+    margin: 0;
+border: solid 1px blue;
+border-radius: 14px;
+width: 28vw;
+margin: auto;
+height: 14vh;
+align-content: center;
+padding: 1vh 2vw;
+margin-top: 2vh;}
+
