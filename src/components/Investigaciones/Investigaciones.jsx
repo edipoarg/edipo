@@ -6,7 +6,7 @@ import styles from './Investigaciones.module.css';
 const Investigations = () => {
   return (
     <div className="investigations-container">
-      <h1>Menú de Investigaciones</h1>
+      <h1>Proyectos / Tecnopolíticas</h1>
       <ul className={styles.seccion}>
         {investigationsData.map((investigacion, index) => (
           <li key={index}>
