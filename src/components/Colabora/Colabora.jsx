@@ -1,48 +1,54 @@
+import React from 'react';
 import styles from './Colabora.module.css';
 
+const titulo = "Apoyanos";
+const descripcion1 = "EdIPo es un colectivo que genera herramientas, información y análisis que enriquecen el debate público y fortalecen la convivencia democrática.";
+const descripcion2 = "EdIPo se sostiene con nuestra militancia, con el apoyo de organizaciones sociales y de ciudadanxs como vos.";
+const desdeArgentina = "Desde Argentina:";
+const aliasTransferencia = "Alias para transferencias: xxxxx";
+const desdeOtrosPaises = "Desde otros países:";
+const paypalUrl = "https://www.paypal.com";
+const paypalTexto = "Botón de Paypal";
+const mediosTexto = "Medios como gelatina o PDB usan botones de pago:";
+const pagoMensualTexto = "Botón de pago mensual";
+const pagoUnicoTexto = "Botón de pago único";
+const montosMensuales = [3000, 6000, 9000, 12000, 17000, 25000];
+const montosUnicos = [5000, 10000, 15000, 20000, 25000];
+
 const Colabora = () => {
-  return (
-    <section className={styles.colabora}>
-      <h2>Apoyanos</h2>
-      <p>
-        EdIPo es un colectivo que genera herramientas, información y análisis que enriquecen el debate público y fortalecen la convivencia democrática.
-      </p>
-      <p>
-        EdIPo se sostiene con nuestra militancia, con el apoyo de organizaciones sociales y de ciudadanxs como vos.
-      </p>
+    return (
+        <section className={styles.colabora}>
+            <h2>{titulo}</h2>
+            <h5>{descripcion1}</h5>
+            <h5>{descripcion2}</h5>
 
-      <h3>Desde Argentina:</h3>
-      <p>Alias para transferencias: xxxxx</p>
+            <h3>{desdeArgentina}</h3>
+            <h5>{aliasTransferencia}</h5>
 
-      <h3>Desde otros países:</h3>
-      <a 
-        href="https://www.paypal.com" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className={styles.paypalButton}
-      >
-        Botón de Paypal
-      </a>
+            <h3>{desdeOtrosPaises}</h3>
+            <a
+                href={paypalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.paypalButton}
+            >
+                {paypalTexto}
+            </a>
 
-      <h3>Medios como gelatina o PDB usan botones de pago:</h3>
-      <div className={styles.paymentButtons}>
-        <h4>Botón de pago mensual</h4>
-        <button className={styles.paymentButton}>$3000</button>
-        <button className={styles.paymentButton}>$6000</button>
-        <button className={styles.paymentButton}>$9000</button>
-        <button className={styles.paymentButton}>$12000</button>
-        <button className={styles.paymentButton}>$17000</button>
-        <button className={styles.paymentButton}>$25000</button>
-        
-        <h4>Botón de pago único</h4>
-        <button className={styles.paymentButton}>$5000</button>
-        <button className={styles.paymentButton}>$10000</button>
-        <button className={styles.paymentButton}>$15000</button>
-        <button className={styles.paymentButton}>$20000</button>
-        <button className={styles.paymentButton}>$25000</button>
-      </div>
-    </section>
-  );
+            <h3>{mediosTexto}</h3>
+            <div className={styles.paymentButtons}>
+                <h4>{pagoMensualTexto}</h4>
+                {montosMensuales.map(monto => (
+                    <button key={monto} className={styles.paymentButton}>${monto}</button>
+                ))}
+
+                <h4>{pagoUnicoTexto}</h4>
+                {montosUnicos.map(monto => (
+                    <button key={monto} className={styles.paymentButton}>${monto}</button>
+                ))}
+            </div>
+        </section>
+    );
 };
 
 export default Colabora;
