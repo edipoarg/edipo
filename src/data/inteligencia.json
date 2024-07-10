@@ -1,0 +1,96 @@
+{
+    "nombre": "MANUAL INTELIGENCIA ABIERTA",
+    "descripcion": "Este manual ofrece técnicas avanzadas para la investigación utilizando fuentes abiertas y diversas herramientas de búsqueda en línea. Ya sea que desee aplicar búsquedas avanzadas en Internet, recuperar contenido en línea eliminado, usar mapas para verificar información o más, aquí puede comprender las técnicas clave que debe utilizar en su investigación. https://kit.exposingtheinvisible.org/en/",
+    "herramientas": [
+        {
+            "nombre": "OSINT",
+            "bajada": "Sumergirse en un océano de información",
+            "info": "Open Source Intelligence – Inteligencia de Fuentes Abiertas. Es la profesionalización de un concepto básico referido a información, herramientas o medios gratuitos o de bajo costo que pueden ser accedidos, revisados y utilizados por personas promedio, sin licencias o permisos activos. La inteligencia en  este caso significa  conocimiento extraídos de fuentes abiertas de información.\n\nOSINT no es solo información disponible por cualquier medio. Se refiere a la información accesible legalmente por un miembro del público, como una reseña de Mercado Libre, un tweet sin protección, un documento judicial sin sellar o las actividades de un sitio de construcción vistas desde la calle. OSINT también describe información filtrada al público, como los “Papeles de Panamá” o información publicada por Wikileaks.org. La información legalmente accesible significa algo diferente según el lugar donde vivas y quién seas.\n\nUn aspecto importante de la investigación OSINT se basa en la creación de superposiciones y la combinación de conocimientos de diferentes fuentes. Cada una crea una comprensión más profunda y se desarrolla aún más en un contexto más amplio. Es posible que la información individual no sea accesible para todxs, pero la combinación de suficientes fuentes diferentes puede ayudar a convertir datos aparentemente inútiles en resultados significativos.\n\nMuchos gobiernos y corporaciones están obligados a registrar información públicamente, pero a menudo lo hacen de manera descentralizada. La información es más poderosa cuando se puede reunir, combinando conjuntos de datos que tienen una importancia mutua.\n\nExiste una tensión entre el \"bien\" aparentemente obvio de la información abierta, transparente y gratuita y  el  \"bien\"  de querer proteger los datos personales y sensibles de las personas contra la explotación. Los datos gratuitos y abiertos sobre empresas, gobiernos y el medio ambiente pueden ser un derecho humano, al igual que muchas personas creen que  la privacidad personal es un derecho humano. Tal vez esta tensión no se resuelva hasta que las protecciones de datos de las corporaciones y sus activos que a menudo ocultan puedan separarse adecuadamente de las de las personas físicas.\n\nLas  investigaciones de OSINT a  menudo requieren creatividad e intuición: ver dónde encajan diferentes conjuntos de datos, imaginar  dónde  puede aparecer algo  útil  o  buscar nuevas fuentes incluso cuando  nos  encontramos a  un  callejón sin salida, una y otra vez. A veces, la información que deseamos o  necesitamos simplemente no  es OSINT: sucede. Pero la información en capas, la extracción de contexto adicional, la  adición de detalles  aparentemente pequeños a  un conjunto de datos y  la búsqueda en lugares inusuales pueden llevarnos a donde buscamos. Los recursos OSINT pueden unirse entre sí como piezas de un  rompecabezas o desarrollar una  imagen como fotoquímicos cuando  se usan en conjunto. Los datos abiertos  aparentemente inútiles o irrelevantes pueden transformarse en herramientas extremadamente poderosas y utilizarse para promover investigaciones importantes utilizando técnicas de investigación OSINT.\n\nSabemos que nada de esto es fácil. Convertir la información en evidencia, para luego pasarla a conocimiento, acción o justicia requiere tiempo, esfuerzo, persistencia y coraje. Pero creemos que estas transformaciones son necesarias. Investigar los problemas que definen el aquí y ahora, así como nuestro futuro es vital.",
+            "tag": "INVESTIGACIÓN",
+            "link": "No disponible",
+            "imagen": "RED",
+            "nombre_descriptivo": ""
+        },
+        {
+            "nombre": "DORKINKG",
+            "bajada": "Profundizar en la búsqueda",
+            "info": "Implica usar los motores de búsqueda en todo su potencial para descubrir resultados que no son visibles con una búsqueda regular, te permite refinar las búsquedas y profundizar con mayor precisión en páginas web y documentos que están disponibles en línea. Descubrir archivos ocultos y fallas de seguridad mediante  el  uso de  dorking  no requiere  gran conocimiento técnico, sino aprender algunas técnicas de búsqueda y usarlas en varios motores de búsqueda.\n\nBUSQUEDA AVANZADA\nrefina una consulta combinando elementos técnicos y semánticos, para aprovechar al máximo el contenido web que es escaneado e indexado constantemente por máquinas.\n\nBUSQUEDA REGULAR\nforma directa de pedir información, ya sea escribiendo una pregunta completa <<¿cómo hacer panqueques?>> o eligiendo palabras clave <<panqueques receta>>.\n\nEN LA PRÁCTICA\n\nEl siguiente es un ejemplo simple de un dork que se basa en un OPERADOR DE PREFIJO. Buscará en https://tacticaltech.org todos los archivos PDF indexados alojados en ese dominio:\n   site:tacticaltech.org filetype:pdf\n\nOtro ejemplo, devuelve todos los sitios web bajo el dominio https://tacticaltech.org que tienen la palabra <<invisible>> en sus títulos se ve así:\n   site:tacticaltech.org intitle:invisible\n\nAdemás, si necesitas usar un término de búsqueda que contenga varias palabras, puedes ponerlas entre comillas, para buscar en https://site:tacticaltech.org:\n   intext:exposing intitle:\"the invisible\"\n\nLos dorks también se pueden combinar con un término de búsqueda general, por ejemplo:\nexposing site:tacticaltech.org o\nexposing site:tacticaltech.org filetype:pdf\n\nAquí, <<exposing>> es el término de búsqueda general y los filtros site: y filetype: acotan los resultados.\n\nCada palabra clave del filtro tiene que terminar con dos puntos <<:>> seguida del término o términos de búsqueda relevantes. ¡sin espacio antes o después de los dos puntos!",
+            "tag": "NAVEGACIÓN",
+            "link": "No disponible",
+            "imagen": "CONTROL",
+            "nombre_descriptivo": ""
+        },
+        {
+            "nombre": "DUCK DUCK GO",
+            "bajada": "Motor de búsqueda",
+            "info": "Incluimos los motores de búsqueda más utilizados pero nuestro preferido es DuckDuckGo: un motor de búsqueda centrado en la privacidad, afirma que no recopila información personal sobre las personas usuarias y que guarda las consultas de búsqueda de tal manera que no puedan atribuirse a usuarios específicos.\n\nDicho esto, si estás llevando a cabo una investigación sensible, tiene sentido usar el navegador Tor en combinación con DuckDuckGo para proteger aún más tu privacidad.",
+            "tag": "NAVEGACIÓN",
+            "link": "No disponible",
+            "imagen": "MOTOR",
+            "nombre_descriptivo": ""
+        },
+        {
+            "nombre": "DORKING DEFENSIVO",
+            "bajada": "Verificación de seguridad y búsqueda de información",
+            "info": "Profundiza en el uso de los motores de búsqueda para encontrar información oculta o sensible y también para probar la seguridad del sitio web.\n\nPuedes usar dorking para proteger tus propios datos y defender los sitios web de los que eres responsable. Esto generalmente se manifiesta en dos formas:\n\n1. Verificación de vulnerabilidades de seguridad en un servicio en línea, como un sitio web o un servidor FTP que administras.\n\nLa Base de Datos de Hacking de Google (GHDB) sugiere varias palabras clave y otros términos que puedes usar junto con el filtro `site:yoursite.org` para identificar ciertas vulnerabilidades. Si bien estas búsquedas pueden ayudar a los atacantes a localizar servicios vulnerables, también ayudan a los administradores a proteger los suyos.\n\n2. Búsqueda de información confidencial tuya o de otra persona, con su permiso, que pueda exponerse involuntariamente en un sitio web, independientemente de si administras o no ese sitio web.\n\nAquí algunos comandos simples para buscar información confidencial, junto con el filtro `site:mycompany.com`:\n- `filetype:pdf`\n- `intitle:www`\n- `intext:otros`\n- `intext:\"correo electrónico\"`\n\n3. Defensa proactiva: Utilización de técnicas de dorking para identificar y mitigar posibles exposiciones de información sensible antes de que sean explotadas por terceros malintencionados.",
+            "tag": "NAVEGACIÓN",
+            "link": "No disponible",
+            "imagen": "ESCUDO",
+            "nombre_descriptivo": ""
+        },
+        {
+            "nombre": "OSINT Framework",
+            "bajada": "Herramientas y técnicas de OSINT",
+            "info": "Un recopilatorio de diversas herramientas y técnicas de OSINT (Open Source Intelligence), incluyendo motores de búsqueda, redes sociales, herramientas de análisis de metadatos, visualización de geolocalización, y más. Este framework es utilizado por investigadores y analistas para recopilar y analizar información de fuentes abiertas en línea.",
+            "tag": "INVESTIGACIÓN",
+            "link": "https://osintframework.com/",
+            "imagen": "RED",
+            "nombre_descriptivo": ""
+        },
+        {
+            "nombre": "Verificación",
+            "bajada": "Comprobación de información y seguridad",
+            "info": "La verificación de información implica validar la exactitud y autenticidad de los datos recopilados. En contextos de OSINT, esto es crucial para garantizar la fiabilidad de la información obtenida de fuentes abiertas.\n\nEn términos de seguridad, la verificación se refiere a la evaluación y confirmación de la seguridad de sistemas, aplicaciones o infraestructuras para identificar posibles vulnerabilidades y asegurar que se implementen medidas adecuadas de protección.",
+            "tag": "SEGURIDAD",
+            "link": "No disponible",
+            "imagen": "NO HAY",
+            "nombre_descriptivo": ""
+        },
+        {
+            "nombre": "Archivo",
+            "bajada": "Almacenamiento de datos y documentos",
+            "info": "El archivo se refiere al almacenamiento y organización sistemática de documentos y datos. En términos de OSINT, puede incluir la recopilación, almacenamiento y gestión de información obtenida de fuentes abiertas para su posterior referencia y análisis.\n\nLa gestión efectiva de archivos es crucial para mantener la integridad y accesibilidad de la información recopilada durante las investigaciones de OSINT.",
+            "tag": "ORGANIZACIÓN",
+            "link": "No disponible",
+            "imagen": "ARCHIVO",
+            "nombre_descriptivo": ""
+        },
+        {
+            "nombre": "Geolocalización",
+            "bajada": "Determinación de ubicación física",
+            "info": "La geolocalización se refiere al proceso de determinar la ubicación física de un objeto, persona o dispositivo en la Tierra utilizando tecnologías como el GPS, redes móviles o direcciones IP.\n\nEn OSINT, la geolocalización se utiliza para rastrear la ubicación de eventos, personas o dispositivos basándose en información pública disponible, como metadatos de imágenes, publicaciones en redes sociales o datos de ubicación en sitios web.",
+            "tag": "TECNOLOGÍA",
+            "link": "No disponible",
+            "imagen": "MAPA",
+            "nombre_descriptivo": ""
+        },
+        {
+            "nombre": "Metadatos",
+            "bajada": "Datos descriptivos y contextuales",
+            "info": "Los metadatos son datos que proporcionan información descriptiva y contextual sobre otros datos. En OSINT, los metadatos son especialmente útiles para el análisis de imágenes, archivos y documentos, ya que pueden revelar detalles como la fecha y hora de creación, ubicación geográfica, autoría y configuraciones de dispositivo utilizadas para crear o modificar los datos.\n\nLos analistas de OSINT utilizan herramientas especializadas para extraer, analizar y correlacionar metadatos con el fin de obtener información adicional y contextualizar los datos recopilados de fuentes abiertas.",
+            "tag": "ANÁLISIS",
+            "link": "No disponible",
+            "imagen": "META",
+            "nombre_descriptivo": ""
+        },
+        {
+            "nombre": "Otros Recursos",
+            "bajada": "Herramientas y técnicas adicionales",
+            "info": "En el contexto de OSINT, los recursos adicionales pueden incluir desde bases de datos especializadas y herramientas de análisis forense digital hasta técnicas avanzadas de búsqueda y visualización de datos. Estos recursos son utilizados por investigadores, analistas y profesionales de la seguridad para recopilar, analizar y contextualizar información obtenida de fuentes abiertas.",
+            "tag": "INVESTIGACIÓN",
+            "link": "No disponible",
+            "imagen": "MAS",
+            "nombre_descriptivo": ""
+        }
+    ]
+}
