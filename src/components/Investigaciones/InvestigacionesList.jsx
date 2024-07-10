@@ -20,14 +20,6 @@ export const investigationsData = [
       dominio: 'radar',
     },
     {
-      nombre: "Monitor",
-      aclaracion: "Injerencia de Estados Unidos en Argentina",
-      textoLargo: "El proyecto propone la elaboración de un Monitor para el seguimiento de la injerencia de Estados Unidos en Argentina, pretendiendo así registrar las distintas modalidades de intervención del Estado norteamericano y organizaciones financiadas por él sobre la dinámica institucional, política, educativa, científica, económica y cultural de nuestro país. Esto implica dar cuenta del carácter global y dinámico de la intervención que, más allá de las discontinuidades en su coherencia o articulación, está orientada a consolidar la hegemonía del país del norte y contrarrestar tendencias ajenas a su capacidad de influencia. Para construir el registro de hechos, procesos e iniciativas del presente y el pasado reciente, se construirán las herramientas técnicas y organizativas necesarias, así como una metodología propia, inspirada en el trabajo de Juan Ramón Quintana Taborga sobre las intervenciones de EE.UU. en Bolivia, quien dirigió un amplio equipo para el relevamiento y sistematización de información sobre la injerencia norteamericana sobre ese país durante el siglo XX. La propuesta consiste en una plataforma web de libre acceso que permite tanto la visualización sintética y automatizada de algunas dimensiones de la información como su procesamiento por parte del público interesado a través de recursos estadísticos, la geolocalización de hechos y el mapeo de vínculos entre agentes e instituciones. A su vez, incluiremos una biblioteca con documentos estratégicos producidos por EE.UU. sobre Argentina, incluyendo una reseña y un breve análisis en español.",
-      enlace: "https://monitor.com.ar",
-      dominio: 'monitor',
-
-    },
-    {
       nombre: "A.H.O.R.A.",
       aclaracion: "Ahrchivo historico organizado de la represion argentina",
       textoLargo: "Información detallada sobre la composición del suelo y su importancia.",
@@ -35,5 +27,6 @@ export const investigationsData = [
       dominio: 'ahora',
 
     }
+
   ];
   

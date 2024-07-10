@@ -1,0 +1,39 @@
+.talleres{ 
+    position: absolute;
+    top: 0;
+    left: 0; 
+
+
+}
+
+.header{
+    padding: 0vh 10vw;
+    padding-top: 10vh;
+background-color: black;
+color: white;
+height: 35vh;
+}
+
+.title{
+    padding: 2vh 0vw;
+}
+
+.info{
+    text-align: justify;
+}
+.talleres{
+    background-color: white;
+    padding-bottom: 15vh;
+
+}
+
+.title, .subTitle, .info, .name, .date{ margin: 0}
+
+.iframe{width: 70vw;}
+
+.taller{
+    padding: 0vh 10vw;
+    padding-top: 5vh;
+    text-align: left;
+
+}
