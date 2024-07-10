@@ -18,6 +18,8 @@ import Talleres from './components/Talleres/Talleres.jsx';
 import Contacto from './components/Contacto/Contacto.jsx';
 import Colabora from './components/Colabora/Colabora.jsx';
 import Autocuidado from './components/Recursos/Autocuidado/Autocuidado.jsx';
+import Inteligencia from './components/Recursos/Inteligencia/Inteligencia.jsx';
+import FichaInteligencia from './components/Recursos/Inteligencia/FichaInteligencia.jsx'
 import FichaAutocuidado from './components/Recursos/Autocuidado/FichaAutocuidado.jsx';
 
 
@@ -38,8 +40,8 @@ const router = createHashRouter([
       { path: "/colabora", element: <Colabora /> },
       { path: "/recursos/autocuidado", element: <Autocuidado /> },
       { path: "/recursos/autocuidado/:IMAGEN", element: <FichaAutocuidado /> },
-  
-         
+      { path: "/recursos/inteligencia_abierta", element: <Inteligencia /> },
+      { path: "/recursos/inteligencia_abierta/:IMAGEN", element: <FichaInteligencia /> },
     ]
   },
 ]);
