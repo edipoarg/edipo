@@ -12,6 +12,7 @@ import App from "./App";
 import Investigations from './components/Investigaciones/Investigaciones.jsx';
 import Recursos from './components/Recursos/Recursos.jsx';
 import Investigacion from './components/Investigaciones/Investigacion.jsx';
+import Publicaciones from './components/Publicaciones/Publicaciones.jsx';
 import Landing from './components/Landing/Landing.jsx';
 import Talleres from './components/Talleres/Talleres.jsx';
 import Contacto from './components/Contacto/Contacto.jsx';
@@ -29,6 +30,7 @@ const router = createHashRouter([
       { path:"/", element:<App/>},
       { path:"/recursos", element:<Recursos/>},
       { path:"/lista", element:<Investigations/>},
+      {path:"/publicaciones", element:<Publicaciones/>},
       { path: "/:dominio", element: <Investigacion /> }, // Asume que aquí se mostrará la información completa de una investigación
       { path: "/landing", element: <Landing /> }, 
       { path: "/talleres", element: <Talleres /> },

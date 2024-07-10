@@ -10,6 +10,9 @@ function Navbar() {
   <Link to='./lista'>
 <h5 className={styles.item}>Investigaciones</h5>
 </Link>  
+<Link to='./publicaciones'>
+<h5 className={styles.item}>Publicaciones</h5>
+</Link>  
 <Link to='./recursos'>
 <h5 className={styles.item}>Recursos</h5>
 </Link>  

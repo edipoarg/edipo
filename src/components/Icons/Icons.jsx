@@ -28,7 +28,7 @@ export const Camping = GiCampingTent;
 //Contacto
 export const Historia = GoCodescan;
 export const Mision = GoEye;
-export const Internaiconal = TbWorld;
+export const Internacional = TbWorld;
 export const Equipo = HiMiniUserGroup;
 
 
