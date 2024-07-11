@@ -20,8 +20,10 @@ function Navbar() {
 <h5 className={styles.item}>Contacto</h5>
 </Link>  
 </section>
+<Link to='./colabora'>
 
 <section className={styles.suscribite}><h4 className={styles.text}>Suscribite</h4></section>
+</Link>  
 
 
 </section>
