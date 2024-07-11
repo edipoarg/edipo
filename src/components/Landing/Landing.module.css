@@ -1,57 +1,69 @@
-.landing{
-position: absolute;
-height: 93vh;
-background-color: #808080;
-width: 100vw;
-bottom: 0;
-left: 0;
+.landing {
+    position: absolute;
+    height: 93vh;
+    background-color: #808080;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
 }
 
-.news{
+.news {
     background-color: blue;
     height: 15vh;
 }
 
-.title{margin: 0}
+.title {
+    margin: 0
+}
 
-.mainBoard{
+.mainBoard {
     display: grid;
     grid-template-columns: 4fr 3fr;
     padding: 2vh 10vw;
     height: 70vh;
 }
 
-.recursos{
+.recursos {
     background-color: black;
     color: white;
     padding-top: 8vh;
 }
 
-.boxList{
+.boxList {
     padding: 10vh 4vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1vw;
-
 }
 
-.box{
+.box {
     background-color: black;
     color: white;
     border-radius: 14px;
     height: 20vh;
     margin: 0;
 }
-.button{
+
+.box:hover {
+    background-color: aliceblue;
+    color: black;
+}
+
+.button {
     background-color: blue;
     color: white;
     margin: 0;
-border: solid 1px blue;
-border-radius: 14px;
-width: 28vw;
-margin: auto;
-height: 14vh;
-align-content: center;
-padding: 1vh 2vw;
-margin-top: 2vh;}
+    border: solid 1px blue;
+    border-radius: 14px;
+    width: 28vw;
+    margin: auto;
+    height: 14vh;
+    align-content: center;
+    padding: 1vh 2vw;
+    margin-top: 2vh;
+}
 
+.button:hover {
+    color: blue;
+    background-color: aliceblue;
+}

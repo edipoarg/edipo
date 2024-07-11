@@ -18,12 +18,13 @@ const Autocuidado = () => {
     <div className="container">
       <div className={styles.list}>
       <h2 className={styles.text}>Autocuidado</h2>
+      <section className={styles.links}>
         {recursos.map((recurso, index) => (
           <div className="recurso" key={index}>
   <Link to={`/recursos/autocuidado/${recurso.IMAGEN}`} className={styles.link}>
               {recurso.NOMBRE}
             </Link>          </div>
-        ))}
+        ))}</section>
       </div>
       <section className={styles.mapa}>
       <Link to={`/recursos/autocuidado/BARCO`} >
