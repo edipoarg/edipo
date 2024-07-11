@@ -27,14 +27,14 @@ import FichaAutocuidado from './components/Recursos/Autocuidado/FichaAutocuidado
 const router = createHashRouter([
   {
     path: "/",
-    element: <Root/>,
-    children:[
-      { path:"/", element:<App/>},
-      { path:"/recursos", element:<Recursos/>},
-      { path:"/lista", element:<Investigations/>},
-      {path:"/publicaciones", element:<Publicaciones/>},
+    element: <Root />,
+    children: [
+      { path: "/", element: <App /> },
+      { path: "/recursos", element: <Recursos /> },
+      { path: "/lista", element: <Investigations /> },
+      { path: "/publicaciones", element: <Publicaciones /> },
       { path: "/:dominio", element: <Investigacion /> }, // Asume que aquí se mostrará la información completa de una investigación
-      { path: "/landing", element: <Landing /> }, 
+      { path: "/landing", element: <Landing /> },
       { path: "/talleres", element: <Talleres /> },
       { path: "/contacto", element: <Contacto /> },
       { path: "/colabora", element: <Colabora /> },
