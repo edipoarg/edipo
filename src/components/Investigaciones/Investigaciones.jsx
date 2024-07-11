@@ -11,7 +11,7 @@ const Investigations = () => {
         {investigationsData.map((investigacion, index) => (
           <li key={index}>
             <InvestigationButton
-              nombre={investigacion.nombre}
+              nombre={investigacion.titulo}
               dominio={investigacion.dominio}
               geometryType={investigacion.geometryType} // Pasa la propiedad geometryType
             />
