@@ -15,6 +15,7 @@ import Investigacion from './components/Investigaciones/Investigacion.jsx';
 import Landing from './components/Landing/Landing.jsx';
 import Talleres from './components/Talleres/Talleres.jsx';
 import Contacto from './components/Contacto/Contacto.jsx';
+import Colabora from './components/Colabora/Colabora.jsx';
 import Autocuidado from './components/Recursos/Autocuidado/Autocuidado.jsx';
 import FichaAutocuidado from './components/Recursos/Autocuidado/FichaAutocuidado.jsx';
 
@@ -32,6 +33,7 @@ const router = createHashRouter([
       { path: "/landing", element: <Landing /> }, 
       { path: "/talleres", element: <Talleres /> },
       { path: "/contacto", element: <Contacto /> },
+      { path: "/colabora", element: <Colabora /> },
       { path: "/recursos/autocuidado", element: <Autocuidado /> },
       { path: "/recursos/autocuidado/:IMAGEN", element: <FichaAutocuidado /> },
   
