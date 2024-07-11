@@ -1,10 +1,44 @@
 .list {
-    position: absolute;
+  position: fixed;
+width: 80vw;  
+left: 8vw;
+bottom: 5vh;
+  padding: 1vh 3vw 4vh 3vw;
+  background-color: black;
+  color: wheat;
+}
+
+.links{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+}
+
+.nube {
+  position: absolute;
+  top: 15vh;
+  left: 10vw;
+  animation: moveCloud 50s linear infinite; /* Aplica la animación */
+}
+
+@keyframes moveCloud {
+  0% {
+    left: 10vw; /* Posición inicial */
+  }
+  50% {
+    left: 30vw; /* Posición intermedia (a la derecha) */
+  }
+  100% {
+    left: 10vw; /* Posición final (de regreso a la izquierda) */
+  }
+}
+
+
+@media (min-width: 768px) {
+
+.list {
     right: 10vw;
     top: 20vh;
     padding: 2vh 3vw 8vh 3vw;
-    background-color: black;
-    color: wheat;
   }
   
   .nube {
@@ -214,3 +248,5 @@ font-size: 1rem;
 background-color: black;
 color: white;
 padding: 0vh 1vw;}
+
+  }
