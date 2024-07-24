@@ -1,0 +1,56 @@
+.background{
+    width: 0;
+    height: 0;
+    position: fixed;
+    z-index: 0;
+}
+
+.colabora {
+    position: fixed;
+    height: 93vh;
+    background: radial-gradient(circle at 50% 0%, #463f41, #231f20, #100f10);    width: 100vw;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    color: #ecede7;
+    padding-top: 10vh;
+}
+
+.title{
+    padding-top: 10vh;
+    text-align: left;
+    padding-left: 15vw;
+    padding-right: 15vw;
+}
+
+.desc, .desc2, .arg, .world, .alias {
+    text-align: left;
+    padding-left: 15vw;
+
+}
+
+.paymentButtons, .paypalButtons{
+    text-align: left;
+    padding-left: 15vw; 
+}
+
+@media (min-width: 768px) {
+    .colabora{
+        width: 80vw;
+        left: 5vw;
+    height: 80vh;
+    top: 10vh;
+    border-radius: 3px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Sombra común */
+    padding: 5vh 4vw;
+    }
+    
+    .background{
+        background: radial-gradient(circle at top left, #131212, #0b0b0b, #000000);
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    }

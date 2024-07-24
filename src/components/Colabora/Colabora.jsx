@@ -16,15 +16,17 @@ const montosUnicos = [5000, 10000, 15000, 20000, 25000];
 
 const Colabora = () => {
     return (
+        <section className={styles.background}>
+
         <section className={styles.colabora}>
-            <h2>{titulo}</h2>
-            <h5>{descripcion1}</h5>
-            <h5>{descripcion2}</h5>
+            <h2 className={styles.title}>{titulo}</h2>
+            <h5 className={styles.desc}>{descripcion1}</h5>
+            <h5 className={styles.desc2}>{descripcion2}</h5>
 
-            <h3>{desdeArgentina}</h3>
-            <h5>{aliasTransferencia}</h5>
+            <h3 className={styles.arg}>{desdeArgentina}</h3>
+            <h5 className={styles.alias}>{aliasTransferencia}</h5>
 
-            <h3>{desdeOtrosPaises}</h3>
+            <h3 className={styles.world}>{desdeOtrosPaises}</h3>
             <a
                 href={paypalUrl}
                 target="_blank"
@@ -47,6 +49,8 @@ const Colabora = () => {
                 ))}
             </div>
         </section>
+        </section>
+
     );
 };
 

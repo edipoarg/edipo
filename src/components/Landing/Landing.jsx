@@ -1,35 +1,45 @@
 import { Link } from "react-router-dom";
 import styles from "./Landing.module.css";
+import AppBar from "../AppBar/AppBar";
 
 const Landing = () =>{
     
 
     return(
         <>
+       
+        <section className={styles.background}>
+        <AppBar></AppBar>
         <section className={styles.landing}>
-        <section className={styles.news}>
-        <h2 className={styles.title}>Novedades</h2>
-        </section>
         <div className={styles.mainBoard}>
+            <section className={styles.header}> <h1 className={styles.edipo}>[EdIPo]</h1><h3 className={styles.name}>Equipo de Investigación Política</h3> <h6 className={styles.texto}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet commodi incidunt nisi quaerat vero a hic eum unde ipsum nulla eos nemo consectetur, voluptatum nihil enim provident veniam odio. Non?</h6> </section>
         <section className={styles.investigaciones}>
-        <h2 className={styles.title}>Investigaciones</h2>
-        <div className={styles.boxList}>
-            <Link ><h5 className={styles.box}>MAPA DE LA POLICIA</h5></Link>
-            <Link > <h5 className={styles.box}>RA-DAR</h5></Link>
-            <Link >  <h5 className={styles.box}>Monitor</h5></Link>
-            <Link >   <h5 className={styles.box}>A.H.O.R.A.</h5></Link>
-            <Link >   <h5 className={styles.box}>OTRAS</h5></Link>
-        </div>
+        <h2 className={styles.title}>PROYECTOS <br /> / TECNOPOLÍTICAS</h2>
+       {/* <div className={styles.boxList}>
+            <Link ><div className={styles.box}><h5 className={styles.lightBox}>MAPA DE LA POLICIA</h5></div></Link>
+            <Link > <div className={styles.box}><h5 className={styles.lightBox}>RA-DAR</h5></div></Link>
+            <Link >  <div className={styles.box}><h5 className={styles.lightBox}>MONITOR</h5></div></Link>
+            <Link >   <div className={styles.box}><h5 className={styles.lightBox}>A.H.O.R.A.</h5></div></Link>
+        </div>*/}
         </section>
         <section className={styles.recursos}>
-        <h2 className={styles.title}>Recursos</h2>
-               <div>
-               <Link>    <h5 className={styles.button}>MANUAL DE CUIDADO COLECTIVO Y AUTODEFENSA DIGITAL</h5></Link>
-               <Link>    <h5 className={styles.button}>MANUAL INTELIGENCIA ABIERTA</h5></Link>
-               <Link>    <h5 className={styles.button}>GUIA MAPA</h5></Link>
+        <h2 className={styles.recursosTitle}>RECURSOS</h2>
+               <div className={styles.recursosList}>
+               <Link>    <h5 className={styles.button1}>d</h5></Link>
+               <Link>    <h5 className={styles.button2}>i</h5></Link>
+               <Link>    <h5 className={styles.button3}>gm</h5></Link>
         </div>
         </section>
         </div>
+        <Link to={'../publicaciones'}>
+        <section className={styles.news}>
+        <h2 className={styles.newsTitle}>¿Quién mató a Facundo?</h2>
+        <h4 className={styles.newsBajada}>10/05/</h4>
+
+        </section>
+        </Link>
+        </section>
+        
         </section>
         </>
     );};

@@ -1,5 +1,162 @@
-.seccion{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.background {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: radial-gradient(circle at top left, #333333, #1a1a1a, #000000);
+  }
+  
+  
+.header{
+  position: fixed;
+  left: 13vw;
+  top: 15vh;
+  font-size: 1.3rem;
+  text-align: left;
+  color: #2e2c2f;
+}
 
+  .investigaciones {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    background: radial-gradient(circle at 50% 0%, #d7d5d8, #d6d4d7, #858383);   
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content{
+position: fixed; 
+display: grid;
+grid-template-columns: 1fr;
+top: 20vh;
+left: 0;
+padding-left: 5vw;}
+
+.detailSection{
+    padding: 1vh 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    width: 70vw;
+}
+
+.listSection{
+    width: 60vw;
+}
+
+.list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+}
+
+
+.selected{
+    height: 40vh;
+    width: 55vw;
+}
+
+.button{
+    border: solid 1px #1a1a1a;
+    border-radius: 7px;
+}
+
+
+.header{
+    margin:0;
+    font-size: 1.7rem;
+}
+  
+  @media (min-width: 768px) {
+    .investigaciones {
+      width: 85vw;
+      left: 5vw;
+  height: 75vh;
+  top: 5vh;
+      border-radius: 3px;
+      box-shadow: 0 45px 40px rgba(0, 0, 0, 0.7);
+      padding: 5vh 4vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+  .selected{
+    margin-top: 30vh;
+    height: 70vh;
+  }
+  .content {
+    padding-left: 15vw;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 60vw;
+    height: 70vh;
+  }
+  
+  .listSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .list {
+    list-style: none;
+    padding: 0;
+    grid-template-columns: 1fr;
+  }
+  
+  .button {
+    color: #1a1a1a;
+    border: none;
+    border-radius: 0;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-bottom: solid 1px #1a1a1a;
+  }
+  
+  .selectedButton {
+    font-size: 1.8rem;
+  }
+  
+  .button:hover{
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  .detailSection {
+    width: 40vw;
+  }
+  
+  .imagePlaceholder {
+    width: 20vw;
+    height: 40vh;
+    margin: auto;
+    border: solid 1px;
+  }
+  
+  .navigationButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .navigationButtons button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }

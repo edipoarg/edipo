@@ -1,26 +1,62 @@
-// En el componente Investigations.jsx
-import InvestigationButton from './InvestigationButon'; // Ajusta la ruta según tu estructura de archivos
-import { investigationsData } from './InvestigacionesList'; // Ajusta la ruta según tu estructura de archivos
+import { useState, useEffect } from 'react';
+
+import { investigationsData } from './InvestigacionesList';
 import styles from './Investigaciones.module.css';
 
+import AppBar from '../AppBar/AppBar';
+
 const Investigations = () => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const selectedInvestigation = investigationsData[selectedIndex];
+
+  const handleNext = () => {
+    setSelectedIndex((prevIndex) => (prevIndex + 1) % investigationsData.length);
+  };
+
+  const handlePrev = () => {
+    setSelectedIndex((prevIndex) => (prevIndex - 1 + investigationsData.length) % investigationsData.length);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 3000); // Cambia cada 3 segundos
+
+    return () => clearInterval(interval); // Limpia el intervalo al desmontar el componente
+  }, []);
+
   return (
-    <div className="investigations-container">
-      <h1>Proyectos / Tecnopolíticas</h1>
-      <ul className={styles.seccion}>
-        {investigationsData.map((investigacion, index) => (
-          <li key={index}>
-            <InvestigationButton
-              nombre={investigacion.titulo}
-              dominio={investigacion.dominio}
-              geometryType={investigacion.geometryType} // Pasa la propiedad geometryType
-            />
-          </li>
-        ))}
-      </ul>
-      <hr />
-      {/* Deja de renderizar todas las investigaciones aquí */}
-    </div>
+    <section className={styles.background}>
+    <AppBar></AppBar>
+      <div className={styles.investigaciones}>
+      <h1 className={styles.header}>Proyectos / Tecnopolíticas</h1>
+        <div className={styles.content}>
+          <div className={styles.detailSection}>
+            <button onClick={handlePrev}>x</button>
+            <div className={styles.selected}>
+              <h2>{selectedInvestigation.titulo}</h2>
+              <div className={styles.imagePlaceholder}></div>
+              <p>{selectedInvestigation.bajada}</p>
+            </div>
+            <button onClick={handleNext}>x</button>
+          </div>
+          <div className={styles.listSection}>
+          {/*  <ul className={styles.list}>
+              {investigationsData.map((investigacion, index) => (
+                <li className={styles.li} key={index}>
+                  <div
+                    className={`${styles.button} ${index === selectedIndex ? styles.selectedButton : ''}`}
+                    onClick={() => setSelectedIndex(index)}
+                  >
+                    + {investigacion.titulo}
+                  </div>
+                </li>
+              ))}
+            </ul>*/}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

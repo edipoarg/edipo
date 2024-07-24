@@ -2,14 +2,15 @@
     position: absolute;
     top: 0;
     left: 0; 
+    text-align: left;
 
 
 }
 
 .header{
-    padding: 0vh 10vw;
-    padding-top: 10vh;
-background-color: black;
+    padding: 0vh 45vw 10vh 10vw;
+    padding-top: 25vh;
+background-color: #2e2c2f;
 color: white;
 height: 35vh;
 }

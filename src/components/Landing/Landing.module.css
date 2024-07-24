@@ -1,69 +1,287 @@
+.background{
+    width: 0;
+    height: 0;
+    position: fixed;
+    z-index: 0;
+}
+
 .landing {
-    position: absolute;
-    height: 93vh;
-    background-color: #808080;
-    width: 100vw;
+    padding-top: 13vh;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    background: radial-gradient(circle at 50% 0%, #d7d5d8, #d6d4d7, #858383);    width: 100vw;
     bottom: 0;
     left: 0;
+    z-index: 1000;
 }
 
-.news {
-    background-color: blue;
-    height: 15vh;
+.edipo{
+    margin: 0;
+    color: #231f20;
 }
+
+.name{
+    margin: 0;
+    text-align: left;
+    color: #231f20;
+}
+.news {
+    background: radial-gradient(circle at top, #333333, #231f20, #000000);
+    border-radius: 120px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 120px;
+    height: 7vh;
+    text-align: left ;
+    font-size: 0.8rem;
+    align-content: center;
+color: #ecede7;}
 
 .title {
-    margin: 0
+    margin: 0;
+    margin-left: 4vw;
+    color: #d7d5d8;
+    text-align: left;
+    padding-top: 3vh;
+    text-shadow: 1px 1px 15px rgba(255, 255, 255, 0.409);
+    font-size: 2rem;
+
 }
 
+.recursosTitle {
+    margin: 0;
+    color: #231f20;
+}
 .mainBoard {
     display: grid;
-    grid-template-columns: 4fr 3fr;
     padding: 2vh 10vw;
     height: 70vh;
 }
 
 .recursos {
-    background-color: black;
-    color: white;
+    position: fixed;
+    bottom: 7vh;
+    right: 3vw;
+    border-radius: 3px;
+   border-top-right-radius: 80px;
+   border-top-left-radius: 40px;
+   border-bottom-left-radius: 120px ;
+    color: #ecede7;
     padding-top: 8vh;
+    background-color: red ;
+    background-color: white;
+    
+    
 }
 
 .boxList {
-    padding: 10vh 4vw;
+    padding: 3vh 0vw;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1vw;
+    width: 100%;
 }
 
 .box {
-    background-color: black;
-    color: white;
-    border-radius: 14px;
-    height: 20vh;
+    background: radial-gradient(circle at top, #333333, #231f20, #000000);
+    color: #ecede7;
+    border-radius: 48px;
+    height: 25vh;
     margin: 0;
+    padding: 0.5vh 0.5vh;
 }
 
-.box:hover {
-    background-color: aliceblue;
-    color: black;
+.lightBox{
+border: solid 2px #535252;
+border-radius: 46px;
+height: 22.5vh;
+margin: 0;
+font-size: 1rem;
+padding-top: 2vh;
+
 }
 
-.button {
-    background-color: blue;
-    color: white;
+.lightBox:hover{
+    border: solid 2px #86a0e1;
+    box-shadow: 0 0 1px #86a0e1, 0 0 10px #86a0e1;
+    text-shadow: 0 0 3px #86a0e1, 0 0 5px #86a0e1, 0 0 10px #5973b5, 0 0 15px #86a0e1; /* Sombra difuminada para el texto */
+
+}
+
+.newsTitle{margin: 0;
+font-size: 1.5rem;
+width: 18vw;}
+
+.newsBajada{
+    text-align: justify;
+    width: 17vw;
+}
+
+.button1, .button2, .button3 {
+    background-color: #d6d4d7;
+    color: #231f20;
     margin: 0;
-    border: solid 1px blue;
-    border-radius: 14px;
-    width: 28vw;
+    border: solid 1px #231f20;
+    border-radius: 360px;
+    width: 15vw;
     margin: auto;
-    height: 14vh;
+    height: 10vh;
     align-content: center;
     padding: 1vh 2vw;
     margin-top: 2vh;
 }
 
-.button:hover {
-    color: blue;
-    background-color: aliceblue;
+
+.button1 {
+    color: #231f20;
+    background: url('../../svg/mapa.svg') no-repeat center center ; /* Añadir la ruta correcta a tu SVG */
+    background-size:cover; /* Asegura que el SVG cubra todo el fondo */
+    box-shadow: inset -5px -10px 15px rgba(54, 54, 54, 0.1);
+}
+
+.button2 {
+        color: #231f20;
+        background: url('../../svg/Inteligencia.svg') no-repeat center center; /* Añadir la ruta correcta a tu SVG */
+        background-size:cover; /* Asegura que el SVG cubra todo el fondo */
+        box-shadow: inset -5px -10px 15px rgba(54, 54, 54, 0.1);}
+        
+.button1:hover {
+    color: #231f20;
+    font-size: 0;
+    background: url('../../svg/mapa.svg') no-repeat center center; /* Añadir la ruta correcta a tu SVG */
+    background-size:cover; /* Asegura que el SVG cubra todo el fondo */
+   }
+
+.button2:hover {
+        color: #231f20;
+        font-size: 0;
+        background: url('../../svg/Inteligencia.svg') no-repeat center center; /* Añadir la ruta correcta a tu SVG */
+        background-size:cover; /* Asegura que el SVG cubra todo el fondo */
+       }
+
+@media (min-width: 768px) {
+.landing{
+    width: 85vw;
+    left: 5vw;
+height: 50vh;
+top: 5vh;
+border-radius: 3px;
+box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Sombra común */
+padding: 15vh 1vw 5vh 4vw;
+border-bottom-left-radius: 260px;
+border-bottom-right-radius: 90px;
+}
+
+.background{
+    background: radial-gradient(circle at top left, #333333, #231f20, #000000);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.edipo{
+    padding-top: 0vh;
+    font-size: 6rem;
+    text-align: left;
+}
+
+.name{
+    margin:0;
+    padding-left: 2vw;
+    padding-top: 1vh;
+}
+
+.texto{
+    margin: 0;
+    width: 26vw;
+    text-align: justify;
+    padding: 0vh 2vw;
+}
+
+.news{
+    position: fixed;
+    top: 55vh;
+    width: 26vw;
+    padding-left: 6vw;
+    height: 35vh;
+}
+
+.news:hover{
+    box-shadow: 5px 0px 10px 1px rgba(253, 253, 253, 0.1),
+    -10px 0px 50px  rgba(253, 253, 253, 0.192),
+     5px 5px 60px inset rgba(254, 252, 252, 0.1);
+    width: 28vw;
+    height: 36vh;
+    top: 54vh;
+    text-shadow: 1px 1px 7px  rgba(253, 253, 253, 0.4);
+}
+.investigaciones{
+    position: fixed;
+    top: 21vh;
+    right: 7vw;
+    height: 32vh;
+    width: 40vw;
+    background: radial-gradient(circle at top, #333333, #231f20, #000000);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 120px ;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 35px;
+}
+
+.mainBoard{
+    height: 60vh;
+    padding: 2vh 2vw;
+    padding-right: 5vw;
+
+}
+
+.recursos{
+    color: #ecede7;
+    padding-top: 2vh;
+    width: 42vw;
+    padding-left: 2vw;
+    height: 30vh;
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.1);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(30px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+.recursosTitle{
+    margin-left: 2vw;
+    text-align: left;
+    color: white;
+    text-shadow: 1px 1px 10px  white;
+font-size: 2.5rem;
+}
+
+.recursosList{
+    display: flex;
+ gap: 1vw;
+    justify-content: right;
+    
+
+
+}
+
+    .button1, .button2, .button3 {
+        width: 2vw;
+        color: #d6d4d7;
+        margin: 0;
+        border: solid 1px #d7d5d8;
+        border-radius: 360px;
+        height: 7vh;
+        align-content: center;
+        padding: 1vh 2vw;
+        margin-top: 2vh;
+    }
+  
+
+
+
 }

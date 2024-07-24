@@ -3,6 +3,8 @@ import styles from './Publicaciones.module.css';
 
 const Publicaciones = () => {
   return (
+    <section className={styles.background}>
+
     <section className={styles.publicaciones}>
       {Object.keys(publicacionesData).map(year => (
         <div key={year} className={styles.publicacion}>
@@ -24,6 +26,8 @@ const Publicaciones = () => {
         </div>
       ))}
     </section>
+    </section>
+
   );
 };
 
