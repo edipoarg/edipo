@@ -14,7 +14,7 @@ export const investigationsData = [
       mail: 'mapadelapolicia@gmail.com',
     },
     {
-      titulo: "Monitor de injerencia de EEUU en Argentina",
+      titulo: "Monitor",
       bajada: "Para mapear la injerencia de EEUU en Argentina",
       año: "2022",
       descripcion: "El proyecto propone la elaboración de un Monitor para el seguimiento de la injerencia de Estados Unidos en Argentina, pretendiendo así registrar las distintas modalidades de intervención del Estado norteamericano y organizaciones financiadas sobre la dinámica institucional, política, educativa, científica, económica y cultural de nuestro país. Esto implica dar cuenta del carácter global y dinámico de la intervención que, más allá de las discontinuidades en su coherencia o articulación, está orientada a consolidar la hegemonía del país del norte y contrarrestar tendencias ajenas a su capacidad de influencia. En este contexto el Monitor tiene como objetivo analizar la injerencia de los Estados Unidos en Argentina durante el período 2019-2023. Esto implica: a) Identificar hechos de injerencia en las distintas Áreas de Intervención, b) detallar de la localización y temporalidad de esos hechos, c) describir las modalidades de injerencia, d) Identificar agencias y actores sociales y analizar las dinámicas de articulación, e), dar cuenta de la relevancia geopolítica de las áreas donde se efectúa la injerencia, f) estudiar las relaciones diplomáticas entre Estados Unidos y Argentina. Para construir el registro de hechos, procesos e iniciativas del presente y el pasado reciente, se construirán las herramientas técnicas y organizativas necesarias",

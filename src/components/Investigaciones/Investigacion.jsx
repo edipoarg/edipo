@@ -1,3 +1,5 @@
+
+import styles from './Investigaciones.module.css';
 // En el componente Investigacion.jsx
 import { useParams } from 'react-router-dom';
 import { investigationsData } from './InvestigacionesList';
@@ -13,6 +15,8 @@ const Investigacion = () => {
   const { titulo, bajada, año, descripcion, enlace, ig, tw, fb, mail} = investigacion;
 
   return (
+    <section className={styles.background}>
+
     <div className="investigation-container">
 
       <h2>{titulo}</h2>
@@ -36,6 +40,8 @@ const Investigacion = () => {
         <button>mail</button>
       </a>
     </div>
+    </section>
+
   );
 };
 

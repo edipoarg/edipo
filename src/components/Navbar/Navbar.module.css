@@ -1,20 +1,21 @@
 .navbar {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: 1fr 4fr 1fr;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 5vh;
+    left: 10vh;
     height: 6vh;
-    background-color: black;
-    width: 100vw;
+    width: 83vw;
     padding-top: 2vh;
     z-index: 1000;
     align-items: center;
+    justify-items: right;
 }
 
 .logo {
+    font-size: 1.3rem;
     margin: 0;
-    color: white;
+    color: #231f20;
 }
 
 .menu {
@@ -31,7 +32,7 @@
     top: 6vh;
     left: 0;
     width: 100%;
-    background-color: black;
+    background-color: #231f20;
     padding: 1rem 0;
 }
 
@@ -40,11 +41,14 @@
 }
 
 .text {
-    color: orange;
+    color: #231f20;
+    border: solid 1px #231f20;
+    border-radius: 48px;
+    padding: 0.5vh 1vw;
 }
 
 .item {
-    color: white;
+    color: #231f20;
 }
 
 .suscribite {
@@ -58,12 +62,17 @@
 }
 
 .icon {
-    color: white;
+    color: #231f20;
     font-size: 1.5rem;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    .navbar{
+        position: fixed;
+        top: 0;
+    }
+    
     .menu {
         display: none;
     }

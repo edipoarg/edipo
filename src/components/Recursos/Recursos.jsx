@@ -6,8 +6,11 @@ const Recursos = () =>{
 
 return(
     <>
+          
+
     <section className={styles.header}>
-    <h2>recursos</h2>
+    <h2 className={styles.title}>RECURSOS</h2>
+    <h4 className={styles.subTitle}>Herramientas de investigación</h4>
     </section>
     <section className={styles.recursos}>
     <Link to='./autocuidado'>
@@ -21,6 +24,7 @@ return(
         <div className={styles.guiaMapa}><h3 className={styles.item}>Guia mapa</h3></div>
         </Link>
     </section>
+
 
 
     </>
