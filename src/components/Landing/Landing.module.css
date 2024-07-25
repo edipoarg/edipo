@@ -1,23 +1,26 @@
 .background{
-    width: 0;
-    height: 0;
-    position: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
     z-index: 0;
+    background: radial-gradient(circle at top left, #333333, #1a1a1a, #000000);
+padding-top: 1vh;
+padding: 2vh 2vw;
+min-height: 100vh;
 }
 
 .landing {
-    padding-top: 13vh;
-    position: fixed;
-    top: 0;
-    height: 100vh;
-    background: radial-gradient(circle at 50% 0%, #d7d5d8, #d6d4d7, #858383);    width: 100vw;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
+  
+box-sizing: border-box;
 }
 
 .edipo{
     margin: 0;
+    text-align: left;
+    font-size: 5rem;
+    padding-top: 1vh;
     color: #231f20;
 }
 
@@ -25,21 +28,34 @@
     margin: 0;
     text-align: left;
     color: #231f20;
+    padding-top: 2vh;
 }
-.news {
-    background: radial-gradient(circle at top, #333333, #231f20, #000000);
-    border-radius: 120px;
-    border-bottom-left-radius: 10px;
-    border-top-right-radius: 120px;
-    height: 7vh;
-    text-align: left ;
-    font-size: 0.8rem;
-    align-content: center;
-color: #ecede7;}
 
+.texto{
+    margin: 0;
+    width: 55vw;
+    text-align: justify;
+    padding-top: 1vh;
+    padding-bottom: 5vh;
+    box-sizing: border-box;
+
+}
+
+
+.header{  
+    background: radial-gradient(circle at 50% 0%, #c1bfc1, #d6d4d7, #737171);   
+    border-radius: 3px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Sombra común */
+    padding: 6vh 10vw;
+    min-height: 45vh;
+    border-bottom-left-radius: 180px;
+    border-bottom-right-radius: 38px;
+    margin: 0vh 2vw;
+    padding-top: 10vh;
+    margin-right: 4vw;
+}
 .title {
     margin: 0;
-    margin-left: 4vw;
     color: #d7d5d8;
     text-align: left;
     padding-top: 3vh;
@@ -48,38 +64,71 @@ color: #ecede7;}
 
 }
 
-.recursosTitle {
-    margin: 0;
-    color: #231f20;
+.news {
+    margin-top: -18vh;
+    background: radial-gradient(circle at top, #333333, #231f20, #000000);
+    border-radius: 120px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 120px;
+    width: 50vw;
+    text-align: left ;
+    font-size: 0.8rem;
+    align-content: center;
+    padding-left: 5vw;
+    min-height: 25vh;
+color: #ecede7;
+text-shadow: 1px 1px 7px  rgba(253, 253, 253, 0.4);
+box-shadow: 5px 0px 10px 1px rgba(253, 253, 253, 0.1),
+    -10px 0px 50px  rgba(253, 253, 253, 0.192),
+     5px 5px 60px inset rgba(254, 252, 252, 0.1);
+     box-sizing: border-box;
+
+    }
+
+.newsTitle{
+    font-size: 1.5rem;
+    width: 45vw;
+margin: 0;
+box-sizing: border-box;
 }
+    
+    .newsBajada{
+        margin: 0;
+        text-align: justify;
+        width: 17vw;
+        box-sizing: border-box;
+
+    }
+    
+
 .mainBoard {
     display: grid;
-    padding: 2vh 10vw;
-    height: 70vh;
+    box-sizing: border-box;
+
 }
 
-.recursos {
-    position: fixed;
-    bottom: 7vh;
-    right: 3vw;
-    border-radius: 3px;
-   border-top-right-radius: 80px;
-   border-top-left-radius: 40px;
-   border-bottom-left-radius: 120px ;
-    color: #ecede7;
-    padding-top: 8vh;
-    background-color: red ;
-    background-color: white;
-    
-    
+
+.investigaciones{
+    background: radial-gradient(circle at top, #333333, #231f20, #000000);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 120px ;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 35px;
+    margin: 3vh 5vw;
+    padding: 2vh 6vw;
+    margin-top: 2vh;
+    box-sizing: border-box;
 }
 
+.title{font-size: 1.7rem;}
 .boxList {
     padding: 3vh 0vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1vw;
     width: 100%;
+    box-sizing: border-box;
+
 }
 
 .box {
@@ -108,15 +157,36 @@ padding-top: 2vh;
 
 }
 
-.newsTitle{margin: 0;
-font-size: 1.5rem;
-width: 18vw;}
 
-.newsBajada{
-    text-align: justify;
-    width: 17vw;
+.recursos {
+    bottom: 7vh;
+    border-radius: 3px;
+   border-top-right-radius: 80px;
+   border-top-left-radius: 40px;
+   border-bottom-left-radius: 120px ;
+    color: #ecede7;
+    margin: 3vh 5vw;
+    padding: 2vh 6vw;
+    margin-top: 0vh;
+    box-sizing: border-box;
+    background-color: white;   
 }
 
+.recursosList {
+ display: flex;
+ justify-content: center;
+ gap: 1vw;
+
+}
+
+.recursosTitle {
+    margin: 0;
+    color: #231f20;
+    box-sizing: border-box;
+    font-size: 1.7rem;
+    text-align: left;
+
+}
 .button1, .button2, .button3 {
     background-color: #d6d4d7;
     color: #231f20;
@@ -129,6 +199,8 @@ width: 18vw;}
     align-content: center;
     padding: 1vh 2vw;
     margin-top: 2vh;
+    box-sizing: border-box;
+
 }
 
 
@@ -137,12 +209,16 @@ width: 18vw;}
     background: url('../../svg/mapa.svg') no-repeat center center ; /* Añadir la ruta correcta a tu SVG */
     background-size:cover; /* Asegura que el SVG cubra todo el fondo */
     box-shadow: inset -5px -10px 15px rgba(54, 54, 54, 0.1);
+    box-sizing: border-box;
+
 }
 
 .button2 {
         color: #231f20;
         background: url('../../svg/Inteligencia.svg') no-repeat center center; /* Añadir la ruta correcta a tu SVG */
         background-size:cover; /* Asegura que el SVG cubra todo el fondo */
+        box-sizing: border-box;
+
         box-shadow: inset -5px -10px 15px rgba(54, 54, 54, 0.1);}
         
 .button1:hover {
@@ -161,51 +237,53 @@ width: 18vw;}
 
 @media (min-width: 768px) {
 .landing{
-    width: 85vw;
-    left: 5vw;
-height: 50vh;
-top: 5vh;
-border-radius: 3px;
-box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Sombra común */
-padding: 15vh 1vw 5vh 4vw;
-border-bottom-left-radius: 260px;
-border-bottom-right-radius: 90px;
+
+
+
 }
 
 .background{
     background: radial-gradient(circle at top left, #333333, #231f20, #000000);
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
+    min-height: 100vh;
+    width: 100vw;   
+    padding: 0vh 1vw;
+}
+
+.header{
+    margin: 0;
+    padding: 4vh 1vw;
+    padding-bottom: 0;
+    max-height: 70vh;
+    height: 70vh;
+
 }
 
 .edipo{
     padding-top: 0vh;
     font-size: 6rem;
     text-align: left;
+    padding-left: 1vw;
+    margin-top:10vh;
 }
 
 .name{
     margin:0;
-    padding-left: 2vw;
+    padding-left: 4vw;
     padding-top: 1vh;
 }
 
 .texto{
     margin: 0;
-    width: 26vw;
+    max-width: 32vw;
     text-align: justify;
-    padding: 0vh 2vw;
+    padding-left: 4vw;
+
 }
 
 .news{
-    position: fixed;
-    top: 55vh;
-    width: 26vw;
     padding-left: 6vw;
-    height: 35vh;
+    min-height: 35vh;
+    max-width: 45vw;
 }
 
 .news:hover{
@@ -218,7 +296,7 @@ border-bottom-right-radius: 90px;
     text-shadow: 1px 1px 7px  rgba(253, 253, 253, 0.4);
 }
 .investigaciones{
-    position: fixed;
+    position: absolute;
     top: 21vh;
     right: 7vw;
     height: 32vh;
@@ -238,11 +316,12 @@ border-bottom-right-radius: 90px;
 }
 
 .recursos{
+    position: absolute;
+    right: 0vw;
     color: #ecede7;
     padding-top: 2vh;
     width: 42vw;
     padding-left: 2vw;
-    height: 30vh;
     /* From https://css.glass */
 background: rgba(255, 255, 255, 0.1);
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -260,14 +339,7 @@ border: 1px solid rgba(255, 255, 255, 0.15);
 font-size: 2.5rem;
 }
 
-.recursosList{
-    display: flex;
- gap: 1vw;
-    justify-content: right;
-    
 
-
-}
 
     .button1, .button2, .button3 {
         width: 2vw;

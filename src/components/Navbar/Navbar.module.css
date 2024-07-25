@@ -1,87 +1,110 @@
-.navbar {
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    position: fixed;
-    top: 5vh;
-    left: 10vh;
-    height: 6vh;
-    width: 83vw;
-    padding-top: 2vh;
-    z-index: 1000;
+.navbar{
+    left: 0;
     align-items: center;
+    position: absolute;
+    display: flex;
+    width: 90vw;
+    top: 2vh;
+    box-sizing: border-box;
+    padding: 0vh 7vw;   
+    z-index: 1000;
     justify-items: right;
-}
-
-.logo {
-    font-size: 1.3rem;
-    margin: 0;
-    color: #231f20;
+    gap: 1vw;
 }
 
 .menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+    display: none;
 }
 
 .menu.open {
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 6vh;
-    left: 0;
-    width: 100%;
-    background-color: #231f20;
-    padding: 1rem 0;
-}
-
-.text, .title, .item {
-    margin: 0;
-}
-
-.text {
-    color: #231f20;
-    border: solid 1px #231f20;
-    border-radius: 48px;
-    padding: 0.5vh 1vw;
-}
-
-.item {
-    color: #231f20;
-}
-
-.suscribite {
-    display: flex;
-    justify-content: flex-end;
 }
 
 .hamburger {
-    display: none;
-    cursor: pointer;
+    display: flex;
 }
 
-.icon {
+.hamburger {
+        cursor: pointer;
+   align-content: right;
+justify-items: right;}
+    
+.logo{      box-sizing: border-box;
+    
+    font-size: 1.3rem;
+    margin: 0;
     color: #231f20;
-    font-size: 1.5rem;
+    text-align: left;
+    box-sizing: border-box;
+    width: 40vw;
 }
+  
+    .text {
+        color: #231f20;
+        border: solid 1px #231f20;
+        border-radius: 48px;
+        padding: 0.5vh 1vw;
+    }
+
+    .suscribite {
+        display: flex;
+        justify-content: flex-end;
+    }
+
 
 /* Responsive Styles */
-@media (max-width: 768px) {
-    .navbar{
-        position: fixed;
-        top: 0;
+@media (min-width: 768px) {
+   
+    .navbar {
+        display: flex;
+        height: 6vh;
+        width: 80%;
+        padding-top: 2vh;
+        z-index: 1000;
+      
+    
     }
     
+  
     .menu {
-        display: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
     }
     
     .menu.open {
         display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 6vh;
+        left: 0;
+        width: 100%;
+        background-color: #231f20;
+        padding: 1rem 0;
+    }
+    
+    .text, .title, .item {
+        margin: 0;
+    }
+  
+    
+    .item {
+        color: #231f20;
+    }
+    
+  
+    .logo{width: 20vw}
+    
+    .icon {
+        color: #231f20;
+        font-size: 1.5rem;
     }
 
-    .hamburger {
-        display: block;
+    .suscribite {
+       
+        width: 20vw;
     }
+
+
 }

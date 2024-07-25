@@ -49,10 +49,10 @@
   @media (max-width: 768px) {
     .appBar {
         position: fixed;
-        right: 25vw;
-        top: 0;
-        width: 80px;
-        height: 90vh;
+        right: 0vw;
+        top:  40vh;
+        width: 10vw;
+        height: 35vh;
         display: flex;
         flex-direction: column;
         align-items: center;

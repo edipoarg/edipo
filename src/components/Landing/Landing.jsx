@@ -7,12 +7,19 @@ const Landing = () => {
 
     return (
         <>
+                <AppBar></AppBar>
 
             <section className={styles.background}>
-                <AppBar></AppBar>
                 <section className={styles.landing}>
                     <div className={styles.mainBoard}>
                         <section className={styles.header}> <h1 className={styles.edipo}>[EdIPo]</h1><h3 className={styles.name}>Equipo de Investigación Política</h3> <h6 className={styles.texto}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet commodi incidunt nisi quaerat vero a hic eum unde ipsum nulla eos nemo consectetur, voluptatum nihil enim provident veniam odio. Non?</h6> </section>
+                        <Link to={'../publicaciones'}>
+                            <section className={styles.news}>
+                                <h2 className={styles.newsTitle}>¿Quién mató a Facundo?</h2>
+                                <h4 className={styles.newsBajada}>10/05/</h4>
+
+                            </section>
+                        </Link>
                         <section className={styles.investigaciones}>
                             <h2 className={styles.title}>PROYECTOS <br /> / TECNOPOLÍTICAS</h2>
                             {/* <div className={styles.boxList}>
@@ -31,13 +38,7 @@ const Landing = () => {
                             </div>
                         </section>
                     </div>
-                    <Link to={'../publicaciones'}>
-                        <section className={styles.news}>
-                            <h2 className={styles.newsTitle}>¿Quién mató a Facundo?</h2>
-                            <h4 className={styles.newsBajada}>10/05/</h4>
 
-                        </section>
-                    </Link>
                 </section>
 
             </section>

@@ -34,7 +34,7 @@ const Autocuidado = () => {
   return (
     <div className={styles.container}>
       <div className={styles.list}>
-        <h2 className={styles.text}>Autocuidado</h2>
+        <h2 className={styles.text}>AUTOCUIDADO</h2>
         <section className={styles.links}>
           {recursos.map((recurso, index) => (
             <div className={styles.recurso} key={index}>
