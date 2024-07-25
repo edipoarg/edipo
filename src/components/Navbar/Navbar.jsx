@@ -18,9 +18,7 @@ function Navbar() {
         <div className={styles.logo}><h3 className={styles.title}>[ ] EdIPo</h3></div>
         </Link>
 
-        <div className={styles.hamburger} onClick={toggleMenu}>
-          {isOpen ? <FaTimes className={styles.icon} /> : <FaBars className={styles.icon} />}
-        </div>
+       
         <section className={`${styles.menu} ${isOpen ? styles.open : ''}`}>
           <Link to='./lista'>
             <h5 className={styles.item}>Proyetos</h5>
@@ -41,7 +39,9 @@ function Navbar() {
         <Link to='./colabora'>
         <section className={styles.suscribite}><h4 className={styles.text}>¿Queré aportar?</h4></section>
         </Link>
-
+        <div className={styles.hamburger} onClick={toggleMenu}>
+          {isOpen ? <FaTimes className={styles.icon} /> : <FaBars className={styles.icon} />}
+        </div>
       </section>
     </>
   );
