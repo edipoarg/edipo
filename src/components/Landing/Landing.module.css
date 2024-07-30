@@ -281,6 +281,7 @@ padding-top: 2vh;
 }
 
 .news{
+    box-shadow: none;
     padding-left: 6vw;
     min-height: 35vh;
     max-width: 45vw;
@@ -290,7 +291,7 @@ padding-top: 2vh;
     box-shadow: 5px 0px 10px 1px rgba(253, 253, 253, 0.1),
     -10px 0px 50px  rgba(253, 253, 253, 0.192),
      5px 5px 60px inset rgba(254, 252, 252, 0.1);
-    width: 28vw;
+    width: 46vw;
     height: 36vh;
     top: 54vh;
     text-shadow: 1px 1px 7px  rgba(253, 253, 253, 0.4);
@@ -298,7 +299,7 @@ padding-top: 2vh;
 .investigaciones{
     position: absolute;
     top: 21vh;
-    right: 7vw;
+    right: 2vw;
     height: 32vh;
     width: 40vw;
     background: radial-gradient(circle at top, #333333, #231f20, #000000);
@@ -354,6 +355,25 @@ font-size: 2.5rem;
     }
   
 
+
+
+}
+
+@media (min-width: 1080px) {
+
+
+    .news{
+        padding-left: 6vw;
+        min-height: 35vh;
+        max-width: 35vw;
+    }
+    
+    .news:hover{
+        width: 36vw;
+        height: 36vh;
+        top: 54vh;
+   
+    }
 
 
 }
