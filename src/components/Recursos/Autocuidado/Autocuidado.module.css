@@ -81,14 +81,15 @@ grid-template-columns: 1fr 1fr 1fr;
   
   .image{
     height: 15vh;
-    width: 5vw;
     margin: auto; /* Ajusta según sea necesario */
     background-size: cover;
     background-position: center;
   }
 @media (min-width: 768px) {
 
+.card{
 
+}
 .list {
     right: 10vw;
     left: unset;
@@ -322,7 +323,6 @@ background-color: #2e2c2f;
 color: white;
 padding: 0vh 1vw;
 border-radius: 50px;
-width: 10vw;
 }
 
 

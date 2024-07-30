@@ -1,4 +1,33 @@
 {
+  "2024":[  
+    {
+      "titulo": "Las milicias digitales de la ultraderecha",
+      "resumen": "La ultraderecha ensaya nuevas formas de violencia paraestatal, que comienzan como ataques virtuales en las redes pero derraman hacia los domicilios y familiares de sus objetivos. Esta investigación revela quiénes son los integrantes de uno de los grupos más despiadados y describe de manera pormenorizada su modo de operar. También avanza en cuáles son sus terminales con el Poder Ejecutivo. Conocer estos vericuetos es clave para poner en juego estrategias de autodefensa.",
+      "anio": "13/7/2024",
+      "foto": "",
+      "link": "https://revistacrisis.com.ar/notas/las-milicias-digitales-de-la-ultraderecha"
+    },     
+  {
+    "titulo": "La conexión alemana",
+    "resumen": "Con la lupa puesta en la trayectoria de sus cien principales funcionarios, presentamos aquí una semblanza del primer gobierno libertario del mundo. Un pequeño círculo que tiene en su centro a los hermanos Milei, distintas vertientes del macrismo y también el tradicional nacionalismo reaccionario: quiénes componen el organigrama del gobierno que considera que el Estado es una asociación criminal.",
+    "anio": "24/6/2024",
+    "foto": "",
+    "link": "https://revistacrisis.com.ar/notas/la-conexion-alemana"
+  },   
+    {
+      "titulo": "Capital Inhumano: los seis primeros meses del experimento libertario",
+      "resumen": "En continuidad con el mapa político del gobierno de Javier Milei publicado en la Crisis #61, en esta oportunidad hacemos zoom sobre el Ministerio de Capital Humano. Presentamos una radiografía política a seis meses de su creación, una pormenorizada revisión de la avanzada antiderechos en la administración pública y un análisis del proyecto frustrado del sector más conservador de la alianza ultraderechista.",
+      "anio": "24/06/2024",
+      "foto": "",
+      "link": "https://informes.revistacrisis.com.ar/capital-inhumano-experimento-libertario/"
+    },   
+  {
+    "titulo": "Mapa político del gobierno de Javier Milei",
+    "resumen": "Con la lupa puesta en la trayectoria de sus cien principales funcionarios, presentamos aquí una semblanza del primer gobierno libertario del mundo. Un pequeño círculo que tiene en su centro a los hermanos Milei, distintas vertientes del macrismo y también el tradicional nacionalismo reaccionario: quiénes componen el organigrama del gobierno que considera que el Estado es una asociación criminal.",
+    "anio": "13/03/2024",
+    "foto": "",
+    "link": "https://revistacrisis.com.ar/notas/mapa-politico-del-gobierno-de-javier-milei"
+  }],
     "2023": [
       {
         "titulo": "Los dinosaurios no van a desaparecer",
@@ -6,13 +35,6 @@
         "anio": "09/12/2023",
         "foto": "",
         "link": "https://www.revistacrisis.com.ar/articulo/los-dinosaurios-no-van-a-desaparecer"
-      },
-      {
-        "titulo": "La violencia avanza: Informe a un año del atentado a Cristina Fernández de Kirchner",
-        "resumen": "El intento de asesinato a la principal figura política del país pone sobre la mesa una pregunta urgente: ¿de dónde viene la violencia política hoy? Los avances en la causa judicial muestran día a día la existencia de un trasfondo organizacional y de conexiones que descartan la posibilidad de que estemos ante un lobo solitario. En esta investigación proponemos leer el intento de magnicidio en el marco del contexto geopolítico signado por la guerra en Ucrania. Y exploramos algunos indicios sorprendentes que muestran la consistencia de las redes neonazis trasnacionales, especialmente las que se articulan en torno al Batallón Azov.",
-        "anio": "20/09/2022",
-        "foto": "",
-        "link": "https://www.revistacrisis.com.ar/articulo/la-violencia-avanza"
       },
       {
         "titulo": "Quién mató a Facundo",
@@ -31,6 +53,13 @@
     ],
     "2022": [
       {
+        "titulo": "El atentado a CFK y la guerra que ya llegó",
+        "resumen": "El intento de asesinato a la principal figura política del país pone sobre la mesa una pregunta urgente: ¿de dónde viene la violencia política hoy? Los avances en la causa judicial muestran día a día la existencia de un trasfondo organizacional y de conexiones que descartan la posibilidad de que estemos ante un lobo solitario. En esta investigación proponemos leer el intento de magnicidio en el marco del contexto geopolítico signado por la guerra en Ucrania. Y exploramos algunos indicios sorprendentes que muestran la consistencia de las redes neonazis trasnacionales, especialmente las que se articulan en torno al Batallón Azov.",
+        "anio": "20/09/2022",
+        "foto": "",
+        "link": "https://revistacrisis.com.ar/notas/el-atentado-cfk-y-la-guerra-que-ya-llego"
+      },
+      {
         "titulo": "La madre de todas las rentas",
         "resumen": "La pandemia primero y la guerra después provocaron el mayor aumento en el precio de la soja en lo que va del siglo XXI. Eso acarrea una renta “inesperada” y “extraordinaria” para la Argentina, gracias a su perfil agroexportador. Sin embargo, una buena parte de esas tan preciadas divisas nunca ingresan al país porque unos pocos vivos las piratean en el camino. Aquí revelamos cómo los traficantes de granos del mundo contemporáneo se enfrentan al Estado en una verdadera 'puja extractiva'. Además, te contamos cuál es la solución democrática, antes de que las instituciones se desfonden.",
         "anio": "29/05/2022",
@@ -39,14 +68,14 @@
       }
     ],
     "2021": [],
-    "2020": [
-      {
-        "titulo": "El conflicto por la tierra en Guernica",
-        "resumen": "La toma de Guernica se convirtió en el foco de atención del cada vez más intenso conflicto por la tierra y la vivienda en el conurbano bonaerense. La mayoría de los medios y del sistema político acusa a los ocupantes por utilizar un método ilegal, y la justicia decretó el desalojo de más de 2000 familias sin techo para este miércoles. Pero nadie se pregunta quiénes son los supuestos dueños legítimos de los terrenos en disputa. Esta investigación intenta aportar información al respecto. ¿Habrá una solución democrática o volveremos a presenciar las escenas dantescas del Parque Indoamericano en 2010?",
-        "anio": "20/09/2020",
-        "foto": "",
-        "link": "https://www.revistacrisis.com.ar/articulo/el-conflicto-por-la-tierra-en-guernica"
-      },
+    "2020": [  {
+      "titulo": "El conflicto por la tierra en Guernica",
+      "resumen": "La toma de Guernica se convirtió en el foco de atención del cada vez más intenso conflicto por la tierra y la vivienda en el conurbano bonaerense. La mayoría de los medios y del sistema político acusa a los ocupantes por utilizar un método ilegal, y la justicia decretó el desalojo de más de 2000 familias sin techo para este miércoles. Pero nadie se pregunta quiénes son los supuestos dueños legítimos de los terrenos en disputa. Esta investigación intenta aportar información al respecto. ¿Habrá una solución democrática o volveremos a presenciar las escenas dantescas del Parque Indoamericano en 2010?",
+      "anio": "20/09/2020",
+      "foto": "",
+      "link": "https://www.revistacrisis.com.ar/articulo/el-conflicto-por-la-tierra-en-guernica"
+    }],
+    "2019": [
       {
         "titulo": "La cuestión evangélica",
         "resumen": "Según la Segunda Encuesta Nacional de Creencias Religiosas publicada hace pocos días, el único credo que viene creciendo a ritmo acelerado son los evangélicos quienes ya constituyen el 15,3% de la población, cuando hace diez años apenas eran el 9%. Mientras tanto la comunidad católica sigue contrayéndose, a pesar del Papa argentino. Pero la novedad más significativa es el papel político que el movimiento evangélico ha decidido asumir: movilización callejera, lobby en las instituciones, poder mediático y participación electoral. ¿Quiénes son los evangélicos en la Argentina? ¿Cuáles son sus tendencias principales? ¿Por qué los sectores conservadores ganaron la hegemonía y cómo se cuece el fundamentalismo en su interior? Lo que sigue es una investigación minuciosa para desarmar los estereotipos y comprender de dónde viene y hacia donde va ese aluvión religioso que asombra.",
