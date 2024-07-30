@@ -1,25 +1,69 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import styles from "./Landing.module.css";
 import AppBar from "../AppBar/AppBar";
 
+import publicacionesData from "../../data/publicaciones.json"; // Asegúrate de que la ruta sea correcta
+
+
 const Landing = () => {
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [publicaciones, setPublicaciones] = useState([]);
+
+    useEffect(() => {
+        // Convertir el JSON en un array de publicaciones ordenado por fecha
+        const publicacionesArray = [];
+        Object.values(publicacionesData).forEach(yearPublicaciones => {
+            publicacionesArray.push(...yearPublicaciones);
+        });
+
+        // Ordenar las publicaciones por fecha correcta
+        publicacionesArray.sort((a, b) => {
+            const dateA = a.anio.split('/').reverse().join('-'); // Convierte "dd/mm/yyyy" a "yyyy-mm-dd"
+            const dateB = b.anio.split('/').reverse().join('-');
+            return new Date(dateB) - new Date(dateA);
+        });
+
+        setPublicaciones(publicacionesArray);
+    }, []);
+
+    const handlePrevious = () => {
+        setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : publicaciones.length - 1));
+    };
+
+    const handleNext = () => {
+        setCurrentIndex((prevIndex) => (prevIndex < publicaciones.length - 1 ? prevIndex + 1 : 0));
+    };
+
+    const currentPublicacion = publicaciones[currentIndex];
 
 
     return (
         <>
-                <AppBar></AppBar>
+            <AppBar></AppBar>
 
             <section className={styles.background}>
                 <section className={styles.landing}>
                     <div className={styles.mainBoard}>
                         <section className={styles.header}> <h1 className={styles.edipo}>[EdIPo]</h1><h3 className={styles.name}>Equipo de Investigación Política</h3> <h6 className={styles.texto}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet commodi incidunt nisi quaerat vero a hic eum unde ipsum nulla eos nemo consectetur, voluptatum nihil enim provident veniam odio. Non?</h6> </section>
-                        <Link to={'../publicaciones'}>
-                            <section className={styles.news}>
-                                <h2 className={styles.newsTitle}>¿Quién mató a Facundo?</h2>
-                                <h4 className={styles.newsBajada}>10/05/</h4>
+                        {currentPublicacion && (
 
+                            <section className={styles.news}>
+                            <section className={styles.newsContainer}>
+
+                                <button onClick={handlePrevious} className={styles.botonNews}>{"<"}</button>
+                                <div className={styles.newsData}>
+                                    <h2 className={styles.newsTitle}>{currentPublicacion.titulo}</h2>
+                                    <h4 className={styles.newsBajada}>{currentPublicacion.anio}</h4>
+
+                                    <Link to={currentPublicacion.link}><h3  className={styles.leer}>Leer</h3></Link>
+                                </div>
+                                <button onClick={handleNext} className={styles.botonNews}>{">"}</button>
                             </section>
-                        </Link>
+                            </section>
+
+                        )}
                         <section className={styles.investigaciones}>
                             <h2 className={styles.title}>PROYECTOS <br /> / TECNOPOLÍTICAS</h2>
                             {/* <div className={styles.boxList}>

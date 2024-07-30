@@ -4,38 +4,104 @@
 }
 
 .background{
-    width: 0;
-    height: 0;
-    position: fixed;
+    box-sizing: border-box;
     z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
 }
 
-.landing {
-    position: fixed;
-    height: 93vh;
+.publicaciones {
     background: radial-gradient(circle at 50% 0%, #d3d3d3, #a9a9a9, #696969);    width: 100vw;
     bottom: 0;
     left: 0;
     z-index: 1000;
+    min-width: 100%;
+    min-height: 80vh;
 }
 
+.main{display: flex;
+gap: 2vw;}
+.each{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+ 
+    margin: 1vh 0vw;
+    border-radius: 48px;
+    text-align: left;
+    padding: 1vh 2vw;
+    max-width: 16vw;
+    color: #1a1a1a;
+    background-color: #d3d3d3;
+    border: solid 1px #1a1a1a;
+}
+.selected{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: #1a1a1a;
+    color: #d3d3d3;
+}
+
+.each:hover{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: #1a1a1a;
+    color: #d3d3d3;
+}
+ 
+.header{
+    padding-top: 10vh;
+    margin: 0;
+    font-size: 1.3rem;
+    text-align: left;
+    color: #2e2c2f;
+  }
+
+  .publicacion{
+    flex-direction: column;
+    box-sizing: border-box;
+    max-width: 35vw;
+    margin: auto;
+    text-align: justify;
+    color: #1a1a1a;
+  }
+
+  .post{
+    max-width: 40vw;
+    padding: 2vw 3vh;
+    background-color: #1a1a1a;
+    color: #a9a9a9;
+    border-radius: 14px;
+    height: fit-content;
+    text-align: justify;
+    padding-top: 6vh;
+  }
+.postTitle{font-size: 2rem;}
+
+  .title, .year, .link, .postTitle, .postLink, .postDate, .postLink {
+    margin: 0
+  }
+
 @media (min-width: 768px) {
-    .landing{
+    .publicaciones{
         width: 80vw;
         left: 10vw;
-    height: 80vh;
     top: 10vh;
     border-radius: 3px;
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Sombra común */
     padding: 5vh 4vw;
+    min-width: 80vw;
     }
     
     .background{
         background: radial-gradient(circle at top left, #333333, #1a1a1a, #000000);
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
+        width: 100%;
         top: 0;
         left: 0;
+        padding: 2vh 4vw;
     }
     }

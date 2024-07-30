@@ -76,11 +76,17 @@ padding-left: 5vw;}
 }
   
   @media (min-width: 768px) {
+
+    .background{
+      padding-top: 2vh;
+      padding-left: 3vw;
+    }
     .investigaciones {
+      position: initial;
       width: 85vw;
       left: 5vw;
   height: 75vh;
-  top: 5vh;
+  top: 2vh;
       border-radius: 3px;
       box-shadow: 0 45px 40px rgba(0, 0, 0, 0.7);
       padding: 5vh 4vw;
