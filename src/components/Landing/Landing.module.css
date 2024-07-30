@@ -70,14 +70,11 @@ box-sizing: border-box;
     border-radius: 120px;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 120px;
-    width: 50vw;
-    text-align: left ;
-    font-size: 0.8rem;
-    align-content: center;
-    padding-left: 5vw;
+    width: 60vw;
+   
     min-height: 25vh;
-color: #ecede7;
-text-shadow: 1px 1px 7px  rgba(253, 253, 253, 0.4);
+    padding-left: 2vw;
+
 box-shadow: 5px 0px 10px 1px rgba(253, 253, 253, 0.1),
     -10px 0px 50px  rgba(253, 253, 253, 0.192),
      5px 5px 60px inset rgba(254, 252, 252, 0.1);
@@ -85,11 +82,45 @@ box-shadow: 5px 0px 10px 1px rgba(253, 253, 253, 0.1),
 
     }
 
+    .newsContainer{
+        display: flex;
+    align-content: center;
+ align-self: center;
+        justify-items: center;
+    max-width: 55vw;
+padding-top: 6vh;}
+
+    .newsData{ 
+        padding-left: 2vw;
+        max-width: 45vw;
+        text-align: left ;
+        font-size: 0.8rem;
+        align-content: center;
+        color: #ecede7;
+text-shadow: 1px 1px 7px  rgba(253, 253, 253, 0.4);
+
+    }
+    .botonNews{
+        height: 5vh;
+        width: 1vw;
+        border-radius: 360px;
+        box-sizing: border-box;
+        align-self: center;
+        justify-items: center;
+        margin: 0;
+    }
+
+    .leer{
+        margin: 0;
+        text-align: center;
+text-justify: center;    }
+
 .newsTitle{
     font-size: 1.5rem;
     width: 45vw;
 margin: 0;
 box-sizing: border-box;
+max-width: 45vw;
 }
     
     .newsBajada{
@@ -296,6 +327,20 @@ padding-top: 2vh;
     top: 54vh;
     text-shadow: 1px 1px 7px  rgba(253, 253, 253, 0.4);
 }
+
+.newsContainer{
+max-width: 50vw;
+padding-top: 4vh;}
+
+.newsData{ 
+    padding-left: 1vw;
+    max-width: 40vw;
+    font-size: 0.8rem;
+}
+
+.newsTitle{
+    max-width: 28vw;
+}
 .investigaciones{
     position: absolute;
     top: 21vh;
@@ -374,6 +419,20 @@ font-size: 2.5rem;
         top: 54vh;
    
     }
+
+    .newsContainer{
+        max-width: 50vw;
+        padding-top: 6vh;}
+        
+        .newsData{ 
+            padding-left: 2vw;
+            max-width: 40vw;
+            font-size: 0.8rem;
+        }
+        
+        .newsTitle{
+            max-width: 20vw;
+        }
 
 
 }
