@@ -1,4 +1,4 @@
-.background{
+.background {
     position: absolute;
     top: 0;
     left: 0;
@@ -6,17 +6,16 @@
     width: 100%;
     z-index: 0;
     background: radial-gradient(circle at top left, #333333, #1a1a1a, #000000);
-padding-top: 1vh;
-padding: 2vh 2vw;
-min-height: 100vh;
+    padding-top: 1vh;
+    padding: 2vh 2vw;
+    min-height: 100vh;
 }
 
 .landing {
-  
-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.edipo{
+.edipo {
     margin: 0;
     text-align: left;
     font-size: 5rem;
@@ -24,28 +23,27 @@ box-sizing: border-box;
     color: #231f20;
 }
 
-.name{
+.name {
     margin: 0;
     text-align: left;
     color: #231f20;
     padding-top: 2vh;
 }
 
-.texto{
+.texto {
     margin: 0;
     width: 55vw;
     text-align: justify;
     padding-top: 1vh;
     padding-bottom: 5vh;
     box-sizing: border-box;
-
 }
 
-
-.header{  
-    background: radial-gradient(circle at 50% 0%, #c1bfc1, #d6d4d7, #737171);   
+.header {
+    background: radial-gradient(circle at 50% 0%, #c1bfc1, #d6d4d7, #737171);
     border-radius: 3px;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Sombra común */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    /* Sombra común */
     padding: 6vh 10vw;
     min-height: 45vh;
     border-bottom-left-radius: 180px;
@@ -54,6 +52,7 @@ box-sizing: border-box;
     padding-top: 10vh;
     margin-right: 4vw;
 }
+
 .title {
     margin: 0;
     color: #d7d5d8;
@@ -61,7 +60,6 @@ box-sizing: border-box;
     padding-top: 3vh;
     text-shadow: 1px 1px 15px rgba(255, 255, 255, 0.409);
     font-size: 2rem;
-
 }
 
 .news {
@@ -71,78 +69,73 @@ box-sizing: border-box;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 120px;
     width: 60vw;
-   
     min-height: 25vh;
     padding-left: 2vw;
+    box-shadow: 5px 0px 10px 1px rgba(253, 253, 253, 0.1),
+        -10px 0px 50px rgba(253, 253, 253, 0.192),
+        5px 5px 60px inset rgba(254, 252, 252, 0.1);
+    box-sizing: border-box;
+}
 
-box-shadow: 5px 0px 10px 1px rgba(253, 253, 253, 0.1),
-    -10px 0px 50px  rgba(253, 253, 253, 0.192),
-     5px 5px 60px inset rgba(254, 252, 252, 0.1);
-     box-sizing: border-box;
-
-    }
-
-    .newsContainer{
-        display: flex;
+.newsContainer {
+    display: flex;
     align-content: center;
- align-self: center;
-        justify-items: center;
+    align-self: center;
+    justify-items: center;
     max-width: 55vw;
-padding-top: 6vh;}
+    padding-top: 6vh;
+}
 
-    .newsData{ 
-        padding-left: 2vw;
-        max-width: 45vw;
-        text-align: left ;
-        font-size: 0.8rem;
-        align-content: center;
-        color: #ecede7;
-text-shadow: 1px 1px 7px  rgba(253, 253, 253, 0.4);
+.newsData {
+    padding-left: 2vw;
+    max-width: 45vw;
+    text-align: left;
+    font-size: 0.8rem;
+    align-content: center;
+    color: #ecede7;
+    text-shadow: 1px 1px 7px rgba(253, 253, 253, 0.4);
+}
 
-    }
-    .botonNews{
-        height: 5vh;
-        width: 1vw;
-        border-radius: 360px;
-        box-sizing: border-box;
-        align-self: center;
-        justify-items: center;
-        margin: 0;
-    }
+.botonNews {
+    height: 5vh;
+    width: 1vw;
+    border-radius: 360px;
+    box-sizing: border-box;
+    align-self: center;
+    justify-items: center;
+    margin: 0;
+}
 
-    .leer{
-        margin: 0;
-        text-align: center;
-text-justify: center;    }
+.leer {
+    margin: 0;
+    text-align: center;
+    text-justify: center;
+}
 
-.newsTitle{
+.newsTitle {
     font-size: 1.5rem;
     width: 45vw;
-margin: 0;
-box-sizing: border-box;
-max-width: 45vw;
+    margin: 0;
+    box-sizing: border-box;
+    max-width: 45vw;
 }
-    
-    .newsBajada{
-        margin: 0;
-        text-align: justify;
-        width: 17vw;
-        box-sizing: border-box;
 
-    }
-    
+.newsBajada {
+    margin: 0;
+    text-align: justify;
+    width: 17vw;
+    box-sizing: border-box;
+}
 
 .mainBoard {
     display: grid;
     box-sizing: border-box;
-
 }
 
-
-.investigaciones{
+.investigaciones {
     background: radial-gradient(circle at top, #333333, #231f20, #000000);
     border-top-right-radius: 20px;
-    border-bottom-right-radius: 120px ;
+    border-bottom-right-radius: 120px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 35px;
     margin: 3vh 5vw;
@@ -151,7 +144,10 @@ max-width: 45vw;
     box-sizing: border-box;
 }
 
-.title{font-size: 1.7rem;}
+.title {
+    font-size: 1.7rem;
+}
+
 .boxList {
     padding: 3vh 0vw;
     display: grid;
@@ -159,7 +155,6 @@ max-width: 45vw;
     gap: 1vw;
     width: 100%;
     box-sizing: border-box;
-
 }
 
 .box {
@@ -171,43 +166,40 @@ max-width: 45vw;
     padding: 0.5vh 0.5vh;
 }
 
-.lightBox{
-border: solid 2px #535252;
-border-radius: 46px;
-height: 22.5vh;
-margin: 0;
-font-size: 1rem;
-padding-top: 2vh;
-
+.lightBox {
+    border: solid 2px #535252;
+    border-radius: 46px;
+    height: 22.5vh;
+    margin: 0;
+    font-size: 1rem;
+    padding-top: 2vh;
 }
 
-.lightBox:hover{
+.lightBox:hover {
     border: solid 2px #86a0e1;
     box-shadow: 0 0 1px #86a0e1, 0 0 10px #86a0e1;
-    text-shadow: 0 0 3px #86a0e1, 0 0 5px #86a0e1, 0 0 10px #5973b5, 0 0 15px #86a0e1; /* Sombra difuminada para el texto */
-
+    text-shadow: 0 0 3px #86a0e1, 0 0 5px #86a0e1, 0 0 10px #5973b5, 0 0 15px #86a0e1;
+    /* Sombra difuminada para el texto */
 }
-
 
 .recursos {
     bottom: 7vh;
     border-radius: 3px;
-   border-top-right-radius: 80px;
-   border-top-left-radius: 40px;
-   border-bottom-left-radius: 120px ;
+    border-top-right-radius: 80px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 120px;
     color: #ecede7;
     margin: 3vh 5vw;
     padding: 2vh 6vw;
     margin-top: 0vh;
     box-sizing: border-box;
-    background-color: white;   
+    background-color: white;
 }
 
 .recursosList {
- display: flex;
- justify-content: center;
- gap: 1vw;
-
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
 }
 
 .recursosTitle {
@@ -216,9 +208,11 @@ padding-top: 2vh;
     box-sizing: border-box;
     font-size: 1.7rem;
     text-align: left;
-
 }
-.button1, .button2, .button3 {
+
+.button1,
+.button2,
+.button3 {
     background-color: #d6d4d7;
     color: #231f20;
     margin: 0;
@@ -231,163 +225,162 @@ padding-top: 2vh;
     padding: 1vh 2vw;
     margin-top: 2vh;
     box-sizing: border-box;
-
 }
-
 
 .button1 {
     color: #231f20;
-    background: url('../../svg/mapa.svg') no-repeat center center ; /* Añadir la ruta correcta a tu SVG */
-    background-size:cover; /* Asegura que el SVG cubra todo el fondo */
+    background: url('../../svg/mapa.svg') no-repeat center center;
+    /* Añadir la ruta correcta a tu SVG */
+    background-size: cover;
+    /* Asegura que el SVG cubra todo el fondo */
     box-shadow: inset -5px -10px 15px rgba(54, 54, 54, 0.1);
     box-sizing: border-box;
-
 }
 
 .button2 {
-        color: #231f20;
-        background: url('../../svg/Inteligencia.svg') no-repeat center center; /* Añadir la ruta correcta a tu SVG */
-        background-size:cover; /* Asegura que el SVG cubra todo el fondo */
-        box-sizing: border-box;
+    color: #231f20;
+    background: url('../../svg/Inteligencia.svg') no-repeat center center;
+    /* Añadir la ruta correcta a tu SVG */
+    background-size: cover;
+    /* Asegura que el SVG cubra todo el fondo */
+    box-sizing: border-box;
+    box-shadow: inset -5px -10px 15px rgba(54, 54, 54, 0.1);
+}
 
-        box-shadow: inset -5px -10px 15px rgba(54, 54, 54, 0.1);}
-        
 .button1:hover {
     color: #231f20;
     font-size: 0;
-    background: url('../../svg/mapa.svg') no-repeat center center; /* Añadir la ruta correcta a tu SVG */
-    background-size:cover; /* Asegura que el SVG cubra todo el fondo */
-   }
+    background: url('../../svg/mapa.svg') no-repeat center center;
+    /* Añadir la ruta correcta a tu SVG */
+    background-size: cover;
+    /* Asegura que el SVG cubra todo el fondo */
+}
 
 .button2:hover {
-        color: #231f20;
-        font-size: 0;
-        background: url('../../svg/Inteligencia.svg') no-repeat center center; /* Añadir la ruta correcta a tu SVG */
-        background-size:cover; /* Asegura que el SVG cubra todo el fondo */
-       }
+    color: #231f20;
+    font-size: 0;
+    background: url('../../svg/Inteligencia.svg') no-repeat center center;
+    /* Añadir la ruta correcta a tu SVG */
+    background-size: cover;
+    /* Asegura que el SVG cubra todo el fondo */
+}
 
 @media (min-width: 768px) {
-.landing{
+    .landing {}
 
+    .background {
+        background: radial-gradient(circle at top left, #333333, #231f20, #000000);
+        min-height: 100vh;
+        width: 100vw;
+        padding: 0vh 1vw;
+    }
 
+    .header {
+        margin: 0;
+        padding: 4vh 1vw;
+        padding-bottom: 0;
+        max-height: 70vh;
+        height: 70vh;
+    }
 
-}
+    .edipo {
+        padding-top: 0vh;
+        font-size: 6rem;
+        text-align: left;
+        padding-left: 1vw;
+        margin-top: 10vh;
+    }
 
-.background{
-    background: radial-gradient(circle at top left, #333333, #231f20, #000000);
-    min-height: 100vh;
-    width: 100vw;   
-    padding: 0vh 1vw;
-}
+    .name {
+        margin: 0;
+        padding-left: 4vw;
+        padding-top: 1vh;
+    }
 
-.header{
-    margin: 0;
-    padding: 4vh 1vw;
-    padding-bottom: 0;
-    max-height: 70vh;
-    height: 70vh;
+    .texto {
+        margin: 0;
+        max-width: 32vw;
+        text-align: justify;
+        padding-left: 4vw;
+    }
 
-}
+    .news {
+        box-shadow: none;
+        padding-left: 6vw;
+        min-height: 35vh;
+        max-width: 45vw;
+    }
 
-.edipo{
-    padding-top: 0vh;
-    font-size: 6rem;
-    text-align: left;
-    padding-left: 1vw;
-    margin-top:10vh;
-}
+    .news:hover {
+        box-shadow: 5px 0px 10px 1px rgba(253, 253, 253, 0.1),
+            -10px 0px 50px rgba(253, 253, 253, 0.192),
+            5px 5px 60px inset rgba(254, 252, 252, 0.1);
+        width: 46vw;
+        height: 36vh;
+        top: 54vh;
+        text-shadow: 1px 1px 7px rgba(253, 253, 253, 0.4);
+    }
 
-.name{
-    margin:0;
-    padding-left: 4vw;
-    padding-top: 1vh;
-}
+    .newsContainer {
+        max-width: 50vw;
+        padding-top: 4vh;
+    }
 
-.texto{
-    margin: 0;
-    max-width: 32vw;
-    text-align: justify;
-    padding-left: 4vw;
+    .newsData {
+        padding-left: 1vw;
+        max-width: 40vw;
+        font-size: 0.8rem;
+    }
 
-}
+    .newsTitle {
+        max-width: 28vw;
+    }
 
-.news{
-    box-shadow: none;
-    padding-left: 6vw;
-    min-height: 35vh;
-    max-width: 45vw;
-}
+    .investigaciones {
+        position: absolute;
+        top: 21vh;
+        right: 2vw;
+        height: 32vh;
+        width: 40vw;
+        background: radial-gradient(circle at top, #333333, #231f20, #000000);
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 120px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 35px;
+    }
 
-.news:hover{
-    box-shadow: 5px 0px 10px 1px rgba(253, 253, 253, 0.1),
-    -10px 0px 50px  rgba(253, 253, 253, 0.192),
-     5px 5px 60px inset rgba(254, 252, 252, 0.1);
-    width: 46vw;
-    height: 36vh;
-    top: 54vh;
-    text-shadow: 1px 1px 7px  rgba(253, 253, 253, 0.4);
-}
+    .mainBoard {
+        height: 60vh;
+        padding: 2vh 2vw;
+        padding-right: 5vw;
+    }
 
-.newsContainer{
-max-width: 50vw;
-padding-top: 4vh;}
+    .recursos {
+        position: absolute;
+        right: 0vw;
+        color: #ecede7;
+        padding-top: 2vh;
+        width: 42vw;
+        padding-left: 2vw;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
 
-.newsData{ 
-    padding-left: 1vw;
-    max-width: 40vw;
-    font-size: 0.8rem;
-}
+    .recursosTitle {
+        margin-left: 2vw;
+        text-align: left;
+        color: white;
+        text-shadow: 1px 1px 10px white;
+        font-size: 2.5rem;
+    }
 
-.newsTitle{
-    max-width: 28vw;
-}
-.investigaciones{
-    position: absolute;
-    top: 21vh;
-    right: 2vw;
-    height: 32vh;
-    width: 40vw;
-    background: radial-gradient(circle at top, #333333, #231f20, #000000);
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 120px ;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 35px;
-}
-
-.mainBoard{
-    height: 60vh;
-    padding: 2vh 2vw;
-    padding-right: 5vw;
-
-}
-
-.recursos{
-    position: absolute;
-    right: 0vw;
-    color: #ecede7;
-    padding-top: 2vh;
-    width: 42vw;
-    padding-left: 2vw;
-    /* From https://css.glass */
-background: rgba(255, 255, 255, 0.1);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(30px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-
-.recursosTitle{
-    margin-left: 2vw;
-    text-align: left;
-    color: white;
-    text-shadow: 1px 1px 10px  white;
-font-size: 2.5rem;
-}
-
-
-
-    .button1, .button2, .button3 {
+    .button1,
+    .button2,
+    .button3 {
         width: 2vw;
         color: #d6d4d7;
         margin: 0;
@@ -398,41 +391,33 @@ font-size: 2.5rem;
         padding: 1vh 2vw;
         margin-top: 2vh;
     }
-  
-
-
-
 }
 
 @media (min-width: 1080px) {
-
-
-    .news{
+    .news {
         padding-left: 6vw;
         min-height: 35vh;
         max-width: 35vw;
     }
-    
-    .news:hover{
+
+    .news:hover {
         width: 36vw;
         height: 36vh;
         top: 54vh;
-   
     }
 
-    .newsContainer{
+    .newsContainer {
         max-width: 50vw;
-        padding-top: 6vh;}
-        
-        .newsData{ 
-            padding-left: 2vw;
-            max-width: 40vw;
-            font-size: 0.8rem;
-        }
-        
-        .newsTitle{
-            max-width: 20vw;
-        }
+        padding-top: 6vh;
+    }
 
+    .newsData {
+        padding-left: 2vw;
+        max-width: 40vw;
+        font-size: 0.8rem;
+    }
 
+    .newsTitle {
+        max-width: 20vw;
+    }
 }

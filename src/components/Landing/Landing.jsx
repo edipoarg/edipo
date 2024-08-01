@@ -50,17 +50,17 @@ const Landing = () => {
                         {currentPublicacion && (
 
                             <section className={styles.news}>
-                            <section className={styles.newsContainer}>
+                                <section className={styles.newsContainer}>
 
-                                <button onClick={handlePrevious} className={styles.botonNews}>{"<"}</button>
-                                <div className={styles.newsData}>
-                                    <h2 className={styles.newsTitle}>{currentPublicacion.titulo}</h2>
-                                    <h4 className={styles.newsBajada}>{currentPublicacion.anio}</h4>
+                                    <button onClick={handlePrevious} className={styles.botonNews}>{"<"}</button>
+                                    <div className={styles.newsData}>
+                                        <h2 className={styles.newsTitle}>{currentPublicacion.titulo}</h2>
+                                        <h4 className={styles.newsBajada}>{currentPublicacion.anio}</h4>
 
-                                    <Link to={currentPublicacion.link}><h3  className={styles.leer}>Leer</h3></Link>
-                                </div>
-                                <button onClick={handleNext} className={styles.botonNews}>{">"}</button>
-                            </section>
+                                        <Link to={currentPublicacion.link}><h3 className={styles.leer}>Leer</h3></Link>
+                                    </div>
+                                    <button onClick={handleNext} className={styles.botonNews}>{">"}</button>
+                                </section>
                             </section>
 
                         )}

@@ -1,56 +1,75 @@
-.background{
-    width: 0;
-    height: 0;
-    position: fixed;
-    z-index: 0;
-}
-
-.colabora {
-    position: fixed;
-    height: 93vh;
-    background: radial-gradient(circle at 50% 0%, #463f41, #231f20, #100f10);    width: 100vw;
-    bottom: 0;
+/* Estilo general del fondo */
+.background {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
     left: 0;
-    z-index: 1000;
-    color: #ecede7;
-    padding-top: 10vh;
+    min-height: 100%;
+    width: 100%;
+    background: radial-gradient(circle at top left, #131212, #0b0b0b, #000000);
 }
 
-.title{
-    padding-top: 10vh;
-    text-align: left;
-    padding-left: 15vw;
-    padding-right: 15vw;
-}
-
-.desc, .desc2, .arg, .world, .alias {
-    text-align: left;
-    padding-left: 15vw;
-
-}
-
-.paymentButtons, .paypalButtons{
-    text-align: left;
-    padding-left: 15vw; 
-}
-
-@media (min-width: 768px) {
-    .colabora{
-        width: 80vw;
-        left: 5vw;
-    height: 80vh;
-    top: 10vh;
-    border-radius: 3px;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Sombra común */
+/* Contenedor principal del componente */
+.colabora {
+    background: radial-gradient(circle at 50% 0%, #d3d3d3, #a9a9a9, #696969);
+    width: 80vw;
+    margin: auto;
     padding: 5vh 4vw;
-    }
-    
-    .background{
-        background: radial-gradient(circle at top left, #131212, #0b0b0b, #000000);
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-    }
+    min-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo del título principal */
+.title {
+    font-size: 2rem;
+    color: #2e2c2f;
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+/* Estilo de las descripciones */
+.desc,
+.desc2 {
+    color: #1a1a1a;
+    text-align: center;
+    margin: 1vh 0;
+}
+
+/* Estilo de secciones de pagos */
+.paymentButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.paymentButton {
+    background-color: #1a1a1a;
+    color: #d3d3d3;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.paymentButton:hover {
+    background-color: #333333;
+}
+
+/* Estilo de botón de PayPal */
+.paypalButton {
+    background-color: #0070ba;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 1rem 0;
+}
+
+.paypalButton:hover {
+    background-color: #005a9e;
+}

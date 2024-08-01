@@ -1,41 +1,58 @@
-.background{
-    width: 0;
-    height: 0;
-    position: fixed;
-    z-index: 0;
-}
-
-.contato {
-    position: fixed;
-    height: 93vh;
-    background: radial-gradient(circle at 50% 0%, #d3d3d3, #a9a9a9, #696969);    width: 100vw;
-    bottom: 0;
+/* Estilo general del fondo */
+.background {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
     left: 0;
-    z-index: 1000;
+    min-height: 100%;
+    width: 100%;
+    background: radial-gradient(circle at top left, #333333, #1a1a1a, #000000);
 }
 
-.header, .tematica{
-    color: #d3d3d3;
-    text-align: left;
-}
-
-@media (min-width: 768px) {
-    .contacto{
-        width: 80vw;
-        left: 10vw;
-    height: 80vh;
-    top: 10vh;
-    border-radius: 3px;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Sombra común */
+/* Contenedor principal del componente */
+.contacto {
+    background: radial-gradient(circle at 50% 0%, #d3d3d3, #a9a9a9, #696969);
+    width: 80vw;
+    margin: auto;
     padding: 5vh 4vw;
-    }
-    
-    .background{
-        background: radial-gradient(circle at top left, #333333, #1a1a1a, #000000);
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-    }
+    min-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo del header */
+.header {
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.header h2 {
+    margin: 0;
+    color: #2e2c2f;
+}
+
+/* Estilo de las secciones temáticas */
+.tematica {
+    margin-bottom: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #1a1a1a;
+}
+
+.tematica h3 {
+    font-size: 1.5rem;
+    color: #333333;
+}
+
+.tematica h5 {
+    font-size: 1rem;
+    color: #1a1a1a;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+/* Iconos dentro de la sección */
+.tematica svg {
+    margin-bottom: 1rem;
+}

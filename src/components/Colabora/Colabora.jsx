@@ -18,37 +18,37 @@ const Colabora = () => {
     return (
         <section className={styles.background}>
 
-        <section className={styles.colabora}>
-            <h2 className={styles.title}>{titulo}</h2>
-            <h5 className={styles.desc}>{descripcion1}</h5>
-            <h5 className={styles.desc2}>{descripcion2}</h5>
+            <section className={styles.colabora}>
+                <h2 className={styles.title}>{titulo}</h2>
+                <h5 className={styles.desc}>{descripcion1}</h5>
+                <h5 className={styles.desc2}>{descripcion2}</h5>
 
-            <h3 className={styles.arg}>{desdeArgentina}</h3>
-            <h5 className={styles.alias}>{aliasTransferencia}</h5>
+                <h3 className={styles.arg}>{desdeArgentina}</h3>
+                <h5 className={styles.alias}>{aliasTransferencia}</h5>
 
-            <h3 className={styles.world}>{desdeOtrosPaises}</h3>
-            <a
-                href={paypalUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.paypalButton}
-            >
-                {paypalTexto}
-            </a>
+                <h3 className={styles.world}>{desdeOtrosPaises}</h3>
+                <a
+                    href={paypalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.paypalButton}
+                >
+                    {paypalTexto}
+                </a>
 
-            <h3>{mediosTexto}</h3>
-            <div className={styles.paymentButtons}>
-                <h4>{pagoMensualTexto}</h4>
-                {montosMensuales.map(monto => (
-                    <button key={monto} className={styles.paymentButton}>${monto}</button>
-                ))}
+                <h3>{mediosTexto}</h3>
+                <div className={styles.paymentButtons}>
+                    <h4>{pagoMensualTexto}</h4>
+                    {montosMensuales.map(monto => (
+                        <button key={monto} className={styles.paymentButton}>${monto}</button>
+                    ))}
 
-                <h4>{pagoUnicoTexto}</h4>
-                {montosUnicos.map(monto => (
-                    <button key={monto} className={styles.paymentButton}>${monto}</button>
-                ))}
-            </div>
-        </section>
+                    <h4>{pagoUnicoTexto}</h4>
+                    {montosUnicos.map(monto => (
+                        <button key={monto} className={styles.paymentButton}>${monto}</button>
+                    ))}
+                </div>
+            </section>
         </section>
 
     );

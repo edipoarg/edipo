@@ -1,81 +1,83 @@
-{    
-    "2019": [
-  {
-    "titulo": "La cuestión evangélica",
-    "resumen": "Según la Segunda Encuesta Nacional de Creencias Religiosas publicada hace pocos días, el único credo que viene creciendo a ritmo acelerado son los evangélicos quienes ya constituyen el 15,3% de la población, cuando hace diez años apenas eran el 9%. Mientras tanto la comunidad católica sigue contrayéndose, a pesar del Papa argentino. Pero la novedad más significativa es el papel político que el movimiento evangélico ha decidido asumir: movilización callejera, lobby en las instituciones, poder mediático y participación electoral. ¿Quiénes son los evangélicos en la Argentina? ¿Cuáles son sus tendencias principales? ¿Por qué los sectores conservadores ganaron la hegemonía y cómo se cuece el fundamentalismo en su interior? Lo que sigue es una investigación minuciosa para desarmar los estereotipos y comprender de dónde viene y hacia donde va ese aluvión religioso que asombra.",
-    "anio": "16/12/2019",
-    "foto": "",
-    "link": "https://www.revistacrisis.com.ar/articulo/la-cuestion-evangelica"
-  }
-],
-"2020": [  {
-  "titulo": "El conflicto por la tierra en Guernica",
-  "resumen": "La toma de Guernica se convirtió en el foco de atención del cada vez más intenso conflicto por la tierra y la vivienda en el conurbano bonaerense. La mayoría de los medios y del sistema político acusa a los ocupantes por utilizar un método ilegal, y la justicia decretó el desalojo de más de 2000 familias sin techo para este miércoles. Pero nadie se pregunta quiénes son los supuestos dueños legítimos de los terrenos en disputa. Esta investigación intenta aportar información al respecto. ¿Habrá una solución democrática o volveremos a presenciar las escenas dantescas del Parque Indoamericano en 2010?",
-  "anio": "20/09/2020",
-  "foto": "",
-  "link": "https://www.revistacrisis.com.ar/articulo/el-conflicto-por-la-tierra-en-guernica"
-}],
-"2022": [
-  {
-    "titulo": "La madre de todas las rentas",
-    "resumen": "La pandemia primero y la guerra después provocaron el mayor aumento en el precio de la soja en lo que va del siglo XXI. Eso acarrea una renta “inesperada” y “extraordinaria” para la Argentina, gracias a su perfil agroexportador. Sin embargo, una buena parte de esas tan preciadas divisas nunca ingresan al país porque unos pocos vivos las piratean en el camino. Aquí revelamos cómo los traficantes de granos del mundo contemporáneo se enfrentan al Estado en una verdadera 'puja extractiva'. Además, te contamos cuál es la solución democrática, antes de que las instituciones se desfonden.",
-    "anio": "29/05/2022",
-    "foto": "",
-    "link": "https://www.revistacrisis.com.ar/articulo/la-madre-de-todas-las-rentas"
-  },
-      {
-        "titulo": "El atentado a CFK y la guerra que ya llegó",
-        "resumen": "El intento de asesinato a la principal figura política del país pone sobre la mesa una pregunta urgente: ¿de dónde viene la violencia política hoy? Los avances en la causa judicial muestran día a día la existencia de un trasfondo organizacional y de conexiones que descartan la posibilidad de que estemos ante un lobo solitario. En esta investigación proponemos leer el intento de magnicidio en el marco del contexto geopolítico signado por la guerra en Ucrania. Y exploramos algunos indicios sorprendentes que muestran la consistencia de las redes neonazis trasnacionales, especialmente las que se articulan en torno al Batallón Azov.",
-        "anio": "20/09/2022",
-        "foto": "",
-        "link": "https://revistacrisis.com.ar/notas/el-atentado-cfk-y-la-guerra-que-ya-llego"
-      }
-    ],
-    "2023": [
-  {
-    "titulo": "La batalla por el 5G",
-    "resumen": "En la Argentina, las promesas del 5G todavía están en el aire. Detrás del titubeo que retarda su implementación, hay una intensa disputa geopolítica: Estados Unidos no está dispuesto a que China venda una sola antena más. ¿Hasta dónde se puede achicar el espacio de la soberanía?",
-    "anio": "05/05/2023",
-    "foto": "",
-    "link": "https://www.revistacrisis.com.ar/articulo/la-batalla-por-el-5g"
-  },
-  {
-    "titulo": "Quién mató a Facundo",
-    "resumen": "Susi Maresca trasmitió en vivo a través de su Instagram el video que se viralizó y fue instrumentado por los portales de noticias para construir la versión falsa que el propio Ministro de Seguridad porteño, Eugenio Burzaco, defendió públicamente apenas tres horas después de lo sucedido: “es un hecho lamentable, pero no tiene que ver con la acción policial”. Sin embargo, el testimonio de Maresca publicado por el Mapa de la Policía desmiente con claridad esa falsa hipótesis. Lo mismo queda explicitado en las declaraciones de Delia, también testigo directo del hecho. Y en el relato de Brisa, otra militante que participó de la asamblea.",
-    "anio": "11/08/2023",
-    "foto": "",
-    "link": "https://www.revistacrisis.com.ar/articulo/quien-mato-a-facundo"
-  },
-  {
-    "titulo": "Los dinosaurios no van a desaparecer",
-    "resumen": "Presentamos en estas páginas el primer informe del Registro de Ataques de la Derecha Argentina Radicalizada (RADAR), plataforma digital creada por la revista crisis para realizar un seguimiento colectivo y en tiempo real sobre el crecimiento de la violencia de ultraderecha en sincronía con su llegada al poder. Para construir nuevas formas de cuidado, lo primero es comprender el sentido estratégico de este verdadero desafío a la democracia.",
-    "anio": "09/12/2023",
-    "foto": "",
-    "link": "https://www.revistacrisis.com.ar/articulo/los-dinosaurios-no-van-a-desaparecer"
-  }
-  
-],
-
-  "2024":[    {
-    "titulo": "Mapa político del gobierno de Javier Milei",
-    "resumen": "Con la lupa puesta en la trayectoria de sus cien principales funcionarios, presentamos aquí una semblanza del primer gobierno libertario del mundo. Un pequeño círculo que tiene en su centro a los hermanos Milei, distintas vertientes del macrismo y también el tradicional nacionalismo reaccionario: quiénes componen el organigrama del gobierno que considera que el Estado es una asociación criminal.",
-    "anio": "13/03/2024",
-    "foto": "",
-    "link": "https://revistacrisis.com.ar/notas/mapa-politico-del-gobierno-de-javier-milei"
-  },
-  {
-    "titulo": "Capital Inhumano: los seis primeros meses del experimento libertario",
-    "resumen": "En continuidad con el mapa político del gobierno de Javier Milei publicado en la Crisis #61, en esta oportunidad hacemos zoom sobre el Ministerio de Capital Humano. Presentamos una radiografía política a seis meses de su creación, una pormenorizada revisión de la avanzada antiderechos en la administración pública y un análisis del proyecto frustrado del sector más conservador de la alianza ultraderechista.",
-    "anio": "24/06/2024",
-    "foto": "",
-    "link": "https://informes.revistacrisis.com.ar/capital-inhumano-experimento-libertario/"
-  },   {
-    "titulo": "La conexión alemana",
-    "resumen": "Con la lupa puesta en la trayectoria de sus cien principales funcionarios, presentamos aquí una semblanza del primer gobierno libertario del mundo. Un pequeño círculo que tiene en su centro a los hermanos Milei, distintas vertientes del macrismo y también el tradicional nacionalismo reaccionario: quiénes componen el organigrama del gobierno que considera que el Estado es una asociación criminal.",
-    "anio": "24/6/2024",
-    "foto": "",
-    "link": "https://revistacrisis.com.ar/notas/la-conexion-alemana"
-  },     
+{
+  "2019": [
+    {
+      "titulo": "La cuestión evangélica",
+      "resumen": "Según la Segunda Encuesta Nacional de Creencias Religiosas publicada hace pocos días, el único credo que viene creciendo a ritmo acelerado son los evangélicos quienes ya constituyen el 15,3% de la población, cuando hace diez años apenas eran el 9%. Mientras tanto la comunidad católica sigue contrayéndose, a pesar del Papa argentino. Pero la novedad más significativa es el papel político que el movimiento evangélico ha decidido asumir: movilización callejera, lobby en las instituciones, poder mediático y participación electoral. ¿Quiénes son los evangélicos en la Argentina? ¿Cuáles son sus tendencias principales? ¿Por qué los sectores conservadores ganaron la hegemonía y cómo se cuece el fundamentalismo en su interior? Lo que sigue es una investigación minuciosa para desarmar los estereotipos y comprender de dónde viene y hacia donde va ese aluvión religioso que asombra.",
+      "anio": "16/12/2019",
+      "foto": "",
+      "link": "https://www.revistacrisis.com.ar/articulo/la-cuestion-evangelica"
+    }
+  ],
+  "2020": [
+    {
+      "titulo": "El conflicto por la tierra en Guernica",
+      "resumen": "La toma de Guernica se convirtió en el foco de atención del cada vez más intenso conflicto por la tierra y la vivienda en el conurbano bonaerense. La mayoría de los medios y del sistema político acusa a los ocupantes por utilizar un método ilegal, y la justicia decretó el desalojo de más de 2000 familias sin techo para este miércoles. Pero nadie se pregunta quiénes son los supuestos dueños legítimos de los terrenos en disputa. Esta investigación intenta aportar información al respecto. ¿Habrá una solución democrática o volveremos a presenciar las escenas dantescas del Parque Indoamericano en 2010?",
+      "anio": "20/09/2020",
+      "foto": "",
+      "link": "https://www.revistacrisis.com.ar/articulo/el-conflicto-por-la-tierra-en-guernica"
+    }
+  ],
+  "2022": [
+    {
+      "titulo": "La madre de todas las rentas",
+      "resumen": "La pandemia primero y la guerra después provocaron el mayor aumento en el precio de la soja en lo que va del siglo XXI. Eso acarrea una renta “inesperada” y “extraordinaria” para la Argentina, gracias a su perfil agroexportador. Sin embargo, una buena parte de esas tan preciadas divisas nunca ingresan al país porque unos pocos vivos las piratean en el camino. Aquí revelamos cómo los traficantes de granos del mundo contemporáneo se enfrentan al Estado en una verdadera 'puja extractiva'. Además, te contamos cuál es la solución democrática, antes de que las instituciones se desfonden.",
+      "anio": "29/05/2022",
+      "foto": "",
+      "link": "https://www.revistacrisis.com.ar/articulo/la-madre-de-todas-las-rentas"
+    },
+    {
+      "titulo": "El atentado a CFK y la guerra que ya llegó",
+      "resumen": "El intento de asesinato a la principal figura política del país pone sobre la mesa una pregunta urgente: ¿de dónde viene la violencia política hoy? Los avances en la causa judicial muestran día a día la existencia de un trasfondo organizacional y de conexiones que descartan la posibilidad de que estemos ante un lobo solitario. En esta investigación proponemos leer el intento de magnicidio en el marco del contexto geopolítico signado por la guerra en Ucrania. Y exploramos algunos indicios sorprendentes que muestran la consistencia de las redes neonazis trasnacionales, especialmente las que se articulan en torno al Batallón Azov.",
+      "anio": "20/09/2022",
+      "foto": "",
+      "link": "https://revistacrisis.com.ar/notas/el-atentado-cfk-y-la-guerra-que-ya-llego"
+    }
+  ],
+  "2023": [
+    {
+      "titulo": "La batalla por el 5G",
+      "resumen": "En la Argentina, las promesas del 5G todavía están en el aire. Detrás del titubeo que retarda su implementación, hay una intensa disputa geopolítica: Estados Unidos no está dispuesto a que China venda una sola antena más. ¿Hasta dónde se puede achicar el espacio de la soberanía?",
+      "anio": "05/05/2023",
+      "foto": "",
+      "link": "https://www.revistacrisis.com.ar/articulo/la-batalla-por-el-5g"
+    },
+    {
+      "titulo": "Quién mató a Facundo",
+      "resumen": "Susi Maresca trasmitió en vivo a través de su Instagram el video que se viralizó y fue instrumentado por los portales de noticias para construir la versión falsa que el propio Ministro de Seguridad porteño, Eugenio Burzaco, defendió públicamente apenas tres horas después de lo sucedido: “es un hecho lamentable, pero no tiene que ver con la acción policial”. Sin embargo, el testimonio de Maresca publicado por el Mapa de la Policía desmiente con claridad esa falsa hipótesis. Lo mismo queda explicitado en las declaraciones de Delia, también testigo directo del hecho. Y en el relato de Brisa, otra militante que participó de la asamblea.",
+      "anio": "11/08/2023",
+      "foto": "",
+      "link": "https://www.revistacrisis.com.ar/articulo/quien-mato-a-facundo"
+    },
+    {
+      "titulo": "Los dinosaurios no van a desaparecer",
+      "resumen": "Presentamos en estas páginas el primer informe del Registro de Ataques de la Derecha Argentina Radicalizada (RADAR), plataforma digital creada por la revista crisis para realizar un seguimiento colectivo y en tiempo real sobre el crecimiento de la violencia de ultraderecha en sincronía con su llegada al poder. Para construir nuevas formas de cuidado, lo primero es comprender el sentido estratégico de este verdadero desafío a la democracia.",
+      "anio": "09/12/2023",
+      "foto": "",
+      "link": "https://www.revistacrisis.com.ar/articulo/los-dinosaurios-no-van-a-desaparecer"
+    }
+  ],
+  "2024": [
+    {
+      "titulo": "Mapa político del gobierno de Javier Milei",
+      "resumen": "Con la lupa puesta en la trayectoria de sus cien principales funcionarios, presentamos aquí una semblanza del primer gobierno libertario del mundo. Un pequeño círculo que tiene en su centro a los hermanos Milei, distintas vertientes del macrismo y también el tradicional nacionalismo reaccionario: quiénes componen el organigrama del gobierno que considera que el Estado es una asociación criminal.",
+      "anio": "13/03/2024",
+      "foto": "",
+      "link": "https://revistacrisis.com.ar/notas/mapa-politico-del-gobierno-de-javier-milei"
+    },
+    {
+      "titulo": "Capital Inhumano: los seis primeros meses del experimento libertario",
+      "resumen": "En continuidad con el mapa político del gobierno de Javier Milei publicado en la Crisis #61, en esta oportunidad hacemos zoom sobre el Ministerio de Capital Humano. Presentamos una radiografía política a seis meses de su creación, una pormenorizada revisión de la avanzada antiderechos en la administración pública y un análisis del proyecto frustrado del sector más conservador de la alianza ultraderechista.",
+      "anio": "24/06/2024",
+      "foto": "",
+      "link": "https://informes.revistacrisis.com.ar/capital-inhumano-experimento-libertario/"
+    },
+    {
+      "titulo": "La conexión alemana",
+      "resumen": "Con la lupa puesta en la trayectoria de sus cien principales funcionarios, presentamos aquí una semblanza del primer gobierno libertario del mundo. Un pequeño círculo que tiene en su centro a los hermanos Milei, distintas vertientes del macrismo y también el tradicional nacionalismo reaccionario: quiénes componen el organigrama del gobierno que considera que el Estado es una asociación criminal.",
+      "anio": "24/6/2024",
+      "foto": "",
+      "link": "https://revistacrisis.com.ar/notas/la-conexion-alemana"
+    },
     {
       "titulo": "Las milicias digitales de la ultraderecha",
       "resumen": "La ultraderecha ensaya nuevas formas de violencia paraestatal, que comienzan como ataques virtuales en las redes pero derraman hacia los domicilios y familiares de sus objetivos. Esta investigación revela quiénes son los integrantes de uno de los grupos más despiadados y describe de manera pormenorizada su modo de operar. También avanza en cuáles son sus terminales con el Poder Ejecutivo. Conocer estos vericuetos es clave para poner en juego estrategias de autodefensa.",
@@ -83,7 +85,5 @@
       "foto": "",
       "link": "https://revistacrisis.com.ar/notas/las-milicias-digitales-de-la-ultraderecha"
     }
- 
-]
-  }
-  
+  ]
+}
