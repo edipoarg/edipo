@@ -4,10 +4,10 @@ import Navbar from "../components/Navbar/Navbar.jsx";
 
 
 export default function Root() {
-    return (
-        <>
-<Navbar/>
-<Outlet/>
-</>
+  return (
+    <>
+      <Navbar />
+      <Outlet />
+    </>
   );
 }
