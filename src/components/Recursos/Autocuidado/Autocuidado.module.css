@@ -1,332 +1,391 @@
-.container{
+.container {
   height: 100vh;
   width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
-  background: radial-gradient(circle at 50% 0%, #f2f1f1, #dddcdc, #818485);    
+  background: radial-gradient(circle at 50% 0%, #f2f1f1, #dddcdc, #818485);
 }
-.text{
+
+.text {
   color: #2e2c2f;
 }
+
 .list {
+  display: none;
+}
+
+.mapa {
+  background-image: url('../../../svg/mapa.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
   position: fixed;
-width: 80vw;  
-left: 8vw;
-bottom: 5vh;
-  padding: 1vh 3vw 4vh 3vw;
-  background: radial-gradient(circle at 50% 0%, #dfdddd, #efeeee, #c1c3c3);      
-  color: #231f20;
-  border-radius: 14px;
-  box-shadow: 
-      4px 20px 10px 1px rgba(0, 0, 0, 0.2), 
-      inset -2px 0 5px rgba(255, 255, 255, 0.3),
-      inset 0 20px 35px rgba(255, 255, 255, 0.8);
+  top: 20vh;
+  left: 5vw;
+  width: 90vw;
+  z-index: 1000;
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2vw;
+}
+
+.barco,
+.botella,
+.camping,
+.cofre,
+.llave,
+.nube,
+.remolino {
+  /* From https://css.glass */
+  background-color: rgba(218, 208, 208, 0.1);
+  border-radius: 10px;
+  box-shadow: 3px 8px 15px rgba(45, 45, 45, 0.6),
+    2px 3px 2px inset rgba(232, 230, 230, 0.767);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.image {
+  height: 20vh;
+  margin: auto;
+  /* Ajusta según sea necesario */
+  background-size: cover;
+  background-position: center;
+}
+
+.nombre {
+  margin: 0;
+  font-size: 1rem;
+  background-color: #2e2c2f;
+  color: white;
+  padding: 0vh 1vw;
+  border-radius: 50px;
+}
+
+@media (min-width: 768px) {
+  .mapa {
+    background-image: url('../../../svg/mapa.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    position: fixed;
+    top: 0px;
+    left: 5vw;
+    width: 90vw;
+    height: 125vh;
+    z-index: 1000;
+  }
+
+  @media (min-width: 768px) {
+    .list {
+      display: initial;
+      position: fixed;
       background: rgba(255, 255, 255, 0.1);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      /* Asegúrate de que esta línea esté presente */
+      color: #231f20;
+      border-radius: 14px;
+      box-shadow:
+        4px 20px 10px 1px rgba(0, 0, 0, 0.2),
+        inset -2px 0 5px rgba(255, 255, 255, 0.3),
+        inset 0 20px 35px rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(30px);
       -webkit-backdrop-filter: blur(5px);
       border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 3px;
       border-top-right-radius: 80px;
       border-top-left-radius: 40px;
-      border-bottom-left-radius: 120px ;
+      border-bottom-left-radius: 120px;
+      z-index: 1500;
     }
-.mapa{
-  background-image: url('../../../svg/mapa.svg') ;  
-  background-size:contain;
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  position: fixed;
-  top: 0px;
-  left: 5vw;
-  width: 90vw;
-  height: 125vh;
-  z-index: 1000;
-}
-.links{
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-}
-.recurso{
-  margin-bottom: 3vh;
-  border-bottom: solid 1px;
- 
-}
 
-
-.link{
-  color: #231f20;
-  font-size: 1.2rem;
-  padding-left: 2vw;
-
-}
-.nube {
-  position: absolute;
-  top: 15vh;
-  left: 10vw;
-  animation: moveCloud 50s linear infinite; /* Aplica la animación */
-}
-
-@keyframes moveCloud {
-  0% {
-    left: 10vw; /* Posición inicial */
-  }
-  50% {
-    left: 30vw; /* Posición intermedia (a la derecha) */
-  }
-  100% {
-    left: 10vw; /* Posición final (de regreso a la izquierda) */
-  }
-}
-  
-  .image{
-    height: 15vh;
-    margin: auto; /* Ajusta según sea necesario */
-    background-size: cover;
-    background-position: center;
-  }
-@media (min-width: 768px) {
-
-.card{
-
-}
-.list {
-    right: 10vw;
-    left: unset;
-    top: 20vh;
-    padding: 2vh 3vw 8vh 3vw;
-    max-width: 15vw;
-    text-align: right;
-  }
-
-  .links{
-    grid-template-columns: 1fr;
-  }
-  
-  .nube {
-    font-size: 5rem;
-    position: absolute;
-    top: 15vh;
-    left: 10vw;
-    animation: moveCloud 50s linear infinite; /* Aplica la animación */
-  }
-  
-  @keyframes moveCloud {
-    0% {
-      left: 10vw; /* Posición inicial */
+    .recurso {
+      margin-bottom: 3vh;
+      border-bottom: solid 1px;
     }
-    50% {
-      left: 30vw; /* Posición intermedia (a la derecha) */
-    }
-    100% {
-      left: 10vw; /* Posición final (de regreso a la izquierda) */
-    }
-  }
 
-  .barco, .botella, .camping, .cofre, .llave, .nube, .remolino {
+    .link {
+      color: #231f20;
+      font-size: 1.2rem;
+      padding-left: 2vw;
+      cursor: pointer;
+      /* Asegúrate de que esta línea esté presente */
+    }
+
+    .list {
+      right: 10vw;
+      top: 20vh;
+      padding: 2vh 3vw 8vh 3vw;
+      max-width: 15vw;
+      text-align: right;
+    }
+
+    .links {
+      grid-template-columns: 1fr;
+    }
+
+    .nube {
+      font-size: 5rem;
+      position: absolute;
+      top: 15vh;
+      left: 10vw;
+      animation: moveCloud 50s linear infinite;
+      /* Aplica la animación */
+    }
+
+    @keyframes moveCloud {
+      0% {
+        left: 10vw;
+        /* Posición inicial */
+      }
+
+      50% {
+        left: 30vw;
+        /* Posición intermedia (a la derecha) */
+      }
+
+      100% {
+        left: 10vw;
+        /* Posición final (de regreso a la izquierda) */
+      }
+    }
+
+    .barco,
+    .botella,
+    .camping,
+    .cofre,
+    .llave,
+    .nube,
+    .remolino {
       /* From https://css.glass */
       background-color: rgba(218, 208, 208, 0.1);
-border-radius: 10px;
-box-shadow: 3px 8px 15px rgba(45, 45, 45, 0.6),
-2px 3px 2px inset rgba(232, 230, 230, 0.767);
-backdrop-filter: blur(3px);
--webkit-backdrop-filter: blur(5px);
-width: 8vw;
-  }
-  
-  .barco {
-    position: absolute;
-    bottom: 30vh;
-    right: 35vw;
-    animation: moveBoat 120s linear infinite;
-    
-  }
-  
-  .barcoIcon {
-    font-size: 5rem;
-  }
-  
-  @keyframes moveBoat {
-    0% {
+      border-radius: 10px;
+      box-shadow: 3px 8px 15px rgba(45, 45, 45, 0.6),
+        2px 3px 2px inset rgba(232, 230, 230, 0.767);
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(5px);
+      width: 8vw;
+    }
+
+    .barco {
+      position: absolute;
       bottom: 30vh;
       right: 35vw;
+      animation: moveBoat 120s linear infinite;
     }
-    25% {
-      bottom: 35vh;
-      right: 45vw;
-    }
-    50% {
-      bottom: 33vh;
-      right: 40vw;
-    }
-    100% {
-      bottom: 30vh;
-      right: 35vw;
-    }
-  }
-  
-  .botella {
-    font-size: 5rem;
-    position: absolute;
-    bottom: 15vh;
-    right: 45vw;
-    animation: moveBottle 120s linear infinite;
-  }
-  
-  @keyframes moveBottle {
-    0% {
-      bottom: 15vh;
-      right: 45vw;
-    }
-    25% {
-      bottom: 10vh;
-      right: 35vw;
-    }
-    100% {
-      bottom: 15vh;
-      right: 45vw;
-    }
-  }
-  
-  .remolino {
-    font-size: 5rem;
-    position: absolute;
-    top: 45vh;
-    left: 15vw;
-    animation: moveTwist 40s linear infinite; 
-  }
-  
-  @keyframes moveTwist {
-    0% {
-      top: 45vh;
-      left: 15vw;
-    }
-    25% {
-      top: 58vh;
-      left: 23vw;
-    }
-    50% {
-      top: 47vh;
-      left: 26vw;
-    }
-    100% {
-      top: 45vh;
-      left: 15vw;
-    }
-  }
-  
-  .camping {
-    font-size: 5rem;
-    position: absolute;
-    top: 35vh;
-    right: 50vw;
-    animation: moveCamping 4s linear infinite; /* Aplica la animación */
-  }
-  
-  @keyframes moveCamping {
-    0% {
+
+    .barcoIcon {
       font-size: 5rem;
     }
-    25% {
-      font-size: 5.2rem;
+
+    @keyframes moveBoat {
+      0% {
+        bottom: 30vh;
+        right: 35vw;
+      }
+
+      25% {
+        bottom: 35vh;
+        right: 45vw;
+      }
+
+      50% {
+        bottom: 33vh;
+        right: 40vw;
+      }
+
+      100% {
+        bottom: 30vh;
+        right: 35vw;
+      }
     }
-    50% {
-      font-size: 5.4rem;
-    }
-    100% {
+
+    .botella {
       font-size: 5rem;
+      position: absolute;
+      bottom: 15vh;
+      right: 45vw;
+      animation: moveBottle 120s linear infinite;
     }
-  }
-  
-  .llave {
-    font-size: 3rem;
-    position: absolute;
-    top: 45vh;
-    right: 60vw;
-  }
 
-  .llaveIcon{
-    animation: moveKey 6s linear infinite; /* Aplica la animación */
+    @keyframes moveBottle {
+      0% {
+        bottom: 15vh;
+        right: 45vw;
+      }
 
-  }
-  @keyframes moveKey {
-    0% {
-      font-size: 2rem;
-      rotate: 25deg;
+      25% {
+        bottom: 10vh;
+        right: 35vw;
+      }
+
+      100% {
+        bottom: 15vh;
+        right: 45vw;
+      }
     }
-    25% {
-      font-size: 2.6rem;
+
+    .remolino {
+      font-size: 5rem;
+      position: absolute;
+      top: 45vh;
+      left: 15vw;
+      animation: moveTwist 40s linear infinite;
     }
-    50% {
+
+    @keyframes moveTwist {
+      0% {
+        top: 45vh;
+        left: 15vw;
+      }
+
+      25% {
+        top: 58vh;
+        left: 23vw;
+      }
+
+      50% {
+        top: 47vh;
+        left: 26vw;
+      }
+
+      100% {
+        top: 45vh;
+        left: 15vw;
+      }
+    }
+
+    .camping {
+      font-size: 5rem;
+      position: absolute;
+      top: 35vh;
+      right: 50vw;
+      animation: moveCamping 4s linear infinite;
+      /* Aplica la animación */
+    }
+
+    @keyframes moveCamping {
+      0% {
+        font-size: 5rem;
+      }
+
+      25% {
+        font-size: 5.2rem;
+      }
+
+      50% {
+        font-size: 5.4rem;
+      }
+
+      100% {
+        font-size: 5rem;
+      }
+    }
+
+    .llave {
       font-size: 3rem;
-      rotate: 0deg;
+      position: absolute;
+      top: 45vh;
+      right: 60vw;
     }
-    100% {
-      font-size: 2.5rem;
-      rotate: 25deg;
+
+    .llaveIcon {
+      animation: moveKey 6s linear infinite;
+      /* Aplica la animación */
     }
-  }
-  
-  .cofre {
-    font-size: 3rem;
-    position: absolute;
-    top: 60vh;
-    right: 60vw;
-    animation: moveChest 6s linear infinite; /* Aplica la animación */
-  }
-  
-  @keyframes moveChest {
-    0% {
+
+    @keyframes moveKey {
+      0% {
+        font-size: 2rem;
+        rotate: 25deg;
+      }
+
+      25% {
+        font-size: 2.6rem;
+      }
+
+      50% {
+        font-size: 3rem;
+        rotate: 0deg;
+      }
+
+      100% {
+        font-size: 2.5rem;
+        rotate: 25deg;
+      }
+    }
+
+    .cofre {
       font-size: 3rem;
+      position: absolute;
+      top: 60vh;
+      right: 60vw;
+      animation: moveChest 6s linear infinite;
+      /* Aplica la animación */
     }
-    25% {
-      font-size: 3.5rem;
+
+    @keyframes moveChest {
+      0% {
+        font-size: 3rem;
+      }
+
+      25% {
+        font-size: 3.5rem;
+      }
+
+      50% {
+        font-size: 3.4rem;
+      }
+
+      100% {
+        font-size: 3rem;
+      }
     }
-    50% {
-      font-size: 3.4rem;
+
+    .camping:hover,
+    .llave:hover,
+    .barco:hover,
+    .botella:hover,
+    .nube:hover,
+    .remolino:hover,
+    .cofre:hover {
+      color: #2e2c2f;
     }
-    100% {
-      font-size: 3rem;
+
+    .mapa {
+      justify-content: center;
+    }
+
+    .iconContainer {
+      position: relative;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .iconContainer h4 {
+      visibility: hidden;
+    }
+
+    .iconContainer:hover h4 {
+      visibility: visible;
+    }
+
+    .iconLink {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .nombre {
+      margin: 0;
+      font-size: 1rem;
+      background-color: #2e2c2f;
+      color: white;
+      padding: 0vh 1vw;
+      border-radius: 50px;
+    }
+
+    .link:hover {
+      color: #dddcdc;
     }
   }
-  
-  .camping:hover, .llave:hover, .barco:hover, .botella:hover, .nube:hover, .remolino:hover, .cofre:hover {
-    color: #2e2c2f;
-  }
-  
-  .mapa {
-    justify-content: center;
-  }
-  
-  .iconContainer {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-  }
-  
-  .iconContainer h4 {
-    visibility: hidden;
-  }
-  
-  .iconContainer:hover h4 {
-    visibility: visible;
-  }
-  
-  .iconLink {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .nombre{margin:0;
-font-size: 1rem;
-background-color: #2e2c2f;
-color: white;
-padding: 0vh 1vw;
-border-radius: 50px;
 }
-
-
-.link:hover{
-  color: #dddcdc;
-}
-  }

@@ -1,40 +1,45 @@
-.talleres{ 
+.talleres {
     position: absolute;
     top: 0;
-    left: 0; 
+    left: 0;
     text-align: left;
-
-
 }
 
-.header{
+.header {
     padding: 0vh 45vw 10vh 10vw;
     padding-top: 25vh;
-background-color: #2e2c2f;
-color: white;
-height: 35vh;
+    background-color: #2e2c2f;
+    color: white;
+    height: 35vh;
 }
 
-.title{
+.title {
     padding: 2vh 0vw;
 }
 
-.info{
+.info {
     text-align: justify;
 }
-.talleres{
+
+.talleres {
     background-color: white;
     padding-bottom: 15vh;
-
 }
 
-.title, .subTitle, .info, .name, .date{ margin: 0}
+.title,
+.subTitle,
+.info,
+.name,
+.date {
+    margin: 0
+}
 
-.iframe{width: 70vw;}
+.iframe {
+    width: 70vw;
+}
 
-.taller{
+.taller {
     padding: 0vh 10vw;
     padding-top: 5vh;
     text-align: left;
-
 }

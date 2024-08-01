@@ -4,46 +4,53 @@
     left: 0;
     width: 100vw;
     display: grid;
-    grid-template-columns: 1fr; /* Disposición vertical por defecto */
-    grid-template-rows: auto auto auto; /* Asegura que los elementos se apilen */
+    grid-template-columns: 1fr;
+    /* Disposición vertical por defecto */
+    grid-template-rows: auto auto auto;
+    /* Asegura que los elementos se apilen */
 }
 
-.seguridad, .busqueda, .guiaMapa {
+.seguridad,
+.busqueda,
+.guiaMapa {
     padding-top: 5vh;
     border: solid 1px #2e2c2f;
     border-radius: 25px;
 }
 
 .seguridad {
-   
-        background: url('../../svg/mapa.svg') no-repeat center center; /* Añadir la ruta correcta a tu SVG */
-        background-size:contain; /* Asegura que el SVG cubra todo el fondo */
-        color: #2e2c2f;
-        padding: 0vh 3vw;
-       
+    background: url('../../svg/mapa.svg') no-repeat center center;
+    /* Añadir la ruta correcta a tu SVG */
+    background-size: contain;
+    /* Asegura que el SVG cubra todo el fondo */
+    color: #2e2c2f;
+    padding: 0vh 3vw;
 }
 
-.seguridad:hover, .busqueda:hover{
-    background-size:cover; /* Asegura que el SVG cubra todo el fondo */
-
+.seguridad:hover,
+.busqueda:hover {
+    background-size: cover;
+    /* Asegura que el SVG cubra todo el fondo */
 }
 
 .busqueda {
     background-color: white;
     color: #2e2c2f;
-    background: url('../../svg/Inteligencia.svg') no-repeat center center; /* Añadir la ruta correcta a tu SVG */
-    background-size:contain; /* Asegura que el SVG cubra todo el fondo */
+    background: url('../../svg/Inteligencia.svg') no-repeat center center;
+    /* Añadir la ruta correcta a tu SVG */
+    background-size: contain;
+    /* Asegura que el SVG cubra todo el fondo */
 }
 
 .guiaMapa {
- color: #2e2c2f;
+    color: #2e2c2f;
 }
 
 .item {
     margin: 0;
 }
 
-.header{
+.header {
     position: fixed;
     left: 13vw;
     top: 15vh;
@@ -52,22 +59,27 @@
     color: #2e2c2f;
 }
 
-.title, .subTitle{
+.title,
+.subTitle {
     margin: 0;
 }
-.subTitle{font-size: 0.7rem;}
+
+.subTitle {
+    font-size: 0.7rem;
+}
+
 @media (min-width: 768px) {
-    .background{
+    .background {
         background: radial-gradient(circle at top left, #333333, #1a1a1a, #000000);
         width: 100vw;
         height: 100vh;
         position: fixed;
         top: 0;
-        left: 0;        
+        left: 0;
     }
-   
+
     .recursos {
-        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 0.4vw;
         top: 30vh;
         width: 70vw;
@@ -75,14 +87,17 @@
         left: 15vw;
     }
 
-    .seguridad, .busqueda, .guiaMapa {
-        height: 60vh; 
+    .seguridad,
+    .busqueda,
+    .guiaMapa {
+        height: 60vh;
         padding-top: 4vh;
         box-shadow: inset -5px -10px 15px rgba(54, 54, 54, 0.1);
-
     }
 
-    .item{padding-top: 0vh;
-    margin: 0;
-font-size: 0.8rem;}
+    .item {
+        padding-top: 0vh;
+        margin: 0;
+        font-size: 0.8rem;
+    }
 }

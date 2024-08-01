@@ -27,9 +27,9 @@ const Investigations = () => {
 
   return (
     <section className={styles.background}>
-    <AppBar></AppBar>
+      <AppBar></AppBar>
       <div className={styles.investigaciones}>
-      <h1 className={styles.header}>Proyectos / Tecnopolíticas</h1>
+        <h1 className={styles.header}>Proyectos / Tecnopolíticas</h1>
         <div className={styles.content}>
           <div className={styles.detailSection}>
             <button onClick={handlePrev}>x</button>
@@ -41,7 +41,7 @@ const Investigations = () => {
             <button onClick={handleNext}>x</button>
           </div>
           <div className={styles.listSection}>
-          {/*  <ul className={styles.list}>
+            {/*  <ul className={styles.list}>
               {investigationsData.map((investigacion, index) => (
                 <li className={styles.li} key={index}>
                   <div

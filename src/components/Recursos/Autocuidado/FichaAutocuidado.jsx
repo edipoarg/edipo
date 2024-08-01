@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import autocuidadoData from '../../../data/autocuidado.json';
+import autocuidadoSubData from '../../../data/autocuidadoSub.json'; // Importa los datos de los sub-recursos
 import styles from './FichaAutocuidado.module.css';
 
 // Import SVG files
@@ -43,22 +44,46 @@ const FichaAutocuidado = () => {
     }
   };
 
+  // Si el recurso tiene una lista de sub-recursos, obtén esos sub-recursos
+  const subRecursos = recurso.LISTA ? recurso.LISTA.map(subNombre =>
+    autocuidadoSubData.find(subItem => subItem.NOMBRE === subNombre)
+  ) : [];
+
   return (
-    <div className={styles.Container}>   
-
+    <div className={styles.Container}>
       <section className={styles.ficha}>
-      <h2 className={styles.name}>{recurso.NOMBRE}</h2>
+        <section>
+          <h2 className={styles.name}>{recurso.NOMBRE}</h2>
 
-        <div
-          className={styles.iconContainer}
-          style={{ backgroundImage: getBackgroundImageByImagen(recurso.IMAGEN) }}
-        />
-                <a href={recurso.LINK} className={styles.link}>WEB</a>
+          <div
+            className={styles.iconContainer}
+            style={{ backgroundImage: getBackgroundImageByImagen(recurso.IMAGEN) }}
+          />
+          {recurso.LINK && <a href={recurso.LINK} className={styles.link}>WEB</a>}
 
-        <h3 className={styles.bajada}>{recurso.BAJADA}</h3>
-        <h5 className={styles.info}>{recurso.INFO}</h5>
+        </section>
+        <section>
+
+
+          <h3 className={styles.bajada}>{recurso.BAJADA}</h3>
+          <h5 className={styles.info}>{recurso.INFO}</h5>
+        </section>
+
+        {subRecursos.length > 0 && (
+          <section className={styles.subRecursos}>
+            {subRecursos.map(subRecurso => (
+              <div key={subRecurso.NOMBRE} className={styles.subFicha}>
+                <h2 className={styles.name}>{subRecurso.NOMBRE}</h2>
+                {subRecurso.LINK && <a href={subRecurso.LINK} className={styles.link}>WEB</a>}
+                <h3 className={styles.bajada}>{subRecurso.BAJADA}</h3>
+                <h5 className={styles.info}>{subRecurso.INFO}</h5>
+              </div>
+            ))}
+          </section>
+        )}
       </section>
-      </div>  );
+    </div>
+  );
 };
 
 export default FichaAutocuidado;

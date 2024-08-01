@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     left: 0;
     align-items: center;
     position: absolute;
@@ -6,7 +6,7 @@
     width: 90vw;
     top: 2vh;
     box-sizing: border-box;
-    padding: 0vh 7vw;   
+    padding: 0vh 7vw;
     z-index: 1000;
     justify-items: right;
     gap: 1vw;
@@ -25,12 +25,13 @@
 }
 
 .hamburger {
-        cursor: pointer;
-   align-content: right;
-justify-items: right;}
-    
-.logo{      box-sizing: border-box;
-    
+    cursor: pointer;
+    align-content: right;
+    justify-items: right;
+}
+
+.logo {
+    box-sizing: border-box;
     font-size: 1.3rem;
     margin: 0;
     color: #231f20;
@@ -38,41 +39,36 @@ justify-items: right;}
     box-sizing: border-box;
     width: 40vw;
 }
-  
-    .text {
-        color: #231f20;
-        border: solid 1px #231f20;
-        border-radius: 48px;
-        padding: 0.5vh 1vw;
-    }
 
-    .suscribite {
-        display: flex;
-        justify-content: flex-end;
-    }
+.text {
+    color: #231f20;
+    border: solid 1px #231f20;
+    border-radius: 48px;
+    padding: 0.5vh 1vw;
+}
 
+.suscribite {
+    display: flex;
+    justify-content: flex-end;
+}
 
 /* Responsive Styles */
 @media (min-width: 768px) {
-   
     .navbar {
-        display: flex;
+        display: flex-end;
         height: 6vh;
         width: 80%;
         padding-top: 2vh;
         z-index: 1000;
-      
-    
     }
-    
-  
+
     .menu {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 1rem;
     }
-    
+
     .menu.open {
         display: flex;
         flex-direction: column;
@@ -83,28 +79,27 @@ justify-items: right;}
         background-color: #231f20;
         padding: 1rem 0;
     }
-    
-    .text, .title, .item {
+
+    .text,
+    .title,
+    .item {
         margin: 0;
     }
-  
-    
+
     .item {
         color: #231f20;
     }
-    
-  
-    .logo{width: 20vw}
-    
+
+    .logo {
+        width: 20vw
+    }
+
     .icon {
         color: #231f20;
         font-size: 1.5rem;
     }
 
     .suscribite {
-       
         width: 20vw;
     }
-
-
 }

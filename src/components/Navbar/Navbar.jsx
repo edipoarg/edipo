@@ -13,15 +13,15 @@ function Navbar() {
   return (
     <>
       <section className={styles.navbar}>
-      <Link to='./landing'>
+        <Link to='./landing'>
 
-        <div className={styles.logo}><h3 className={styles.title}>[ ] EdIPo</h3></div>
+          <div className={styles.logo}><h3 className={styles.title}>[ ] EdIPo</h3></div>
         </Link>
 
-       
+
         <section className={`${styles.menu} ${isOpen ? styles.open : ''}`}>
           <Link to='./lista'>
-            <h5 className={styles.item}>Proyetos</h5>
+            <h5 className={styles.item}>Proyectos</h5>
           </Link>
           <Link to='./recursos'>
             <h5 className={styles.item}>Recursos</h5>
@@ -37,7 +37,7 @@ function Navbar() {
           </Link>
         </section>
         <Link to='./colabora'>
-        <section className={styles.suscribite}><h4 className={styles.text}>¿Queré aportar?</h4></section>
+          <section className={styles.suscribite}><h4 className={styles.text}>¿Querés aportar?</h4></section>
         </Link>
         <div className={styles.hamburger} onClick={toggleMenu}>
           {isOpen ? <FaTimes className={styles.icon} /> : <FaBars className={styles.icon} />}

@@ -1,64 +1,61 @@
 .appBar {
-    position: fixed;
-    right: 2vw;
-    top: 5vh;
-    width: 8vw;
-    height: 40vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
-    padding-bottom: 2vh;
-    padding-top: 2vh;
-    z-index: 5000;
-    box-shadow: 
-    inset 5px 5px 15px rgba(0, 0, 0, 0.5), /* Sombra interna para el efecto metálico */
+  position: fixed;
+  right: 2vw;
+  top: 5vh;
+  width: 8vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2vh;
+  padding-top: 2vh;
+  z-index: 5000;
+  box-shadow:
+    inset 5px 5px 15px rgba(0, 0, 0, 0.5),
+    /* Sombra interna para el efecto metálico */
     0 10px 20px rgba(0, 0, 0, 0.5),
-    3px 0px 0px   rgba(0, 0, 0, 0.035);
+    3px 0px 0px rgba(0, 0, 0, 0.035);
   border-bottom-right-radius: 120px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 15px;
   border-top-left-radius: 120px;
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(5px);  
+  -webkit-backdrop-filter: blur(5px);
 }
-  
-  
-  
-  .button {
-    width: 50px;
-    height: 50px;
-    margin: 4px 0;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .button:hover {
-    background-color: #333;
-  }
-  
 
-  @media (max-width: 768px) {
-    .appBar {
-        position: fixed;
-        right: 0vw;
-        top:  40vh;
-        width: 10vw;
-        height: 35vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-        padding-bottom: 5vh;
-        z-index: 1000;
-      }
-    
+.button {
+  width: 50px;
+  height: 50px;
+  margin: 4px 0;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .appBar {
+    position: fixed;
+    right: 0vw;
+    top: 40vh;
+    width: 10vw;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 5vh;
+    z-index: 1000;
   }
+}

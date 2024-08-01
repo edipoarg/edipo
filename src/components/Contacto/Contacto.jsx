@@ -22,36 +22,36 @@ const internacionalDescripcion = "Trabajamos a la par con organizaciones sociale
 const Contacto = () => {
     return (
         <>
-                <section className={styles.background}>
+            <section className={styles.background}>
 
                 <section className={styles.contacto}>
 
 
-            <section className={styles.header}>
-                <h2>{tituloPrincipal}</h2>
-                <h2>{subtituloPrincipal}</h2>
-            </section>
+                    <section className={styles.header}>
+                        <h2>{tituloPrincipal}</h2>
+                        <h2>{subtituloPrincipal}</h2>
+                    </section>
 
-                <div className={styles.tematica}>
-                    <Historia />
-                    <h3>{historiaTitulo}</h3>
-                    <h5>{historiaDescripcion}</h5>
-                </div>
+                    <div className={styles.tematica}>
+                        <Historia />
+                        <h3>{historiaTitulo}</h3>
+                        <h5>{historiaDescripcion}</h5>
+                    </div>
 
-                <div className={styles.tematica}>
-                    <Mision />
-                    <h3>{misionTitulo}</h3>
-                    {misionDescripciones.map((desc, index) => (
-                        <h5 key={index}>{desc}</h5>
-                    ))}
-                </div>
+                    <div className={styles.tematica}>
+                        <Mision />
+                        <h3>{misionTitulo}</h3>
+                        {misionDescripciones.map((desc, index) => (
+                            <h5 key={index}>{desc}</h5>
+                        ))}
+                    </div>
 
-                <div className={styles.tematica}>
-                    <Internacional />
-                    <h3>{internacionalTitulo}</h3>
-                    <h5>{internacionalDescripcion}</h5>
-                </div>
-            </section>
+                    <div className={styles.tematica}>
+                        <Internacional />
+                        <h3>{internacionalTitulo}</h3>
+                        <h5>{internacionalDescripcion}</h5>
+                    </div>
+                </section>
             </section>
 
         </>
