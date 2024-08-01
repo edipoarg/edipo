@@ -29,7 +29,7 @@ const router = createHashRouter([
     path: "/",
     element: <Root />,
     children: [
-      { path: "/", element: <App /> },
+      { path: "/", element: <Landing /> },
       { path: "/recursos", element: <Recursos /> },
       { path: "/lista", element: <Investigations /> },
       { path: "/publicaciones", element: <Publicaciones /> },
