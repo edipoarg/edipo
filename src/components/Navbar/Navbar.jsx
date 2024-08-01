@@ -18,6 +18,9 @@ function Navbar() {
 <Link to='./talleres'>
 <h5 className={styles.item}>Talleres</h5>
 </Link>  
+<Link to='./publicaciones'>
+<h5 className={styles.item}>Publicaciones</h5>
+</Link> 
 <Link to='./contacto'>
 <h5 className={styles.item}>Contacto</h5>
 </Link>  
