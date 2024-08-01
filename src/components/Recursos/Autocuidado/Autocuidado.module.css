@@ -129,7 +129,7 @@
       position: absolute;
       top: 15vh;
       left: 10vw;
-      animation: moveCloud 50s linear infinite;
+      animation: moveCloud 55s linear infinite;
       /* Aplica la animación */
     }
 
@@ -140,7 +140,7 @@
       }
 
       50% {
-        left: 30vw;
+        left: 20vw;
         /* Posición intermedia (a la derecha) */
       }
 
@@ -164,7 +164,8 @@
         2px 3px 2px inset rgba(232, 230, 230, 0.767);
       backdrop-filter: blur(3px);
       -webkit-backdrop-filter: blur(5px);
-      width: 8vw;
+      width: fit-content;
+      min-width: 8vw;
     }
 
     .barco {
@@ -180,86 +181,86 @@
 
     @keyframes moveBoat {
       0% {
-        bottom: 30vh;
-        right: 35vw;
+        bottom: 40vh;
+        right: 25vw;
       }
 
       25% {
         bottom: 35vh;
-        right: 45vw;
+        right: 35vw;
       }
 
       50% {
         bottom: 33vh;
-        right: 40vw;
+        right: 38vw;
       }
 
       100% {
-        bottom: 30vh;
-        right: 35vw;
+        bottom: 40vh;
+        right: 25vw;
       }
     }
 
     .botella {
       font-size: 5rem;
       position: absolute;
-      bottom: 15vh;
-      right: 45vw;
+      bottom: 70vh;
+      right: 25vw;
       animation: moveBottle 120s linear infinite;
     }
-
     @keyframes moveBottle {
       0% {
-        bottom: 15vh;
-        right: 45vw;
+        bottom: 70vh;
+        right: 30vw;
       }
 
       25% {
-        bottom: 10vh;
-        right: 35vw;
+        bottom: 50vh;
+        right: 26vw;
       }
 
       100% {
-        bottom: 15vh;
-        right: 45vw;
+        bottom: 70vh;
+        right: 30vw;
       }
     }
+ 
 
     .remolino {
       font-size: 5rem;
       position: absolute;
-      top: 45vh;
-      left: 15vw;
+      bottom: 10vh;
+      left: 5vw;
       animation: moveTwist 40s linear infinite;
     }
 
     @keyframes moveTwist {
       0% {
-        top: 45vh;
-        left: 15vw;
+        bottom: 65vh;
+        left: 1vw;
       }
 
       25% {
-        top: 58vh;
-        left: 23vw;
+        bottom: 55vh;
+        left: 0vw;
       }
 
       50% {
-        top: 47vh;
-        left: 26vw;
+        bottom: 40vh;
+        left: 0vw;
       }
 
       100% {
-        top: 45vh;
-        left: 15vw;
+        bottom: 65vh;
+        left: 1vw;
       }
     }
 
     .camping {
       font-size: 5rem;
       position: absolute;
-      top: 35vh;
-      right: 50vw;
+      top: 45vh;
+      right: 40vw;
       animation: moveCamping 4s linear infinite;
       /* Aplica la animación */
     }
@@ -285,8 +286,8 @@
     .llave {
       font-size: 3rem;
       position: absolute;
-      top: 45vh;
-      right: 60vw;
+      top: 55vh;
+      right: 50vw;
     }
 
     .llaveIcon {
@@ -319,7 +320,7 @@
       font-size: 3rem;
       position: absolute;
       top: 60vh;
-      right: 60vw;
+      right: 70vw;
       animation: moveChest 6s linear infinite;
       /* Aplica la animación */
     }
