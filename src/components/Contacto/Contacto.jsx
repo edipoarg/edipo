@@ -34,13 +34,11 @@ const Contacto = () => {
 
                     <div className={styles.tematica}>
                         <Historia />
-                        <h3>{historiaTitulo}</h3>
                         <h5>{historiaDescripcion}</h5>
                     </div>
 
                     <div className={styles.tematica}>
                         <Mision />
-                        <h3>{misionTitulo}</h3>
                         {misionDescripciones.map((desc, index) => (
                             <h5 key={index}>{desc}</h5>
                         ))}
@@ -48,7 +46,6 @@ const Contacto = () => {
 
                     <div className={styles.tematica}>
                         <Internacional />
-                        <h3>{internacionalTitulo}</h3>
                         <h5>{internacionalDescripcion}</h5>
                     </div>
                 </section>

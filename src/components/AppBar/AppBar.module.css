@@ -3,13 +3,13 @@
   right: 2vw;
   top: 5vh;
   width: 8vw;
-  height: 40vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-bottom: 2vh;
-  padding-top: 2vh;
+  padding-top: 4vh;
   z-index: 5000;
   box-shadow:
     inset 5px 5px 15px rgba(0, 0, 0, 0.5),
@@ -24,9 +24,13 @@
   -webkit-backdrop-filter: blur(5px);
 }
 
-.button {
-  width: 50px;
-  height: 50px;
+.button1,
+.button2,
+.button3,
+.button4 {
+  width: fit-content;
+  height: fit-content;
+  padding: 1vh 1vh;
   margin: 4px 0;
   background-color: #000;
   color: #fff;
@@ -38,10 +42,69 @@
   justify-content: center;
   cursor: pointer;
   transition: background-color 0.3s;
+  border: solid 1px;
+}
+
+.button1 {
+  border-color: rgb(186, 69, 212);
+}
+
+.button2 {
+  border-color: rgb(69, 102, 212);
+}
+
+.button3 {
+  border-color: rgb(126, 150, 41);
+}
+
+.button4 {
+  border-color: rgb(241, 115, 77);
 }
 
 .button:hover {
   background-color: #333;
+}
+
+.logoMapa {
+  background-image: url('../../svg/LogoMapa.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 5vh;
+  width: 8vh;
+  margin: 1.5vh 0;
+  filter: drop-shadow(0 0 5px rgba(171, 51, 211, 0.8)) drop-shadow(0 0 10px rgba(123, 34, 178, 0.5)) drop-shadow(0 0 15px rgba(153, 44, 203, 0.8))
+}
+
+.logoAhora {
+  background-image: url('../../svg/LogoAhora.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 6vh;
+  width: 4vh;
+  margin: 0 1.7vh;
+  margin-top: 1vh;
+  filter: drop-shadow(0 0 5px rgba(147, 230, 24, 0.8)) drop-shadow(0 0 10px rgba(83, 214, 32, 0.5)) drop-shadow(0 0 15px rgba(101, 197, 28, 0.8))
+}
+
+.logoRadar {
+  background-image: url('../../svg/LogoRadar.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 11vh;
+  width: 11vh;
+  margin: -1vh -1.5vh -2.5vh -1.5vh;
+  filter: drop-shadow(0 0 5px rgba(29, 116, 237, 0.6)) drop-shadow(0 0 10px rgba(70, 64, 223, 0.4)) drop-shadow(0 0 15px rgba(29, 120, 223, 0.6))
+}
+
+.logoMonitor {
+  height: 5vh;
+  width: 5vh;
+  margin: 1.5vh 1.5vh;
+  color: rgb(178, 34, 65);
+  filter: drop-shadow(0 0 5px rgba(246, 93, 93, 0.2)) drop-shadow(0 0 10px rgba(250, 57, 32, 0.2)) drop-shadow(0 0 15px rgba(230, 44, 44, 0.5))
 }
 
 @media (max-width: 768px) {
@@ -49,8 +112,8 @@
     position: fixed;
     right: 0vw;
     top: 40vh;
-    width: 10vw;
-    height: 35vh;
+    width: 20vw;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
