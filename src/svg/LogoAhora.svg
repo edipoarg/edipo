@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63.65 102.58">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: yellowgreen; /* Color del borde *
+        stroke-width: 30; /* Grosor del borde */
+      }
+
+      .cls-3 {
+        fill: yellowgreen;
+      }
+
+      .cls-2 {
+        font-family: Ronnia-Bold, Ronnia;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: .01em;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-1" d="M61.74,20.38h1.92s0-12.16,0-17.24c0-.95,0-2.01-.78-2.57C62.01-.06,60.91,0,60.91,0L10.44.16.03,10.61v15.65s1.56,0,1.56,0v4.34H.03c-.03,6.39,0,46.62,0,50.26,0,.86-.19,2.22.4,2.9.89,1.02,2.06,1.02,3.5,1.02h18.87s1.07-.83,1.07-.83h15.87s.95.82.95.82c0,0,13.79-.01,19.36.02,1.02,0,2.18.07,2.94-.67.67-.65.56-1.53.58-2.45.2-13.47-.08-42.73-.08-42.73l-1.72-.02.09-18.66"/>
+    <g>
+      <rect class="cls-3" x="52.89" y="9.3" width="4.65" height="15.37" transform="translate(110.42 33.97) rotate(-180)"/>
+      <rect class="cls-3" x="45.14" y="9.3" width="4.65" height="15.37" transform="translate(94.93 33.97) rotate(-180)"/>
+      <rect class="cls-3" x="36.68" y="9.3" width="4.65" height="15.37" transform="translate(78.01 33.97) rotate(-180)"/>
+      <rect class="cls-3" x="28.45" y="9.3" width="4.65" height="15.37" transform="translate(61.56 33.97) rotate(-180)"/>
+      <rect class="cls-3" x="20.61" y="9.3" width="4.65" height="15.37" transform="translate(45.88 33.97) rotate(-180)"/>
+      <rect class="cls-3" x="13.05" y="9.3" width="4.65" height="15.37" transform="translate(30.75 33.97) rotate(-180)"/>
+      <rect class="cls-3" x="6.82" y="24.14" width="4.65" height="15.37" transform="translate(18.29 63.65) rotate(-180)"/>
+    </g>
+  </g>
+</svg>
