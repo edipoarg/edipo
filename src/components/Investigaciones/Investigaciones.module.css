@@ -1,55 +1,50 @@
 .background {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
+  position: absolute;
+  width: 100%;
+  height: fit-content;
   top: 0;
   left: 0;
   z-index: 0;
   background: radial-gradient(circle at top left, #333333, #1a1a1a, #000000);
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
-  position: fixed;
   left: 13vw;
   top: 15vh;
   font-size: 1.3rem;
   text-align: left;
   color: #2e2c2f;
+  margin: 0;
 }
 
 .investigaciones {
-  position: fixed;
-  top: 0;
-  height: 100vh;
   background: radial-gradient(circle at 50% 0%, #d7d5d8, #d6d4d7, #858383);
-  width: 100vw;
-  bottom: 0;
-  left: 0;
   z-index: 1000;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  padding: 15vh 2vw 5vh 2vw;
 }
 
 .content {
-  position: fixed;
-  display: grid;
-  grid-template-columns: 1fr;
   top: 20vh;
   left: 0;
   padding-left: 5vw;
 }
+
+.bajada, .descripcion, .titulo {margin: 0}
 
 .detailSection {
   padding: 1vh 1vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40vh;
   width: 70vw;
 }
 
 .listSection {
-  width: 60vw;
 }
 
 .list {
@@ -59,8 +54,6 @@
 }
 
 .selected {
-  height: 40vh;
-  width: 55vw;
 }
 
 .button {
