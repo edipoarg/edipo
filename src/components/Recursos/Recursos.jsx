@@ -18,7 +18,7 @@ const Recursos = () => {
 
                 </Link>
                 <Link to='./inteligencia_abierta'>
-                    <div className={styles.busqueda}><h3 className={styles.item}>MANUAL INTELIGENCIA ABIERTA</h3></div>
+                    <div className={styles.busqueda}><h3 className={styles.item}>MANUAL DE INTELIGENCIA ABIERTA</h3></div>
                 </Link>
                 <Link>
                     <div className={styles.guiaMapa}><h3 className={styles.item}>Guia mapa</h3></div>

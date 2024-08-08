@@ -34,12 +34,16 @@ const Investigations = () => {
           <div className={styles.detailSection}>
             <button onClick={handlePrev}>x</button>
             <div className={styles.selected}>
-              <h2>{selectedInvestigation.titulo}</h2>
+              <h2 className={styles.titulo}>{selectedInvestigation.titulo}</h2>
               <div className={styles.imagePlaceholder}></div>
-              <p>{selectedInvestigation.bajada}</p>
+              <p className={styles.bajada}>{selectedInvestigation.bajada}</p>
             </div>
             <button onClick={handleNext}>x</button>
           </div>
+          <section className={styles.fullInfo}>
+              <p className={styles.descripcion}>{selectedInvestigation.descripcion}</p>
+            </section>
+
           <div className={styles.listSection}>
             {/*  <ul className={styles.list}>
               {investigationsData.map((investigacion, index) => (

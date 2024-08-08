@@ -44,6 +44,9 @@
 
 .guiaMapa {
     color: #2e2c2f;
+    background: url('../../svg/portadaMapa.svg') no-repeat center center;
+    /* Añadir la ruta correcta a tu SVG */
+    background-size: contain;
 }
 
 .item {

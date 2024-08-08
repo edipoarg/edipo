@@ -35,7 +35,7 @@
     width: 55vw;
     text-align: justify;
     padding-top: 1vh;
-    padding-bottom: 5vh;
+    padding-bottom: 15vh;
     box-sizing: border-box;
 }
 
@@ -82,13 +82,13 @@
     align-content: center;
     align-self: center;
     justify-items: center;
-    max-width: 55vw;
-    padding-top: 6vh;
+    padding-top: 5vh;
+    padding-left: 4vw;
+    width: fit-content;
 }
 
 .newsData {
-    padding-left: 2vw;
-    max-width: 45vw;
+    padding-left: 8vw;
     text-align: left;
     font-size: 0.8rem;
     align-content: center;
@@ -97,34 +97,59 @@
 }
 
 .botonNews {
-    height: 5vh;
-    width: 1vw;
     border-radius: 360px;
     box-sizing: border-box;
     align-self: center;
     justify-items: center;
     margin: 0;
+    align-content: center;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.newsButtons {
+    display: flex;
+    gap: 40vw;
+    margin-top: -15vh;
 }
 
 .leer {
     margin: 0;
     text-align: center;
     text-justify: center;
+    padding: 0vh 0vw;
+    border: solid 1px;
+    max-width: 15vw;
+    border-radius: 45px;
+    color: #5973b5;
+    border-color: #86a0e1;
+}
+
+.play {
+    color: #86a0e1af;
+    font-size: 6rem;
+    background-color: #1d1d2184;
+    border-radius: 360px;
+    border: dashed 4px #686868;
+}
+
+.playContainer {
+    max-width: 20vw;
 }
 
 .newsTitle {
-    font-size: 1.5rem;
-    width: 45vw;
+    font-size: 0.8rem;
     margin: 0;
     box-sizing: border-box;
-    max-width: 45vw;
+    max-width: 38vw;
+    min-height: 10vh;
+    margin-top: 1vh;
 }
 
 .newsBajada {
     margin: 0;
     text-align: justify;
-    width: 17vw;
     box-sizing: border-box;
+    font-size: 0.7rem;
 }
 
 .mainBoard {
@@ -140,12 +165,32 @@
     border-bottom-left-radius: 35px;
     margin: 3vh 5vw;
     padding: 2vh 6vw;
-    margin-top: 2vh;
+    margin-top: 5vh;
     box-sizing: border-box;
 }
 
 .title {
     font-size: 1.7rem;
+}
+
+.bajada {
+    color: #d6d4d7;
+    font-size: 0.7rem;
+    margin: 0;
+    text-align: justify;
+    padding-right: 15vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.bajada2 {
+    color: #231f20;
+    font-size: 0.7rem;
+    margin: 0;
+    text-align: justify;
+    padding-right: 15vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
 }
 
 .boxList {
@@ -199,7 +244,7 @@
 .recursosList {
     display: flex;
     justify-content: center;
-    gap: 1vw;
+    gap: 0.5vw;
 }
 
 .recursosTitle {
@@ -227,6 +272,16 @@
     box-sizing: border-box;
 }
 
+.recursoName {
+    margin: 0;
+    max-width: 18vw;
+    font-size: 0.6rem;
+    color: #1a1a1a;
+    text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+}
+
 .button1 {
     color: #231f20;
     background: url('../../svg/mapa.svg') no-repeat center center;
@@ -240,6 +295,16 @@
 .button2 {
     color: #231f20;
     background: url('../../svg/Inteligencia.svg') no-repeat center center;
+    /* Añadir la ruta correcta a tu SVG */
+    background-size: cover;
+    /* Asegura que el SVG cubra todo el fondo */
+    box-sizing: border-box;
+    box-shadow: inset -5px -10px 15px rgba(54, 54, 54, 0.1);
+}
+
+.button3 {
+    color: #231f20;
+    background: url('../../svg/portadaMapa.svg') no-repeat center center;
     /* Añadir la ruta correcta a tu SVG */
     background-size: cover;
     /* Asegura que el SVG cubra todo el fondo */
@@ -307,8 +372,8 @@
     .news {
         box-shadow: none;
         padding-left: 6vw;
-        min-height: 35vh;
-        max-width: 45vw;
+        min-height: 30vh;
+        max-width: 35vw;
     }
 
     .news:hover {
@@ -322,7 +387,7 @@
     }
 
     .newsContainer {
-        max-width: 50vw;
+        max-width: 30vw;
         padding-top: 4vh;
     }
 
@@ -338,15 +403,68 @@
 
     .investigaciones {
         position: absolute;
-        top: 21vh;
+        top: 10vh;
         right: 2vw;
         height: 32vh;
-        width: 40vw;
+        width: 50vw;
         background: radial-gradient(circle at top, #333333, #231f20, #000000);
         border-top-right-radius: 20px;
         border-bottom-right-radius: 120px;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 35px;
+    }
+
+    .play {
+        font-size: 8rem;
+        background-color: #0f0f0f;
+        border-color: #ffffff96;
+        border-radius: 360px;
+        /* Mantener el borde redondeado si es necesario */
+        color: #86a0e1;
+        /* Color del texto inicial */
+        transition: all 0.3s ease;
+        /* Transición suave para los cambios */
+    }
+
+    .play:hover {
+        border-color: #5973b5;
+        /* Cambia el color del borde al blanco */
+        color: #d7d5d8;
+        /* Cambia el color del texto al blanco */
+        box-shadow: 0 0 15px 5px rgba(109, 117, 178, 0.858);
+        /* Efecto de resplandor en el borde */
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        /* Efecto de resplandor en el texto */
+    }
+
+    .playContainer {
+        padding-top: 2vh;
+        max-width: 50vw;
+        align-content: right;
+        text-align: right;
+        /* Alinea el contenido de texto a la derecha */
+        display: flex;
+        /* Si estás trabajando con elementos flexibles */
+        justify-content: flex-end;
+        /* Alinea los elementos dentro del contenedor flex al final */
+    }
+
+    .bajada {
+        font-size: 0.7rem;
+        margin: 0;
+        padding-right: 3vw;
+        padding-bottom: 2vh;
+        display: none;
+    }
+
+    .bajada2 {
+        display: none;
+        font-size: 0.7rem;
+        margin: 0;
+        padding-right: 3vw;
+        padding-bottom: 0vh;
+        padding-top: 0;
+        padding-left: 2vw;
     }
 
     .mainBoard {
@@ -358,9 +476,10 @@
     .recursos {
         position: absolute;
         right: 0vw;
+        bottom: 2vh;
         color: #ecede7;
         padding-top: 2vh;
-        width: 42vw;
+        width: 52vw;
         padding-left: 2vw;
         /* From https://css.glass */
         background: rgba(255, 255, 255, 0.1);
@@ -376,27 +495,38 @@
         color: white;
         text-shadow: 1px 1px 10px white;
         font-size: 2rem;
-        padding-bottom: 2rem;
+        padding-bottom: 0vh;
     }
 
     .button1,
     .button2,
     .button3 {
-        width: 15vh;
+        width: 12vh;
         color: #d6d4d7;
         margin: 0;
         border: solid 1px #d7d5d8;
         border-radius: 360px;
-        height: 15vh;
+        height: 12vh;
         align-content: center;
         padding: 1vh 2vw;
         margin-top: 2vh;
     }
+
+    .recursoName {
+        margin: 0;
+        max-width: 10vw;
+        font-size: 0.6rem;
+        color: #c1bfc1;
+        text-align: center;
+        padding-top: 2vh;
+        padding-bottom: 1vh;
+    }
 }
 
 @media (min-width: 1080px) {
-
-    .header { padding: 4vh 6vw;}
+    .header {
+        padding: 4vh 6vw;
+    }
 
     .edipo {
         font-size: 6rem;
@@ -405,7 +535,9 @@
         margin-top: 10vh;
     }
 
-    .name { padding-top: 5vh;}
+    .name {
+        padding-top: 5vh;
+    }
 
     .texto {
         margin: 0;
@@ -413,6 +545,7 @@
         text-align: justify;
         padding-left: 4vw;
     }
+
     .news {
         padding-left: 6vw;
         min-height: 35vh;
@@ -440,7 +573,6 @@
         max-width: 20vw;
     }
 
-
     .button1,
     .button2,
     .button3 {
@@ -453,5 +585,31 @@
         align-content: center;
         padding: 1vh 2vw;
         margin-top: 2vh;
+    }
+
+    .bajada {
+        display: flex;
+        color: #d6d4d7;
+        font-size: 0.7rem;
+        margin: 0;
+        text-align: justify;
+        padding-top: 1vh;
+        padding-bottom: 2vh;
+        max-width: 20vw;
+    }
+
+    .bajada2 {
+        display: flex;
+        color: #231f20;
+        font-size: 0.7rem;
+        margin: 0;
+        text-align: justify;
+        padding-left: 1vw;
+        padding-bottom: 1vh;
+        max-width: 40vw;
+    }
+
+    .playContainer {
+        margin-top: -20vh;
     }
 }
