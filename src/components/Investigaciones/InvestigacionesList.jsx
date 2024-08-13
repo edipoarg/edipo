@@ -12,6 +12,7 @@ export const investigationsData = [
     fb: 'https://www.facebook.com/mapadelapolicia/',
     investigaciones: 'http://wwwm.mapadelapolicia.com/#/investigaciones',
     mail: 'mapadelapolicia@gmail.com',
+    img: 'https://static.wixstatic.com/media/0f4ca0_ab230e22132d40c4bc91d7a4ae51cb00~mv2.png/v1/fill/w_750,h_750,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/pngmapa.png',
   },
   {
     titulo: "Monitor",
@@ -21,6 +22,7 @@ export const investigationsData = [
     enlace: "",
     dominio: 'monitor',
     mail: 'monitordeinjerencia@gmail.com',
+    img: "https://static.wixstatic.com/media/0f4ca0_88b8f6393a3f4353a5a48e48e223725d~mv2.png/v1/fill/w_750,h_750,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/pngMonitor.png",
   },
   {
     titulo: "Ra-dar",
@@ -31,7 +33,8 @@ export const investigationsData = [
     investigaciones: "https://ra-dar.com.ar/#/notas",
     Newsletter: "https://ra-dar.com.ar/",
     mail: "RADAR.EDIPO@GMAIL.COM",
-    dominio: "radar"
+    dominio: "radar",
+    img: "https://static.wixstatic.com/media/0f4ca0_d28b4374488a4f5380fc7b67769318fe~mv2.png/v1/fill/w_750,h_750,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/pngRadar.png",
 
   },
   {
@@ -43,6 +46,7 @@ export const investigationsData = [
     dominio: 'ahora',
     ig: "https://www.instagram.com/mapadelapolicia/",
     mail: "registrocolectivo2024@gmail.com",
+    img: 'https://static.wixstatic.com/media/0f4ca0_67dd90c24ac54a88b652797092e7d405~mv2.png/v1/fill/w_750,h_750,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/pngAhora.png',
   }
 
 ];

@@ -56,6 +56,22 @@
 .selected {
 }
 
+
+.imagePlaceholder {
+  width: 50vw;
+  height: 50vh;
+  margin: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.imagePlaceholder.show {
+  opacity: 1; /* Totalmente visible cuando se añade la clase 'show' */
+}
+
 .button {
   border: solid 1px #1a1a1a;
   border-radius: 7px;
@@ -141,7 +157,14 @@
     width: 20vw;
     height: 40vh;
     margin: auto;
-    border: solid 1px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  .imagePlaceholder.show {
+    opacity: 1; /* Totalmente visible cuando se añade la clase 'show' */
   }
 
   .navigationButtons {
