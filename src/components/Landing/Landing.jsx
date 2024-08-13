@@ -73,7 +73,7 @@ const Landing = () => {
                         )}
                         <section className={styles.investigaciones}>
                             <h2 className={styles.title}>PROYECTOS <br /> / TECNOPOLÍTICAS</h2>
-                            <h4 className={styles.bajada}>Bajo la premisa de la información como autodefensa desarrollamos plataformas de monitoreo ciudadano y experiencias de periodismo abierto en red con diversos actores de la sociedad civil.
+                            <h4 className={styles.bajada}> plataformas de monitoreo ciudadano y experiencias de periodismo abierto en red con diversos actores de la sociedad civil.
                             </h4>
                             <div className={styles.playContainer}>
                                 <Link to='/lista' ><GoPlay className={styles.play} /></Link>
@@ -87,7 +87,7 @@ const Landing = () => {
                         </section>
                         <section className={styles.recursos}>
                             <h2 className={styles.recursosTitle}>RECURSOS</h2>
-                            <h4 className={styles.bajada2}>Hacer investigación política en el presente tiene desafíos metodológicos sobre la recolección de los datos y su análisis, así como desafíos vinculados a la seguridad de los datos y las personas involucradas en el proceso de investigación. </h4>
+                            <h4 className={styles.bajada2}>Desafíos metodológicos sobre la recolección de los datos y su análisis, así como desafíos vinculados a la seguridad de los datos y las personas involucradas. </h4>
 
                             <div className={styles.recursosList}>
                                 <Link to='/recursos/autocuidado'>   <h5 className={styles.button1}></h5><h5 className={styles.recursoName}>CUIDADO COLECTIVO Y AUTODEFENSA DIGITAL</h5> </Link>
