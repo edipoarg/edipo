@@ -131,7 +131,11 @@
     .hamburger .icon {
         font-size: 2rem;
     }
+
+    .suscribite{
+    }
 }
+
 
 @media (min-width: 768px) {
     .menu {
