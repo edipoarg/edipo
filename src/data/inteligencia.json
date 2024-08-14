@@ -69,7 +69,7 @@
             "nombre": "Metadatos",
             "bajada": "Datos descriptivos y contextuales",
             "info": "Los metadatos son datos que proporcionan información descriptiva y contextual sobre otros datos. En OSINT, los metadatos son especialmente útiles para el análisis de imágenes, archivos y documentos, ya que pueden revelar detalles como la fecha y hora de creación, ubicación geográfica, autoría y configuraciones de dispositivo utilizadas para crear o modificar los datos.\n\nLos analistas de OSINT utilizan herramientas especializadas para extraer, analizar y correlacionar metadatos con el fin de obtener información adicional y contextualizar los datos recopilados de fuentes abiertas.",
-            "tag": "ANÁLISIS",
+            "tag": "ANALISIS",
             "link": "No disponible",
             "imagen": "METADATOS",
             "nombre_descriptivo": ""
