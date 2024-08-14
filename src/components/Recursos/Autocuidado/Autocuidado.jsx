@@ -46,7 +46,7 @@ const Autocuidado = () => {
         {Object.entries(iconMap).map(([key, value]) => {
           const recurso = recursos.find(recurso => recurso.IMAGEN === key);
           return (
-            <Link key={key} to={`/recursos/autocuidado/${key}`}>
+            <Link key={key} to={`/recursos/autocuidado/${key}`} className={styles.a}>
               <div className={styles[key.toLowerCase()]}>
                 <section className={styles.card}>
                   <div className={styles.image} style={{ backgroundImage: `url(${value})` }}>

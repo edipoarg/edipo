@@ -42,13 +42,13 @@ const Investigations = () => {
           <div className={styles.detailSection}>
             <button onClick={handlePrev}> - </button>
             <div className={styles.selected}>
-              <h2 className={styles.titulo}>{selectedInvestigation.titulo}</h2>
               <div className={styles.imageContainer}>
                 <div
                   className={`${styles.imagePlaceholder} ${showImage ? styles.show : ''}`}
                   style={{ backgroundImage: `url(${selectedInvestigation.img})` }} // Establecer la imagen de fondo
                 ></div>
               </div>
+              <h2 className={styles.titulo}>{selectedInvestigation.titulo}</h2>
               <p className={styles.bajada}>{selectedInvestigation.bajada}</p>
             </div>
             <button onClick={handleNext}>+</button>

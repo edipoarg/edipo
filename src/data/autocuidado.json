@@ -31,7 +31,7 @@
   {
     "NOMBRE": "KEEPASS",
     "SUB": "NO TE VAYAS SIN CERRAR",
-    "BAJADA": "Herramienta para la gestión \nsegura de contraseñas diversas \nmediante una única “llave maestra”",
+    "BAJADA": "Herramienta para la gestión segura de contraseñas diversas mediante una única “llave maestra",
     "INFO": "Gestor seguro para proteger todas tus contraseñas sin tener que recordarlas\nmediante una única “llave maestra”. Fabrica contraseñas seguras.",
     "TAG": "RESGUARDO DE INFORMACIÓN",
     "LINK": "https://keepassxc.org/",
@@ -40,7 +40,7 @@
   {
     "NOMBRE": "VERACRYPT",
     "SUB": "RESGUARDÁ TU ALMACENAMIENTO",
-    "BAJADA": "Herramienta para el cifrado \nde discos y carpetas \nen la PC y pendrives",
+    "BAJADA": "Herramienta para el cifrado de discos y carpetas en la PC y pendrives",
     "INFO": "Es un software para establecer y mantener un volumen cifrado sobre la marcha. Esto significa que los datos se cifran automáticamente justo antes de guardarlos y se descifran justo después de cargarlos, sin ningún usuario intervención. Ningún dato almacenado en un volumen cifrado se puede leer (descifrar) sin utilizar las contraseñas/archivos de claves correctos o las claves de cifrado correctas. Todo el sistema de archivos está encriptado",
     "TAG": "RESGUARDO DE INFORMACIÓN",
     "LINK": "https://www.veracrypt.fr/",
@@ -49,7 +49,7 @@
   {
     "NOMBRE": "PROTONMAIL",
     "SUB": "PROTEGÉ EL MENSAJE",
-    "BAJADA": "Correo electrónico cifrado \nde extremo a extremo",
+    "BAJADA": "Correo electrónico cifrado de extremo a extremo",
     "INFO": "Correo electrónico cifrado de extremo a extremo. Podes migrar rápidamente correos electrónicos, etiquetas, contactos y calendariosdes de cualquier proveedor de correo electrónico a Proton Mail.",
     "TAG": "COMUNICACIÓN",
     "LINK": "https://proton.me/es/mail",
@@ -58,7 +58,7 @@
   {
     "NOMBRE": "TAILS",
     "SUB": "TU LUGAR SEGURO",
-    "BAJADA": "Sistema operativo paralelo \nportátil de naturaleza \nanónima y amnésica. \nOfrece una selección de \nherramientas para el \ntrabajo con información \nsensible y la comunicación \nsegura.",
+    "BAJADA": "Sistema operativo paralelo portátil de naturaleza anónima y amnésica. Ofrece una selección de herramientas para el trabajo con información sensible y la comunicación segura.",
     "INFO": "Es un sistema operativo portátil que te protege\nde la vigilancia y la censura.\nEs independiente, vive en un pendrive y se puede\nutilizar desde cualquier computadora\nEVITA EL RASTREO,CÓDIGO DE SOFTWARE PÚBLICO, MÁXIMA SEGURIDAD GRATIS",
     "TAG": "COMUNICACIÓN",
     "LINK": "https://tails.boum.org",
