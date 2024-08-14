@@ -2,41 +2,28 @@
     {
         "nombre": "La investigación política",
         "fecha": "junio / julio 2021",
-        "lugar": "Virtual",
-        "contenido": "Invevstigación Política y Walsh - Charla con Diego Sztulwark",
-        "url": "",
-        "videoUrl": "https://youtube.com/bzkPRRWj2tE"
+        "contenido": "Invevstigación Política y Walsh"
     },
     {
         "nombre": "Guía práctica para la investigación política en el SXXI",
-        "fecha": "Lunes 8, 15, 22 y 29 de agosto 2022 (18 a 20 hs.)",
-        "lugar": "La tribu (Lambaré 873)",
-        "contenido": "",
-        "url": "https://www.revistacrisis.com.ar/articulo/guia-practica-para-la-investigacion-politica-en-el-siglo-xxi",
-        "videoUrl": "https://www.youtube.com/embed/video_id_1"
+        "fecha": "agosto 2022"
+      
     },
     {
         "nombre": "Investigación e incidencia política",
-        "fecha": "13 marzo 2023",
-        "lugar": "Virtual",
-        "contenido": "Seminario: https://drive.google.com/file/d/16pe5mAkr3CHPEqbTrRqqfg60clr_hO-o/view?usp=share_link\n\nConvocatoria: https://www.mpdl.org/noticias/seminario-online-investigacion-e-incidencia-politica#sthash.XZsSfGon.HhM5QwBU.dpbs\n\nUn seminario online que propone una nueva metodología de investigación política para enfrentar las violencias contemporáneas: los mapas de poder. Organizan: Alba Quirós (Moderadora), Noemi Laforgue y Margarita del Olmo. Grupo INTER. Ponentes: Stephanie Darling y Elisa Corzo, del Equipo de Investigación Política EdIPo (Buenos Aires, Argentina).",
-        "url": "",
-        "videoUrl": "https://www.youtube.com/embed/video_id_2"
+        "fecha": "marzo 2023"
+ 
     },
     {
         "nombre": "La investigación política en el siglo XXI",
-        "fecha": "5, 12, 19 y 26 de Abril 2023",
-        "lugar": "CCK",
-        "contenido": "2023 talleres investigación política en el cck\n\ntaller 1 cck: presentación https://youtu.be/JNrrQahIVeg\n\ntaller 2 cck (video de ale fraile no sé dónde está)\n\ntaller 3 cck https://youtu.be/0SMXdC0549g\n\ntaller 4 cck https://youtu.be/P8FkxyGs-SA",
-        "url": "https://www.cck.gob.ar/events/la-investigacion-politica-en-el-siglo-xxi-taller-con-el-equipo-de-investigacion-politica/",
-        "videoUrl": "https://www.youtube.com/embed/video_id_3"
+        "fecha": " Abril 2023",
+        "contenido": "2023 talleres investigación política en el cck"
+
     },
     {
         "nombre": "Taller de cuidado y primero auxilios para el registro en manifestaciones",
         "fecha": "marzo 2024",
-        "lugar": "La tribu (Lambaré 873)",
-        "contenido": "TALLER CUIDADO COLECTIVO DIRIGIDO A FOTOREPORTERXS Y PERIODISTAS Convoca Mapa de la Policía- Revista Crisis En la actividad de registrar el despliegue policial o simplemente el contexto en que se realiza una manifestación puede tener consecuencias negativas para personas que registran hechos de violencia cometidos por las fuerzas de seguridad. Aquí recopilamos recursos de distintas fuentes para el cuidado físico, psico/emocional y salud en la actividad de registro audiovisual en manifestaciones.",
-        "url": "",
-        "videoUrl": ""
+        "contenido": "TALLER CUIDADO COLECTIVO DIRIGIDO A FOTOREPORTERXS Y PERIODISTAS"
+  
     }
 ]

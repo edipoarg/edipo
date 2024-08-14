@@ -18,15 +18,12 @@ const Talleres = () => {
                     <div key={index} className={styles.taller}>
                         <h3 className={styles.name}>{taller.nombre}</h3>
                         <p className={styles.date}><strong>Fecha:</strong> {taller.fecha}</p>
-                        <p className={styles.lugar}><strong>Lugar:</strong> {taller.lugar}</p>
                         {taller.contenido && (
                             <div className={styles.contenido}>
                                 <strong>Contenido:</strong>
                                 <p>{taller.contenido}</p>
                             </div>
                         )}
-                        {taller.url && <p><a href={taller.url} target="_blank" rel="noopener noreferrer">Más información</a></p>}
-                        {taller.videoUrl && <iframe className={styles.iframe} width="560" height="315" src={taller.videoUrl} title={taller.nombre} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>}
                     </div>
                 ))}
             </div>
