@@ -1,0 +1,76 @@
+/* FichaInteligencia.module.css */
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle at 50% 0%, #d7d5d8, #d6d4d7, #858383);
+    padding: 18vh 7vw;
+    padding-bottom: 5vh;
+}
+
+.ficha {
+    background: radial-gradient(circle at 50% 0%, #dfdada, #bdbaba, #818485);
+    color: #231f20;
+    height: fit-content;
+    padding: 5vh 8vw;
+    border-radius: 14px;
+    box-shadow:
+        0px 20px 30px 1px rgba(0, 0, 0, 0.5),
+        inset -2px 0 5px rgba(255, 255, 255, 0.3),
+        inset 0 20px 35px rgba(255, 255, 255, 0.8);
+}
+
+.iconContainer {
+    height: 30vh; /* Ajusta según sea necesario */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(0 0 2px rgba(205, 211, 212, 0.8)) drop-shadow(0 0 8px rgb(203, 217, 223));
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+}
+
+.name {
+    font-size: 1.5rem; /* Ajusta el tamaño según tu diseño */
+    margin: 0;
+}
+
+.bajada {
+    text-align: left;
+    font-size: 2rem;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+    margin: 0;
+}
+
+.info {
+    text-align: justify;
+    padding-bottom: 3vh;
+    font-size: 1rem;
+}
+
+.link {
+    border: solid 1px white;
+    border-radius: 50px;
+    color: white;
+    padding: 1vh 8vw;
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.2),
+        0 0 20px rgba(255, 255, 255, 0.1),
+        inset 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: box-shadow 0.3s ease;
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.1),
+        0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.link:hover {
+    color: white;
+    box-shadow:
+        0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 30px rgba(255, 255, 255, 0.2),
+        inset 0 0 15px rgba(255, 255, 255, 0.4);
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.5),
+        0 0 10px rgba(255, 255, 255, 0.7);
+}
