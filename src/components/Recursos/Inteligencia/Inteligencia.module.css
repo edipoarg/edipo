@@ -1,0 +1,58 @@
+/* Inteligencia.module.css */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle at 50% 0%, #f2f1f1, #dddcdc, #818485);
+  }
+  
+  .text {
+    color: #2e2c2f;
+  }
+  
+  .recursos-list {
+    background-image: url('../../../svg/portadaInteligencia.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    position: fixed;
+    top: 20vh;
+    left: 5vw;
+    width: 90vw;
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2vw;
+  }
+  
+  .recurso {
+    background-color: rgba(218, 208, 208, 0.1);
+    border-radius: 10px;
+    box-shadow: 3px 8px 15px rgba(45, 45, 45, 0.6), 2px 3px 2px inset rgba(232, 230, 230, 0.767);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(5px);
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .recurso img {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+  }
+  
+  .recurso h4 {
+    margin: 0;
+    font-size: 1rem;
+    background-color: #2e2c2f;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 50px;
+  }
+  
