@@ -1,7 +1,7 @@
 [
   {
     "NOMBRE": "VPN",
-    "BAJADA": "Anonimiza la locación y \nencripta el tráfico de datos\n(recomendamos Riseup VPN)",
+    "BAJADA": "Anonimiza la locación encripta el tráfico de datos(recomendamos Riseup VPN) ",
     "INFO": "anonimiza la locación y encripta el tráfico de datos. esquiva censuras y evita\nrastreos con fines de vigilancia o publicidad.¿cómo? una conexión encriptada\ncanaliza a través de sus servidores seguros tu tráfico hacia el internet público\ncomo si fuese un túnel. recomendamos RISE UP VPN porque además de ser gratuita no\nregistra dirección IP (pero debe ser activada cada vez). También disponible para ANDROID (alternativas ProtonVPN, NordVPN, Tunnel Bear).",
     "TAG": "NAVEGACIÓN",
     "LINK": "https://riseup.net/en/vpn",
@@ -9,7 +9,7 @@
   },
   {
     "NOMBRE": "TOR",
-    "BAJADA": "Cifra tres veces el tráfico de datos y los redirige a través de servidores \naleatorios de esta red para ocultar su origen y destino. Bloquea rastreos y accesos al \ncontenido de tu navegación a terceros",
+    "BAJADA": "Cifra tres veces el tráfico de datos y los redirige a través de servidores aleatorios de esta red para ocultar su origen y destino. Bloquea rastreos y accesos al contenido de tu navegación a terceros",
     "INFO": "cifra tres veces el tráfico de datos y lo redirige a través de servidores aleatorios\nde la red Tor para ocultar su origen y destino. bloquea rastreadores e invisibiliza\nel contenido de tu navegación a terceros Tor cifra y anonimiza tu conexión al\npasarlo a través de 3 relays. Los relays son servidores operados por diferentes\npersonas y organizaciones de todo el mundo. Tor evita que alguien que esté viendo\ntu conexión a Internet sepa qué estás haciendo en Internet. Se han detectado vulnerabilidades en algunos de sus nodos de salida, por lo que se\nrecomienda agregar una capa extra de protección combinando su uso con una VPN.",
     "TAG": "NAVEGACIÓN",
     "LINK": "https://www.torproject.org/es/download",
@@ -17,7 +17,7 @@
   },
   {
     "NOMBRE": "CRYPTPAD",
-    "BAJADA": "Espacio de colaboración en línea que \npermite trabajar hojas de calculo, \ndocumentos de texto, kanban, \nformularios y  diapositivas. Ofrece servicio de almacenamiento en \nlínea encriptado con un máximo de 1GB",
+    "BAJADA": "Espacio de olaboración en línea que permite trabajar hojas de calculo, documentos de texto, kanban, formularios y  diapositivas. Ofrece servicio de almacenamiento en línea encriptado con un máximo de 1GB",
     "INFO": "Espacio de colaboración y almacenamiento en línea encriptado de extremo a extremo\ncon posibilidad de trabajar hojas de cálculo, documentos de texto, kanban, códigos,\nformularios, pizarras y diapositivas con un max. de 1 GB. OJO! si olvidas la\ncontraseña no es posible recuperarla.",
     "TAG": "COLABORACIÓN",
     "LINK": "https://cryptpad.fr/",
@@ -25,7 +25,7 @@
   },
   {
     "NOMBRE": "RISE UP PAD",
-    "BAJADA": "Permite crear documentos en línea\ncolaborativos, con posibilidad \nde introducir contraseñas para \nsu protección, y programar su \nautodestrucción",
+    "BAJADA": "Permite crear documentos en línea colaborativos, con posibilidad de introducir contraseñas para su protección, y programar su autodestrucción",
     "INFO": "Permite crear de forma sencilla documentos colaborativos alojados en servers seguros\ncon posibilidad de programar su autodestrucción. Además, funciona como alternativa\npara chatear sin necesidad de compartir aplicación.",
     "TAG": "COLABORACIÓN",
     "LINK": "https://pad.riseup.net/",
