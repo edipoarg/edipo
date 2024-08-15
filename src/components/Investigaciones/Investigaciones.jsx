@@ -38,6 +38,7 @@ const Investigations = () => {
       <AppBar></AppBar>
       <div className={styles.investigaciones}>
         <h1 className={styles.header}>Proyectos / Tecnopolíticas</h1>
+        <h4 className={styles.subtitle}>Bajo la premisa de la información como autodefensa desarrollamos plataformas de monitoreo ciudadano y experiencias de periodismo abierto en red con diversos actores de la sociedad civil.</h4>
         <div className={styles.content}>
           <div className={styles.detailSection}>
             <button onClick={handlePrev}> - </button>

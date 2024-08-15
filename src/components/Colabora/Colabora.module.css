@@ -1,12 +1,15 @@
 /* Estilo general del fondo */
 .background {
-    box-sizing: border-box;
     position: absolute;
     top: 0;
     left: 0;
-    min-height: 100%;
+    box-sizing: border-box;
     width: 100%;
-    background: radial-gradient(circle at top left, #131212, #0b0b0b, #000000);
+    z-index: 0;
+    background: radial-gradient(circle at top left, #333333, #1a1a1a, #000000);
+    padding-top: 1vh;
+    padding: 2vh 2vw;
+    min-height: 100vh;
 }
 
 /* Contenedor principal del componente */

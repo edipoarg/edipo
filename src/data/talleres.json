@@ -1,29 +1,35 @@
 [
     {
-        "nombre": "La investigación política",
-        "fecha": "junio / julio 2021",
-        "contenido": "Invevstigación Política y Walsh"
+        "nombre": "[ Cuidado y primero auxilios para el registro en manifestaciones ]",
+        "fecha": "marzo 2024",
+        "contenido": "TALLER CUIDADO COLECTIVO DIRIGIDO A FOTOREPORTERXS Y PERIODISTAS",
+        "color": "yellowgreen"
+  
     },
     {
-        "nombre": "Guía práctica para la investigación política en el SXXI",
-        "fecha": "agosto 2022"
-      
+        "nombre": "[ La investigación política en el siglo XXI ]",
+        "fecha": " Abril 2023",
+        "contenido": "2023 talleres investigación política en el cck",
+        "color": "white"
     },
+
     {
-        "nombre": "Investigación e incidencia política",
-        "fecha": "marzo 2023"
+        "nombre": "[ Investigación e incidencia política ]",
+        "fecha": "marzo 2023",
+        "color": "black"
  
     },
     {
-        "nombre": "La investigación política en el siglo XXI",
-        "fecha": " Abril 2023",
-        "contenido": "2023 talleres investigación política en el cck"
-
+        "nombre": "[ Guía práctica para la investigación política en el SXXI ]",
+        "fecha": "agosto 2022",
+        "color": "blue"
     },
-    {
-        "nombre": "Taller de cuidado y primero auxilios para el registro en manifestaciones",
-        "fecha": "marzo 2024",
-        "contenido": "TALLER CUIDADO COLECTIVO DIRIGIDO A FOTOREPORTERXS Y PERIODISTAS"
   
+    {
+        "nombre": "[ La investigación política ]",
+        "fecha": "junio / julio 2021",
+        "contenido": "Invevstigación Política y Walsh",
+        "color": "white"
+
     }
 ]
