@@ -9,7 +9,7 @@
     top: 2vh;
     box-sizing: border-box;
     padding: 0vh 7vw;
-    z-index: 1000;
+    z-index: 2000;
     justify-content: space-between;
 }
 
