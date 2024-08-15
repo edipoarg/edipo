@@ -36,6 +36,11 @@
 
 .bajada, .descripcion, .titulo {margin: 0}
 
+.fullInfo{
+  text-align: justify;
+  padding-right: 5vw;
+}
+
 .detailSection {
   padding: 1vh 1vw;
   display: flex;
