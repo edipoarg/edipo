@@ -1,5 +1,3 @@
-/* Navbar.module.css */
-/* General Styles */
 .navbar {
     left: 0;
     align-items: center;
@@ -21,7 +19,6 @@
 
 .menu {
     display: none;
-    /* Oculta el menú por defecto */
 }
 
 .menu.open {
@@ -40,7 +37,6 @@
     overflow: auto;
     align-items: flex-start;
     border-bottom: 1px solid black;
-    /* Línea debajo de cada opción */
 }
 
 .menu.open .item {
@@ -49,27 +45,21 @@
     width: 100%;
     text-align: left;
     color: black;
-    /* Color del texto */
 }
 
-/* Estilos para los enlaces del menú */
 .menu.open a {
     text-decoration: none;
     color: black;
-    /* Color del texto del enlace */
 }
 
 .menu.open a:hover,
 .menu.open a:focus {
     text-decoration: none;
-    /* Asegura que el subrayado no aparezca al pasar el mouse */
     color: black;
-    /* Mantiene el color del texto al pasar el mouse */
 }
 
 .hamburger {
     display: none;
-    /* Oculta el botón de hamburguesa por defecto */
     cursor: pointer;
     font-size: 2rem;
     padding-right: 6vw;
@@ -132,8 +122,6 @@
         font-size: 2rem;
     }
 
-    .suscribite{
-    }
 }
 
 
