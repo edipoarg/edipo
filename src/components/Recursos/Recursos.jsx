@@ -10,7 +10,8 @@ const Recursos = () => {
 
             <section className={styles.header}>
                 <h2 className={styles.title}>RECURSOS</h2>
-                <h4 className={styles.subTitle}>Herramientas de investigación</h4>
+                <h4 className={styles.subTitle}>Hacer investigación política en el presente tiene desafíos metodológicos sobre la recolección de los datos y su análisis, así como desafíos vinculados a la seguridad de los datos y las personas involucradas en el proceso de investigación. 
+                </h4>
             </section>
             <section className={styles.recursos}>
                 <Link to='./autocuidado'>

@@ -10,6 +10,10 @@ function Navbar() {
     setMenuOpen(!menuOpen);
   };
 
+  const handleMenuItemClick = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <>
       <section className={styles.navbar}>
@@ -20,21 +24,20 @@ function Navbar() {
         </Link>
 
         <section className={styles.derecha}>
-
           <section className={`${styles.menu} ${menuOpen ? styles.open : ''}`}>
-            <Link to='./lista'>
+            <Link to='./lista' onClick={handleMenuItemClick}>
               <h5 className={styles.item}>Investigaciones</h5>
             </Link>
-            <Link to='./recursos'>
+            <Link to='./recursos' onClick={handleMenuItemClick}>
               <h5 className={styles.item}>Recursos</h5>
             </Link>
-            <Link to='./talleres'>
+            <Link to='./talleres' onClick={handleMenuItemClick}>
               <h5 className={styles.item}>Talleres</h5>
             </Link>
-            <Link to='./publicaciones'>
+            <Link to='./publicaciones' onClick={handleMenuItemClick}>
               <h5 className={styles.item}>Publicaciones</h5>
             </Link>
-            <Link to='./contacto'>
+            <Link to='./contacto' onClick={handleMenuItemClick}>
               <h5 className={styles.item}>Contacto</h5>
             </Link>
           </section>
@@ -44,11 +47,11 @@ function Navbar() {
               <h4 className={styles.text}>Suscribite</h4>
             </section>
           </Link>
+
           <div className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`} onClick={handleMenuToggle}>
             {menuOpen ? <FaTimes className={styles.icon} /> : <FaBars className={styles.icon} />}
           </div>
         </section>
-
       </section>
     </>
   );
