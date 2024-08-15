@@ -37,11 +37,15 @@ const Investigations = () => {
     <section className={styles.background}>
       <AppBar></AppBar>
       <div className={styles.investigaciones}>
-        <h1 className={styles.header}>Proyectos / Tecnopolíticas</h1>
-        <h4 className={styles.subtitle}>Bajo la premisa de la información como autodefensa desarrollamos plataformas de monitoreo ciudadano y experiencias de periodismo abierto en red con diversos actores de la sociedad civil.</h4>
+        <section className={styles.header}>
+
+      
+        <h1 className={styles.title} >Proyectos / Tecnopolíticas</h1>
+        <h4 className={styles.subTitle}>Bajo la premisa de la información como autodefensa desarrollamos plataformas de monitoreo ciudadano y experiencias de periodismo abierto en red con diversos actores de la sociedad civil.</h4>
+        </section>
         <div className={styles.content}>
           <div className={styles.detailSection}>
-            <button onClick={handlePrev}> - </button>
+            <div className={styles.button} onClick={handlePrev}> - </div>
             <div className={styles.selected}>
               <div className={styles.imageContainer}>
                 <div
@@ -49,18 +53,15 @@ const Investigations = () => {
                   style={{ backgroundImage: `url(${selectedInvestigation.img})` }} // Establecer la imagen de fondo
                 ></div>
               </div>
-              <h2 className={styles.titulo}>{selectedInvestigation.titulo}</h2>
-              <p className={styles.bajada}>{selectedInvestigation.bajada}</p>
             </div>
-            <button onClick={handleNext}>+</button>
+            <div onClick={handleNext} className={styles.button}>+</div>
           </div>
+          
       
           <div className={styles.listSection}>
-            {/* Aquí puedes agregar la lista si es necesario */}
-          </div>
-          <section className={styles.fullInfo}>
-            <p className={styles.descripcion}>{selectedInvestigation.descripcion}</p>
-          </section>
+          <h2 className={styles.titulo}>{selectedInvestigation.titulo}</h2>
+          <p className={styles.bajada}>{selectedInvestigation.bajada}</p>          </div>
+         
 
         </div>
       </div>
