@@ -35,7 +35,7 @@ const router = createHashRouter([
       { path: "/publicaciones", element: <Publicaciones /> },
       { path: "/:dominio", element: <Investigacion /> }, // Asume que aquí se mostrará la información completa de una investigación
       { path: "/talleres", element: <Talleres /> },
-      { path: "/contacto", element: <Contacto /> },
+      { path: "/equipo", element: <Contacto /> },
       { path: "/colabora", element: <Colabora /> },
       { path: "/recursos/autocuidado", element: <Autocuidado /> },
       { path: "/recursos/autocuidado/:IMAGEN", element: <FichaAutocuidado /> },
