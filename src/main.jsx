@@ -8,10 +8,9 @@ import {
 } from "react-router-dom";
 import "./index.css";
 
-import App from "./App";
 import Investigations from './components/Investigaciones/Investigaciones.jsx';
 import Recursos from './components/Recursos/Recursos.jsx';
-import Investigacion from './components/Investigaciones/Investigacion.jsx';
+import FichaProyecto from './components/Investigaciones/FichaPoryecto/FichaPoryecto.jsx';
 import Publicaciones from './components/Publicaciones/Publicaciones.jsx';
 import Landing from './components/Landing/Landing.jsx';
 import Talleres from './components/Talleres/Talleres.jsx';
@@ -33,7 +32,7 @@ const router = createHashRouter([
       { path: "/recursos", element: <Recursos /> },
       { path: "/lista", element: <Investigations /> },
       { path: "/publicaciones", element: <Publicaciones /> },
-      { path: "/:dominio", element: <Investigacion /> }, // Asume que aquí se mostrará la información completa de una investigación
+      { path: "/:dominio", element: <FichaProyecto /> }, // Asume que aquí se mostrará la información completa de una investigación
       { path: "/talleres", element: <Talleres /> },
       { path: "/equipo", element: <Contacto /> },
       { path: "/colabora", element: <Colabora /> },
