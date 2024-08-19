@@ -1,0 +1,27 @@
+
+.equipo {
+margin: 0;}
+
+.tematica {
+    margin-bottom: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #dcd6d6;
+}
+
+.tematica h3 {
+    font-size: 1.5rem;
+    color: #dcd6d6;
+}
+
+.tematica h5 {
+    font-size: 1rem;
+    color: #dcd6d6;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.tematica svg {
+    margin-bottom: 1rem;
+}

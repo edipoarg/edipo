@@ -1,15 +1,4 @@
-.background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    box-sizing: border-box;
-    width: 100%;
-    z-index: 0;
-    background: radial-gradient(circle at top left, #333333, #1a1a1a, #000000);
-    padding-top: 1vh;
-    padding: 2vh 2vw;
-    min-height: 100vh;
-}
+
 
 .landing {
     box-sizing: border-box;
@@ -19,10 +8,16 @@
     margin: 0;
     text-align: left;
     font-size: 5rem;
-    padding-top: 1vh;
+    padding-top: 5vh;
     color: #231f20;
 }
-
+.subTitle{
+    margin: 0;
+    text-align: left;
+    color: #231f20;
+    padding-top: 2vh;
+    padding-left: 2vw;
+}
 .name {
     margin: 0;
     text-align: left;
@@ -32,11 +27,13 @@
 
 .texto {
     margin: 0;
-    width: 55vw;
+    width: 60vw;
     text-align: justify;
     padding-top: 1vh;
-    padding-bottom: 15vh;
+    padding-bottom: 20vh;
     box-sizing: border-box;
+    color: #1a1a1a;
+    padding-left: 2vw;
 }
 
 .header {
@@ -44,13 +41,13 @@
     border-radius: 3px;
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
     /* Sombra común */
-    padding: 6vh 10vw;
     min-height: 45vh;
     border-bottom-left-radius: 180px;
     border-bottom-right-radius: 38px;
+    padding: 6vh 10vw;
     margin: 0vh 2vw;
-    padding-top: 10vh;
     margin-right: 4vw;
+
 }
 
 .title {
@@ -62,29 +59,28 @@
     font-size: 2rem;
 }
 
-.news {
-    margin-top: -18vh;
+
+
+.newsContainer {
     background: radial-gradient(circle at top, #333333, #231f20, #000000);
     border-radius: 120px;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 120px;
-    width: 60vw;
-    min-height: 25vh;
-    padding-left: 2vw;
     box-shadow: 5px 0px 10px 1px rgba(253, 253, 253, 0.1),
-        -10px 0px 50px rgba(253, 253, 253, 0.192),
-        5px 5px 60px inset rgba(254, 252, 252, 0.1);
-    box-sizing: border-box;
-}
-
-.newsContainer {
+    -10px 0px 50px rgba(253, 253, 253, 0.192),
+    5px 5px 60px inset rgba(254, 252, 252, 0.1);
     display: flex;
     align-content: center;
     align-self: center;
     justify-items: center;
+    margin-top: -18vh;
     padding-top: 5vh;
     padding-left: 4vw;
     width: fit-content;
+    height: fit-content;
+    min-height: 25vh;
+    padding-right: 4vw;
+
 }
 
 .newsData {
@@ -106,14 +102,8 @@
     background-color: rgba(0, 0, 0, 0);
 }
 
-.newsButtons {
-    display: flex;
-    gap: 40vw;
-    margin-top: -15vh;
-}
-
 .leer {
-    margin: 0;
+    margin: 2vh 0;
     text-align: center;
     text-justify: center;
     padding: 0vh 0vw;
@@ -141,7 +131,6 @@
     margin: 0;
     box-sizing: border-box;
     max-width: 38vw;
-    min-height: 10vh;
     margin-top: 1vh;
 }
 
@@ -152,10 +141,6 @@
     font-size: 0.7rem;
 }
 
-.mainBoard {
-    display: grid;
-    box-sizing: border-box;
-}
 
 .investigaciones {
     background: radial-gradient(circle at top, #333333, #231f20, #000000);
@@ -193,12 +178,10 @@
     padding-bottom: 2vh;
 }
 
-.boxList {
-    padding: 3vh 0vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+.appList {
+    padding: 3vh 5vw;
     gap: 1vw;
-    width: 100%;
+    max-width: 83vw;
     box-sizing: border-box;
 }
 
@@ -206,7 +189,7 @@
     background: radial-gradient(circle at top, #333333, #231f20, #000000);
     color: #ecede7;
     border-radius: 48px;
-    height: 25vh;
+    height: 10vh;
     margin: 0;
     padding: 0.5vh 0.5vh;
 }
@@ -214,10 +197,12 @@
 .lightBox {
     border: solid 2px #535252;
     border-radius: 46px;
-    height: 22.5vh;
+    height: 7.5vh;
     margin: 0;
     font-size: 1rem;
+    padding: 0vh 8vw;
     padding-top: 2vh;
+    text-align: right;
 }
 
 .lightBox:hover {
@@ -331,29 +316,12 @@
 }
 
 @media (min-width: 768px) {
-    .landing {}
 
-    .background {
-        background: radial-gradient(circle at top left, #333333, #231f20, #000000);
-        min-height: 100vh;
-        width: 100%;
-        padding: 0vh 1vw;
-    }
-
-    .header {
-        margin: 0;
-        padding: 4vh 1vw;
-        padding-bottom: 0;
-        max-height: 70vh;
-        height: 70vh;
-    }
 
     .edipo {
         padding-top: 0vh;
         font-size: 6rem;
         text-align: left;
-        padding-left: 1vw;
-        margin-top: 10vh;
     }
 
     .name {
@@ -369,24 +337,18 @@
         padding-left: 4vw;
     }
 
-    .news {
-        box-shadow: none;
-        padding-left: 6vw;
-        min-height: 30vh;
-        max-width: 35vw;
-    }
+    
 
-    .news:hover {
+    .newsContainer:hover {
         box-shadow: 5px 0px 10px 1px rgba(253, 253, 253, 0.1),
             -10px 0px 50px rgba(253, 253, 253, 0.192),
             5px 5px 60px inset rgba(254, 252, 252, 0.1);
-        width: 46vw;
-        height: 36vh;
-        top: 54vh;
         text-shadow: 1px 1px 7px rgba(253, 253, 253, 0.4);
     }
 
     .newsContainer {
+        box-shadow: none;
+        margin-top: -13vh;
         max-width: 30vw;
         padding-top: 4vh;
     }
@@ -467,12 +429,9 @@
         padding-left: 2vw;
     }
 
-    .mainBoard {
-        height: 60vh;
-        padding: 2vh 2vw;
-        padding-right: 5vw;
-    }
-
+  .appList{
+    display: none;
+  }
     .recursos {
         position: absolute;
         right: 0vw;

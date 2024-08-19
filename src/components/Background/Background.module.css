@@ -1,0 +1,15 @@
+.Dark {
+    box-sizing: border-box;
+    width: 100%;
+    background: radial-gradient(circle at top left, #333333, #1a1a1a, #000000);
+    padding: 2vh 2vw;
+    min-height: 100vh;
+}
+
+.Light {
+    box-sizing: border-box;
+    width: 100%;
+    background: radial-gradient(circle at top left, #f0f0f0, #d9d9d9, #bfbfbf);
+    padding: 2vh 2vw;
+    min-height: 100vh;
+}

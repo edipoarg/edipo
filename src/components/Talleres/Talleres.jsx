@@ -1,5 +1,7 @@
 import styles from './Talleres.module.css';
 import talleres from '../../data/talleres.json';
+import Background from '../Background/Background';
+import Header from '../Header/Header';
 
 const title = "Talleres / seminarios";
 const title2 = "dados por EdIPo";
@@ -23,13 +25,11 @@ const getColorClass = (color) => {
 
 const Talleres = () => {
     return (
-        <section className={styles.background}>
+        <Background  theme="dark" >
             <div className={styles.talleres}>
-                <section className={styles.header}>
-                    <h1 className={styles.title}>{title}</h1>
-                    <h1 className={styles.title2}>{title2}</h1>
-                    <h2 className={styles.subTitle}>{subTitle}</h2>
-                </section>
+            <Header     theme="solid" 
+ title={title} title2={title2} subTitle={subTitle} /> {/* Usa el componente Header */}
+
                 <div className={styles.list}>
                     {talleres.map((taller, index) => (
                         <div
@@ -47,7 +47,7 @@ const Talleres = () => {
                     ))}
                 </div>
             </div>
-        </section>
+        </Background>
     );
 };
 

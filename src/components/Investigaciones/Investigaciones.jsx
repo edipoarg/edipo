@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { investigationsData } from './InvestigacionesList';
 import styles from './Investigaciones.module.css';
 import AppBar from '../AppBar/AppBar';
+import Background from '../Background/Background';
+import Header from '../Header/Header';
 
 const Investigations = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -34,15 +36,13 @@ const Investigations = () => {
   }, [selectedIndex]);
 
   return (
-    <section className={styles.background}>
+    <Background theme="dark">
       <AppBar></AppBar>
       <div className={styles.investigaciones}>
-        <section className={styles.header}>
-
-      
-        <h1 className={styles.title} >Proyectos / Tecnopolíticas</h1>
-        <h4 className={styles.subTitle}>Bajo la premisa de la información como autodefensa desarrollamos plataformas de monitoreo ciudadano y experiencias de periodismo abierto en red con diversos actores de la sociedad civil.</h4>
-        </section>
+      <Header theme='solid'
+          title="Proyectos / Tecnopolíticas"
+          subTitle="Bajo la premisa de la información como autodefensa desarrollamos plataformas de monitoreo ciudadano y experiencias de periodismo abierto en red con diversos actores de la sociedad civil."
+        />
         <div className={styles.content}>
           <div className={styles.detailSection}>
             <div className={styles.button} onClick={handlePrev}> - </div>
@@ -65,7 +65,7 @@ const Investigations = () => {
 
         </div>
       </div>
-    </section>
+    </Background>
   );
 };
 

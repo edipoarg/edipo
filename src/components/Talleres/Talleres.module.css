@@ -1,54 +1,9 @@
-.background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    box-sizing: border-box;
-    width: 100%;
-    z-index: 0;
-    background: radial-gradient(circle at top left, #333333, #1a1a1a, #000000);
-    padding-top: 1vh;
-    padding: 2vh 2vw;
-    min-height: 100vh;
-}
 
 .talleres {
 
     text-align: left;
 }
 
-.header {
-    background: radial-gradient(circle at 50% 0%, #c1bfc1, #d6d4d7, #737171);
-    border-radius: 3px;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-    /* Sombra común */
-    padding: 6vh 10vw;
-    min-height: 30vh;
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 38px;
-    margin: 0vh 2vw;
-    padding-top: 10vh;
-    margin-right: 4vw;
-}
-
-
-
-.title {
-    padding: 2vh 0vw;
-padding-bottom: 0;}
-
-.title2{
-    padding: 2vh 0vw;
-    margin: 0;
-    font-size: 2.2rem;
-    padding-top: 0;
-}
-
-.subTitle {
-    
-    font-size: 0.9rem;
-    margin: 0;
-    padding-bottom: 10vh;
-}
 
 .info {
     text-align: justify;
@@ -65,8 +20,6 @@ padding-bottom: 0;}
     padding-bottom: 15vh;
 }
 
-.title,
-.subTitle,
 .info,
 .name,
 .date {
