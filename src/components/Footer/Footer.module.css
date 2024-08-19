@@ -1,0 +1,55 @@
+.footer {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    color: aliceblue;
+    z-index: 3000;
+    justify-content: right;
+    padding: 2vh 0vw;
+    background-color: rgba(0, 0, 0, 0.669);
+}
+
+.tatech {
+    width: 25vh; /* Ajusta el tamaño según sea necesario */
+    height: 10vh; /* Ajusta el tamaño según sea necesario */
+    background-image: url('../../svg/logoTTnombre.svg'); /* Ruta al archivo SVG */
+    background-size: 200% 200%; /* Aumenta el tamaño del fondo para permitir el recorte */
+    background-position: left top; /* Alinea el fondo a la parte superior izquierda del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-clip: content-box; /* Solo muestra el contenido del área definida por el contenedor */
+    overflow: hidden; /* Oculta cualquier parte del fondo fuera del contenedor */
+    position: relative; /* Asegura que el recorte se ajuste al contenedor */
+}
+.crisis {
+    margin-right: 2vw;
+    width: 10vh; /* Ajusta el tamaño según sea necesario */
+    height: 6vh; /* Ajusta el tamaño según sea necesario */
+    background-image: url('https://static.wixstatic.com/media/0f4ca0_8cd724bf4ddf4f2792ebd7c8f64b871a~mv2.png/v1/fill/w_340,h_94,al_c,lg_1,q_85,enc_auto/Crisis_revista_logo.png');
+    background-size:contain;
+    background-repeat: no-repeat; 
+    /* Ajusta el tamaño del fondo para cubrir el contenedor */
+    background-position: center; /* Centra la imagen */
+    filter: invert(1) brightness(2); /* Aplica filtro para invertir colores y ajustar brillo */
+}
+
+@media (min-width: 768px) {
+
+.footer{
+    padding-right: 2vw;
+    box-sizing: border-box;
+    position: absolute;
+    max-width: 100%;
+    top: 100vh;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.237);
+}
+
+.tatech{
+    height: 6vh;
+    width: 15vh;
+}
+
+.crisis{
+
+}
+}

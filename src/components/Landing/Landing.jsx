@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import styles from "./Landing.module.css";
 import AppBar from "../AppBar/AppBar";
 import { GoPlay } from "react-icons/go";
+import Footer from "../Footer/Footer";
 
 
 import publicacionesData from "../../data/publicaciones.json"; // Asegúrate de que la ruta sea correcta
@@ -99,6 +100,7 @@ const Landing = () => {
                     </div>
 
                 </section>
+                <Footer></Footer>
 
             </section>
         </>
