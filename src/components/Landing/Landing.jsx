@@ -4,6 +4,7 @@ import styles from "./Landing.module.css";
 import AppBar from "../AppBar/AppBar";
 import { GoPlay } from "react-icons/go";
 import Footer from "../Footer/Footer";
+import Background from "../Background/Background";
 
 
 import publicacionesData from "../../data/publicaciones.json"; // Asegúrate de que la ruta sea correcta
@@ -46,30 +47,22 @@ const Landing = () => {
         <>
             <AppBar></AppBar>
 
-            <section className={styles.background}>
+            <Background theme="dark">
                 <section className={styles.landing}>
-                    <div className={styles.mainBoard}>
-                        <section className={styles.header}> <h1 className={styles.edipo}>[EdIPo]</h1><h3 className={styles.name}>Equipo de Investigación Política</h3> <h6 className={styles.texto}>Ante la pregunta ¿cómo nos defendemos de las violencias contemporáneas? generamos herramientas y recursos para la investigación política, y producimos análisis que enriquezcan el debate público y fortalezcan las respuestas comunitarias.</h6> </section>
+                        <section className={styles.header}> <h1 className={styles.edipo}>[EdIPo]</h1><h3 className={styles.subTitle}>Equipo de Investigación Política</h3> <h6 className={styles.texto}>Ante la pregunta ¿cómo nos defendemos de las violencias contemporáneas? generamos herramientas y recursos para la investigación política, y producimos análisis que enriquezcan el debate público y fortalezcan las respuestas comunitarias.</h6> </section>
                         {currentPublicacion && (
 
-                            <section className={styles.news}>
                                 <section className={styles.newsContainer}>
-
-
-
+                                <button onClick={handlePrevious} className={styles.botonNews}>{"<"}</button>
                                     <div className={styles.newsData}>
                                         <h4 className={styles.newsBajada}>{currentPublicacion.anio}</h4>
                                         <h2 className={styles.newsTitle}>{currentPublicacion.titulo}</h2>
-
-
                                         <Link to={currentPublicacion.link}><h3 className={styles.leer}>Leer</h3></Link>
-
-
                                     </div>
-                                </section>
-                                <section className={styles.newsButtons}><button onClick={handlePrevious} className={styles.botonNews}>{"<"}</button>
-                                    <button onClick={handleNext} className={styles.botonNews}>{">"}</button></section>
-                            </section>
+                             
+                                    <button onClick={handleNext} className={styles.botonNews}>{">"}</button>
+                                    </section>
+
 
                         )}
                         <section className={styles.investigaciones}>
@@ -79,12 +72,7 @@ const Landing = () => {
                             <div className={styles.playContainer}>
                                 <Link to='/lista' ><GoPlay className={styles.play} /></Link>
                             </div>
-                            {/* <div className={styles.boxList}>
-            <Link ><div className={styles.box}><h5 className={styles.lightBox}>MAPA DE LA POLICIA</h5></div></Link>
-            <Link > <div className={styles.box}><h5 className={styles.lightBox}>RA-DAR</h5></div></Link>
-            <Link >  <div className={styles.box}><h5 className={styles.lightBox}>MONITOR</h5></div></Link>
-            <Link >   <div className={styles.box}><h5 className={styles.lightBox}>A.H.O.R.A.</h5></div></Link>
-        </div>*/}
+                          
                         </section>
                         <section className={styles.recursos}>
                             <h2 className={styles.recursosTitle}>RECURSOS</h2>
@@ -97,12 +85,18 @@ const Landing = () => {
                             </div>
 
                         </section>
-                    </div>
+
+                          <div className={styles.appList}>
+            <Link to='mapa'><div className={styles.box}><h5 className={styles.lightBox}>MAPA DE LA POLICIA</h5></div></Link>
+            <Link  to='radar' > <div className={styles.box}><h5 className={styles.lightBox}>RA-DAR</h5></div></Link>
+            <Link  to='ahora' >  <div className={styles.box}><h5 className={styles.lightBox}>MONITOR</h5></div></Link>
+            <Link to='monitor' >   <div className={styles.box}><h5 className={styles.lightBox}>A.H.O.R.A.</h5></div></Link>
+        </div>
 
                 </section>
                 <Footer></Footer>
 
-            </section>
+            </Background>
         </>
     );
 };

@@ -37,8 +37,8 @@ function Navbar() {
             <Link to='./publicaciones' onClick={handleMenuItemClick}>
               <h5 className={styles.item}>Publicaciones</h5>
             </Link>
-            <Link to='./contacto' onClick={handleMenuItemClick}>
-              <h5 className={styles.item}>Contacto</h5>
+            <Link to='./equipo' onClick={handleMenuItemClick}>
+              <h5 className={styles.item}>Equipo</h5>
             </Link>
           </section>
 

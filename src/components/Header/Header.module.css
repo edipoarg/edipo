@@ -1,0 +1,56 @@
+.header {
+   
+    padding: 6vh 10vw;
+    min-height: 30vh;
+    margin: 0vh 2vw;
+    padding-top: 10vh;
+    margin-right: 4vw;
+    border-radius: 3px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 38px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    color: #1a1a1a;
+}
+
+.title,
+.subTitle,
+.title2 {
+    margin: 0;
+}
+
+.title {
+    padding: 2vh 0vw;
+    padding-bottom: 0;
+}
+
+.title2 {
+    padding: 2vh 0vw;
+    margin: 0;
+    font-size: 2.2rem;
+    padding-top: 0;
+}
+
+.subTitle {
+    font-size: 0.9rem;
+    margin: 0;
+    padding-bottom: 10vh;
+}
+
+/* Tema solid */
+.solid {
+    background: radial-gradient(circle at 50% 0%, #c1bfc1, #d6d4d7, #737171);
+}
+
+/* Tema void */
+.void {
+    background: none;
+    box-shadow: none;
+    color: #d6d4d7;
+
+}
+
+/* Tema dark */
+.dark {
+    background: none;
+    box-shadow: none;    color: #1a1a1a;
+}

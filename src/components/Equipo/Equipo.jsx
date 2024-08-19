@@ -1,5 +1,7 @@
-import styles from './Contacto.module.css';
+import styles from './Equipo.module.css';
 import { Historia, Mision, Internacional } from '../Icons/Icons';
+import Background from '../Background/Background';
+import Header from '../Header/Header';
 
 const tituloPrincipal = "EdIPo";
 const subtituloPrincipal = "Equipo de Investigación Política";
@@ -16,18 +18,17 @@ const internacionalDescripcion = "Trabajamos a la par con organizaciones sociale
 
 
 
-const Contacto = () => {
+const Equipo = () => {
     return (
         <>
-            <section className={styles.background}>
+            <Background theme="dark">
 
-                <section className={styles.contacto}>
+                <section className={styles.equipo}>
 
 
-                    <section className={styles.header}>
-                        <h2>{tituloPrincipal}</h2>
-                        <h2>{subtituloPrincipal}</h2>
-                    </section>
+                <Header     theme="void" 
+ title={tituloPrincipal} subTitle={subtituloPrincipal} /> 
+
 
                     <div className={styles.tematica}>
                         <Historia />
@@ -46,10 +47,10 @@ const Contacto = () => {
                         <h5>{internacionalDescripcion}</h5>
                     </div>
                 </section>
-            </section>
+            </Background>
 
         </>
     );
 };
 
-export default Contacto;
+export default Equipo;

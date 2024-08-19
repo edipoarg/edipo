@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import publicacionesData from '../../data/publicaciones.json';
 import styles from './Publicaciones.module.css';
+import Background from '../Background/Background';
+import Header from '../Header/Header';
 
 const Publicaciones = () => {
   // Estado para la publicación seleccionada
@@ -25,9 +27,15 @@ const Publicaciones = () => {
   };
 
   return (
-    <section className={styles.background}>
+    <Background theme="dark">
+      {/* Agregando el Header */}
+      <Header 
+        theme="solid"
+        title="Publicaciones"
+        subTitle="Explora nuestras publicaciones recientes."
+      />
+      
       <section className={styles.publicaciones}>
-        <h1 className={styles.header}>PUBLICACIONES</h1>
         <div className={styles.main}>
           <div>
             {Object.keys(publicacionesData).flatMap(year =>
@@ -59,7 +67,7 @@ const Publicaciones = () => {
           </div>
         </div>
       </section>
-    </section>
+    </Background>
   );
 };
 

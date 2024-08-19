@@ -10,11 +10,11 @@ import "./index.css";
 
 import Investigations from './components/Investigaciones/Investigaciones.jsx';
 import Recursos from './components/Recursos/Recursos.jsx';
-import FichaProyecto from './components/Investigaciones/FichaPoryecto/FichaPoryecto.jsx';
+import FichaProyecto from './components/Investigaciones/FichaProyecto/FichaPoryecto.jsx';
 import Publicaciones from './components/Publicaciones/Publicaciones.jsx';
 import Landing from './components/Landing/Landing.jsx';
 import Talleres from './components/Talleres/Talleres.jsx';
-import Contacto from './components/Contacto/Contacto.jsx';
+import Equipo from './components/Equipo/Equipo.jsx';
 import Colabora from './components/Colabora/Colabora.jsx';
 import Autocuidado from './components/Recursos/Autocuidado/Autocuidado.jsx';
 import Inteligencia from './components/Recursos/Inteligencia/Inteligencia.jsx';
@@ -34,7 +34,7 @@ const router = createHashRouter([
       { path: "/publicaciones", element: <Publicaciones /> },
       { path: "/:dominio", element: <FichaProyecto /> }, // Asume que aquí se mostrará la información completa de una investigación
       { path: "/talleres", element: <Talleres /> },
-      { path: "/equipo", element: <Contacto /> },
+      { path: "/equipo", element: <Equipo /> },
       { path: "/colabora", element: <Colabora /> },
       { path: "/recursos/autocuidado", element: <Autocuidado /> },
       { path: "/recursos/autocuidado/:IMAGEN", element: <FichaAutocuidado /> },

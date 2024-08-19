@@ -53,33 +53,10 @@
     margin: 0;
 }
 
-.header {
-    position: fixed;
-    left: 13vw;
-    top: 15vh;
-    font-size: 1.3rem;
-    text-align: left;
-    color: #2e2c2f;
-}
 
-.title,
-.subTitle {
-    margin: 0;
-}
-
-.subTitle {
-    font-size: 0.7rem;
-}
 
 @media (min-width: 768px) {
-    .background {
-        background: radial-gradient(circle at top left, #333333, #1a1a1a, #000000);
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
+   
 
     .recursos {
         grid-template-columns: 1fr 1fr 1fr;

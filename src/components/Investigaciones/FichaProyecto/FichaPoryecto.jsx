@@ -1,8 +1,8 @@
-
 import styles from './FichaProyecto.module.css';
-// En el componente Investigacion.jsx
 import { useParams } from 'react-router-dom';
 import { investigationsData } from '../InvestigacionesList';
+import Background from '../../Background/Background';
+import Header from '../../Header/Header';
 
 const FichaProyecto = () => {
   const { dominio } = useParams();
@@ -15,13 +15,14 @@ const FichaProyecto = () => {
   const { titulo, bajada, año, descripcion, enlace, ig, tw, fb, mail } = investigacion;
 
   return (
-    <section className={styles.background}>
-
+    <Background theme="dark">
       <div className="investigation-container">
+        {/* Agregar el Header con el título y la bajada */}
+        <Header 
+          title={titulo} 
+          subTitle={bajada} 
+        />
 
-        <h2>{titulo}</h2>
-
-        <h3>{bajada}</h3>
         <h3>{año}</h3>
         <p>{descripcion}</p>
         <a href={enlace} target="_blank" rel="noopener noreferrer">
@@ -40,8 +41,7 @@ const FichaProyecto = () => {
           <button>mail</button>
         </a>
       </div>
-    </section>
-
+    </Background>
   );
 };
 

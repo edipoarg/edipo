@@ -1,6 +1,8 @@
 import styles from './Colabora.module.css';
+import Background from '../Background/Background';
+import Header from '../Header/Header';
 
-const titulo = "Apoyanos";
+const titulo = "Apóyanos";
 const descripcion1 = "EdIPo es un colectivo que genera herramientas, información y análisis que enriquecen el debate público y fortalecen la convivencia democrática.";
 const descripcion2 = "EdIPo se sostiene con nuestra militancia, con el apoyo de organizaciones sociales y de ciudadanxs como vos.";
 const desdeArgentina = "Desde Argentina:";
@@ -16,10 +18,15 @@ const montosUnicos = [5000, 10000, 15000, 20000, 25000];
 
 const Colabora = () => {
     return (
-        <section className={styles.background}>
+        <Background theme="dark">
+            {/* Agregando el Header con un tema específico */}
+            <Header
+                theme="void"
+                title={titulo}
+                subTitle={descripcion1}
+            />
 
             <section className={styles.colabora}>
-                <h2 className={styles.title}>{titulo}</h2>
                 <h5 className={styles.desc}>{descripcion1}</h5>
                 <h5 className={styles.desc2}>{descripcion2}</h5>
 
@@ -49,8 +56,7 @@ const Colabora = () => {
                     ))}
                 </div>
             </section>
-        </section>
-
+        </Background>
     );
 };
 
