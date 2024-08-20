@@ -77,6 +77,7 @@
     padding-top: 5vh;
     padding-left: 4vw;
     width: fit-content;
+    min-width: 60vw;
     height: fit-content;
     min-height: 25vh;
     padding-right: 4vw;
@@ -89,6 +90,7 @@
     font-size: 0.8rem;
     align-content: center;
     color: #ecede7;
+    min-width: 45vw;
     text-shadow: 1px 1px 7px rgba(253, 253, 253, 0.4);
 }
 
@@ -117,13 +119,23 @@
 .play {
     color: #86a0e1af;
     font-size: 6rem;
-    background-color: #1d1d2184;
     border-radius: 360px;
     border: dashed 4px #686868;
+    border-color: #5973b5;
+    /* Cambia el color del borde al blanco */
+    color: #d7d5d8;
+    /* Cambia el color del texto al blanco */
+    box-shadow: 0 0 15px 5px rgba(109, 117, 178, 0.2);
+    /* Efecto de resplandor en el borde */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    /* Efecto de resplandor en el texto */
 }
 
 .playContainer {
-    max-width: 20vw;
+    width: 80%;
+    height: fit-content;
+    text-align: right;
+
 }
 
 .newsTitle {
@@ -228,7 +240,7 @@
 
 .recursosList {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 0.5vw;
 }
 
@@ -238,6 +250,14 @@
     box-sizing: border-box;
     font-size: 1.7rem;
     text-align: left;
+}
+
+.linkBackground{
+    background-color: #eff1f1;
+    border-radius: 360px;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 2vh;
 }
 
 .button1,
@@ -252,8 +272,6 @@
     margin: auto;
     height: 10vh;
     align-content: center;
-    padding: 1vh 2vw;
-    margin-top: 2vh;
     box-sizing: border-box;
 }
 
@@ -349,26 +367,24 @@
     .newsContainer {
         box-shadow: none;
         margin-top: -13vh;
-        max-width: 30vw;
+        min-width: 30vw;
         padding-top: 4vh;
     }
 
     .newsData {
         padding-left: 1vw;
-        max-width: 40vw;
         font-size: 0.8rem;
+        min-width: 22vw;
+        max-width: 22vw;
     }
 
-    .newsTitle {
-        max-width: 28vw;
-    }
 
     .investigaciones {
         position: absolute;
         top: 10vh;
         right: 2vw;
         height: 32vh;
-        width: 50vw;
+        width: 40vw;
         background: radial-gradient(circle at top, #333333, #231f20, #000000);
         border-top-right-radius: 20px;
         border-bottom-right-radius: 120px;
@@ -377,7 +393,7 @@
     }
 
     .play {
-        font-size: 8rem;
+        font-size: 5rem;
         background-color: #0f0f0f;
         border-color: #ffffff96;
         border-radius: 360px;
@@ -399,18 +415,7 @@
         /* Efecto de resplandor en el texto */
     }
 
-    .playContainer {
-        padding-top: 2vh;
-        max-width: 50vw;
-        align-content: right;
-        text-align: right;
-        /* Alinea el contenido de texto a la derecha */
-        display: flex;
-        /* Si estás trabajando con elementos flexibles */
-        justify-content: flex-end;
-        /* Alinea los elementos dentro del contenedor flex al final */
-    }
-
+    
     .bajada {
         font-size: 0.7rem;
         margin: 0;
@@ -433,12 +438,13 @@
     display: none;
   }
     .recursos {
+        display: flex;
         position: absolute;
         right: 0vw;
         top: 58vh;
         color: #ecede7;
         padding-top: 2vh;
-        width: 52vw;
+        width: 42vw;
         padding-left: 2vw;
         /* From https://css.glass */
         background: rgba(255, 255, 255, 0.1);
@@ -446,12 +452,12 @@
         backdrop-filter: blur(30px);
         -webkit-backdrop-filter: blur(5px);
         border: 1px solid rgba(255, 255, 255, 0.15);
+    height: fit-content;
     }
 
     .recursosTitle {
         margin-left: 2vw;
         text-align: left;
-        color: white;
         text-shadow: 1px 1px 10px white;
         font-size: 2rem;
         padding-bottom: 0vh;
@@ -472,13 +478,7 @@
     }
 
     .recursoName {
-        margin: 0;
-        max-width: 10vw;
-        font-size: 0.6rem;
-        color: #c1bfc1;
-        text-align: center;
-        padding-top: 2vh;
-        padding-bottom: 1vh;
+    display: none;
     }
 }
 
@@ -508,8 +508,7 @@
 
     .news {
         padding-left: 6vw;
-        min-height: 35vh;
-        max-width: 35vw;
+        min-height: 10vh;
     }
 
     .news:hover {
@@ -523,16 +522,23 @@
     }
 
     .newsContainer {
-        max-width: 50vw;
+        max-width: 10vw;
         padding-top: 6vh;
+        min-width: 25vw;
     }
 
     .newsData {
         padding-left: 2vw;
-        max-width: 40vw;
+        max-width: 20vw;
+        min-width: 20vw;
         font-size: 0.8rem;
     }
-
+.recursos{width: 45vw;
+align-items: center;
+}
+.investigaciones{width: 45vw;
+display: flex;
+align-items: center;}
     .investigaciones{
         height: 40vh;
     }
@@ -552,8 +558,7 @@
         border-radius: 360px;
         height: 12vh;
         align-content: center;
-        padding: 1vh 2vw;
-        margin-top: 2vh;
+    
     }
 
     .bajada {
@@ -564,9 +569,10 @@
         text-align: justify;
         padding-top: 1vh;
         padding-bottom: 2vh;
-        max-width: 20vw;
+        max-width: 30vw;
     }
 
+    .title{padding-top: 0;}
     .bajada2 {
         display: flex;
         color: #231f20;
@@ -575,10 +581,19 @@
         text-align: justify;
         padding-left: 2vw;
         padding-bottom: 0vh;
-        max-width: 25vw;
+        max-width: 50vw;
     }
 
-    .playContainer {
-        margin-top: -20vh;
-    }
+  .play{font-size: 8rem;}
+
+  .recursoName{
+    display: block;
+    margin: 0;
+    max-width: 10vw;
+    font-size: 0.6rem;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+  }
 }
