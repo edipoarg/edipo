@@ -4,6 +4,7 @@ import styles from './Investigaciones.module.css';
 import AppBar from '../AppBar/AppBar';
 import Background from '../Background/Background';
 import Header from '../Header/Header';
+import { Link } from 'react-router-dom';
 
 const Investigations = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -60,7 +61,9 @@ const Investigations = () => {
       
           <div className={styles.listSection}>
           <h2 className={styles.titulo}>{selectedInvestigation.titulo}</h2>
-          <p className={styles.bajada}>{selectedInvestigation.bajada}</p>          </div>
+          <p className={styles.bajada}>{selectedInvestigation.bajada}</p>    
+          <Link to={selectedInvestigation.link}> <h4 className={styles.ver}> Ver</h4> </Link>
+                </div>
          
 
         </div>
