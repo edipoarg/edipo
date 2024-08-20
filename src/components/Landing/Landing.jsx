@@ -66,24 +66,36 @@ const Landing = () => {
 
                         )}
                         <section className={styles.investigaciones}>
-                            <h2 className={styles.title}>PROYECTOS <br /> / TECNOPOLÍTICAS</h2>
+              <div>            <h2 className={styles.title}>PROYECTOS <br /> / TECNOPOLÍTICAS</h2>
                             <h4 className={styles.bajada}> plataformas de monitoreo ciudadano y experiencias de periodismo abierto en red con diversos actores de la sociedad civil.
                             </h4>
+                            </div>  
                             <div className={styles.playContainer}>
                                 <Link to='/lista' ><GoPlay className={styles.play} /></Link>
                             </div>
                           
                         </section>
                         <section className={styles.recursos}>
+                            <div>
                             <h2 className={styles.recursosTitle}>RECURSOS</h2>
                             <h4 className={styles.bajada2}>Desafíos metodológicos sobre la recolección de los datos y su análisis, así como desafíos vinculados a la seguridad de los datos y las personas involucradas. </h4>
 
                             <div className={styles.recursosList}>
-                                <Link to='/recursos/autocuidado'>   <h5 className={styles.button1}></h5><h5 className={styles.recursoName}>CUIDADO COLECTIVO Y AUTODEFENSA DIGITAL</h5> </Link>
-                                <Link to='/recursos/inteligencia_abierta'>  <h5 className={styles.button2}></h5> <h5 className={styles.recursoName}>MANUAL DE INTELIGENCIA ABIERTA</h5> </Link>
-                                <Link>    <h5 className={styles.button3}></h5> <h5 className={styles.recursoName}>MANUAL DEL MAPA DE LA POLICÍA</h5> </Link>
+                                
+                                <Link  to='/recursos/autocuidado'> <div className={styles.linkBackground}>   <h5 className={styles.button1}></h5></div>
+                                    <h5 className={styles.recursoName}>CUIDADO COLECTIVO Y AUTODEFENSA DIGITAL</h5> 
+                                </Link>
+                                <Link  to='/recursos/inteligencia_abierta'> 
+                                <div className={styles.linkBackground}> <h5 className={styles.button2}></h5> </div>
+                                <h5 className={styles.recursoName}>MANUAL DE INTELIGENCIA ABIERTA</h5> 
+                                </Link>
+                                <Link >
+                                <div className={styles.linkBackground}><h5 className={styles.button3}></h5> </div>
+                                <h5 className={styles.recursoName}>MANUAL DEL MAPA DE LA POLICÍA</h5> </Link>
+                            </div></div>
+                            <div className={styles.playContainer}>
+                                <Link to='/recursos' ><GoPlay className={styles.play} /></Link>
                             </div>
-
                         </section>
 
                           <div className={styles.appList}>

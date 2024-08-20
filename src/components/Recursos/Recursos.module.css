@@ -1,13 +1,7 @@
 .recursos {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: 1fr;
-    /* Disposición vertical por defecto */
-    grid-template-rows: auto auto auto;
-    /* Asegura que los elementos se apilen */
+    display: flex;
+flex-direction: column;    grid-template-rows: auto auto auto;
+gap: 1vh;
 }
 
 .seguridad,
@@ -16,6 +10,7 @@
     padding-top: 5vh;
     border: solid 1px #2e2c2f;
     border-radius: 25px;
+min-height: 25vh;
 }
 
 .seguridad {
@@ -24,7 +19,6 @@
     background-size: contain;
     /* Asegura que el SVG cubra todo el fondo */
     color: #2e2c2f;
-    padding: 0vh 3vw;
 }
 
 .seguridad:hover,
@@ -59,21 +53,23 @@
    
 
     .recursos {
-        grid-template-columns: 1fr 1fr 1fr;
+flex-direction: row;
         gap: 0.4vw;
         top: 30vh;
-        width: 70vw;
         margin: auto;
-        left: 15vw;
+        justify-content: center;
     }
 
     .seguridad,
     .busqueda,
     .guiaMapa {
-        height: 60vh;
+        height: 50vh;
         padding-top: 4vh;
+        min-width: 25vw;
         box-shadow: inset -5px -10px 15px rgba(54, 54, 54, 0.1);
+        
     }
+
 
     .item {
         padding-top: 0vh;
