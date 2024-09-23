@@ -21,7 +21,7 @@ const Investigacion = () => {
 
         <h2>{titulo}</h2>
 
-        <h3>{bajada}</h3>
+        <h3 className={styles.descripcion}>{bajada}</h3>
         <h3>{año}</h3>
         <p>{descripcion}</p>
         <a href={enlace} target="_blank" rel="noopener noreferrer">

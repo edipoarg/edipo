@@ -10,7 +10,7 @@ import "./index.css";
 
 import Investigations from './components/Investigaciones/Investigaciones.jsx';
 import Recursos from './components/Recursos/Recursos.jsx';
-import FichaProyecto from './components/Investigaciones/FichaProyecto/FichaPoryecto.jsx';
+import FichaProyecto from './components/Investigaciones/FichaProyecto/FichaProyecto.jsx';
 import Publicaciones from './components/Publicaciones/Publicaciones.jsx';
 import Landing from './components/Landing/Landing.jsx';
 import Talleres from './components/Talleres/Talleres.jsx';
