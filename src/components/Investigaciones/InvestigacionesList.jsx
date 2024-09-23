@@ -36,6 +36,7 @@ export const investigationsData = [
     Newsletter: "https://ra-dar.com.ar/",
     mail: "RADAR.EDIPO@GMAIL.COM",
     dominio: "radar",
+    link: '/radar',
     img: "https://static.wixstatic.com/media/0f4ca0_d28b4374488a4f5380fc7b67769318fe~mv2.png/v1/fill/w_750,h_750,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/pngRadar.png",
 
   },
