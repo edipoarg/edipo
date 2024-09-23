@@ -561,6 +561,9 @@ align-items: center;}
     
     }
 
+    .subTitle{
+        padding-left: 4vw;
+    }
     .bajada {
         display: flex;
         color: #d6d4d7;
