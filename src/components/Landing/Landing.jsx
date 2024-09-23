@@ -101,8 +101,8 @@ const Landing = () => {
                           <div className={styles.appList}>
             <Link to='mapa'><div className={styles.box}><h5 className={styles.lightBox}>MAPA DE LA POLICIA</h5></div></Link>
             <Link  to='radar' > <div className={styles.box}><h5 className={styles.lightBox}>RA-DAR</h5></div></Link>
-            <Link  to='ahora' >  <div className={styles.box}><h5 className={styles.lightBox}>MONITOR</h5></div></Link>
-            <Link to='monitor' >   <div className={styles.box}><h5 className={styles.lightBox}>A.H.O.R.A.</h5></div></Link>
+            <Link  to='ahora' >  <div className={styles.box}><h5 className={styles.lightBox}>A.H.O.R.A.</h5></div></Link>
+            <Link to='monitor' >   <div className={styles.box}><h5 className={styles.lightBox}>MONITOR</h5></div></Link>
         </div>
 
                 </section>
