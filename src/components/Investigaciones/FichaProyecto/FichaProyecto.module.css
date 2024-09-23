@@ -1,0 +1,63 @@
+.descripcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #dcd6d6;
+    border: solid #dcd6d6;
+    padding-top: 8vh;
+    padding-bottom: 5vh;
+    text-align: left;
+    border-radius: 10px;
+    width: 85vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    box-sizing: border-box;
+    gap: 1vh;
+    min-height: 35vh;
+    border-bottom-left-radius: 60px;
+    border-top-right-radius: 60px;
+    margin: auto;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #dcd6d6;
+    border: solid #dcd6d6;
+    width: fit-content;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    text-align: left;
+    border-radius: 10px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    box-sizing: border-box;
+    gap: 1vh;
+    border-bottom-left-radius: 60px;
+    border-top-right-radius: 60px;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    margin-left: 10vw;
+}
+
+.links button:hover {
+    color: #007bff; /* Cambia el color a azul en hover */
+}
+
+.links a {
+    text-decoration: none;
+}
+
+.links button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 0.5rem;
+    color: white; /* Icono en blanco por defecto */
+    font-size: 1.5rem; /* Ajustar el tamaño del icono */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
