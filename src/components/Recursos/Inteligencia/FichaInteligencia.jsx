@@ -44,16 +44,16 @@ const FichaInteligencia = () => {
         <div className={styles.container}>
             <section className={styles.ficha}>
                 <h2 className={styles.name}>{recurso.nombre}</h2>
+                <p>{recurso.tag}</p>
+
                 <div
                     className={styles.iconContainer}
                     style={{ backgroundImage: `url(${backgroundImage})` }}
                 />
                 <p className={styles.bajada}>{recurso.bajada}</p>
                 <p className={styles.info}>{recurso.info}</p>
-                <p>Tag: {recurso.tag}</p>
-                {recurso.link && <p>Link: <a href={recurso.link} className={styles.link}>{recurso.link}</a></p>}
-                {recurso.imagen && <img src={recurso.imagen} alt={`Imagen ${recurso.nombre}`} />}
-            </section>
+                {recurso.link && <p> <a href={recurso.link} className={styles.link} target="_blank" rel="noopener noreferrer">WEB</a></p>}
+                </section>
         </div>
     );
 }
