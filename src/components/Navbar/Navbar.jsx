@@ -42,11 +42,11 @@ function Navbar() {
             </Link>
           </section>
 
-          <Link to='./colabora'>
+        {/*}  <Link to='./colabora'>
             <section className={styles.suscribite}>
               <h4 className={styles.text}>Suscribite</h4>
             </section>
-          </Link>
+          </Link>*/}
 
           <div className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`} onClick={handleMenuToggle}>
             {menuOpen ? <FaTimes className={styles.icon} /> : <FaBars className={styles.icon} />}

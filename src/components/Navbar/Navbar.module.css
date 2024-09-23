@@ -132,6 +132,8 @@
         align-items: center;
         gap: 1rem;
         color: #231f20;
+        margin-right: 2vw;
+
     }
 
     .menu.open {
