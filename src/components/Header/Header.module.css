@@ -60,3 +60,15 @@
     min-height: 10vh;
 
 }
+
+
+@media (min-width: 768px) {
+    .subTitle {
+        font-size: 0.9rem;
+        margin: 0;
+        padding: 4vh 0vw;
+        text-align: justify;
+        max-width: 40vw;
+    }
+
+}
