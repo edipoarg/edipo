@@ -1,158 +1,324 @@
+/* =====================================
+   NAVBAR EDIPO
+===================================== */
+
 .navbar {
-    left: 0;
-    align-items: center;
-    position: absolute;
-    display: flex;
+    position: relative;
+
     width: 100%;
-    top: 2vh;
-    box-sizing: border-box;
-    padding: 0vh 7vw;
-    z-index: 2000;
+    padding: 0 2.7vw;
+
+    background: var(--papel);
+    color: var(--negro);
+
+    font-family: var(--fontTexto);
+
+    z-index: 1000;
+}
+
+.navbar a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* =====================================
+   CONTENEDOR PRINCIPAL
+===================================== */
+
+.contenedor {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
+
+    width: 100%;
+    max-width: 1800px;
+
+    margin: 0 auto;
+    padding: 14px 8px 18px;
+
+    gap: 22px;
+
+    min-height: 85px;
+
+    border-bottom: 3px solid var(--negro);
 }
 
-.derecha {
+/* =====================================
+   IDENTIDAD
+===================================== */
+
+.identidad {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-}
 
-.menu {
-    display: none;
-}
+    gap: 18px;
 
-.menu.open {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 10vh;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: white;
-    color: black;
-    padding: 2rem 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    z-index: 2000;
-    overflow: auto;
-    align-items: flex-start;
-    border-bottom: 1px solid black;
-}
-
-.menu.open .item {
-    padding: 1rem;
-    border-bottom: 1px solid black;
-    width: 100%;
-    text-align: left;
-    color: black;
-}
-
-.menu.open a {
-    text-decoration: none;
-    color: black;
-}
-
-.menu.open a:hover,
-.menu.open a:focus {
-    text-decoration: none;
-    color: black;
-}
-
-.hamburger {
-    display: none;
-    cursor: pointer;
-    font-size: 2rem;
-    padding-right: 6vw;
-}
-
-.hamburger.open {
-    display: block;
-}
-
-.hamburger .icon {
-    color: black;
+    flex-shrink: 0;
 }
 
 .logo {
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 5vw;
-    color: #231f20;
+    font-family: var(--fontTitulo);
+    font-size: clamp(2rem, 3.7vw, 3.6rem);
+    font-weight: 900;
+
+    letter-spacing: -0.085em;
+    line-height: 1;
 }
 
-.suscribite {
-    color: #5973b5;
-    border: solid 1px #506495;
-    border-radius: 24px;
-    padding: 0rem 1rem;
+.separador {
+    width: 2px;
+    height: 48px;
+
+    background: var(--negro);
+}
+
+.nombre {
+    font-family: var(--fontTexto);
+    font-size: clamp(0.6rem, 0.95vw, 0.95rem);
+    font-weight: 600;
+
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+}
+
+/* =====================================
+   NAVEGACIÓN
+===================================== */
+
+.navegacion {
     display: flex;
+    align-items: center;
     justify-content: flex-end;
-    max-width: fit-content;
-    margin: 0px 1rem;
+
+    flex: 1;
+
+    gap: clamp(10px, 1.65vw, 26px);
 }
 
-.text {
-    margin: 0
+.navLink {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    font-family: var(--fontTexto);
+    font-size: clamp(0.65rem, 0.95vw, 0.95rem);
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: background 150ms;
 }
 
-.item {
-    color: #231f20;
+.navLink span {
+    font-weight: 700;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .navbar {
-        padding: 0vh 1rem;
-        justify-content: space-between;
+.navLink:hover {
+    background: var(--lima);
+}
+
+/* =====================================
+   ACCIONES
+===================================== */
+
+.acciones {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+    flex-shrink: 0;
+}
+
+.iconButton {
+    display: grid;
+    place-items: center;
+
+    width: 30px;
+    height: 34px;
+
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    border-radius: 0;
+
+    background: transparent;
+    color: var(--negro);
+
+    font-size: 1.7rem;
+
+    cursor: pointer;
+}
+
+.iconButton:hover {
+    background: var(--lima);
+}
+
+/* =====================================
+   MENÚ DESPLEGABLE
+===================================== */
+
+.menuDesplegable,
+.buscador {
+    position: absolute;
+
+    right: 2.7vw;
+    top: calc(100% + 8px);
+
+    width: min(360px, 90vw);
+
+    padding: 15px;
+
+    background: var(--papel);
+    color: var(--negro);
+
+    border: 2px solid var(--negro);
+    border-radius: 8px;
+
+    box-shadow: 6px 6px 0 var(--negro);
+
+    z-index: 1001;
+}
+
+.menuDesplegable,
+.resultados {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuDesplegable a,
+.resultados a {
+    display: block;
+
+    padding: 13px 8px;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    border-bottom: 1px solid var(--negro);
+}
+
+.menuDesplegable a:last-child,
+.resultados a:last-child {
+    border-bottom: none;
+}
+
+.menuDesplegable a:hover,
+.resultados a:hover {
+    background: var(--lima);
+}
+
+/* =====================================
+   BUSCADOR
+===================================== */
+
+.buscador input {
+    width: 100%;
+
+    padding: 12px;
+
+    font-family: var(--fontTexto);
+    font-size: 0.9rem;
+
+    background: var(--papel);
+    color: var(--negro);
+
+    border: 2px solid var(--negro);
+    border-radius: 0;
+}
+
+.resultados {
+    margin-top: 12px;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 1250px) {
+
+    .navegacion {
+        gap: 10px;
     }
 
-    .menu {
+    .identidad {
+        gap: 12px;
+    }
+
+    .contenedor {
+        gap: 16px;
+    }
+
+}
+
+@media (max-width: 1100px) {
+
+    .navegacion {
         display: none;
     }
 
-    .menu.open {
-        display: flex;
+    .logo {
+        font-size: 3rem;
     }
 
-    .hamburger {
-        display: block;
-    }
-
-    .hamburger .icon {
-        font-size: 2rem;
+    .nombre {
+        font-size: 0.75rem;
     }
 
 }
 
+@media (max-width: 600px) {
 
-@media (min-width: 768px) {
-    .menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        color: #231f20;
-        margin-right: 2vw;
-
+    .navbar {
+        padding: 0 18px;
     }
 
-    .menu.open {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 6vh;
-        left: 0;
-        width: 100%;
-        background-color: #231f20;
-        padding: 1rem 0;
-        color: #231f20;
+    .contenedor {
+        min-height: 75px;
+        padding: 12px 0;
+        gap: 10px;
+    }
+
+    .identidad {
+        gap: 9px;
     }
 
     .logo {
-        width: 20vw;
+        font-size: 2.1rem;
     }
 
-    .suscribite {
-        width: 20vw;
+    .nombre {
+        font-size: 0.55rem;
     }
+
+    .separador {
+        height: 34px;
+    }
+
+    .acciones {
+        gap: 10px;
+    }
+
+    .iconButton {
+        width: 24px;
+        font-size: 1.4rem;
+    }
+
+}
+
+@media (max-width: 360px) {
+
+    .identidad {
+        gap: 6px;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .nombre {
+        font-size: 0.5rem;
+    }
+
 }

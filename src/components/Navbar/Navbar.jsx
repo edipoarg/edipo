@@ -1,60 +1,195 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import styles from './Navbar.module.css';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { FiSearch, FiMenu, FiX } from "react-icons/fi";
+
+import styles from "./Navbar.module.css";
+
+const navegacion = [
+    { nombre: "PROYECTOS", ruta: "/lista" },
+    { nombre: "INVESTIGACIONES", ruta: "/investigaciones" },
+    { nombre: "PUBLICACIONES", ruta: "/publicaciones" },
+    { nombre: "RECURSOS", ruta: "/recursos" },
+    { nombre: "TALLERES", ruta: "/talleres" },
+    { nombre: "EQUIPO", ruta: "/equipo" }
+];
 
 function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleMenuToggle = () => {
-    setMenuOpen(!menuOpen);
-  };
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [searchOpen, setSearchOpen] = useState(false);
+    const [busqueda, setBusqueda] = useState("");
 
-  const handleMenuItemClick = () => {
-    setMenuOpen(false);
-  };
+    const cerrarTodo = () => {
+        setMenuOpen(false);
+        setSearchOpen(false);
+        setBusqueda("");
+    };
 
-  return (
-    <>
-      <section className={styles.navbar}>
-        <Link to='./'>
-          <div className={styles.logo}>
-            <h3 className={styles.title}>[ ] EdIPo</h3>
-          </div>
-        </Link>
+    const resultados = navegacion.filter(item =>
+        item.nombre.toLowerCase().includes(
+            busqueda.toLowerCase().trim()
+        )
+    );
 
-        <section className={styles.derecha}>
-          <section className={`${styles.menu} ${menuOpen ? styles.open : ''}`}>
-            <Link to='./lista' onClick={handleMenuItemClick}>
-              <h5 className={styles.item}>Investigaciones</h5>
-            </Link>
-            <Link to='./recursos' onClick={handleMenuItemClick}>
-              <h5 className={styles.item}>Recursos</h5>
-            </Link>
-            <Link to='./talleres' onClick={handleMenuItemClick}>
-              <h5 className={styles.item}>Talleres</h5>
-            </Link>
-            <Link to='./publicaciones' onClick={handleMenuItemClick}>
-              <h5 className={styles.item}>Publicaciones</h5>
-            </Link>
-            <Link to='./equipo' onClick={handleMenuItemClick}>
-              <h5 className={styles.item}>Equipo</h5>
-            </Link>
-          </section>
+    return (
 
-        {/*}  <Link to='./colabora'>
-            <section className={styles.suscribite}>
-              <h4 className={styles.text}>Suscribite</h4>
-            </section>
-          </Link>*/}
+        <header className={styles.navbar}>
 
-          <div className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`} onClick={handleMenuToggle}>
-            {menuOpen ? <FaTimes className={styles.icon} /> : <FaBars className={styles.icon} />}
-          </div>
-        </section>
-      </section>
-    </>
-  );
+            <div className={styles.contenedor}>
+
+                {/* IDENTIDAD INSTITUCIONAL */}
+
+                <Link
+                    to="/"
+                    className={styles.identidad}
+                    onClick={cerrarTodo}
+                >
+
+                    <span className={styles.logo}>
+                        [EdIPo]
+                    </span>
+
+                    <span className={styles.separador} />
+
+                    <span className={styles.nombre}>
+                        EQUIPO DE
+                        <br />
+                        INVESTIGACIÓN
+                        <br />
+                        POLÍTICA
+                    </span>
+
+                </Link>
+
+                {/* NAVEGACIÓN PRINCIPAL */}
+
+                <nav className={styles.navegacion}>
+
+                    {navegacion.map(item => (
+
+                        <Link
+                            key={item.ruta}
+                            to={item.ruta}
+                            className={styles.navLink}
+                            onClick={cerrarTodo}
+                        >
+                            <span>/</span>
+                            {item.nombre}
+                        </Link>
+
+                    ))}
+
+                </nav>
+
+                {/* ACCIONES */}
+
+                <div className={styles.acciones}>
+
+                    <button
+                        type="button"
+                        className={styles.iconButton}
+                        aria-label="Buscar"
+                        aria-expanded={searchOpen}
+                        onClick={() => {
+                            setSearchOpen(!searchOpen);
+                            setMenuOpen(false);
+                        }}
+                    >
+
+                        {searchOpen ? <FiX /> : <FiSearch />}
+
+                    </button>
+
+                    <button
+                        type="button"
+                        className={styles.iconButton}
+                        aria-label="Menú"
+                        aria-expanded={menuOpen}
+                        onClick={() => {
+                            setMenuOpen(!menuOpen);
+                            setSearchOpen(false);
+                        }}
+                    >
+
+                        {menuOpen ? <FiX /> : <FiMenu />}
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            {/* MENÚ DESPLEGABLE */}
+
+            {menuOpen && (
+
+                <nav className={styles.menuDesplegable}>
+
+                    {navegacion.map(item => (
+
+                        <Link
+                            key={item.ruta}
+                            to={item.ruta}
+                            onClick={cerrarTodo}
+                        >
+                            / {item.nombre}
+                        </Link>
+
+                    ))}
+
+                    <Link
+                        to="/colabora"
+                        onClick={cerrarTodo}
+                    >
+                        / COLABORÁ
+                    </Link>
+
+                </nav>
+
+            )}
+
+            {/* BUSCADOR */}
+
+            {searchOpen && (
+
+                <div className={styles.buscador}>
+
+                    <input
+                        type="search"
+                        placeholder="Buscar sección..."
+                        aria-label="Buscar sección"
+                        value={busqueda}
+                        onChange={e => setBusqueda(e.target.value)}
+                        autoFocus
+                    />
+
+                    <div className={styles.resultados}>
+
+                        {resultados.map(item => (
+
+                            <Link
+                                key={item.ruta}
+                                to={item.ruta}
+                                onClick={cerrarTodo}
+                            >
+                                / {item.nombre}
+                            </Link>
+
+                        ))}
+
+                        {!resultados.length && (
+                            <p>Sin resultados.</p>
+                        )}
+
+                    </div>
+
+                </div>
+
+            )}
+
+        </header>
+
+    );
 }
 
 export default Navbar;
