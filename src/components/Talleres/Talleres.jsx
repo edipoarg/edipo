@@ -3,91 +3,134 @@ import talleres from '../../data/talleres.json';
 import Background from '../Background/Background';
 
 const title = "Talleres / seminarios";
-const title2 = "dados por EdIPo";
+const title2 = "dados por [EdIPo]";
 
-const subTitle = "En esta sección encontrarás un listado de los talleres y seminarios que hemos ofrecido.";
+const subTitle =
+    "En esta sección encontrarás un listado de los talleres y seminarios que hemos ofrecido.";
 
-const getColorClass = (color) => {
 
-    const colores = {
-        white: styles.white,
-        black: styles.black,
-        yellowgreen: styles.yellowgreen,
-        blue: styles.blue
-    };
+// ========================================
+// MARCA GRÁFICA
+// ========================================
 
-    return colores[color] || styles.white;
+const MarcaPixeles = () => {
+    return (
+        <div
+            className={styles.marcaPixeles}
+            aria-hidden="true"
+        >
+            <span />
+            <span />
+        </div>
+    );
 };
 
 
-/* =====================================
-   FICHA DE TALLER
-===================================== */
+// ========================================
+// TICKET
+// ========================================
 
 const Taller = ({ taller, index }) => {
 
-    const numero = String(index + 1).padStart(2, '0');
+    const numero = String(index + 1).padStart(3, '0');
+
+    const descripcion = taller.contenido?.trim() || '';
+
+    const tieneDescripcion = descripcion.length > 0;
 
     return (
 
-        <article
-            className={`${styles.taller} ${getColorClass(taller.color)}`}
-        >
+        <article className={styles.taller}>
 
-            <div className={styles.barra}>
+            <div
+                className={styles.barraLateral}
+                aria-hidden="true"
+            />
 
-                <div className={styles.identificador}>
-                    <span className={styles.barras}>///</span>
-                    <span>TALLER / {numero}</span>
+            {/* TALÓN */}
+
+            <div className={styles.talon}>
+
+                <div className={styles.talonDatos}>
+
+                    <div className={styles.identificador}>
+                        /// TALLER
+                    </div>
+
+                    <div className={styles.talonLinea} />
+
+                    <div className={styles.registro}>
+                        REG. / {numero}
+                    </div>
+
+                    {taller.fecha && (
+                        <div className={styles.date}>
+                            {taller.fecha}
+                        </div>
+                    )}
+
                 </div>
 
-                <div
-                    className={styles.controles}
-                    aria-hidden="true"
-                >
-                    <span>−</span>
-                    <span>□</span>
-                    <span>×</span>
+                <div className={styles.logo}>
+                    [EdIPo]
                 </div>
 
             </div>
 
-            <div className={styles.cuerpo}>
+            {/* TROQUEL */}
 
-                {taller.fecha && (
-                    <div className={styles.date}>
-                        {taller.fecha}
-                    </div>
-                )}
+            <div
+                className={styles.troquel}
+                aria-hidden="true"
+            >
+
+                <span className={styles.muescaSuperior} />
+
+                <span className={styles.lineaTroquel} />
+
+                <span className={styles.muescaInferior} />
+
+            </div>
+
+            {/* CONTENIDO */}
+
+            <div
+                className={`${styles.cuerpo} ${
+                    !tieneDescripcion
+                        ? styles.sinDescripcion
+                        : ''
+                }`}
+            >
 
                 <h2 className={styles.name}>
                     {taller.nombre}
                 </h2>
 
-                {taller.contenido && (
+                {tieneDescripcion && (
 
                     <div className={styles.contenido}>
 
-                        <p>
-                            {taller.contenido}
-                        </p>
+                        <p>{descripcion}</p>
 
                     </div>
 
                 )}
+
+                <div className={styles.firma}>
+                    <MarcaPixeles />
+                </div>
 
             </div>
 
         </article>
 
     );
-
 };
 
 
-/* =====================================
-   PÁGINA TALLERES
-===================================== */
+// ========================================
+// PÁGINA
+// ========================================
 
 const Talleres = () => {
 
@@ -105,6 +148,10 @@ const Talleres = () => {
                         /// FORMACIÓN / ARCHIVO
                     </div>
 
+                    <div className={styles.marcaHeader}>
+                        <MarcaPixeles />
+                    </div>
+
                     <h1 className={styles.title}>
                         {title}
                     </h1>
@@ -113,55 +160,68 @@ const Talleres = () => {
                         {title2}
                     </h2>
 
-                    <p className={styles.subTitle}>
-                        {subTitle}
-                    </p>
+                    <div className={styles.sticker}>
+
+                        <p className={styles.subTitle}>
+                            {subTitle}
+                        </p>
+
+                    </div>
 
                 </header>
 
+                {/* REGISTRO */}
 
-                {/* CABECERA DEL ARCHIVO */}
+                <div className={styles.archivo}>
 
-                <div className={styles.archivoBarra}>
+                    <div className={styles.archivoBarra}>
 
-                    <h2>
-                        /// REGISTRO DE ACTIVIDADES
-                    </h2>
+                        <h2>
+                            /// REGISTRO DE ACTIVIDADES
+                        </h2>
 
-                    <span className={styles.cantidad}>
-                        {String(talleres.length).padStart(2, '0')}
-                        {' '}REGISTROS
-                    </span>
+                        <span className={styles.cantidad}>
 
-                </div>
+                            {String(talleres.length).padStart(2, '0')}
 
+                            {' '}REGISTROS
 
-                {/* LISTADO */}
+                        </span>
 
-                <section className={styles.list}>
+                    </div>
 
-                    {talleres.map((taller, index) => (
+                    {/* LISTADO */}
 
-                        <Taller
-                            key={index}
-                            taller={taller}
-                            index={index}
-                        />
+                    <section
+                        className={styles.list}
+                        aria-label="Listado de talleres y seminarios"
+                    >
 
-                    ))}
+                        {talleres.map((taller, index) => (
 
-                </section>
+                            <Taller
+                                key={index}
+                                taller={taller}
+                                index={index}
+                            />
 
+                        ))}
 
-                {/* CIERRE */}
+                    </section>
 
-                <div className={styles.cierre}>
+                    {/* CIERRE */}
 
-                    <span>EDIPO / FORMACIÓN</span>
+                    <footer className={styles.cierre}>
 
-                    <div className={styles.linea} />
+                        <span>
+                            [EdIPo] / ARCHIVO DE FORMACIÓN
+                        </span>
 
-                    <span>///</span>
+                        <div className={styles.linea} />
+
+                        <span>///</span>
+
+                    </footer>
 
                 </div>
 
@@ -170,7 +230,6 @@ const Talleres = () => {
         </Background>
 
     );
-
 };
 
 export default Talleres;

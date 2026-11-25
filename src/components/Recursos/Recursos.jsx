@@ -21,7 +21,16 @@ const recursos = [
         imagen: portadaCuidado,
         descripcion:
             "Herramientas y estrategias para fortalecer la seguridad digital y los procesos de cuidado colectivo.",
-        link: "/recursos/autocuidado"
+        link: "/recursos/autocuidado",
+
+        pixeles: [
+            "101001",
+            "001010",
+            "110001",
+            "000100",
+            "101010",
+            "010011"
+        ]
     },
     {
         id: "02",
@@ -30,7 +39,16 @@ const recursos = [
         imagen: portadaInteligencia,
         descripcion:
             "Metodologías y herramientas para la recolección, el procesamiento y el análisis de información.",
-        link: "/recursos/inteligencia_abierta"
+        link: "/recursos/inteligencia_abierta",
+
+        pixeles: [
+            "010110",
+            "100001",
+            "001010",
+            "101100",
+            "010001",
+            "100100"
+        ]
     },
     {
         id: "03",
@@ -39,9 +57,53 @@ const recursos = [
         imagen: portadaMapa,
         descripcion:
             "Guía de consulta para el uso de las herramientas del Mapa de la Policía.",
-        link: null
+        link: null,
+
+        pixeles: [
+            "100010",
+            "011001",
+            "000100",
+            "110010",
+            "001001",
+            "010110"
+        ]
     }
 ];
+
+
+// =========================================
+// PATRÓN GRÁFICO 6 X 6
+// =========================================
+
+const PatronPixeles = ({ pixeles }) => {
+
+    const valores = pixeles.join("").split("");
+
+    return (
+
+        <div
+            className={styles.patronPixeles}
+            aria-hidden="true"
+        >
+
+            {valores.map((pixel, index) => (
+
+                <span
+                    key={index}
+                    className={
+                        pixel === "1"
+                            ? styles.pixelActivo
+                            : styles.pixelInactivo
+                    }
+                />
+
+            ))}
+
+        </div>
+
+    );
+
+};
 
 
 // =========================================
@@ -125,6 +187,20 @@ const Recurso = ({ recurso }) => {
                 />
 
 
+                {/* IDENTIFICADOR GRÁFICO */}
+
+                <div
+                    className={styles.identificador}
+                    aria-hidden="true"
+                >
+
+                    <PatronPixeles
+                        pixeles={recurso.pixeles}
+                    />
+
+                </div>
+
+
                 {/* PORTADA CLICKEABLE */}
 
                 {recurso.link ? (
@@ -165,11 +241,15 @@ const Recurso = ({ recurso }) => {
             <div className={styles.informacion}>
 
                 <h2 className={styles.item}>
+
                     {recurso.titulo}
+
                 </h2>
 
                 <p className={styles.descripcion}>
+
                     {recurso.descripcion}
+
                 </p>
 
             </div>
@@ -238,11 +318,15 @@ const Recursos = () => {
                     <div className={styles.identidad}>
 
                         <span className={styles.etiqueta}>
+
                             /// BIBLIOTECA DE HERRAMIENTAS
+
                         </span>
 
                         <h1 className={styles.titulo}>
+
                             Recursos
+
                         </h1>
 
                         <p className={styles.subtitulo}>
@@ -264,13 +348,19 @@ const Recursos = () => {
                     <div className={styles.contador}>
 
                         <strong>
+
                             {String(recursos.length).padStart(2, "0")}
+
                         </strong>
 
                         <span>
+
                             RECURSOS
+
                             <br />
+
                             DE CONSULTA
+
                         </span>
 
                     </div>
@@ -307,7 +397,9 @@ const Recursos = () => {
                     />
 
                     <span>
+
                         Equipo de investigación Política
+
                     </span>
 
                     <span className={styles.linea} />
@@ -316,13 +408,17 @@ const Recursos = () => {
                         className={styles.barras}
                         aria-hidden="true"
                     >
+
                         /////////
+
                     </span>
 
                     <span className={styles.linea} />
 
                     <strong>
+
                         EDIPO / RECURSOS
+
                     </strong>
 
                 </footer>

@@ -291,6 +291,67 @@
 
 
 /* =========================================
+   IDENTIFICADOR GRÁFICO — PIXEL ART 6 X 6
+========================================= */
+
+.identificador {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    background: var(--acento);
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+.patronPixeles {
+    --pixel: 6px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, var(--pixel));
+
+    grid-template-rows:
+        repeat(6, var(--pixel));
+
+    gap: 0;
+
+    width: max-content;
+    height: max-content;
+
+    flex-shrink: 0;
+}
+
+.pixelActivo,
+.pixelInactivo {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+
+.pixelActivo {
+    background: var(--tinta);
+}
+
+.pixelInactivo {
+    background: transparent;
+}
+
+
+/* =========================================
    ACCESO CLICKEABLE
 ========================================= */
 
@@ -674,7 +735,7 @@
 
 
 /* =========================================
-   NOTEBOOK
+   RESPONSIVE — NOTEBOOK
 ========================================= */
 
 @media (max-width: 1100px) {
@@ -693,11 +754,23 @@
         max-width: 680px;
     }
 
+    .identificador {
+        top: 8px;
+        right: 8px;
+
+        width: 36px;
+        height: 36px;
+    }
+
+    .patronPixeles {
+        --pixel: 5px;
+    }
+
 }
 
 
 /* =========================================
-   TABLET HORIZONTAL
+   RESPONSIVE — TABLET HORIZONTAL
 ========================================= */
 
 @media (max-width: 950px) {
@@ -731,11 +804,23 @@
         font-size: 1.15rem;
     }
 
+    .identificador {
+        top: 6px;
+        right: 6px;
+
+        width: 30px;
+        height: 30px;
+    }
+
+    .patronPixeles {
+        --pixel: 4px;
+    }
+
 }
 
 
 /* =========================================
-   TABLET VERTICAL
+   RESPONSIVE — TABLET VERTICAL
 ========================================= */
 
 @media (max-width: 800px) {
@@ -791,6 +876,7 @@
 
 }
 
+
 @media (max-width: 750px) {
 
     .recursos {
@@ -808,7 +894,7 @@
 
 
 /* =========================================
-   CELULARES
+   RESPONSIVE — CELULARES
 ========================================= */
 
 @media (max-width: 520px) {
@@ -865,6 +951,39 @@
 
         width: 46px;
         height: 46px;
+    }
+
+    .identificador {
+        top: 10px;
+        right: 10px;
+
+        width: 42px;
+        height: 42px;
+    }
+
+    .patronPixeles {
+        --pixel: 6px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE — CELULARES PEQUEÑOS
+========================================= */
+
+@media (max-width: 340px) {
+
+    .identificador {
+        top: 6px;
+        right: 6px;
+
+        width: 30px;
+        height: 30px;
+    }
+
+    .patronPixeles {
+        --pixel: 4px;
     }
 
 }
