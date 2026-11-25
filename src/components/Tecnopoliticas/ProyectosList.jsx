@@ -1,5 +1,5 @@
-// En un archivo llamado investigationsData.js
-export const investigationsData = [
+// En un archivo llamado proyectosData.js
+export const proyectosData = [
   {
     titulo: "Mapa de la policía",
     bajada: "Red de cuidado ciudadano",
@@ -11,7 +11,7 @@ export const investigationsData = [
     ig: 'https://www.instagram.com/mapadelapolicia/',
     tw: 'https://x.com/mapadelapolicia',
     fb: 'https://www.facebook.com/mapadelapolicia/',
-    investigaciones: 'http://wwwm.mapadelapolicia.com/#/investigaciones',
+    proyectos: 'http://wwwm.mapadelapolicia.com/#/investigaciones',
     mail: 'mapadelapolicia@gmail.com',
     img: 'https://static.wixstatic.com/media/0f4ca0_ab230e22132d40c4bc91d7a4ae51cb00~mv2.png/v1/fill/w_750,h_750,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/pngmapa.png',
   },

@@ -696,7 +696,7 @@ const Publicaciones = () => {
 
                     <span className={styles.cuadrado} />
 
-                    <span>-34.6037 / -58.3816</span>
+                    <span>Equipo de investigación Política</span>
 
                     <span className={styles.linea} />
 

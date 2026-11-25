@@ -1,31 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
+
 
 /* =====================================
-   SISTEMA VISUAL
+   VARIABLES GENERALES
 ===================================== */
 
 .pagina {
+
     --papel: #f7f3e8;
     --negro: #101010;
+
     --violeta: #b64ef0;
     --lima: #d0f500;
     --cian: #00dce5;
     --azul: #0087f0;
-    --azulOscuro: #0053a6;
 
     --fontTitulo: "Chivo Mono", monospace;
     --fontTexto: "IBM Plex Mono", monospace;
 
     width: 100%;
+
     background: var(--papel);
     color: var(--negro);
 
     font-family: var(--fontTexto);
+
 }
 
-.pagina *,
-.pagina *::before,
-.pagina *::after {
+.pagina * {
     box-sizing: border-box;
 }
 
@@ -52,174 +54,267 @@
     outline-offset: 4px;
 }
 
+
 /* =====================================
-   DISTRIBUCIÓN GENERAL
+   ESTRUCTURA GENERAL
 ===================================== */
 
 .landing {
+
     width: 100%;
     max-width: 1800px;
-    margin: 0 auto;
 
+    margin: 0 auto;
     padding: 28px 2.7vw 22px;
 
     display: flex;
     flex-direction: column;
+
     gap: 42px;
+
 }
 
 .superior {
+
     display: grid;
-    grid-template-columns: 36fr 64fr;
-    gap: 28px;
+
+    grid-template-columns:
+        minmax(0, 36fr)
+        minmax(0, 64fr);
+
     align-items: center;
+
+    gap: 28px;
+
 }
 
 .inferior {
+
     display: grid;
-    grid-template-columns: 1.12fr 1.14fr 0.96fr;
-    gap: 28px;
+
+    grid-template-columns:
+        minmax(0, 1.12fr)
+        minmax(0, 1.14fr)
+        minmax(0, 0.96fr);
+
     align-items: stretch;
+
+    gap: 28px;
+
 }
 
+
 /* =====================================
-   PRESENTACIÓN INSTITUCIONAL
+   PRESENTACIÓN
 ===================================== */
 
 .header {
-    padding: 0 8px;
+
     display: flex;
     flex-direction: column;
+
     align-items: flex-start;
+
+    padding: 0 8px;
+
 }
 
 .headerBarras {
+
+    font-family: var(--fontTitulo);
+
     font-size: 2.1rem;
     font-weight: 700;
+
     line-height: 1;
+
     margin-bottom: 10px;
+
     letter-spacing: 2px;
+
 }
 
 .tituloPrincipal {
+
     font-family: var(--fontTitulo);
+
     font-size: clamp(2rem, 3.55vw, 4.1rem);
     font-weight: 800;
 
     line-height: 1.08;
+
     letter-spacing: -0.065em;
 
-    text-align: left;
-    color: var(--negro);
 }
 
 .tituloPrincipal mark {
-    background: var(--lima);
+
     color: var(--negro);
+    background: var(--lima);
+
     padding: 0 6px;
+
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+
 }
 
 .texto {
+
+    font-family: var(--fontTexto);
+
     font-size: clamp(0.8rem, 1.15vw, 1.15rem);
     font-weight: 500;
+
     line-height: 1.4;
+
     margin-top: 16px !important;
     margin-bottom: 22px !important;
-    text-align: left;
+
 }
 
 .conocer {
+
     display: inline-flex;
+
     align-items: center;
-    justify-content: center;
+
     gap: 16px;
 
+    padding: 8px 16px;
+
     border: 2px solid var(--negro);
+
+    background: var(--papel);
+
     box-shadow: 4px 4px 0 var(--negro);
 
-    padding: 8px 16px;
+    font-family: var(--fontTitulo);
 
     font-size: clamp(0.65rem, 1vw, 1rem);
     font-weight: 700;
 
-    transition: background 150ms, transform 150ms;
+    transition:
+        background 180ms ease,
+        transform 180ms ease,
+        box-shadow 180ms ease;
+
 }
 
 .conocer svg {
-    font-size: 1.65rem;
+
+    width: 1.65rem;
+    height: 1.65rem;
+
     flex-shrink: 0;
+
 }
 
 .conocer:hover {
+
     background: var(--lima);
+
     transform: translate(-2px, -2px);
+
+    box-shadow: 6px 6px 0 var(--negro);
+
 }
 
+
 /* =====================================
-   COMPONENTE VENTANA
+   VENTANAS GENERALES
 ===================================== */
 
 .ventana {
-    position: relative;
 
-    min-width: 0;
+    position: relative;
 
     display: flex;
     flex-direction: column;
 
+    min-width: 0;
+
     background: var(--papel);
+
     border: 2px solid var(--negro);
     border-radius: 17px;
 
     padding: 5px;
 
     box-shadow: 9px 11px 0 var(--negro);
+
 }
 
 .ventanaBarra {
+
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
     gap: 10px;
 
+    padding: 9px 13px;
+
     background: var(--negro);
     color: var(--papel);
 
-    padding: 9px 13px;
-
     border-radius: 10px 10px 5px 5px;
+
 }
 
 .ventanaTitulo {
+
     display: flex;
+
     align-items: center;
+
     gap: 14px;
+
     min-width: 0;
+
 }
 
 .ventanaTitulo h2 {
+
     font-family: var(--fontTitulo);
+
     font-size: clamp(0.8rem, 1.55vw, 1.7rem);
     font-weight: 700;
+
     letter-spacing: -0.035em;
+
     line-height: 1.15;
+
 }
 
 .barras {
+
+    font-family: var(--fontTitulo);
+
     font-size: clamp(1rem, 1.7vw, 1.8rem);
     font-weight: 600;
+
     letter-spacing: 1px;
+
+    flex-shrink: 0;
+
 }
 
 .controles {
+
     display: flex;
+
     align-items: center;
+
     gap: 7px;
+
     flex-shrink: 0;
+
 }
 
 .controles span {
+
     display: grid;
     place-items: center;
 
@@ -232,105 +327,225 @@
     color: var(--negro);
 
     font-family: var(--fontTitulo);
+
     font-size: 1.4rem;
     font-weight: 800;
+
     line-height: 1;
 
-    user-select: none;
 }
 
 .ventanaContenido {
+
     flex: 1;
+
     min-width: 0;
+
+    margin-top: 4px;
 
     border: 2px solid var(--negro);
     border-radius: 5px 5px 10px 10px;
 
-    margin-top: 4px;
 }
+
 
 /* =====================================
    PROYECTOS TECNOPOLÍTICOS
 ===================================== */
 
 .proyectosGrid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
 
-    padding: 30px 8px;
-    min-height: 285px;
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    min-height: 270px;
+
+    padding: 20px 8px;
+
 }
 
 .proyecto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
 
-    gap: 14px;
-    padding: 5px 15px;
+    --escalaLogo: 1;
+
+    display: grid;
+
+    grid-template-rows:
+        130px
+        55px
+        9px
+        30px;
+
+    align-items: center;
+    justify-items: center;
+
+    gap: 12px;
+
+    min-width: 0;
+
+    padding: 12px 16px;
 
     border-right: 1px solid var(--negro);
 
-    transition: background 180ms;
+    transition: background 180ms ease;
+
 }
 
 .proyecto:last-child {
     border-right: none;
 }
 
-.proyectoIcon {
-    width: clamp(48px, 7vw, 110px);
-    height: clamp(48px, 7vw, 110px);
+.proyectoLogo {
 
-    stroke-width: 1.4;
-
-    transition: transform 180ms;
-}
-
-.proyecto h3 {
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    min-height: 2.5em;
+    width: 100%;
+    height: 130px;
+
+    overflow: hidden;
+
+}
+
+.proyectoIcon {
+
+    width: 125px;
+    height: 115px;
+
+    max-width: 100%;
+
+    object-fit: contain;
+
+    transform: scale(var(--escalaLogo));
+
+    transition: transform 220ms ease;
+
+}
+
+
+/* LOGO MAPA */
+
+.proyecto[data-proyecto="mapa"] {
+    --escalaLogo: 1;
+}
+
+.proyecto[data-proyecto="mapa"] .proyectoIcon {
+
+    width: 135px;
+    height: 110px;
+
+}
+
+
+/* LOGO AHORA */
+
+.proyecto[data-proyecto="ahora"] {
+    --escalaLogo: 1.15;
+}
+
+.proyecto[data-proyecto="ahora"] .proyectoIcon {
+
+    width: 100px;
+    height: 110px;
+
+}
+
+
+/* LOGO ÁNCORA */
+
+.proyecto[data-proyecto="ancora"] {
+    --escalaLogo: 1.2;
+}
+
+.proyecto[data-proyecto="ancora"] .proyectoIcon {
+
+    width: 125px;
+    height: 115px;
+
+}
+
+
+/* LOGO RADAR */
+
+.proyecto[data-proyecto="radar"] {
+    --escalaLogo: 2.4;
+}
+
+.proyecto[data-proyecto="radar"] .proyectoIcon {
+
+    width: 125px;
+    height: 125px;
+
+}
+
+
+/* TÍTULOS DE PROYECTOS */
+
+.proyecto h3 {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 55px;
 
     font-family: var(--fontTitulo);
-    font-size: clamp(0.8rem, 1.65vw, 1.8rem);
+
+    font-size: clamp(0.85rem, 1.4vw, 1.45rem);
     font-weight: 800;
 
-    line-height: 1.05;
+    line-height: 1.1;
+
     letter-spacing: -0.045em;
 
     text-align: center;
+
+    overflow-wrap: anywhere;
+
 }
 
 .proyectoColor {
+
     width: 85%;
-    height: 12px;
+    height: 9px;
 
     background: var(--acento);
+
 }
 
 .proyectoFlecha {
-    width: 34px;
-    height: 34px;
+
+    width: 28px;
+    height: 28px;
 
     stroke-width: 1.6;
-    transition: transform 180ms;
+
+    transition: transform 180ms ease;
+
 }
 
 .proyecto:hover {
-    background: rgba(0, 0, 0, 0.045);
+    background: rgba(16, 16, 16, 0.045);
 }
 
 .proyecto:hover .proyectoIcon {
-    transform: translateY(-5px);
+
+    transform:
+        translateY(-4px)
+        scale(var(--escalaLogo));
+
 }
 
 .proyecto:hover .proyectoFlecha {
     transform: translateX(6px);
 }
+
 
 /* =====================================
    PUBLICACIONES
@@ -340,12 +555,15 @@
     background: var(--papel);
 }
 
-/* Punta del globo de diálogo */
+
+/* GLOBO DE DIÁLOGO */
 
 .publicaciones::after {
+
     content: "";
 
     position: absolute;
+
     left: 30px;
     bottom: -20px;
 
@@ -360,57 +578,86 @@
     box-shadow: -2px 2px 0 var(--negro);
 
     transform: skewY(-42deg);
+
     pointer-events: none;
+
 }
 
 .publicaciones .ventanaContenido {
+
     display: flex;
     flex-direction: column;
+
     justify-content: center;
+
+    padding: 18px 14px 15px;
 
     background: var(--negro);
     color: var(--papel);
 
     border-color: var(--negro);
-    padding: 18px 14px 15px;
+
 }
 
+
+/* CARRUSEL */
+
 .newsContainer {
+
     display: grid;
-    grid-template-columns: 32px minmax(0, 1fr) 32px;
+
+    grid-template-columns:
+        32px
+        minmax(0, 1fr)
+        32px;
+
     align-items: center;
+
     gap: 14px;
 
     flex: 1;
+
     min-height: 185px;
+
 }
 
 .newsData {
+
     display: flex;
     flex-direction: column;
+
     align-items: flex-start;
+
     gap: 7px;
+
     min-width: 0;
+
 }
 
 .newsFecha {
+
     font-size: 0.85rem;
     font-weight: 500;
+
 }
 
 .newsTitle {
+
     font-family: var(--fontTitulo);
+
     font-size: clamp(1rem, 2.05vw, 2.1rem);
     font-weight: 800;
 
     line-height: 1.1;
+
     letter-spacing: -0.045em;
 
-    text-align: left;
     overflow-wrap: anywhere;
+
 }
 
 .botonNews {
+
     display: grid;
     place-items: center;
 
@@ -426,17 +673,30 @@
     color: var(--papel);
 
     font-size: 1.3rem;
+
+    transition:
+        background 180ms ease,
+        color 180ms ease;
+
 }
 
 .botonNews:hover {
+
     background: var(--papel);
     color: var(--negro);
+
 }
 
+
+/* BOTÓN LEER */
+
 .leer {
+
     display: flex;
+
     align-items: center;
     justify-content: space-between;
+
     gap: 20px;
 
     margin-top: 10px;
@@ -445,35 +705,58 @@
     border: 2px solid var(--papel);
     border-radius: 4px;
 
+    font-family: var(--fontTitulo);
+
     font-size: 1rem;
     font-weight: 700;
+
+    transition:
+        background 180ms ease,
+        color 180ms ease;
+
 }
 
 .leer svg {
-    font-size: 1.5rem;
+
+    width: 1.5rem;
+    height: 1.5rem;
+
 }
 
 .leer:hover {
+
     background: var(--papel);
     color: var(--negro);
+
 }
 
+
+/* INDICADORES */
+
 .indicadores {
+
     display: flex;
+
     justify-content: flex-end;
+
     gap: 8px;
+
     margin-top: 12px;
     padding-right: 8px;
+
 }
 
 .indicador,
 .indicadorActivo {
+
     width: 12px;
     height: 12px;
+
     padding: 0;
 
     border: 1.5px solid var(--papel);
     border-radius: 1px;
+
 }
 
 .indicador {
@@ -484,209 +767,679 @@
     background: var(--papel);
 }
 
+.indicador:hover {
+    background: var(--lima);
+}
+
+
+/* TODAS LAS PUBLICACIONES */
+
+.publicaciones .todasPublicaciones {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    width: 100%;
+
+    margin-top: 14px;
+    padding: 12px 2px 2px;
+
+    border: none;
+    border-top: 1px solid var(--papel);
+
+    background: transparent;
+    color: var(--papel);
+
+    font-family: var(--fontTitulo);
+
+    font-size: clamp(0.7rem, 0.95vw, 1rem);
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.035em;
+
+    transition: color 180ms ease;
+
+}
+
+.todasPublicaciones svg {
+
+    width: 28px;
+    height: 28px;
+
+    flex-shrink: 0;
+
+    stroke-width: 1.6;
+
+    transition: transform 180ms ease;
+
+}
+
+.publicaciones .todasPublicaciones:hover {
+    color: var(--lima);
+}
+
+.todasPublicaciones:hover svg {
+    transform: translateX(4px);
+}
+
+
+/* =====================================
+   SISTEMA GENERAL DE PÍXELES
+===================================== */
+
+.patronPixeles {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(var(--columnas), var(--pixel, 6px));
+
+    grid-auto-rows: var(--pixel, 6px);
+
+    gap: 0;
+
+    width: max-content;
+
+    flex-shrink: 0;
+
+}
+
+.pixelActivo {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    background: var(--negro);
+
+}
+
+.pixelInactivo {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    background: transparent;
+
+}
+
+
 /* =====================================
    INVESTIGACIONES
 ===================================== */
 
-.investigacionesList {
-    height: 100%;
-    padding: 8px 16px;
+.investigaciones {
+    background: var(--papel);
+}
+
+.investigaciones .ventanaContenido {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+
+    justify-content: space-between;
+
+    padding: 8px 14px 12px;
+
+    background: var(--papel);
+
 }
 
-.investigacion {
-    display: grid;
-    grid-template-columns: 28% minmax(0, 1fr) 26px;
+.investigacionesList {
 
-    gap: 13px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    flex: 1;
+
+}
+
+
+/* FILAS DE INVESTIGACIONES */
+
+.investigacion {
+
+    display: grid;
+
+    grid-template-columns:
+        38px
+        minmax(0, 1fr)
+        30px;
+
     align-items: center;
 
-    padding: 14px 0;
+    gap: 16px;
+
+    flex: 1;
+
+    min-height: 82px;
+
+    padding: 12px 4px;
 
     border-bottom: 1px solid var(--negro);
+
+    transition: background 180ms ease;
+
 }
 
 .investigacion:last-child {
     border-bottom: none;
 }
 
-.mapaMiniatura {
-    width: 100%;
-    aspect-ratio: 1.45;
 
-    background-color: var(--negro);
-    background-image: url("../../svg/mapa.svg");
-    background-size: cover;
-    background-position: center;
+/* PATRONES ORIGINALES 3 X 9 */
 
-    filter: grayscale(1) contrast(1.5);
+.investigacionPatron {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+
+    padding: 2px;
+
 }
+
+.investigacionPatron .patronPixeles {
+    --pixel: 7px;
+}
+
+
+/* TÍTULOS EDITORIALES */
 
 .investigacionInfo {
-    position: relative;
-    padding-left: 13px;
-}
 
-.investigacionInfo::before {
-    content: "";
+    display: flex;
 
-    position: absolute;
-    left: 0;
-    top: 0;
+    flex-direction: column;
 
-    width: 7px;
-    height: 32px;
+    justify-content: center;
 
-    background: var(--acento);
+    min-width: 0;
+
 }
 
 .investigacionInfo h3 {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0;
+
     font-family: var(--fontTitulo);
-    font-size: clamp(0.9rem, 1.5vw, 1.55rem);
-    font-weight: 800;
 
-    line-height: 1.1;
-    letter-spacing: -0.05em;
+    font-weight: 900;
 
-    margin-bottom: 5px;
+    line-height: 0.98;
+
+    letter-spacing: -0.065em;
+
+    text-transform: uppercase;
+
+    color: var(--negro);
+
+    background: transparent;
+
 }
 
-.investigacionInfo p {
-    font-size: clamp(0.7rem, 0.95vw, 1rem);
-    line-height: 1.3;
-    text-align: left;
+
+/* PRIMERA LÍNEA: PODER */
+
+.investigacionInfo .investigacionTituloPrimero {
+
+    display: block;
+
+    font-family: var(--fontTitulo);
+
+    font-size: clamp(1.2rem, 1.65vw, 1.9rem);
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    letter-spacing: -0.065em;
+
 }
+
+
+/* SEGUNDA LÍNEA: CATEGORÍA */
+
+.investigacionInfo .investigacionTituloSegundo {
+
+    display: block;
+
+    max-width: 100%;
+
+    font-family: var(--fontTitulo);
+
+    font-size: clamp(1.25rem, 1.85vw, 2.1rem);
+
+    font-weight: 900;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.065em;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+/* FLECHAS */
 
 .investigacionFlecha {
-    width: 26px;
-    height: 26px;
 
-    transition: transform 180ms;
+    width: 30px;
+    height: 30px;
+
+    stroke-width: 1.8;
+
+    transition: transform 180ms ease;
+
+}
+
+
+/* HOVER MONOCROMÁTICO */
+
+.investigacion:hover {
+    background: rgba(16, 16, 16, 0.055);
 }
 
 .investigacion:hover .investigacionFlecha {
-    transform: translateX(5px);
+    transform: translateX(4px);
 }
+
+.investigaciones a:focus-visible {
+    outline-color: var(--negro);
+}
+
+
+/* TODAS LAS INVESTIGACIONES */
+
+.todasInvestigaciones {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-top: 8px;
+
+    padding: 12px 2px 0;
+
+    border-top: 1px solid var(--negro);
+
+    font-family: var(--fontTitulo);
+
+    font-size: clamp(0.65rem, 0.9vw, 0.95rem);
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.035em;
+
+}
+
+.todasInvestigaciones svg {
+
+    width: 27px;
+    height: 27px;
+
+    flex-shrink: 0;
+
+    stroke-width: 1.6;
+
+    transition: transform 180ms ease;
+
+}
+
+.todasInvestigaciones:hover svg {
+    transform: translateX(4px);
+}
+
+.todasInvestigaciones:hover span {
+
+    text-decoration: underline;
+
+    text-underline-offset: 4px;
+
+}
+
 
 /* =====================================
    RECURSOS
 ===================================== */
 
+.recursos {
+    background: var(--papel);
+}
+
 .recursos .ventanaBarra {
-    background: var(--azulOscuro);
+
+    background: var(--negro);
+    color: var(--papel);
+
 }
 
 .recursos .ventanaContenido {
-    background: var(--azul);
-    color: var(--papel);
 
-    border-color: var(--azul);
-}
-
-.recursosGrid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(2, 1fr);
-
-    height: 100%;
-    min-height: 220px;
-
-    padding: 16px;
-}
-
-.recurso {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
-    gap: 8px;
-    padding: 12px 5px;
+    justify-content: space-between;
 
-    transition: background 180ms;
-}
-
-.recurso:nth-child(odd) {
-    border-right: 1px solid var(--papel);
-}
-
-.recurso:nth-child(-n + 2) {
-    border-bottom: 1px solid var(--papel);
-}
-
-.recurso svg {
-    width: 46px;
-    height: 46px;
-
-    padding: 7px;
+    padding: 8px 12px 12px;
 
     background: var(--papel);
     color: var(--negro);
 
+}
+
+.recursosList {
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    flex: 1;
+
+}
+
+
+/* FILAS DE RECURSOS */
+
+.recurso {
+
+    display: grid;
+
+    grid-template-columns:
+        42px
+        minmax(0, 1fr)
+        24px;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-height: 66px;
+
+    padding: 10px 2px;
+
+    border-bottom: 1px solid var(--negro);
+
+    transition: background 180ms ease;
+
+}
+
+.recurso:last-child {
+    border-bottom: none;
+}
+
+
+/* PATRONES ABSTRACTOS 6 X 6 */
+
+.recursoPatron {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    background: var(--azul);
+
+}
+
+.recursoPatron .patronPixeles {
+    --pixel: 6px;
+}
+
+
+/* TEXTOS */
+
+.recursoInfo {
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 4px;
+
+    min-width: 0;
+
+}
+
+.recursoInfo span {
+
+    font-family: var(--fontTexto);
+
+    font-size: 0.62rem;
+    font-weight: 600;
+
+    letter-spacing: 0.05em;
+
+}
+
+.recursoInfo h3 {
+
+    font-family: var(--fontTitulo);
+
+    font-size: clamp(0.72rem, 1vw, 1.05rem);
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.035em;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+/* FLECHAS */
+
+.recursoFlecha {
+
+    width: 24px;
+    height: 24px;
+
+    stroke-width: 1.6;
+
+    transition: transform 180ms ease;
+
+}
+
+.recurso:not(.recursoInactivo):hover {
+    background: var(--azul);
+}
+
+.recurso:hover .recursoFlecha {
+    transform: translateX(3px);
+}
+
+
+/* RECURSOS NO DISPONIBLES */
+
+.recursoInactivo {
+    cursor: default;
+}
+
+.proximamente {
+
+    font-family: var(--fontTexto);
+
+    font-size: 0.5rem;
+    font-weight: 600;
+
+    text-align: right;
+
+}
+
+
+/* =====================================
+   BOTÓN TODOS LOS RECURSOS
+===================================== */
+
+.recursosPie {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 12px 3px 3px;
+
+    border-top: 1px solid var(--negro);
+
+}
+
+.recursos .todosRecursos {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    width: max-content;
+
+    padding: 8px 10px;
+
     border: 2px solid var(--negro);
-    border-radius: 3px;
+    border-radius: 4px;
+
+    background: var(--azul);
+    color: var(--negro);
 
     box-shadow: 3px 3px 0 var(--negro);
 
-    stroke-width: 1.8;
-}
-
-.recurso h3 {
     font-family: var(--fontTitulo);
-    font-size: clamp(0.7rem, 1.15vw, 1.2rem);
-    font-weight: 700;
 
-    text-align: center;
-    letter-spacing: -0.04em;
+    font-size: 0.78rem;
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.035em;
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        background 180ms ease;
+
 }
 
-.recurso:hover {
-    background: rgba(0, 0, 0, 0.12);
+.todosRecursos svg {
+
+    width: 24px;
+    height: 24px;
+
+    flex-shrink: 0;
+
+    stroke-width: 1.8;
+
 }
+
+.recursos .todosRecursos:hover {
+
+    transform: translate(-2px, -2px);
+
+    box-shadow: 5px 5px 0 var(--negro);
+
+}
+
+.recursos .todosRecursos:active {
+
+    transform: translate(3px, 3px);
+
+    box-shadow: none;
+
+}
+
 
 /* =====================================
-   FOOTER
+   PIE DE PÁGINA
 ===================================== */
 
 .footer {
+
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
     gap: 20px;
+
     padding-top: 14px;
+
+    font-family: var(--fontTexto);
 
     font-size: clamp(0.65rem, 1vw, 1rem);
     font-weight: 600;
 
     white-space: nowrap;
+
 }
 
 .cuadrado {
+
     width: 17px;
     height: 17px;
 
+    background: var(--negro);
+
     flex-shrink: 0;
 
-    background: var(--negro);
 }
 
 .footerLinea {
-    height: 2px;
+
     flex: 1;
+
+    height: 2px;
+
     background: var(--negro);
+
 }
 
 .footerBarras {
+
+    font-family: var(--fontTitulo);
+
     font-size: 1.5rem;
+    font-weight: 700;
+
     letter-spacing: 2px;
+
 }
 
+
 /* =====================================
-   TABLETS
+   RESPONSIVE — TABLET
 ===================================== */
 
 @media (max-width: 1100px) {
@@ -696,108 +1449,259 @@
     }
 
     .superior {
-        grid-template-columns: 35fr 65fr;
+
+        grid-template-columns:
+            minmax(0, 35fr)
+            minmax(0, 65fr);
+
         gap: 20px;
+
     }
 
     .inferior {
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 28px 24px;
+
     }
 
-    .recursos {
-        grid-column: 1 / -1;
-    }
 
-    .recursosGrid {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr;
-        min-height: 130px;
-    }
+    /* VENTANAS */
 
-    .recurso:nth-child(n) {
-        border-bottom: none;
-        border-right: 1px solid var(--papel);
-    }
-
-    .recurso:last-child {
-        border-right: none;
+    .controles {
+        gap: 5px;
     }
 
     .controles span {
+
         width: 18px;
         height: 18px;
+
         font-size: 1.1rem;
+
     }
 
     .ventanaTitulo {
         gap: 8px;
     }
 
+
+    /* PROYECTOS */
+
     .proyectosGrid {
+
         min-height: 240px;
+
+        padding: 16px 6px;
+
+    }
+
+    .proyecto {
+
+        grid-template-rows:
+            110px
+            45px
+            8px
+            26px;
+
+        gap: 10px;
+
+        padding: 10px 8px;
+
+    }
+
+    .proyectoLogo {
+        height: 110px;
+    }
+
+    .proyectoIcon {
+        max-height: 100px;
+    }
+
+    .proyecto h3 {
+
+        height: 45px;
+
+        font-size: clamp(0.75rem, 1.4vw, 1.1rem);
+
+    }
+
+    .proyectoFlecha {
+
+        width: 26px;
+        height: 26px;
+
+    }
+
+
+    /* INVESTIGACIONES */
+
+    .investigacion {
+
+        grid-template-columns:
+            32px
+            minmax(0, 1fr)
+            26px;
+
+        gap: 12px;
+
+    }
+
+    .investigacionInfo .investigacionTituloPrimero {
+
+        font-size: clamp(1.1rem, 2vw, 1.6rem);
+
+    }
+
+    .investigacionInfo .investigacionTituloSegundo {
+
+        font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+
+    }
+
+    .investigacionFlecha {
+
+        width: 26px;
+        height: 26px;
+
+    }
+
+
+    /* RECURSOS */
+
+    .recursos {
+        grid-column: 1 / -1;
+    }
+
+    .recursosList {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        align-items: stretch;
+
+    }
+
+    .recurso {
+
+        border-bottom: none;
+        border-right: 1px solid var(--negro);
+
+        padding: 14px 12px;
+
+    }
+
+    .recurso:last-child {
+        border-right: none;
+    }
+
+    .recursoInfo h3 {
+        font-size: 0.9rem;
+    }
+
+    .recursosPie {
+        margin-top: 6px;
     }
 
 }
 
+
 /* =====================================
-   CELULARES
+   RESPONSIVE — CELULAR
 ===================================== */
 
 @media (max-width: 768px) {
 
     .landing {
+
         padding: 24px 18px 20px;
+
         gap: 30px;
+
     }
 
     .superior,
     .inferior {
-        grid-template-columns: 1fr;
+
+        grid-template-columns: minmax(0, 1fr);
+
         gap: 30px;
+
     }
+
+
+    /* PRESENTACIÓN */
 
     .header {
         padding: 0;
     }
 
     .tituloPrincipal {
-        max-width: 600px;
+
         font-size: clamp(2.4rem, 8.5vw, 4rem);
+
+        max-width: 600px;
+
     }
 
     .texto {
-        font-size: 0.9rem;
+
         max-width: 500px;
+
+        font-size: 0.9rem;
+
     }
 
     .conocer {
         font-size: 0.75rem;
     }
 
+
+    /* VENTANAS */
+
     .ventana {
         box-shadow: 6px 7px 0 var(--negro);
-    }
-
-    .ventanaTitulo h2 {
-        font-size: 0.95rem;
     }
 
     .ventanaBarra {
         padding: 9px;
     }
 
+    .ventanaTitulo h2 {
+        font-size: 0.95rem;
+    }
+
+
+    /* PROYECTOS */
+
     .proyectosGrid {
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
         padding: 10px;
+
     }
 
     .proyecto {
-        padding: 20px 10px;
-        gap: 12px;
+
+        grid-template-rows:
+            120px
+            45px
+            8px
+            26px;
+
+        gap: 10px;
+
+        padding: 15px 10px;
+
     }
 
-    .proyecto:nth-child(2) {
+    .proyecto:nth-child(2n) {
         border-right: none;
     }
 
@@ -805,72 +1709,143 @@
         border-bottom: 1px solid var(--negro);
     }
 
+    .proyectoLogo {
+        height: 120px;
+    }
+
     .proyectoIcon {
-        width: 75px;
-        height: 75px;
+        max-height: 110px;
     }
 
     .proyecto h3 {
-        font-size: 1.15rem;
+
+        font-size: 1rem;
+
+        height: 45px;
+
     }
 
     .proyectoColor {
-        height: 9px;
+        height: 8px;
+    }
+
+
+    /* PUBLICACIONES */
+
+    .newsContainer {
+        min-height: 200px;
     }
 
     .newsTitle {
         font-size: 1.6rem;
     }
 
-    .newsContainer {
-        min-height: 200px;
-    }
-
-    .investigacionInfo h3 {
-        font-size: 1.15rem;
-    }
-
-    .investigacionInfo p {
+    .publicaciones .todasPublicaciones {
         font-size: 0.8rem;
     }
 
-    .investigaciones {
-        margin-top: 8px;
+
+    /* INVESTIGACIONES */
+
+    .investigaciones .ventanaContenido {
+
+        padding: 10px 14px 14px;
+
     }
+
+    .investigacion {
+
+        grid-template-columns:
+            32px
+            minmax(0, 1fr)
+            26px;
+
+        gap: 14px;
+
+        min-height: 90px;
+
+    }
+
+    .investigacionInfo .investigacionTituloPrimero {
+
+        font-size: clamp(1.2rem, 4.5vw, 1.7rem);
+
+    }
+
+    .investigacionInfo .investigacionTituloSegundo {
+
+        font-size: clamp(1.3rem, 4.8vw, 1.9rem);
+
+    }
+
+    .investigacionFlecha {
+
+        width: 26px;
+        height: 26px;
+
+    }
+
+    .todasInvestigaciones {
+        font-size: 0.8rem;
+    }
+
+
+    /* RECURSOS */
 
     .recursos {
         grid-column: auto;
     }
 
-    .recursosGrid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-    }
+    .recursosList {
 
-    .recurso:nth-child(n) {
-        border: none;
-    }
+        display: flex;
+        flex-direction: column;
 
-    .recurso:nth-child(odd) {
-        border-right: 1px solid var(--papel);
-    }
-
-    .recurso:nth-child(-n + 2) {
-        border-bottom: 1px solid var(--papel);
     }
 
     .recurso {
-        padding: 18px 6px;
+
+        grid-template-columns:
+            42px
+            minmax(0, 1fr)
+            24px;
+
+        min-height: 70px;
+
+        padding: 12px 3px;
+
+        border-right: none;
+        border-bottom: 1px solid var(--negro);
+
     }
 
-    .recurso h3 {
+    .recurso:last-child {
+        border-bottom: none;
+    }
+
+    .recursoInfo h3 {
         font-size: 0.9rem;
     }
 
+    .recursosPie {
+        margin-top: 0;
+    }
+
+    .recursos .todosRecursos {
+        font-size: 0.8rem;
+    }
+
+
+    /* FOOTER */
+
     .footer {
+
         flex-wrap: wrap;
+
         gap: 12px;
+
         font-size: 0.65rem;
+
     }
 
     .footerBarras {
@@ -879,6 +1854,177 @@
 
     .footerLinea {
         min-width: 15px;
+    }
+
+}
+
+
+/* =====================================
+   RESPONSIVE — CELULARES PEQUEÑOS
+===================================== */
+
+@media (max-width: 380px) {
+
+    .landing {
+        padding: 20px 12px;
+    }
+
+
+    /* VENTANAS */
+
+    .ventanaTitulo {
+        gap: 6px;
+    }
+
+    .ventanaTitulo h2 {
+        font-size: 0.75rem;
+    }
+
+    .controles {
+        gap: 4px;
+    }
+
+    .controles span {
+
+        width: 16px;
+        height: 16px;
+
+        font-size: 0.95rem;
+
+    }
+
+
+    /* PROYECTOS */
+
+    .proyecto {
+
+        grid-template-rows:
+            100px
+            45px
+            7px
+            24px;
+
+    }
+
+    .proyecto h3 {
+        font-size: 0.95rem;
+    }
+
+    .proyectoLogo {
+        height: 100px;
+    }
+
+    .proyectoIcon {
+        max-height: 90px;
+    }
+
+
+    /* PUBLICACIONES */
+
+    .newsContainer {
+
+        grid-template-columns:
+            26px
+            minmax(0, 1fr)
+            26px;
+
+        gap: 8px;
+
+    }
+
+    .botonNews {
+
+        width: 26px;
+        height: 26px;
+
+    }
+
+    .newsTitle {
+        font-size: 1.3rem;
+    }
+
+
+    /* INVESTIGACIONES */
+
+    .investigacion {
+
+        grid-template-columns:
+            24px
+            minmax(0, 1fr)
+            22px;
+
+        gap: 10px;
+
+    }
+
+    .investigacionPatron .patronPixeles {
+        --pixel: 6px;
+    }
+
+    .investigacionInfo .investigacionTituloPrimero {
+        font-size: 1.15rem;
+    }
+
+    .investigacionInfo .investigacionTituloSegundo {
+        font-size: 1.25rem;
+    }
+
+    .investigacionFlecha {
+
+        width: 22px;
+        height: 22px;
+
+    }
+
+    .todasInvestigaciones {
+        font-size: 0.7rem;
+    }
+
+
+    /* RECURSOS */
+
+    .recurso {
+
+        grid-template-columns:
+            38px
+            minmax(0, 1fr)
+            22px;
+
+        gap: 8px;
+
+    }
+
+    .recursoPatron {
+
+        width: 38px;
+        height: 38px;
+
+    }
+
+    .recursoPatron .patronPixeles {
+        --pixel: 5px;
+    }
+
+    .recursoInfo h3 {
+        font-size: 0.8rem;
+    }
+
+}
+
+
+/* =====================================
+   ACCESIBILIDAD
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .pagina *,
+    .pagina *::before,
+    .pagina *::after {
+
+        transition: none !important;
+        animation: none !important;
+
     }
 
 }
