@@ -1,74 +1,151 @@
+/* =====================================
+   HEADER GENERAL
+===================================== */
+
 .header {
-   
-    padding: 6vh 10vw;
-    margin: 0vh 2vw;
-    padding-top: 10vh;
-    margin-right: 4vw;
-    border-radius: 3px;
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 38px;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-    color: #1a1a1a;
+    position: relative;
+
+    width: auto;
+    min-width: 0;
+
+    margin: 24px 2.7vw;
+    padding: 28px 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    color: var(--negro);
+    font-family: var(--fontTexto);
+
+    box-sizing: border-box;
+}
+
+/* =====================================
+   IDENTIDAD
+===================================== */
+
+.barras {
+    font-family: var(--fontTitulo);
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.titulos {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .title,
-.subTitle,
-.title2 {
+.title2,
+.subTitle {
     margin: 0;
+    padding: 0;
+    text-align: left;
 }
 
 .title {
-    padding: 2vh 0vw;
-    padding-bottom: 0;
+    font-family: var(--fontTitulo);
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 800;
+    letter-spacing: -0.06em;
+    line-height: 1.1;
 }
 
 .title2 {
-    padding: 2vh 0vw;
-    margin: 0;
-    font-size: 2.2rem;
-    padding-top: 0;
+    font-family: var(--fontTitulo);
+    font-size: clamp(1.3rem, 2.5vw, 2.6rem);
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    line-height: 1.15;
 }
 
 .subTitle {
-    font-size: 0.9rem;
-    margin: 0;
-    padding: 4vh 0vw;
-    text-align: justify;
+    max-width: 850px;
+
+    font-family: var(--fontTexto);
+    font-size: clamp(0.85rem, 1.1vw, 1.05rem);
+    font-weight: 400;
+    line-height: 1.5;
 }
 
-/* Tema solid */
+/* =====================================
+   TEMA SOLID
+===================================== */
+
 .solid {
-    background: radial-gradient(circle at 50% 0%, #c1bfc1, #d6d4d7, #737171);
-    min-height: 30vh;
+    background: var(--papel);
+    color: var(--negro);
 
+    border: 2px solid var(--negro);
+    border-radius: 12px;
+
+    box-shadow: 7px 7px 0 var(--negro);
 }
 
-/* Tema void */
+/* =====================================
+   TEMA VOID
+===================================== */
+
 .void {
-    background: none;
+    background: transparent;
+    color: inherit;
+
+    border: none;
+    border-radius: 0;
     box-shadow: none;
-    color: #d6d4d7;
-    min-height: 10vh;
-
-
 }
 
-/* Tema dark */
+/* =====================================
+   TEMA DARK
+===================================== */
+
 .dark {
-    background: none;
-    box-shadow: none;    color: #1a1a1a;
-    min-height: 10vh;
+    background: var(--negro);
+    color: var(--papel);
 
+    border: 2px solid var(--negro);
+    border-radius: 12px;
+
+    box-shadow: 7px 7px 0 var(--negro);
 }
 
+/* =====================================
+   RESPONSIVE
+===================================== */
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+
+    .header {
+        margin: 20px 18px;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .title {
+        font-size: clamp(1.8rem, 7vw, 3rem);
+    }
+
+    .title2 {
+        font-size: 1.4rem;
+    }
+
     .subTitle {
-        font-size: 0.9rem;
-        margin: 0;
-        padding: 4vh 0vw;
-        text-align: justify;
-        max-width: 40vw;
+        font-size: 0.85rem;
+        max-width: 100%;
+    }
+
+    .barras {
+        font-size: 1.4rem;
+    }
+
+    .solid,
+    .dark {
+        box-shadow: 5px 5px 0 var(--negro);
     }
 
 }

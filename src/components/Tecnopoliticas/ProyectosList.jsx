@@ -1,5 +1,5 @@
-// En un archivo llamado investigationsData.js
-export const investigationsData = [
+// En un archivo llamado proyectosData.js
+export const proyectosData = [
   {
     titulo: "Mapa de la policía",
     bajada: "Red de cuidado ciudadano",
@@ -11,19 +11,19 @@ export const investigationsData = [
     ig: 'https://www.instagram.com/mapadelapolicia/',
     tw: 'https://x.com/mapadelapolicia',
     fb: 'https://www.facebook.com/mapadelapolicia/',
-    investigaciones: 'http://wwwm.mapadelapolicia.com/#/investigaciones',
+    proyectos: 'http://wwwm.mapadelapolicia.com/#/investigaciones',
     mail: 'mapadelapolicia@gmail.com',
     img: 'https://static.wixstatic.com/media/0f4ca0_ab230e22132d40c4bc91d7a4ae51cb00~mv2.png/v1/fill/w_750,h_750,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/pngmapa.png',
   },
   {
-    titulo: "Monitor",
-    bajada: "Para mapear la injerencia de EEUU en Argentina",
-    año: "2022",
-    descripcion: "El proyecto propone la elaboración de un Monitor para el seguimiento de la injerencia de Estados Unidos en Argentina, pretendiendo así registrar las distintas modalidades de intervención del Estado norteamericano y organizaciones financiadas sobre la dinámica institucional, política, educativa, científica, económica y cultural de nuestro país. Esto implica dar cuenta del carácter global y dinámico de la intervención que, más allá de las discontinuidades en su coherencia o articulación, está orientada a consolidar la hegemonía del país del norte y contrarrestar tendencias ajenas a su capacidad de influencia. En este contexto el Monitor tiene como objetivo analizar la injerencia de los Estados Unidos en Argentina durante el período 2019-2023. Esto implica: a) Identificar hechos de injerencia en las distintas Áreas de Intervención, b) detallar de la localización y temporalidad de esos hechos, c) describir las modalidades de injerencia, d) Identificar agencias y actores sociales y analizar las dinámicas de articulación, e), dar cuenta de la relevancia geopolítica de las áreas donde se efectúa la injerencia, f) estudiar las relaciones diplomáticas entre Estados Unidos y Argentina. Para construir el registro de hechos, procesos e iniciativas del presente y el pasado reciente, se construirán las herramientas técnicas y organizativas necesarias",
+    titulo: "Ancora.red",
+    bajada: "Inteligencia colectiva para la acción política.",
+    año: "2026",
+    descripcion: "Áncora.red es una plataforma web donde poner en común información relevante para el campo popular en su lucha por la transformación social y la construcción de una democracia plena. Se trata, en este sentido, de una apuesta estratégica por la inteligencia colectiva. Creada por el Equipo de Investigación Política (EdIPo) de la revista Crisis y el Centro de Estudios Legales y Sociales (CELS), está a disposición de todes quienes quieran participar en un marco de confianza y compromiso. Memoria y acción política. En 1976 la Agencia Clandestina de Noticias (ANCLA) fue una respuesta urgente ante el silencio y el terror. Pero fue también un disparo hacia el futuro, que hoy recobra su pleno sentido.En un escenario distinto pero atravesado por nuevas tácticas de sometimiento —la saturación, la desinformación, la guerra cognitiva— emerge una pregunta similar: ¿cómo producir y circular información segura y confiable desde el campo popular, para combatir a los poderes? Áncora.red nace así de una memoria que está viva y relampaguea. No es apenas un homenaje a Rodolfo Walsh, sino la continuidad de su intuición. La apuesta es a recuperar un hábito militante que supimos tener: el de investigar, elaborar y compartir información como parte de la acción política. Reapropiarnos del territorio digital, hoy concentrado en manos de corporaciones, es una condición para eso. Dejar de regalar conocimiento y empezar a ponerlo en común.",
     enlace: "",
-    dominio: 'monitor',
-    link: '/monitor',
-    mail: 'monitordeinjerencia@gmail.com',
+    dominio: 'ancora',
+    link: '/ancora',
+    mail: 'ancora.red@proton.me',
     img: "https://static.wixstatic.com/media/0f4ca0_88b8f6393a3f4353a5a48e48e223725d~mv2.png/v1/fill/w_750,h_750,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/pngMonitor.png",
   },
   {

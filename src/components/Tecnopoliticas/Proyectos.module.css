@@ -1,0 +1,1080 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;600;700;800;900&display=swap');
+
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+.proyectos {
+    --fondo: #f7f3e8;
+    --tinta: #101010;
+    --mono: 'IBM Plex Mono', monospace;
+    --sans: 'Inter', sans-serif;
+
+    width: 100%;
+    max-width: 1380px;
+
+    margin: 0 auto;
+    padding: 24px 12px 30px;
+
+    color: var(--tinta);
+
+    font-family: var(--mono);
+    text-align: left;
+}
+
+.proyectos *,
+.proyectos *::before,
+.proyectos *::after {
+    box-sizing: border-box;
+}
+
+.proyectos a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.proyectos a:focus-visible {
+    outline: 3px solid #0087ef;
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.encabezado {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    padding: 12px 0 26px;
+    margin-bottom: 32px;
+
+    border-bottom: 2px solid var(--tinta);
+}
+
+.identidad {
+    min-width: 0;
+}
+
+.etiqueta {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.headerTitle {
+    width: fit-content;
+
+    margin: 0;
+
+    font-family: var(--sans);
+    font-size: clamp(2.8rem, 5.5vw, 5rem);
+    font-weight: 900;
+
+    letter-spacing: -0.065em;
+    line-height: 1.05;
+
+    color: var(--tinta);
+}
+
+.headerTitle::before,
+.headerTitle::after {
+    content: none;
+}
+
+.subTitle {
+    max-width: 760px;
+
+    margin: 14px 0 0;
+
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+
+/* =========================================
+   CONTADOR
+========================================= */
+
+.contador {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 12px 0 12px 24px;
+
+    border-left: 1px solid var(--tinta);
+
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    flex-shrink: 0;
+}
+
+.contadorNumero {
+    font-family: var(--sans);
+    font-size: 3.3rem;
+    font-weight: 900;
+
+    line-height: 1;
+    letter-spacing: -0.08em;
+}
+
+
+/* =========================================
+   GRILLA DE PROYECTOS
+========================================= */
+
+.list {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 28px;
+
+    padding: 0 8px 8px 0;
+}
+
+
+/* =========================================
+   VENTANA DE PROYECTO
+========================================= */
+
+.proyecto {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    padding: 5px;
+
+    background: var(--fondo);
+
+    border: 2px solid var(--tinta);
+    border-radius: 15px;
+
+    box-shadow: 7px 8px 0 var(--tinta);
+
+    transition:
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
+.proyecto:hover {
+    transform: translate(-2px, -2px);
+
+    box-shadow: 9px 10px 0 var(--tinta);
+}
+
+
+/* =========================================
+   BARRA DE IDENTIDAD
+========================================= */
+
+.proyectoBarra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    min-height: 48px;
+
+    padding: 8px 14px;
+
+    background: var(--acento);
+
+    border: 1.5px solid var(--tinta);
+    border-radius: 9px 9px 3px 3px;
+}
+
+.proyectoIdentidad {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 0;
+
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+}
+
+.proyectoIdentidad > span {
+    min-width: 0;
+
+    overflow-wrap: anywhere;
+}
+
+.numero {
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   LOGOS ORIGINALES
+========================================= */
+
+.logoProyecto {
+    --escalaLogo: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    background: transparent;
+}
+
+.logoImagen {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    background: transparent;
+
+    transform: scale(var(--escalaLogo));
+    transform-origin: center;
+}
+
+.proyectoIdentidad .logoImagen {
+    filter: brightness(0);
+}
+
+.logoProyecto svg {
+    width: 24px;
+    height: 24px;
+
+    flex-shrink: 0;
+
+    stroke-width: 1.8;
+}
+
+
+/* =========================================
+   PROPORCIONES INDIVIDUALES
+========================================= */
+
+.logoProyecto[data-proyecto="mapa"] {
+    --escalaLogo: 1;
+}
+
+.logoProyecto[data-proyecto="ahora"] {
+    --escalaLogo: 1.15;
+}
+
+.logoProyecto[data-proyecto="ancora"] {
+    --escalaLogo: 1.2;
+}
+
+.logoProyecto[data-proyecto="radar"] {
+    --escalaLogo: 2.4;
+}
+
+
+/* =========================================
+   CONTENIDO DE LA TARJETA
+========================================= */
+
+.proyectoContenido {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+
+    padding: 16px;
+
+    min-width: 0;
+}
+
+
+/* =========================================
+   NAVEGADOR SIMULADO
+========================================= */
+
+.browser {
+    display: block;
+
+    width: 100%;
+
+    border: 1.5px solid var(--tinta);
+    border-radius: 7px;
+
+    background: var(--tinta);
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.browserBar {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    height: 32px;
+
+    padding: 5px 10px;
+
+    background: var(--tinta);
+    color: var(--fondo);
+}
+
+.browserBar > svg {
+    width: 15px;
+    height: 15px;
+
+    flex-shrink: 0;
+}
+
+.browserDots {
+    display: flex;
+
+    gap: 5px;
+
+    flex-shrink: 0;
+}
+
+.browserDots span {
+    width: 7px;
+    height: 7px;
+
+    border: 1px solid var(--fondo);
+    border-radius: 50%;
+}
+
+.browserDots span:first-child {
+    background: var(--acento);
+    border-color: var(--acento);
+}
+
+
+/* =========================================
+   BARRA DE DIRECCIÓN
+========================================= */
+
+.address {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    flex: 1;
+
+    min-width: 0;
+
+    height: 21px;
+
+    padding: 2px 8px;
+
+    background: var(--fondo);
+    color: var(--tinta);
+
+    border-radius: 3px;
+
+    font-size: 0.65rem;
+}
+
+.address svg {
+    width: 11px;
+    height: 11px;
+
+    flex-shrink: 0;
+}
+
+.address span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   PREVISUALIZACIÓN WEB
+========================================= */
+
+.previewContent {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 16 / 8;
+
+    overflow: hidden;
+
+    background: #e7e3d9;
+}
+
+.previewImage {
+    position: absolute;
+
+    inset: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: top center;
+
+    transition: transform 350ms ease;
+}
+
+.browser:hover .previewImage {
+    transform: scale(1.035);
+}
+
+
+/* =========================================
+   PREVISUALIZACIÓN PROVISIONAL
+========================================= */
+
+.previewFallback {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 20px;
+
+    background-color: var(--fondo);
+
+    background-image:
+        linear-gradient(
+            #10101015 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            #10101015 1px,
+            transparent 1px
+        );
+
+    background-size: 24px 24px;
+
+    color: var(--tinta);
+
+    text-align: center;
+}
+
+.previewFallback .logoProyecto {
+    width: 140px;
+    height: 100px;
+
+    background: transparent;
+}
+
+.previewFallback .logoImagen {
+    filter: none;
+}
+
+.previewFallback .logoProyecto svg {
+    width: 48px;
+    height: 48px;
+
+    stroke-width: 1.5;
+}
+
+.previewFallback strong {
+    font-family: var(--sans);
+    font-size: clamp(1.2rem, 2.4vw, 2rem);
+    font-weight: 900;
+
+    letter-spacing: -0.055em;
+    line-height: 1.1;
+}
+
+.previewFallback span {
+    font-size: 0.65rem;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   INTERACCIÓN SOBRE LA PREVISUALIZACIÓN
+========================================= */
+
+.previewOverlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #101010a8;
+
+    opacity: 0;
+
+    transition: opacity 180ms ease;
+}
+
+.previewOverlay span {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 12px 16px;
+
+    background: var(--acento);
+    color: var(--tinta);
+
+    border: 2px solid var(--tinta);
+
+    box-shadow: 4px 4px 0 var(--tinta);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.previewOverlay svg {
+    width: 20px;
+    height: 20px;
+
+    flex-shrink: 0;
+}
+
+.browser:hover .previewOverlay,
+.browser:focus-visible .previewOverlay {
+    opacity: 1;
+}
+
+
+/* =========================================
+   INFORMACIÓN EDITORIAL
+========================================= */
+
+.informacion {
+    flex: 1;
+
+    padding: 18px 2px 20px;
+}
+
+.titulo {
+    margin: 0 0 7px;
+
+    font-family: var(--sans);
+    font-size: clamp(1.5rem, 2.3vw, 2.15rem);
+    font-weight: 800;
+
+    letter-spacing: -0.045em;
+    line-height: 1.1;
+}
+
+.bajada {
+    margin: 0 0 12px;
+    padding-left: 12px;
+
+    border-left: 5px solid var(--acento);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    line-height: 1.45;
+}
+
+.descripcion {
+    margin: 0;
+
+    font-size: 0.85rem;
+    font-weight: 400;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================
+   ACCIONES
+========================================= */
+
+.acciones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    padding-top: 16px;
+
+    border-top: 1px solid var(--tinta);
+}
+
+
+/* =========================================
+   BOTONES — ESTILOS COMPARTIDOS
+========================================= */
+
+.explorar,
+.sobreProyecto {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 18px;
+
+    min-height: 44px;
+
+    padding: 12px 16px;
+
+    border: 1.5px solid var(--tinta);
+    border-radius: 3px;
+
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition:
+        background 150ms ease,
+        color 150ms ease,
+        transform 150ms ease,
+        box-shadow 150ms ease;
+}
+
+.explorar svg,
+.sobreProyecto svg {
+    width: 19px;
+    height: 19px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   EXPLORAR PLATAFORMA
+   BOTÓN SECUNDARIO
+========================================= */
+
+.proyecto .explorar {
+    background: transparent;
+    color: var(--tinta);
+
+    box-shadow: none;
+}
+
+.proyecto .explorar:hover {
+    background: var(--acento);
+    color: var(--tinta);
+
+    transform: translate(-2px, -2px);
+
+    box-shadow: 2px 2px 0 var(--tinta);
+}
+
+
+/* =========================================
+   SOBRE EL PROYECTO
+   BOTÓN PRINCIPAL
+========================================= */
+
+.proyecto .sobreProyecto {
+    background: var(--tinta);
+    color: var(--fondo);
+
+    box-shadow: none;
+}
+
+.proyecto .sobreProyecto:hover {
+    background: var(--acento);
+    color: var(--tinta);
+
+    transform: translate(-2px, -2px);
+
+    box-shadow: 2px 2px 0 var(--tinta);
+}
+
+.proyecto .explorar:focus-visible,
+.proyecto .sobreProyecto:focus-visible {
+    outline: 3px solid var(--acento);
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   PIE GRÁFICO
+========================================= */
+
+.cierre {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 38px;
+    padding: 12px 0;
+
+    font-size: 0.75rem;
+}
+
+.cuadrado {
+    width: 15px;
+    height: 15px;
+
+    background: var(--tinta);
+
+    flex-shrink: 0;
+}
+
+.linea {
+    flex: 1;
+
+    min-width: 10px;
+    height: 1.5px;
+
+    background: var(--tinta);
+}
+
+.barras {
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.cierre strong {
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   NOTEBOOK
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .proyectos {
+        padding: 18px 10px 25px;
+    }
+
+    .list {
+        gap: 22px;
+    }
+
+    .proyectoContenido {
+        padding: 12px;
+    }
+
+    .proyectoBarra {
+        padding: 8px 12px;
+    }
+
+    .proyectoIdentidad {
+        font-size: 0.85rem;
+    }
+
+    .proyectoIdentidad .logoProyecto {
+        width: 34px;
+        height: 28px;
+    }
+
+    .numero {
+        font-size: 0.65rem;
+    }
+
+    .acciones {
+        gap: 10px;
+    }
+
+    .explorar,
+    .sobreProyecto {
+        gap: 10px;
+
+        padding: 11px 12px;
+
+        font-size: 0.7rem;
+    }
+
+    .explorar svg,
+    .sobreProyecto svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .descripcion {
+        font-size: 0.82rem;
+    }
+
+    .previewFallback {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .previewFallback .logoProyecto {
+        width: 120px;
+        height: 80px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET Y MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .proyectos {
+        padding: 16px 8px 25px;
+    }
+
+    .encabezado {
+        align-items: flex-start;
+
+        gap: 15px;
+
+        margin-bottom: 24px;
+        padding-bottom: 22px;
+    }
+
+    .headerTitle {
+        font-size: clamp(2.6rem, 9vw, 4rem);
+    }
+
+    .etiqueta {
+        font-size: 0.75rem;
+    }
+
+    .subTitle {
+        font-size: 0.85rem;
+    }
+
+    .contador {
+        display: none;
+    }
+
+    .list {
+        grid-template-columns: minmax(0, 1fr);
+
+        gap: 25px;
+    }
+
+    .proyecto {
+        box-shadow: 5px 6px 0 var(--tinta);
+    }
+
+    .proyecto:hover {
+        box-shadow: 5px 6px 0 var(--tinta);
+
+        transform: none;
+    }
+
+    .proyectoContenido {
+        padding: 12px;
+    }
+
+    .proyectoIdentidad .logoProyecto {
+        width: 32px;
+        height: 27px;
+    }
+
+    .previewContent {
+        aspect-ratio: 16 / 9;
+    }
+
+    .previewFallback .logoProyecto {
+        width: 120px;
+        height: 85px;
+    }
+
+    .titulo {
+        font-size: 1.8rem;
+    }
+
+    .bajada {
+        font-size: 0.8rem;
+    }
+
+    .descripcion {
+        font-size: 0.85rem;
+    }
+
+    .previewOverlay {
+        display: none;
+    }
+
+    .cierre {
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+        margin-top: 25px;
+
+        font-size: 0.65rem;
+    }
+
+    .barras {
+        display: none;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 560px) {
+
+    .acciones {
+        gap: 8px;
+    }
+
+    .explorar,
+    .sobreProyecto {
+        flex: 1;
+
+        gap: 8px;
+
+        min-height: 44px;
+
+        padding: 10px;
+
+        font-size: 0.65rem;
+    }
+
+    .explorar svg,
+    .sobreProyecto svg {
+        width: 16px;
+        height: 16px;
+    }
+
+}
+
+
+/* =========================================
+   CELULARES PEQUEÑOS
+========================================= */
+
+@media (max-width: 420px) {
+
+    .proyectoBarra {
+        padding: 8px 10px;
+    }
+
+    .proyectoIdentidad {
+        gap: 7px;
+
+        font-size: 0.75rem;
+    }
+
+    .proyectoIdentidad .logoProyecto {
+        width: 28px;
+        height: 24px;
+    }
+
+    .logoProyecto svg {
+        width: 19px;
+        height: 19px;
+    }
+
+    .numero {
+        font-size: 0.6rem;
+    }
+
+    .acciones {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .explorar,
+    .sobreProyecto {
+        width: 100%;
+
+        padding: 12px;
+
+        font-size: 0.7rem;
+    }
+
+    .previewFallback {
+        gap: 6px;
+        padding: 8px;
+    }
+
+    .previewFallback .logoProyecto {
+        width: 100px;
+        height: 65px;
+    }
+
+    .previewFallback .logoProyecto svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .previewFallback strong {
+        font-size: 1.1rem;
+    }
+
+    .previewFallback span {
+        font-size: 0.55rem;
+    }
+
+}
+
+
+/* =========================================
+   ACCESIBILIDAD
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .proyecto,
+    .previewImage,
+    .previewOverlay,
+    .explorar,
+    .sobreProyecto {
+        transition: none;
+    }
+
+    .proyecto:hover,
+    .browser:hover .previewImage,
+    .proyecto .explorar:hover,
+    .proyecto .sobreProyecto:hover {
+        transform: none;
+    }
+
+}

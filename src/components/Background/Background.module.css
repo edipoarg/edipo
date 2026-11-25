@@ -1,15 +1,108 @@
-.Dark {
-    box-sizing: border-box;
+/* =====================================
+   BACKGROUND EDIPO
+===================================== */
+
+.background {
+    position: relative;
+
     width: 100%;
-    background: radial-gradient(circle at top left, #333333, #1a1a1a, #000000);
-    padding: 2vh 2vw;
     min-height: 100vh;
+
+    padding: 24px 2.7vw 40px;
+
+    box-sizing: border-box;
+
+    font-family: var(--fontTexto);
+
+    isolation: isolate;
 }
 
+/* =====================================
+   LIGHT
+   Fondo institucional marfil
+===================================== */
+
 .Light {
-    box-sizing: border-box;
-    width: 100%;
-    background: radial-gradient(circle at top left, #f0f0f0, #d9d9d9, #bfbfbf);
-    padding: 2vh 2vw;
-    min-height: 100vh;
+    background-color: var(--papel);
+    color: var(--negro);
+}
+
+/* =====================================
+   DARK
+   Fondo negro editorial
+===================================== */
+
+.Dark {
+    background-color: var(--negro);
+    color: var(--papel);
+}
+
+/* =====================================
+   GRID
+   Fondo técnico de investigación
+===================================== */
+
+.Grid {
+    background-color: var(--papel);
+    color: var(--negro);
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.045) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.045) 1px,
+            transparent 1px
+        );
+
+    background-size: 24px 24px;
+}
+
+/* =====================================
+   WHITE
+   Fondo para lectura y documentación
+===================================== */
+
+.White {
+    background-color: #ffffff;
+    color: var(--negro);
+}
+
+/* =====================================
+   TEXTURA DE IMPRESIÓN
+===================================== */
+
+.Light::before,
+.Dark::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.6' filter='url(%23noise)'/%3E%3C/svg%3E");
+
+    background-size: 180px 180px;
+
+    opacity: 0.055;
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .background {
+        padding: 20px 18px 30px;
+    }
+
+    .Grid {
+        background-size: 18px 18px;
+    }
+
 }

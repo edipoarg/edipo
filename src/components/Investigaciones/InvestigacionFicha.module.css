@@ -1,0 +1,970 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;600;700;800;900&display=swap');
+
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+.pagina {
+    --fondo: #f7f3e8;
+    --tinta: #101010;
+    --acento: #d4ff00;
+
+    --mono: 'IBM Plex Mono', monospace;
+    --sans: 'Inter', sans-serif;
+
+    width: 100%;
+    max-width: 1440px;
+
+    margin: 0 auto;
+    padding: 16px 0 20px;
+
+    color: var(--tinta);
+
+    font-family: var(--mono);
+    text-align: left;
+}
+
+.pagina *,
+.pagina *::before,
+.pagina *::after {
+    box-sizing: border-box;
+}
+
+.pagina a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.pagina a:focus-visible {
+    outline: 3px solid var(--tinta);
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   NAVEGACIÓN SUPERIOR
+========================================= */
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 0 10px;
+    margin-bottom: 24px;
+}
+
+.volver {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 10px;
+
+    width: fit-content;
+
+    padding: 9px 12px;
+
+    border: 1.5px solid var(--tinta);
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    transition:
+        background 150ms ease,
+        box-shadow 150ms ease;
+}
+
+.volver:hover {
+    background: var(--acento);
+
+    box-shadow: 3px 3px 0 var(--tinta);
+}
+
+.volver svg {
+    width: 17px;
+    height: 17px;
+
+    flex-shrink: 0;
+}
+
+.referencia {
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.encabezado {
+    position: relative;
+
+    padding: 10px 10px 25px;
+    margin-bottom: 32px;
+
+    border-bottom: 2px solid var(--tinta);
+}
+
+.etiqueta {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.titulo {
+    position: relative;
+
+    width: fit-content;
+    max-width: 90%;
+
+    margin: 0;
+
+    font-family: var(--sans);
+    font-size: clamp(2.5rem, 5.5vw, 5rem);
+    font-weight: 900;
+
+    line-height: 1.02;
+    letter-spacing: -0.065em;
+}
+
+.bajada {
+    max-width: 850px;
+
+    margin: 16px 0 0;
+
+    font-family: var(--mono);
+    font-size: 0.95rem;
+    font-weight: 400;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   PUNTOS DECORATIVOS
+========================================= */
+
+.puntos {
+    position: absolute;
+
+    top: 0;
+    right: 12px;
+
+    width: 138px;
+    height: 69px;
+
+    background-image:
+        radial-gradient(
+            var(--tinta) 1.2px,
+            transparent 1.2px
+        );
+
+    background-size: 23px 23px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   COMPOSICIÓN PRINCIPAL
+========================================= */
+
+.contenedor {
+    display: grid;
+
+    grid-template-columns:
+        210px
+        minmax(0, 1fr);
+
+    align-items: start;
+
+    gap: 38px;
+
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+
+/* =========================================
+   COLUMNA LATERAL
+========================================= */
+
+.lateral {
+    position: sticky;
+
+    top: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 28px;
+
+    min-width: 0;
+}
+
+
+/* =========================================
+   EXPEDIENTE
+========================================= */
+
+.indice {
+    padding: 4px;
+
+    background: var(--fondo);
+
+    border: 1.5px solid var(--tinta);
+    border-radius: 10px;
+
+    box-shadow: 5px 5px 0 var(--tinta);
+}
+
+.indiceHeader {
+    padding: 10px;
+
+    background: var(--tinta);
+    color: var(--fondo);
+
+    border-radius: 5px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.indiceContenido {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 16px;
+
+    gap: 8px;
+}
+
+.numero {
+    font-family: var(--sans);
+    font-size: 3.6rem;
+    font-weight: 900;
+
+    line-height: 1;
+    letter-spacing: -0.08em;
+}
+
+.indiceEtiqueta {
+    font-size: 0.65rem;
+    font-weight: 600;
+
+    line-height: 1.4;
+}
+
+.indiceContenido strong {
+    font-size: 0.75rem;
+    line-height: 1.4;
+}
+
+.separador {
+    width: 100%;
+    height: 1px;
+
+    margin: 8px 0;
+
+    background: var(--tinta);
+}
+
+
+/* =========================================
+   PATRÓN GRÁFICO DE PÍXELES
+   3 COLUMNAS × 9 FILAS
+========================================= */
+
+.pixeles {
+    --pixel: 12px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, var(--pixel));
+
+    grid-template-rows:
+        repeat(9, var(--pixel));
+
+    grid-auto-flow: row;
+
+    align-self: center;
+
+    justify-content: center;
+    align-content: center;
+
+    flex-shrink: 0;
+
+    width: calc(var(--pixel) * 3);
+    height: calc(var(--pixel) * 9);
+
+    margin: 8px auto;
+    padding: 0;
+
+    gap: 0;
+
+    background: transparent;
+}
+
+.pixelNegro,
+.pixelBlanco {
+    display: block;
+
+    width: var(--pixel);
+    height: var(--pixel);
+
+    min-width: var(--pixel);
+    min-height: var(--pixel);
+
+    max-width: var(--pixel);
+    max-height: var(--pixel);
+
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    border-radius: 0;
+
+    box-shadow: none;
+
+    line-height: 0;
+    font-size: 0;
+}
+
+.pixelNegro {
+    background-color: var(--tinta);
+}
+
+.pixelBlanco {
+    background-color: transparent;
+}
+
+
+/* =========================================
+   NAVEGACIÓN LATERAL
+========================================= */
+
+.otras {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+}
+
+.otrasTitulo {
+    padding-bottom: 12px;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.enlace,
+.enlaceActivo {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 12px 8px;
+
+    border-top: 1px solid var(--tinta);
+
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    transition: background 150ms ease;
+}
+
+.enlace:last-child,
+.enlaceActivo:last-child {
+    border-bottom: 1px solid var(--tinta);
+}
+
+.enlace svg,
+.enlaceActivo svg {
+    flex-shrink: 0;
+
+    width: 16px;
+    height: 16px;
+}
+
+.enlace:hover,
+.enlaceActivo {
+    background: var(--acento);
+}
+
+
+/* =========================================
+   VENTANA DEL DOCUMENTO
+========================================= */
+
+.documento {
+    min-width: 0;
+
+    padding: 5px;
+
+    background: var(--fondo);
+
+    border: 1.5px solid var(--tinta);
+    border-radius: 13px;
+
+    box-shadow: 8px 8px 0 var(--tinta);
+}
+
+
+/* =========================================
+   BARRA SUPERIOR
+========================================= */
+
+.barra {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 12px 16px;
+    margin-bottom: 5px;
+
+    background: var(--tinta);
+    color: var(--fondo);
+
+    border-radius: 7px;
+
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.controles {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    flex-shrink: 0;
+}
+
+.controles span {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 19px;
+    height: 19px;
+
+    background: var(--fondo);
+    color: var(--tinta);
+
+    border-radius: 2px;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   INTERIOR DEL DOCUMENTO
+========================================= */
+
+.documentoContenido {
+    padding: clamp(20px, 3.5vw, 48px);
+
+    border: 1px solid var(--tinta);
+    border-radius: 7px;
+}
+
+
+/* =========================================
+   TÍTULOS INTERNOS
+========================================= */
+
+.seccionTitulo {
+    margin: 0 0 18px;
+
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   HIPÓTESIS
+========================================= */
+
+.hipotesis {
+    position: relative;
+
+    padding: 0 0 28px;
+    margin-bottom: 30px;
+
+    border-bottom: 1.5px solid var(--tinta);
+}
+
+.hipotesis p {
+    margin: 0;
+
+    padding: 18px 20px;
+
+    background: var(--acento);
+
+    border-left: 5px solid var(--tinta);
+
+    font-family: var(--sans);
+    font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+    font-weight: 700;
+
+    line-height: 1.5;
+    letter-spacing: -0.025em;
+
+    white-space: pre-line;
+}
+
+
+/* =========================================
+   DESCRIPCIÓN COMPLETA
+========================================= */
+
+.descripcion {
+    width: 100%;
+}
+
+.descripcion p {
+    margin: 0 0 22px;
+
+    font-family: var(--mono);
+    font-size: 0.95rem;
+    font-weight: 400;
+
+    line-height: 1.85;
+
+    text-align: left;
+
+    white-space: pre-line;
+    overflow-wrap: break-word;
+}
+
+.descripcion p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   CIERRE DEL DOCUMENTO
+========================================= */
+
+.documentoCierre {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 36px;
+    padding-top: 20px;
+
+    border-top: 1px solid var(--tinta);
+}
+
+.documentoCierre > span:first-child {
+    font-family: var(--sans);
+    font-size: 1.5rem;
+    font-weight: 900;
+
+    letter-spacing: -0.08em;
+}
+
+.trama {
+    flex-shrink: 0;
+
+    width: 90px;
+    height: 15px;
+
+    background-image:
+        repeating-linear-gradient(
+            -55deg,
+            var(--tinta) 0px,
+            var(--tinta) 7px,
+            transparent 7px,
+            transparent 12px
+        );
+}
+
+
+/* =========================================
+   NAVEGACIÓN ENTRE INVESTIGACIONES
+========================================= */
+
+.paginacion {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 38px auto 0;
+    padding: 0 10px;
+}
+
+.paginaAnterior,
+.paginaSiguiente {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    min-height: 70px;
+
+    padding: 14px 18px;
+
+    border: 1.5px solid var(--tinta);
+
+    transition:
+        background 150ms ease,
+        box-shadow 150ms ease;
+}
+
+.paginaSiguiente {
+    justify-content: flex-end;
+
+    text-align: right;
+}
+
+.paginaAnterior div,
+.paginaSiguiente div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.paginaAnterior span,
+.paginaSiguiente span {
+    font-size: 0.65rem;
+    font-weight: 500;
+}
+
+.paginaAnterior strong,
+.paginaSiguiente strong {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.paginaAnterior svg,
+.paginaSiguiente svg {
+    flex-shrink: 0;
+
+    width: 23px;
+    height: 23px;
+}
+
+.paginaAnterior:hover,
+.paginaSiguiente:hover {
+    background: var(--acento);
+
+    box-shadow: 4px 4px 0 var(--tinta);
+}
+
+
+/* =========================================
+   PIE GRÁFICO
+========================================= */
+
+.footer {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 35px;
+    padding: 20px 0 5px;
+
+    font-family: var(--mono);
+    font-size: 0.75rem;
+}
+
+.cuadrado {
+    flex-shrink: 0;
+
+    width: 15px;
+    height: 15px;
+
+    background: var(--tinta);
+}
+
+.linea {
+    flex: 1;
+
+    min-width: 10px;
+    height: 1.5px;
+
+    background: var(--tinta);
+}
+
+.barras {
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.footer strong {
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   NOTEBOOK
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .contenedor {
+        grid-template-columns:
+            180px
+            minmax(0, 1fr);
+
+        gap: 25px;
+    }
+
+    .documentoContenido {
+        padding: 30px;
+    }
+
+    .indiceContenido {
+        padding: 12px;
+    }
+
+    .pixeles {
+        --pixel: 11px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    .contenedor {
+        grid-template-columns: minmax(0, 1fr);
+
+        gap: 24px;
+
+        padding: 0;
+    }
+
+    .lateral {
+        position: static;
+
+        order: 2;
+    }
+
+    .indice {
+        display: none;
+    }
+
+    .documento {
+        order: 1;
+
+        box-shadow: 5px 5px 0 var(--tinta);
+    }
+
+    .otras {
+        margin-top: 10px;
+    }
+
+    .documentoContenido {
+        padding: 25px;
+    }
+
+    .encabezado {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .titulo {
+        max-width: 100%;
+
+        font-size: clamp(2.4rem, 7vw, 4rem);
+    }
+
+    .bajada {
+        font-size: 0.85rem;
+    }
+
+    .puntos {
+        width: 69px;
+        height: 46px;
+    }
+
+    .navegacion {
+        padding: 0;
+    }
+
+    .paginacion {
+        padding: 0;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+        font-size: 0.65rem;
+    }
+
+    .barras {
+        display: none;
+    }
+
+}
+
+
+/* =========================================
+   CELULARES
+========================================= */
+
+@media (max-width: 520px) {
+
+    .pagina {
+        padding-top: 10px;
+    }
+
+    .navegacion {
+        gap: 10px;
+
+        margin-bottom: 18px;
+    }
+
+    .volver {
+        font-size: 0.65rem;
+
+        padding: 8px;
+    }
+
+    .referencia {
+        font-size: 0.6rem;
+    }
+
+    .etiqueta {
+        font-size: 0.65rem;
+    }
+
+    .titulo {
+        font-size: clamp(2.1rem, 9vw, 3rem);
+    }
+
+    .puntos {
+        display: none;
+    }
+
+    .barra {
+        padding: 10px;
+
+        font-size: 0.65rem;
+    }
+
+    .controles {
+        gap: 3px;
+    }
+
+    .controles span {
+        width: 15px;
+        height: 15px;
+
+        font-size: 0.75rem;
+    }
+
+    .documentoContenido {
+        padding: 20px 15px;
+    }
+
+    .hipotesis p {
+        padding: 14px;
+
+        font-size: 1.05rem;
+    }
+
+    .descripcion p {
+        font-size: 0.85rem;
+
+        line-height: 1.75;
+    }
+
+    .seccionTitulo {
+        font-size: 0.75rem;
+    }
+
+    .paginacion {
+        gap: 12px;
+    }
+
+    .paginaAnterior,
+    .paginaSiguiente {
+        gap: 8px;
+
+        padding: 10px;
+    }
+
+    .paginaAnterior strong,
+    .paginaSiguiente strong {
+        font-size: 0.7rem;
+    }
+
+    .paginaAnterior svg,
+    .paginaSiguiente svg {
+        width: 16px;
+        height: 16px;
+    }
+
+}
+
+
+/* =========================================
+   ACCESIBILIDAD
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .volver,
+    .enlace,
+    .enlaceActivo,
+    .paginaAnterior,
+    .paginaSiguiente {
+        transition: none;
+    }
+
+}

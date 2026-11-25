@@ -1,79 +1,1008 @@
-.recursos {
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;600;700;800;900&display=swap');
+
+
+/* =========================================
+   VARIABLES Y CONFIGURACIÓN GENERAL
+========================================= */
+
+.pagina {
+    --fondo: #f7f3e8;
+    --tinta: #101010;
+    --acento: #0087ef;
+
+    --mono: 'IBM Plex Mono', monospace;
+    --sans: 'Inter', sans-serif;
+
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    max-width: 1440px;
+
+    margin: 0 auto;
+    padding: 16px 0 10px;
+
+    color: var(--tinta);
+
+    font-family: var(--mono);
+    text-align: left;
+}
+
+.pagina *,
+.pagina *::before,
+.pagina *::after {
+    box-sizing: border-box;
+}
+
+.pagina a:focus-visible {
+    outline: 3px solid var(--acento);
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.encabezado {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        auto;
+
+    align-items: end;
+
+    gap: 40px;
+
+    padding: 8px 10px 22px;
+    margin-bottom: 32px;
+
+    border-bottom: 2px solid var(--tinta);
+}
+
+.identidad {
+    min-width: 0;
+}
+
+.etiqueta {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-family: var(--mono);
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+.titulo {
+    position: relative;
+
+    width: fit-content;
+
+    margin: 0;
+
+    color: var(--tinta);
+
+    font-family: var(--sans);
+    font-size: clamp(2.8rem, 5.5vw, 5rem);
+    font-weight: 900;
+
+    letter-spacing: -0.065em;
+    line-height: 1.02;
+}
+
+.subtitulo {
+    max-width: 820px;
+
+    margin: 14px 0 0;
+
+    font-family: var(--mono);
+    font-size: 0.95rem;
+    font-weight: 400;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================
+   PUNTOS DECORATIVOS
+========================================= */
+
+.puntos {
+    position: absolute;
+
+    top: 0;
+    right: 12px;
+
+    width: 138px;
+    height: 69px;
+
+    background-image: radial-gradient(
+        var(--tinta) 1.2px,
+        transparent 1.2px
+    );
+
+    background-size: 23px 23px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   CONTADOR
+========================================= */
+
+.contador {
     display: flex;
-flex-direction: column;    grid-template-rows: auto auto auto;
-gap: 1vh;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 0 12px 5px 25px;
+
+    border-left: 1px solid var(--tinta);
 }
 
-.seguridad,
-.busqueda,
-.guiaMapa {
-    padding-top: 5vh;
-    border: solid 1px #2e2c2f;
-    border-radius: 25px;
-min-height: 25vh;
+.contador strong {
+    font-family: var(--sans);
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
+    font-weight: 900;
+
+    letter-spacing: -0.075em;
+    line-height: 1;
 }
 
-.seguridad {
-    background: url('../../svg/mapa.svg') no-repeat center center;
-    /* Añadir la ruta correcta a tu SVG */
-    background-size: contain;
-    /* Asegura que el SVG cubra todo el fondo */
-    color: #2e2c2f;
+.contador span {
+    margin-top: 8px;
+
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    line-height: 1.3;
 }
 
-.seguridad:hover,
-.busqueda:hover {
-    background-size: cover;
-    /* Asegura que el SVG cubra todo el fondo */
+
+/* =========================================
+   BIBLIOTECA EDITORIAL
+========================================= */
+
+.recursos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    align-items: stretch;
+
+    width: 100%;
+    max-width: 1080px;
+
+    margin: 0 auto;
+    padding: 0 10px;
+
+    gap: 36px;
 }
 
-.busqueda {
-    background-color: white;
-    color: #2e2c2f;
-    background: url('../../svg/Inteligencia.svg') no-repeat center center;
-    /* Añadir la ruta correcta a tu SVG */
-    background-size: contain;
-    /* Asegura que el SVG cubra todo el fondo */
+
+/* =========================================
+   RECURSO INDIVIDUAL
+========================================= */
+
+.recurso {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
 }
 
-.guiaMapa {
-    color: #2e2c2f;
-    background: url('../../svg/portadaMapa.svg') no-repeat center center;
-    /* Añadir la ruta correcta a tu SVG */
-    background-size: contain;
+.recursoMeta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   SOPORTE EDITORIAL
+========================================= */
+
+.escenario {
+    position: relative;
+    isolation: isolate;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 285px;
+
+    background: var(--fondo);
+
+    border: 1.5px solid var(--tinta);
+    border-radius: 3px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   BASE AZUL
+========================================= */
+
+.escenario::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 32px;
+
+    background: var(--acento);
+
+    border-top: 1px solid var(--tinta);
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   RETÍCULA DE FONDO
+========================================= */
+
+.reticula {
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            #10101009 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            #10101009 1px,
+            transparent 1px
+        );
+
+    background-size: 24px 24px;
+
+    z-index: -2;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   IDENTIFICADOR GRÁFICO — PIXEL ART 6 X 6
+========================================= */
+
+.identificador {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    background: var(--acento);
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+.patronPixeles {
+    --pixel: 6px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, var(--pixel));
+
+    grid-template-rows:
+        repeat(6, var(--pixel));
+
+    gap: 0;
+
+    width: max-content;
+    height: max-content;
+
+    flex-shrink: 0;
+}
+
+.pixelActivo,
+.pixelInactivo {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+
+.pixelActivo {
+    background: var(--tinta);
+}
+
+.pixelInactivo {
+    background: transparent;
+}
+
+
+/* =========================================
+   ACCESO CLICKEABLE
+========================================= */
+
+.accesoPortada,
+.portadaInactiva {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--tinta);
+
+    text-decoration: none;
+}
+
+.accesoPortada {
+    cursor: pointer;
+}
+
+.accesoPortada:focus-visible {
+    outline: 3px solid var(--acento);
+    outline-offset: -4px;
+}
+
+.portadaInactiva {
+    cursor: default;
+}
+
+
+/* =========================================
+   CUADERNO
+========================================= */
+
+.portada {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    flex-shrink: 0;
+
+    width: 174px;
+    height: 240px;
+
+    padding: 9px 6px 9px 10px;
+
+    background: var(--fondo);
+
+    border: 1.5px solid var(--tinta);
+    border-left: 7px solid var(--tinta);
+
+    box-shadow: 6px 7px 0 var(--tinta);
+
+    transform: rotate(-4deg);
+
+    transition:
+        transform 200ms ease,
+        box-shadow 200ms ease;
+}
+
+
+/* =========================================
+   CABECERA DEL CUADERNO
+========================================= */
+
+.portadaSuperior {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-shrink: 0;
+
+    width: 100%;
+
+    padding: 0 3px 6px;
+
+    background: var(--fondo);
+
+    border-bottom: 1px solid var(--tinta);
+
+    z-index: 1;
+}
+
+.portadaSuperior strong {
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    font-weight: 900;
+
+    letter-spacing: -0.07em;
+    line-height: 1;
+}
+
+.portadaSuperior span {
+    font-family: var(--mono);
+    font-size: 0.48rem;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   ILUSTRACIÓN AMPLIADA
+========================================= */
+
+.ilustracion {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1;
+
+    width: 100%;
+    min-height: 0;
+
+    overflow: hidden;
+}
+
+.ilustracion img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: none;
+    max-height: none;
+
+    margin: 0;
+
+    object-fit: contain;
+    object-position: center;
+
+    transform: scale(1.15);
+
+    filter: none;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   TÍTULO DEL CUADERNO
+========================================= */
+
+.portadaInferior {
+    position: relative;
+
+    flex-shrink: 0;
+
+    width: 100%;
+
+    padding: 6px 3px 0;
+
+    background: var(--fondo);
+
+    border-top: 1px solid var(--tinta);
+
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    overflow-wrap: anywhere;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   INTERACCIÓN DEL CUADERNO
+========================================= */
+
+.accesoPortada:hover .portada,
+.accesoPortada:focus-visible .portada {
+    transform:
+        rotate(0deg)
+        translateY(-5px)
+        scale(1.035);
+
+    box-shadow: 8px 10px 0 var(--tinta);
+}
+
+
+/* =========================================
+   MARCA GRÁFICA
+========================================= */
+
+.marcaPortada {
+    position: absolute;
+
+    right: 9px;
+    bottom: 5px;
+
+    color: var(--tinta);
+
+    font-family: var(--mono);
+    font-size: 1rem;
+    font-weight: 700;
+
+    letter-spacing: -0.1em;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   INFORMACIÓN EDITORIAL
+========================================= */
+
+.informacion {
+    flex: 1;
+
+    padding: 14px 0 16px;
 }
 
 .item {
+    margin: 0 0 10px;
+
+    color: var(--tinta);
+
+    font-family: var(--sans);
+    font-size: 1.35rem;
+    font-weight: 800;
+
+    line-height: 1.15;
+    letter-spacing: -0.045em;
+
+    overflow-wrap: anywhere;
+}
+
+.descripcion {
     margin: 0;
+
+    color: var(--tinta);
+
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    font-weight: 400;
+
+    line-height: 1.5;
 }
 
 
+/* =========================================
+   ACCIONES
+========================================= */
 
-@media (min-width: 768px) {
-   
+.acciones {
+    padding-top: 10px;
+
+    border-top: 1px solid var(--tinta);
+}
+
+.boton,
+.noDisponible {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    width: 100%;
+    min-height: 36px;
+
+    padding: 8px 12px;
+
+    border: 1.5px solid var(--tinta);
+
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    text-decoration: none;
+}
+
+
+/* =========================================
+   BOTÓN DE CONSULTA
+========================================= */
+
+.boton {
+    background: var(--tinta);
+    color: var(--fondo);
+
+    transition:
+        background 150ms ease,
+        color 150ms ease,
+        box-shadow 150ms ease;
+}
+
+.boton svg {
+    flex-shrink: 0;
+
+    width: 18px;
+    height: 18px;
+
+    color: var(--acento);
+}
+
+.boton:hover {
+    background: var(--acento);
+    color: var(--tinta);
+
+    box-shadow: 4px 4px 0 var(--tinta);
+}
+
+.boton:hover svg {
+    color: var(--tinta);
+}
+
+
+/* =========================================
+   RECURSO NO DISPONIBLE
+========================================= */
+
+.noDisponible {
+    background: transparent;
+    color: var(--tinta);
+
+    opacity: 0.55;
+
+    cursor: default;
+}
+
+
+/* =========================================
+   PIE GRÁFICO
+========================================= */
+
+.cierre {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 30px;
+    padding: 20px 0 5px;
+
+    font-family: var(--mono);
+    font-size: 0.8rem;
+}
+
+.cuadrado {
+    flex-shrink: 0;
+
+    width: 15px;
+    height: 15px;
+
+    background: var(--tinta);
+}
+
+.linea {
+    flex: 1;
+
+    min-width: 10px;
+    height: 1.5px;
+
+    background: var(--tinta);
+}
+
+.barras {
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.cierre strong {
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   RESPONSIVE — NOTEBOOK
+========================================= */
+
+@media (max-width: 1100px) {
 
     .recursos {
-flex-direction: row;
-        gap: 0.4vw;
-        top: 30vh;
-        margin: auto;
-        justify-content: center;
+        max-width: 940px;
+
+        gap: 28px;
     }
 
-    .seguridad,
-    .busqueda,
-    .guiaMapa {
-        height: 50vh;
-        padding-top: 4vh;
-        min-width: 25vw;
-        box-shadow: inset -5px -10px 15px rgba(54, 54, 54, 0.1);
-        
+    .encabezado {
+        gap: 25px;
     }
 
+    .subtitulo {
+        max-width: 680px;
+    }
+
+    .identificador {
+        top: 8px;
+        right: 8px;
+
+        width: 36px;
+        height: 36px;
+    }
+
+    .patronPixeles {
+        --pixel: 5px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE — TABLET HORIZONTAL
+========================================= */
+
+@media (max-width: 950px) {
+
+    .recursos {
+        gap: 20px;
+    }
+
+    .escenario {
+        height: 260px;
+    }
+
+    .portada {
+        width: 155px;
+        height: 218px;
+    }
+
+    .portadaSuperior strong {
+        font-size: 0.85rem;
+    }
+
+    .portadaSuperior span {
+        font-size: 0.43rem;
+    }
+
+    .portadaInferior {
+        font-size: 0.6rem;
+    }
 
     .item {
-        padding-top: 0vh;
-        margin: 0;
+        font-size: 1.15rem;
+    }
+
+    .identificador {
+        top: 6px;
+        right: 6px;
+
+        width: 30px;
+        height: 30px;
+    }
+
+    .patronPixeles {
+        --pixel: 4px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE — TABLET VERTICAL
+========================================= */
+
+@media (max-width: 800px) {
+
+    .pagina {
+        padding: 12px 0 15px;
+    }
+
+    .encabezado {
+        grid-template-columns: minmax(0, 1fr);
+
+        gap: 20px;
+
+        padding: 5px 0 20px;
+        margin-bottom: 25px;
+    }
+
+    .etiqueta {
         font-size: 0.8rem;
     }
+
+    .titulo {
+        font-size: clamp(2.3rem, 8vw, 4rem);
+    }
+
+    .subtitulo {
+        font-size: 0.85rem;
+    }
+
+    .contador {
+        display: none;
+    }
+
+    .puntos {
+        top: 18px;
+        right: 0;
+
+        width: 69px;
+        height: 46px;
+    }
+
+    .cierre {
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+        font-size: 0.65rem;
+    }
+
+    .barras {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .recursos {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        max-width: 650px;
+
+        gap: 28px;
+
+        padding: 0;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE — CELULARES
+========================================= */
+
+@media (max-width: 520px) {
+
+    .recursos {
+        grid-template-columns: minmax(0, 1fr);
+
+        max-width: 340px;
+
+        gap: 32px;
+    }
+
+    .escenario {
+        height: 285px;
+    }
+
+    .portada {
+        width: 174px;
+        height: 240px;
+    }
+
+    .portadaSuperior strong {
+        font-size: 0.95rem;
+    }
+
+    .portadaSuperior span {
+        font-size: 0.48rem;
+    }
+
+    .portadaInferior {
+        font-size: 0.65rem;
+    }
+
+    .item {
+        font-size: 1.35rem;
+    }
+
+    .descripcion {
+        font-size: 0.85rem;
+    }
+
+    .informacion {
+        padding: 14px 0 16px;
+    }
+
+    .boton,
+    .noDisponible {
+        font-size: 0.75rem;
+    }
+
+    .puntos {
+        top: 25px;
+        right: 0;
+
+        width: 46px;
+        height: 46px;
+    }
+
+    .identificador {
+        top: 10px;
+        right: 10px;
+
+        width: 42px;
+        height: 42px;
+    }
+
+    .patronPixeles {
+        --pixel: 6px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE — CELULARES PEQUEÑOS
+========================================= */
+
+@media (max-width: 340px) {
+
+    .identificador {
+        top: 6px;
+        right: 6px;
+
+        width: 30px;
+        height: 30px;
+    }
+
+    .patronPixeles {
+        --pixel: 4px;
+    }
+
+}
+
+
+/* =========================================
+   ACCESIBILIDAD
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .portada,
+    .boton {
+        transition: none;
+    }
+
+    .accesoPortada:hover .portada,
+    .accesoPortada:focus-visible .portada {
+        transform: rotate(-4deg);
+    }
+
 }

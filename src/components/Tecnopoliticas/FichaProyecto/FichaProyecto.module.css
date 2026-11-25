@@ -1,0 +1,1056 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;600;700;800;900&display=swap');
+
+
+/* =========================================
+   GENERAL
+========================================= */
+
+.pagina {
+    --fondo: #f7f3e8;
+    --tinta: #101010;
+    --acento: #b64ef0;
+
+    --mono: 'IBM Plex Mono', monospace;
+    --sans: 'Inter', sans-serif;
+
+    width: 100%;
+    max-width: 1320px;
+
+    margin: 0 auto;
+    padding: 12px 16px 24px;
+
+    color: var(--tinta);
+    font-family: var(--mono);
+    text-align: left;
+}
+
+.pagina *,
+.pagina *::before,
+.pagina *::after {
+    box-sizing: border-box;
+}
+
+.pagina a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.pagina a:focus-visible {
+    outline: 3px solid var(--acento);
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   VOLVER
+========================================= */
+
+.volver {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 22px;
+
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.volver svg {
+    width: 17px;
+    height: 17px;
+
+    transition: transform 150ms ease;
+}
+
+.volver:hover svg {
+    transform: translateX(-4px);
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding-bottom: 22px;
+    margin-bottom: 26px;
+
+    border-bottom: 2px solid var(--tinta);
+}
+
+.identidad {
+    min-width: 0;
+}
+
+.etiqueta {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.titulo {
+    width: fit-content;
+    max-width: 100%;
+
+    margin: 0;
+
+    font-family: var(--sans);
+    font-size: clamp(2.3rem, 4.2vw, 3.8rem);
+    font-weight: 900;
+
+    color: var(--tinta);
+
+    line-height: 1.05;
+    letter-spacing: -0.065em;
+
+    overflow-wrap: anywhere;
+}
+
+.titulo::before,
+.titulo::after {
+    content: none;
+}
+
+.bajada {
+    max-width: 800px;
+
+    margin: 14px 0 0;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================
+   LOGOS ORIGINALES
+========================================= */
+
+.logoProyecto {
+    --escalaLogo: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    background: transparent;
+}
+
+.logoImagen {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    background: transparent;
+
+    transform: scale(var(--escalaLogo));
+    transform-origin: center;
+}
+
+.logoProyecto svg {
+    flex-shrink: 0;
+}
+
+
+/* PROPORCIONES INDIVIDUALES */
+
+.logoProyecto[data-proyecto="mapa"] {
+    --escalaLogo: 1;
+}
+
+.logoProyecto[data-proyecto="ahora"] {
+    --escalaLogo: 1.15;
+}
+
+.logoProyecto[data-proyecto="ancora"] {
+    --escalaLogo: 1.2;
+}
+
+.logoProyecto[data-proyecto="radar"] {
+    --escalaLogo: 2.4;
+}
+
+
+/* =========================================
+   IDENTIDAD DEL PROYECTO
+========================================= */
+
+.marca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    width: 90px;
+    min-height: 90px;
+
+    padding: 12px;
+
+    background: var(--acento);
+
+    border: 1.5px solid var(--tinta);
+    border-radius: 5px;
+
+    box-shadow: 4px 4px 0 var(--tinta);
+
+    flex-shrink: 0;
+}
+
+.marca .logoProyecto {
+    width: 58px;
+    height: 48px;
+}
+
+.marca .logoImagen {
+    filter: brightness(0);
+}
+
+.marca svg {
+    width: 37px;
+    height: 37px;
+
+    stroke-width: 1.7;
+}
+
+.marca span {
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   DISTRIBUCIÓN PRINCIPAL
+========================================= */
+
+.contenido {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(0, 1fr);
+
+    align-items: start;
+
+    gap: 36px;
+
+    padding-right: 6px;
+}
+
+
+/* =========================================
+   VENTANA DE PREVISUALIZACIÓN
+========================================= */
+
+.ventana {
+    min-width: 0;
+
+    padding: 4px;
+
+    background: var(--fondo);
+
+    border: 1.5px solid var(--tinta);
+    border-radius: 12px;
+
+    box-shadow: 5px 6px 0 var(--tinta);
+}
+
+.ventanaBarra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 9px 12px;
+
+    background: var(--tinta);
+    color: var(--fondo);
+
+    border-radius: 7px 7px 2px 2px;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.controles {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.controles span {
+    display: grid;
+    place-items: center;
+
+    width: 16px;
+    height: 16px;
+
+    background: var(--fondo);
+    color: var(--tinta);
+
+    border-radius: 1px;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+.ventanaContenido {
+    padding: 10px;
+}
+
+
+/* =========================================
+   NAVEGADOR SIMULADO
+========================================= */
+
+.navegador {
+    overflow: hidden;
+
+    border: 1px solid var(--tinta);
+    border-radius: 4px;
+}
+
+.direccion {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 7px 10px;
+
+    background: #e5e1d7;
+
+    border-bottom: 1px solid var(--tinta);
+}
+
+.direccion > svg {
+    width: 14px;
+    height: 14px;
+
+    flex-shrink: 0;
+}
+
+.puntos {
+    display: flex;
+
+    gap: 4px;
+
+    flex-shrink: 0;
+}
+
+.puntos span {
+    width: 7px;
+    height: 7px;
+
+    border: 1px solid var(--tinta);
+    border-radius: 50%;
+}
+
+.puntos span:first-child {
+    background: var(--acento);
+}
+
+.url {
+    flex: 1;
+    min-width: 0;
+
+    font-size: 0.68rem;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   CAPTURA WEB
+========================================= */
+
+.preview {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 2.06 / 1;
+
+    background: var(--tinta);
+
+    overflow: hidden;
+}
+
+.previewImage {
+    position: absolute;
+
+    inset: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    transition: transform 250ms ease;
+}
+
+.preview:hover .previewImage {
+    transform: scale(1.025);
+}
+
+
+/* =========================================
+   PORTADA PROVISIONAL
+========================================= */
+
+.fallback {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    padding: 20px;
+
+    background-color: var(--fondo);
+
+    background-image:
+        linear-gradient(
+            #10101015 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            #10101015 1px,
+            transparent 1px
+        );
+
+    background-size: 22px 22px;
+
+    text-align: center;
+}
+
+.fallback .logoProyecto {
+    width: 140px;
+    height: 100px;
+}
+
+.fallback .logoImagen {
+    filter: none;
+}
+
+.fallback svg {
+    width: 45px;
+    height: 45px;
+
+    stroke-width: 1.5;
+}
+
+.fallback strong {
+    font-family: var(--sans);
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+    font-weight: 900;
+
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+}
+
+
+/* =========================================
+   INTERACCIÓN
+========================================= */
+
+.previewLink {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #10101099;
+
+    opacity: 0;
+
+    transition: opacity 180ms ease;
+}
+
+.previewLink span {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 12px 18px;
+
+    background: var(--acento);
+    color: var(--tinta);
+
+    border: 1.5px solid var(--tinta);
+
+    box-shadow: 4px 4px 0 var(--tinta);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.previewLink svg {
+    width: 20px;
+    height: 20px;
+
+    flex-shrink: 0;
+}
+
+.preview:hover .previewLink,
+.previewLink:focus-visible {
+    opacity: 1;
+}
+
+
+/* =========================================
+   BOTÓN PRINCIPAL
+========================================= */
+
+.explorar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    width: 100%;
+
+    margin-top: 12px;
+    padding: 12px 15px;
+
+    background: var(--acento);
+
+    border: 1.5px solid var(--tinta);
+    border-radius: 3px;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    transition:
+        background 150ms ease,
+        color 150ms ease;
+}
+
+.explorar svg {
+    width: 23px;
+    height: 23px;
+
+    flex-shrink: 0;
+}
+
+.pagina .explorar:hover {
+    background: var(--tinta);
+    color: var(--acento);
+}
+
+
+/* =========================================
+   INFORMACIÓN EDITORIAL
+========================================= */
+
+.informacion {
+    min-width: 0;
+
+    padding: 4px 0;
+}
+
+.seccionTitulo {
+    margin: 0 0 16px;
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid var(--tinta);
+
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.descripcion {
+    margin: 0;
+
+    font-family: var(--mono);
+    font-size: 0.9rem;
+    font-weight: 400;
+
+    line-height: 1.8;
+
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   CONTACTO Y REDES
+========================================= */
+
+.contacto {
+    margin-top: 24px;
+    padding-top: 16px;
+
+    border-top: 1px solid var(--tinta);
+}
+
+.contacto h3 {
+    margin: 0 0 12px;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.redes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.redes a {
+    display: grid;
+    place-items: center;
+
+    width: 38px;
+    height: 38px;
+
+    background: transparent;
+
+    border: 1.5px solid var(--tinta);
+    border-radius: 3px;
+
+    transition:
+        background 150ms ease,
+        transform 150ms ease,
+        box-shadow 150ms ease;
+}
+
+.redes a svg {
+    width: 18px;
+    height: 18px;
+}
+
+.redes a:hover {
+    background: var(--acento);
+
+    transform: translate(-2px, -2px);
+
+    box-shadow: 3px 3px 0 var(--tinta);
+}
+
+
+/* =========================================
+   OTROS PROYECTOS
+========================================= */
+
+.relacionados {
+    margin-top: 36px;
+}
+
+.otrosProyectos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+.otroProyecto {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 0;
+
+    padding: 12px;
+
+    background: var(--fondo);
+
+    border: 1.5px solid var(--tinta);
+    border-radius: 5px;
+
+    transition:
+        background 150ms ease,
+        transform 150ms ease;
+}
+
+.otroProyecto:hover {
+    background: var(--otroAcento);
+
+    transform: translateY(-2px);
+}
+
+.otroIcono {
+    display: grid;
+    place-items: center;
+
+    width: 35px;
+    height: 35px;
+
+    background: var(--otroAcento);
+
+    border: 1px solid var(--tinta);
+    border-radius: 3px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+}
+
+.otroIcono .logoProyecto {
+    width: 27px;
+    height: 27px;
+}
+
+.otroIcono .logoImagen {
+    filter: brightness(0);
+}
+
+.otroIcono svg {
+    width: 20px;
+    height: 20px;
+}
+
+.otroProyecto strong {
+    min-width: 0;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    overflow-wrap: anywhere;
+}
+
+.flecha {
+    width: 18px;
+    height: 18px;
+
+    margin-left: auto;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   PIE GRÁFICO
+========================================= */
+
+.cierre {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 28px;
+    padding: 10px 0;
+
+    font-size: 0.7rem;
+}
+
+.cuadrado {
+    width: 12px;
+    height: 12px;
+
+    background: var(--tinta);
+
+    flex-shrink: 0;
+}
+
+.linea {
+    flex: 1;
+
+    min-width: 10px;
+    height: 1.5px;
+
+    background: var(--tinta);
+}
+
+.barras {
+    font-size: 1.15rem;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.cierre strong {
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   PROYECTO NO ENCONTRADO
+========================================= */
+
+.noEncontrado {
+    max-width: 1320px;
+
+    margin: auto;
+    padding: 40px 20px;
+
+    color: #101010;
+
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.noEncontrado > span {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.noEncontrado h1 {
+    margin: 12px 0 24px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+
+    letter-spacing: -0.045em;
+}
+
+.noEncontrado a {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: #101010;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.noEncontrado a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   NOTEBOOK
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .pagina {
+        padding: 10px 12px 20px;
+    }
+
+    .contenido {
+        gap: 26px;
+    }
+
+    .descripcion {
+        font-size: 0.83rem;
+    }
+
+    .marca {
+        width: 75px;
+        min-height: 75px;
+
+        padding: 8px;
+    }
+
+    .marca .logoProyecto {
+        width: 48px;
+        height: 40px;
+    }
+
+    .marca svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .fallback {
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .fallback .logoProyecto {
+        width: 110px;
+        height: 80px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .contenido {
+        grid-template-columns: minmax(0, 1fr);
+
+        gap: 28px;
+    }
+
+    .otrosProyectos {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .descripcion {
+        font-size: 0.9rem;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 560px) {
+
+    .pagina {
+        padding: 10px 8px 20px;
+    }
+
+    .volver {
+        margin-bottom: 18px;
+
+        font-size: 0.68rem;
+    }
+
+    .encabezado {
+        gap: 15px;
+
+        margin-bottom: 22px;
+        padding-bottom: 18px;
+    }
+
+    .titulo {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+    }
+
+    .etiqueta {
+        font-size: 0.65rem;
+    }
+
+    .bajada {
+        font-size: 0.8rem;
+    }
+
+    .marca {
+        display: none;
+    }
+
+    .ventanaContenido {
+        padding: 7px;
+    }
+
+    .previewLink {
+        display: none;
+    }
+
+    .fallback {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .fallback .logoProyecto {
+        width: 85px;
+        height: 60px;
+    }
+
+    .fallback strong {
+        font-size: 1.1rem;
+    }
+
+    .explorar {
+        font-size: 0.75rem;
+    }
+
+    .descripcion {
+        font-size: 0.83rem;
+        line-height: 1.7;
+    }
+
+    .otrosProyectos {
+        grid-template-columns: minmax(0, 1fr);
+
+        gap: 10px;
+    }
+
+    .relacionados {
+        margin-top: 26px;
+    }
+
+    .cierre {
+        flex-wrap: wrap;
+
+        gap: 8px;
+
+        font-size: 0.6rem;
+    }
+
+    .barras {
+        display: none;
+    }
+
+}
+
+
+/* =========================================
+   ACCESIBILIDAD
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .volver svg,
+    .previewImage,
+    .previewLink,
+    .explorar,
+    .redes a,
+    .otroProyecto {
+        transition: none;
+    }
+
+    .volver:hover svg,
+    .preview:hover .previewImage,
+    .redes a:hover,
+    .otroProyecto:hover {
+        transform: none;
+    }
+
+}

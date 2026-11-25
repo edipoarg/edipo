@@ -1,81 +1,807 @@
+/* ========================================
+   CONFIGURACIÓN GENERAL
+======================================== */
 
 .talleres {
+    --ticket-talon: 120px;
+    --ticket-radio: 9px;
+    --ticket-muesca: 8px;
+
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 8px 0 30px;
+
+    box-sizing: border-box;
+
+    font-family: var(--fontTexto);
+    color: var(--negro);
 
     text-align: left;
 }
 
 
-.info {
-    text-align: justify;
+/* ========================================
+   ENCABEZADO
+======================================== */
+
+.encabezado {
+    position: relative;
+
+    padding: 6px 0 26px;
+    margin-bottom: 24px;
+
+    border-bottom: 1px solid var(--negro);
 }
 
-.list{
-    margin-top: 2vh;
+.etiqueta {
+    margin-bottom: 12px;
+
+    font-family: var(--fontTexto);
+    font-size: .72rem;
+    font-weight: 600;
+
+    letter-spacing: .04em;
+}
+
+.title {
+    max-width: calc(100% - 70px);
+
+    margin: 0;
+
+    font-family: var(--fontTitulo);
+    font-size: clamp(2rem, 3.5vw, 3.25rem);
+    font-weight: 900;
+
+    letter-spacing: -.045em;
+    line-height: 1.1;
+}
+
+.title2 {
+    margin: 6px 0 0;
+
+    font-family: var(--fontTitulo);
+    font-size: clamp(1.15rem, 1.8vw, 1.55rem);
+    font-weight: 600;
+
+    letter-spacing: -.035em;
+    line-height: 1.2;
+}
+
+
+/* ========================================
+   DOS PÍXELES EN DIAGONAL
+======================================== */
+
+.marcaPixeles {
+    --pixel: 7px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, var(--pixel));
+    grid-template-rows: repeat(2, var(--pixel));
+
+    width: max-content;
+    height: max-content;
+
+    flex-shrink: 0;
+}
+
+.marcaPixeles span {
+    display: block;
+
+    background: var(--negro);
+}
+
+.marcaPixeles span:first-child {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.marcaPixeles span:last-child {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.marcaHeader {
+    position: absolute;
+
+    top: 8px;
+    right: 0;
+}
+
+.marcaHeader .marcaPixeles {
+    --pixel: 20px;
+}
+
+
+/* ========================================
+   STICKER NEGRO
+======================================== */
+
+.sticker {
+    position: relative;
+
+    width: fit-content;
+    max-width: 500px;
+
+    margin-top: 18px;
+    margin-bottom: 6px;
+
+    padding: 12px 16px;
+
+    box-sizing: border-box;
+
+    background: var(--negro);
+    color: var(--papel);
+
+    border-radius: 5px;
+}
+
+.sticker::after {
+    content: "";
+
+    position: absolute;
+
+    left: 18px;
+    bottom: -10px;
+
+    width: 16px;
+    height: 12px;
+
+    background: var(--negro);
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        0 100%
+    );
+}
+
+.subTitle {
+    margin: 0;
+
+    font-family: var(--fontTexto);
+    font-size: .8rem;
+    font-weight: 400;
+
+    line-height: 1.55;
+}
+
+
+/* ========================================
+   ARCHIVO CENTRADO
+======================================== */
+
+.archivo {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   CABECERA DEL REGISTRO
+======================================== */
+
+.archivoBarra {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+    padding: 0 3px;
+}
+
+.archivoBarra h2 {
+    margin: 0;
+
+    font-family: var(--fontTitulo);
+    font-size: .75rem;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+.cantidad {
+    font-family: var(--fontTexto);
+    font-size: .65rem;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* ========================================
+   LISTADO
+======================================== */
+
+.list {
     display: flex;
     flex-direction: column;
-    gap: 1vh;
-    padding-left: 5vw;
-}
-.talleres {
-    padding-bottom: 15vh;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0 4px 4px 0;
+
+    gap: 16px;
+
+    box-sizing: border-box;
 }
 
-.info,
-.name,
-.date {
-    margin: 0
-}
 
-.iframe {
-    width: 70vw;
-}
+/* ========================================
+   TICKET HORIZONTAL
+======================================== */
 
 .taller {
-    padding-top: 8vh;
-    padding-bottom: 2vh;
-    text-align: left;
-    border-radius: 10px;
-    width: 85vw;
-    min-height: 25vh;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        var(--ticket-talon)
+        minmax(0, 1fr);
+
+    width: 100%;
+    min-width: 0;
+    min-height: 138px;
+
+    background: var(--papel);
+    color: var(--negro);
+
+    border: 1px solid var(--negro);
+    border-radius: var(--ticket-radio);
+
+    box-shadow: 2px 3px 0 var(--negro);
+
     box-sizing: border-box;
-    gap: 1vh;
-    min-height: 35vh;
-    border-bottom-left-radius: 60px;
-    border-top-right-radius: 60px;
 }
 
-.name{font-size: 1.5rem;}
-.white {
-    background: radial-gradient(circle at top, #ffffff, #e0e0e0);
-    color: #000000;
+
+/* ========================================
+   BARRA NEGRA LATERAL
+======================================== */
+
+.barraLateral {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 8px;
+
+    background: var(--negro);
+
+    border-radius:
+        calc(var(--ticket-radio) - 1px)
+        0
+        0
+        calc(var(--ticket-radio) - 1px);
+
+    pointer-events: none;
 }
 
-.black {
-    background: radial-gradient(circle at top, #000000, #1f1d1d);
-    color: #ffffff;
-  
+
+/* ========================================
+   TALÓN DE REGISTRO
+======================================== */
+
+.talon {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    min-width: 0;
+
+    gap: 14px;
+
+    padding: 14px 14px 14px 19px;
+
+    box-sizing: border-box;
 }
 
-.yellowgreen {
-    background: radial-gradient(circle at top, #9dd83d, #8fc82e);
-    color: #1a1a1a;
-   
+.talonDatos {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
 }
 
-.blue {
-    background: radial-gradient(circle at top, #264f71, #1c2737);
-    color: #ffffff;
-    border: 10px;
+.identificador {
+    font-family: var(--fontTexto);
+    font-size: .65rem;
+    font-weight: 700;
+
+    line-height: 1.3;
 }
 
-@media (min-width: 768px) {
+.talonLinea {
+    width: 100%;
+    height: 1px;
 
-    .list{
-      flex-direction: row;
+    background: var(--negro);
+}
+
+.registro {
+    font-family: var(--fontTexto);
+    font-size: .65rem;
+    font-weight: 500;
+
+    line-height: 1.3;
+
+    letter-spacing: .015em;
+}
+
+.date {
+    font-family: var(--fontTexto);
+    font-size: .65rem;
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+}
+
+.logo {
+    font-family: var(--fontTitulo);
+    font-size: 1.15rem;
+    font-weight: 900;
+
+    letter-spacing: -.085em;
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+/* ========================================
+   TROQUEL VERTICAL
+======================================== */
+
+.troquel {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: var(--ticket-talon);
+
+    width: 0;
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+.lineaTroquel {
+    position: absolute;
+
+    top: var(--ticket-muesca);
+    bottom: var(--ticket-muesca);
+    left: 0;
+
+    width: 0;
+
+    border-left: 1px dashed var(--negro);
+}
+
+.muescaSuperior,
+.muescaInferior {
+    position: absolute;
+
+    left: 0;
+
+    width: calc(var(--ticket-muesca) * 2);
+    height: var(--ticket-muesca);
+
+    background: var(--papel);
+
+    border: 1px solid var(--negro);
+
+    box-sizing: border-box;
+
+    transform: translateX(-50%);
+}
+
+.muescaSuperior {
+    top: -1px;
+
+    border-top: none;
+
+    border-radius:
+        0
+        0
+        var(--ticket-muesca)
+        var(--ticket-muesca);
+}
+
+.muescaInferior {
+    bottom: -1px;
+
+    border-bottom: none;
+
+    border-radius:
+        var(--ticket-muesca)
+        var(--ticket-muesca)
+        0
+        0;
+}
+
+
+/* ========================================
+   CUERPO DEL TICKET
+======================================== */
+
+.cuerpo {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    min-width: 0;
+
+    padding: 16px 42px 16px 20px;
+
+    box-sizing: border-box;
+}
+
+.name {
+    margin: 0;
+
+    font-family: var(--fontTitulo);
+    font-size: clamp(1rem, 1.6vw, 1.3rem);
+    font-weight: 800;
+
+    letter-spacing: -.035em;
+    line-height: 1.25;
+
+    overflow-wrap: anywhere;
+
+    text-wrap: pretty;
+}
+
+
+/* ========================================
+   DESCRIPCIÓN
+======================================== */
+
+.contenido {
+    margin-top: 10px;
+    padding-top: 10px;
+
+    border-top: 1px solid var(--negro);
+}
+
+.contenido p {
+    margin: 0;
+
+    font-family: var(--fontTexto);
+    font-size: .78rem;
+    font-weight: 400;
+
+    line-height: 1.6;
+
+    text-align: left;
+
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+   TICKET SIN DESCRIPCIÓN
+======================================== */
+
+.sinDescripcion {
+    justify-content: center;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sinDescripcion .name {
+    font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+    font-weight: 800;
+
+    letter-spacing: -.04em;
+    line-height: 1.25;
+}
+
+
+/* ========================================
+   FIRMA GRÁFICA
+======================================== */
+
+.firma {
+    position: absolute;
+
+    right: 14px;
+    bottom: 14px;
+
+    display: block;
+
+    pointer-events: none;
+}
+
+.firma .marcaPixeles {
+    --pixel: 7px;
+}
+
+
+/* ========================================
+   CIERRE DEL ARCHIVO
+======================================== */
+
+.cierre {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 24px;
+    padding: 10px 0;
+
+    font-family: var(--fontTexto);
+    font-size: .65rem;
+    font-weight: 600;
+
+    line-height: 1.4;
+}
+
+.linea {
+    flex: 1;
+
+    height: 1px;
+
+    background: var(--negro);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .talleres {
+        max-width: 900px;
     }
-    .taller{width: 25vw;
-    padding: 10vh 2vw;
-padding-bottom: 5vh;}
+
+    .archivo {
+        max-width: 760px;
+    }
+
+    .title {
+        font-size: clamp(2rem, 4.5vw, 3rem);
+    }
+
+    .name {
+        font-size: 1.2rem;
+    }
+
+    .sinDescripcion .name {
+        font-size: 1.35rem;
+    }
+
+    .marcaHeader .marcaPixeles {
+        --pixel: 18px;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+    .talleres {
+        --ticket-talon: 95px;
+        --ticket-radio: 8px;
+        --ticket-muesca: 6px;
+
+        padding: 6px 0 24px;
+    }
+
+    .encabezado {
+        padding: 5px 0 22px;
+        margin-bottom: 20px;
+    }
+
+    .etiqueta {
+        margin-bottom: 10px;
+        font-size: .65rem;
+    }
+
+    .title {
+        max-width: calc(100% - 40px);
+
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+
+        letter-spacing: -.045em;
+    }
+
+    .title2 {
+        margin-top: 6px;
+        font-size: 1.15rem;
+    }
+
+    .marcaHeader {
+        top: 5px;
+    }
+
+    .marcaHeader .marcaPixeles {
+        --pixel: 15px;
+    }
+
+    .sticker {
+        max-width: 100%;
+
+        margin-top: 16px;
+        padding: 10px 13px;
+    }
+
+    .subTitle {
+        font-size: .75rem;
+        line-height: 1.5;
+    }
+
+    .archivoBarra {
+        align-items: flex-start;
+
+        gap: 10px;
+
+        margin-bottom: 12px;
+        padding: 0;
+    }
+
+    .archivoBarra h2 {
+        font-size: .65rem;
+    }
+
+    .cantidad {
+        font-size: .58rem;
+    }
+
+    .list {
+        gap: 14px;
+    }
+
+    .taller {
+        min-height: 125px;
+    }
+
+    .barraLateral {
+        width: 6px;
+    }
+
+    .talon {
+        padding: 12px 10px 12px 14px;
+
+        gap: 12px;
+    }
+
+    .talonDatos {
+        gap: 6px;
+    }
+
+    .identificador,
+    .registro,
+    .date {
+        font-size: .58rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .cuerpo {
+        padding: 14px 30px 14px 14px;
+    }
+
+    .name {
+        font-size: 1rem;
+        line-height: 1.25;
+    }
+
+    .sinDescripcion {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .sinDescripcion .name {
+        font-size: 1.1rem;
+    }
+
+    .contenido {
+        margin-top: 8px;
+        padding-top: 8px;
+    }
+
+    .contenido p {
+        font-size: .72rem;
+        line-height: 1.55;
+    }
+
+    .firma {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .firma .marcaPixeles {
+        --pixel: 6px;
+    }
+
+    .cierre {
+        margin-top: 20px;
+
+        gap: 10px;
+
+        font-size: .58rem;
+    }
+}
+
+
+/* ========================================
+   MOBILE PEQUEÑO
+======================================== */
+
+@media (max-width: 380px) {
+
+    .talleres {
+        --ticket-talon: 80px;
+    }
+
+    .talon {
+        padding: 12px 8px 12px 12px;
+    }
+
+    .identificador,
+    .registro,
+    .date {
+        font-size: .52rem;
+    }
+
+    .logo {
+        font-size: .9rem;
+    }
+
+    .cuerpo {
+        padding: 12px 24px 12px 12px;
+    }
+
+    .name,
+    .sinDescripcion .name {
+        font-size: .95rem;
+    }
+
+    .contenido p {
+        font-size: .7rem;
+    }
+
+    .firma {
+        right: 8px;
+        bottom: 8px;
+    }
+
+    .firma .marcaPixeles {
+        --pixel: 5px;
+    }
+
+    .marcaHeader .marcaPixeles {
+        --pixel: 12px;
+    }
 }

@@ -1,183 +1,764 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;600;700;800;900&display=swap');
+
+
+/* =========================================
+   VARIABLES Y CONFIGURACIÓN GENERAL
+========================================= */
 
 .investigaciones {
-  text-align: left;
+    --fondo: #f7f3e8;
+    --tinta: #101010;
+    --acento: #d5fa00;
 
+    --mono: 'IBM Plex Mono', monospace;
+    --sans: 'Inter', sans-serif;
+
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    max-width: 1440px;
+
+    margin: 0 auto;
+    padding: 24px 10px 15px;
+
+    color: var(--tinta);
+
+    font-family: var(--mono);
+    text-align: left;
 }
 
-.content {
-  margin-top: -8vh;
-  color: #d6d4d7;
+.investigaciones *,
+.investigaciones *::before,
+.investigaciones *::after {
+    box-sizing: border-box;
 }
 
-
-.button{
-  height: 4vh;
-  width: 4vh;
-  box-sizing: border-box;
-  color: #86a0e1af;
-  background-color: #1d1d2184;
-  border-radius: 360px;
-  border: dashed 1px #686868;
-  text-align: center;
+.investigaciones a {
+    color: inherit;
+    text-decoration: none;
 }
 
-.ver{
-  color: #86a0e1af;  
-  border: solid 1px;
-  padding: 0vh 2vw;
-  border-color: #86a0e1af;
-  border-radius: 360px;
-  box-sizing: border-box;
-  align-self: center;
-  justify-items: center;
-  margin: 0;
-  align-content: center;
-  background-color: rgba(0, 0, 0, 0);
-  width: fit-content;
-margin-top: 2vh;
-}
-
-.bajada, .descripcion, .titulo {margin: 0}
-
-.fullInfo{
-  text-align: justify;
-  padding-right: 5vw;
-}
-
-.detailSection {
-  padding: 0vh 1vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 75vw;
-}
-
-.titulo {
-}
-
-.list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1vw;
-}
-
-.selected {
+.investigaciones a:focus-visible {
+    outline: 3px solid #0087ef;
+    outline-offset: 3px;
 }
 
 
-.imagePlaceholder {
-  width: 50vw;
-  height: 32vh;
-  margin: auto;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
+/* =========================================
+   COMPOSICIÓN PRINCIPAL
+========================================= */
 
-.imagePlaceholder.show {
-  opacity: 1; /* Totalmente visible cuando se añade la clase 'show' */
-}
-
-
-.header {
-  margin: 0;
-  font-size: 1.7rem;
-}
-
-.tematica {
-  margin-bottom: 2vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #dcd6d6;
-  border: solid #dcd6d6;
-  padding-top: 8vh;
-  padding-bottom: 2vh;
-  text-align: left;
-  border-radius: 10px;
-  width: 85vw;
-  min-height: 25vh;
-  padding-left: 10vw;
-  padding-right: 10vw;
-  box-sizing: border-box;
-  gap: 1vh;
-  min-height: 35vh;
-  border-bottom-left-radius: 60px;
-  border-top-right-radius: 60px;
-}
-
-@media (min-width: 768px) {
-
-
-  .subTitle{
-    padding-right: 40vw;
-  }
-
-  .content {
-    padding-left: 15vw;
+.contenedor {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-  }
 
-  .listSection {
+    grid-template-columns:
+        minmax(0, 0.9fr)
+        minmax(0, 2.1fr);
+
+    align-items: start;
+
+    gap: 32px;
+
+    padding: 0 10px 20px 0;
+}
+
+
+/* =========================================
+   INTRODUCCIÓN
+========================================= */
+
+.introduccion {
+    position: relative;
+
+    min-width: 0;
+
+    padding: 6px 0 20px;
+}
+
+.marca {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: var(--mono);
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    line-height: 1;
+    letter-spacing: -0.08em;
+}
+
+.introduccion h1 {
+    margin: 0 0 26px;
+
+    font-family: var(--sans);
+    font-size: clamp(1.8rem, 2.85vw, 2.9rem);
+    font-weight: 900;
+
+    line-height: 1.05;
+    letter-spacing: -0.065em;
+}
+
+
+/* =========================================
+   BAJADA DESTACADA
+========================================= */
+
+.bajada {
+    margin: 0 0 22px;
+
+    font-family: var(--sans);
+    font-size: clamp(1.3rem, 1.9vw, 1.9rem);
+    font-weight: 800;
+
+    line-height: 1.35;
+    letter-spacing: -0.035em;
+}
+
+.bajada mark {
+    padding: 2px 5px;
+
+    background: var(--acento);
+    color: var(--tinta);
+
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+
+/* =========================================
+   TEXTO INTRODUCTORIO
+========================================= */
+
+.textoIntro {
+    max-width: 320px;
+
+    margin: 0 0 24px;
+
+    font-family: var(--mono);
+    font-size: 0.95rem;
+    font-weight: 400;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   BOTÓN METODOLOGÍA
+========================================= */
+
+.botonMetodologia {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px 15px;
+
+    border: 2px solid var(--tinta);
+
+    background: var(--fondo);
+    color: var(--tinta);
+
+    box-shadow: 4px 4px 0 var(--tinta);
+
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    transition:
+        background 150ms ease,
+        transform 150ms ease,
+        box-shadow 150ms ease;
+}
+
+.botonMetodologia span {
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+.botonMetodologia:hover {
+    background: var(--acento);
+
+    transform: translate(2px, 2px);
+
+    box-shadow: 2px 2px 0 var(--tinta);
+}
+
+
+/* =========================================
+   LISTADO DE INVESTIGACIONES
+========================================= */
+
+.fichas {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-  }
 
-  .list {
-    list-style: none;
-    padding: 0;
-    grid-template-columns: 1fr;
-  }
+    min-width: 0;
 
- 
-  .selectedButton {
-    font-size: 1.8rem;
-  }
+    gap: 22px;
+}
 
-  .button:hover {
-    font-size: 1.8rem;
-    font-weight: bold;
-  }
 
-  .detailSection {
-    width: 40vw;
-    height: 50vh;
-    justify-content: left;
-  }
+/* =========================================
+   VENTANA DE INVESTIGACIÓN
+========================================= */
 
-  .imagePlaceholder {
-    width: 35vw;
-    height: 50vh;
-    margin: auto;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  .imagePlaceholder.show {
-    opacity: 1; /* Totalmente visible cuando se añade la clase 'show' */
-  }
+.ficha {
+    position: relative;
 
-  .navigationButtons {
+    min-width: 0;
+
+    padding: 5px;
+
+    background: var(--fondo);
+
+    border: 2px solid var(--tinta);
+    border-radius: 15px;
+
+    box-shadow: 7px 8px 0 var(--tinta);
+}
+
+
+/* =========================================
+   BARRA SUPERIOR
+========================================= */
+
+.fichaHeader {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+
+    gap: 12px;
+
+    min-height: 40px;
+
+    margin-bottom: 4px;
+    padding: 9px 13px;
+
+    background: var(--tinta);
+    color: var(--fondo);
+
+    border-radius: 9px 9px 3px 3px;
+}
+
+.barras {
+    flex-shrink: 0;
+
+    font-family: var(--mono);
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+.fichaHeader h2 {
+    flex: 1;
+
+    min-width: 0;
+
+    margin: 0;
+
+    font-family: var(--mono);
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    line-height: 1.2;
+    letter-spacing: -0.035em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   CONTROLES GRÁFICOS
+========================================= */
+
+.controles {
+    display: flex;
+
+    flex-shrink: 0;
+
+    gap: 6px;
+}
+
+.controles span {
+    display: grid;
+    place-items: center;
+
+    width: 19px;
+    height: 19px;
+
+    background: var(--fondo);
+    color: var(--tinta);
+
+    border-radius: 1px;
+
+    font-family: var(--mono);
+    font-size: 1rem;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   INTERIOR DE LA VENTANA
+========================================= */
+
+.fichaContenido {
+    display: grid;
+
+    grid-template-columns:
+        60px
+        minmax(0, 1fr)
+        138px;
+
+    align-items: stretch;
+
+    min-height: 170px;
+
+    padding: 13px;
+
+    background: var(--fondo);
+
+    border: 1.5px solid var(--tinta);
+    border-radius: 3px 3px 9px 9px;
+}
+
+
+/* =========================================
+   IDENTIFICACIÓN DE PÍXELES
+========================================= */
+
+.codigo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-right: 12px;
+
+    border-right: 1px solid var(--tinta);
+}
+
+.pixeles {
+    display: grid;
+
+    grid-template-columns: repeat(3, 11px);
+    grid-template-rows: repeat(9, 11px);
+
+    gap: 0;
+}
+
+.pixelNegro {
+    display: block;
+
+    background: var(--tinta);
+}
+
+.pixelBlanco {
+    display: block;
+
+    background: transparent;
+}
+
+
+/* =========================================
+   INFORMACIÓN
+========================================= */
+
+.informacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 0;
+
+    padding: 0 15px;
+}
+
+.hipotesis {
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid var(--tinta);
+}
+
+.descripcion {
+    padding-top: 10px;
+}
+
+.hipotesis h3,
+.descripcion h3 {
+    margin: 0 0 5px;
+
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    line-height: 1.2;
+    letter-spacing: -0.035em;
+}
+
+.hipotesis p,
+.descripcion p {
+    display: -webkit-box;
+
+    margin: 0;
+
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    font-weight: 400;
+
+    line-height: 1.45;
+
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+
+    overflow: hidden;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   COLUMNA DE ACCIONES
+========================================= */
+
+.acciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    gap: 16px;
+
+    padding-left: 13px;
+
+    border-left: 1px solid var(--tinta);
+}
+
+
+/* =========================================
+   BOTÓN VER INVESTIGACIÓN
+========================================= */
+
+.boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
     width: 100%;
-  }
 
-  .navigationButtons button {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+    padding: 9px 7px;
 
-  
+    background: var(--fondo);
+    color: var(--tinta);
+
+    border: 1.5px solid var(--tinta);
+
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    transition:
+        background 150ms ease,
+        color 150ms ease;
+}
+
+.flecha {
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+.boton:hover {
+    background: var(--acento);
+}
+
+
+/* =========================================
+   TRAMA DIAGONAL
+========================================= */
+
+.trama {
+    width: 85%;
+    height: 15px;
+
+    background: repeating-linear-gradient(
+        -55deg,
+        var(--tinta) 0,
+        var(--tinta) 6px,
+        transparent 6px,
+        transparent 10px
+    );
+}
+
+
+/* =========================================
+   PIE GRÁFICO
+========================================= */
+
+.footer {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 25px;
+    padding: 20px 0 5px;
+
+    font-family: var(--mono);
+    font-size: 0.8rem;
+}
+
+.cuadrado {
+    flex-shrink: 0;
+
+    width: 15px;
+    height: 15px;
+
+    background: var(--tinta);
+}
+
+.linea {
+    flex: 1;
+
+    min-width: 10px;
+    height: 1.5px;
+
+    background: var(--tinta);
+}
+
+.footerBarras {
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   NOTEBOOK
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .contenedor {
+        grid-template-columns:
+            minmax(0, 0.9fr)
+            minmax(0, 2.1fr);
+
+        gap: 24px;
+    }
+
+    .introduccion h1 {
+        font-size: clamp(1.65rem, 2.8vw, 2.3rem);
+    }
+
+    .fichaContenido {
+        grid-template-columns:
+            48px
+            minmax(0, 1fr)
+            115px;
+
+        padding: 10px;
+    }
+
+    .pixeles {
+        grid-template-columns: repeat(3, 9px);
+        grid-template-rows: repeat(9, 9px);
+    }
+
+    .informacion {
+        padding: 0 12px;
+    }
+
+    .acciones {
+        padding-left: 10px;
+    }
+
+    .hipotesis p,
+    .descripcion p {
+        font-size: 0.8rem;
+    }
+
+    .boton {
+        font-size: 0.6rem;
+    }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .investigaciones {
+        padding-top: 15px;
+    }
+
+    .contenedor {
+        grid-template-columns: minmax(0, 1fr);
+
+        gap: 25px;
+    }
+
+    .introduccion {
+        padding-bottom: 24px;
+
+        border-bottom: 2px solid var(--tinta);
+    }
+
+    .introduccion h1 {
+        font-size: clamp(2.2rem, 6vw, 3.5rem);
+    }
+
+    .bajada {
+        font-size: 1.5rem;
+    }
+
+    .bajada br {
+        display: none;
+    }
+
+    .textoIntro {
+        max-width: 520px;
+    }
+
+    .fichaContenido {
+        grid-template-columns:
+            55px
+            minmax(0, 1fr)
+            130px;
+    }
+
+    .fichas {
+        gap: 20px;
+    }
+}
+
+
+/* =========================================
+   CELULARES
+========================================= */
+
+@media (max-width: 550px) {
+
+    .investigaciones {
+        padding: 12px 0;
+    }
+
+    .contenedor {
+        padding-right: 6px;
+    }
+
+    .ficha {
+        padding: 4px;
+
+        box-shadow: 5px 6px 0 var(--tinta);
+    }
+
+    .fichaHeader {
+        gap: 8px;
+
+        padding: 9px;
+    }
+
+    .fichaHeader h2 {
+        font-size: 0.85rem;
+    }
+
+    .barras {
+        font-size: 1.05rem;
+    }
+
+    .controles {
+        gap: 4px;
+    }
+
+    .controles span {
+        width: 15px;
+        height: 15px;
+
+        font-size: 0.8rem;
+    }
+
+    .fichaContenido {
+        grid-template-columns:
+            38px
+            minmax(0, 1fr);
+
+        padding: 10px;
+    }
+
+    .codigo {
+        padding-right: 9px;
+    }
+
+    .pixeles {
+        grid-template-columns: repeat(3, 7px);
+        grid-template-rows: repeat(9, 7px);
+    }
+
+    .informacion {
+        padding: 0 0 0 12px;
+    }
+
+    .acciones {
+        grid-column: 1 / -1;
+
+        flex-direction: row;
+        justify-content: space-between;
+
+        margin-top: 14px;
+        padding: 10px 0 0;
+
+        border-left: none;
+        border-top: 1px solid var(--tinta);
+    }
+
+    .boton {
+        width: auto;
+
+        padding: 8px 12px;
+
+        font-size: 0.7rem;
+    }
+
+    .boton br {
+        display: none;
+    }
+
+    .trama {
+        width: 65px;
+        height: 13px;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+
+        gap: 8px;
+
+        font-size: 0.65rem;
+    }
+
+    .footerBarras {
+        display: none;
+    }
+}
+
+
+/* =========================================
+   ACCESIBILIDAD
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .boton,
+    .botonMetodologia {
+        transition: none;
+    }
 }

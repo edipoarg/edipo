@@ -1,124 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+
 .appBar {
-  position: fixed;
-  right: 2vw;
-  top: 5vh;
-  width: 8vw;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 2vh;
-  padding-top: 4vh;
-  z-index: 5000;
-  box-shadow:
-    inset 5px 5px 15px rgba(0, 0, 0, 0.5),
-    /* Sombra interna para el efecto metálico */
-    0 10px 20px rgba(0, 0, 0, 0.5),
-    3px 0px 0px rgba(0, 0, 0, 0.035);
-  border-bottom-right-radius: 120px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 15px;
-  border-top-left-radius: 120px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(5px);
+    --papel: #f7f3e8;
+    --negro: #101010;
+    --lima: #d0f500;
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 0 2.7vw;
+
+    background: var(--papel);
+    color: var(--negro);
+
+    font-family: "IBM Plex Mono", monospace;
+
+    z-index: 1000;
 }
 
-.button1,
-.button2,
-.button3,
-.button4 {
-  width: fit-content;
-  height: fit-content;
-  padding: 1vh 1vh;
-  margin: 4px 0;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  border: solid 1px;
+.appBar *,
+.appBar *::before,
+.appBar *::after {
+    box-sizing: border-box;
 }
 
-.button1 {
-  border-color: rgb(186, 69, 212);
+.appBar a {
+    color: inherit;
+    text-decoration: none;
 }
 
-.button2 {
-  border-color: rgb(69, 102, 212);
-}
+/* =====================================
+   CONTENEDOR
+===================================== */
 
-.button3 {
-  border-color: rgb(126, 150, 41);
-}
-
-.button4 {
-  border-color: rgb(241, 115, 77);
-}
-
-.button:hover {
-  background-color: #333;
-}
-
-.logoMapa {
-  background-image: url('../../svg/LogoMapa.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 5vh;
-  width: 8vh;
-  margin: 1.5vh 0;
-  filter: drop-shadow(0 0 5px rgba(171, 51, 211, 0.8)) drop-shadow(0 0 10px rgba(123, 34, 178, 0.5)) drop-shadow(0 0 15px rgba(153, 44, 203, 0.8))
-}
-
-.logoAhora {
-  background-image: url('../../svg/LogoAhora.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 6vh;
-  width: 4vh;
-  margin: 0 1.7vh;
-  margin-top: 1vh;
-  filter: drop-shadow(0 0 5px rgba(147, 230, 24, 0.8)) drop-shadow(0 0 10px rgba(83, 214, 32, 0.5)) drop-shadow(0 0 15px rgba(101, 197, 28, 0.8))
-}
-
-.logoRadar {
-  background-image: url('../../svg/LogoRadar.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 11vh;
-  width: 11vh;
-  margin: -1vh -1.5vh -2.5vh -1.5vh;
-  filter: drop-shadow(0 0 5px rgba(29, 116, 237, 0.6)) drop-shadow(0 0 10px rgba(70, 64, 223, 0.4)) drop-shadow(0 0 15px rgba(29, 120, 223, 0.6))
-}
-
-.logoMonitor {
-  height: 5vh;
-  width: 5vh;
-  margin: 1.5vh 1.5vh;
-  color: rgb(178, 34, 65);
-  filter: drop-shadow(0 0 5px rgba(246, 93, 93, 0.2)) drop-shadow(0 0 10px rgba(250, 57, 32, 0.2)) drop-shadow(0 0 15px rgba(230, 44, 44, 0.5))
-}
-
-@media (max-width: 768px) {
-  .appBar {
-    position: fixed;
-    right: 0vw;
-    top: 40vh;
-    width: 20vw;
-    height: fit-content;
+.contenedor {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 22px;
+
+    min-height: 85px;
+    padding: 12px 8px 16px;
+
+    border-bottom: 3px solid var(--negro);
+}
+
+/* =====================================
+   IDENTIDAD
+===================================== */
+
+.identidad {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    flex-shrink: 0;
+}
+
+.logo {
+    font-family: "Chivo Mono", monospace;
+
+    font-size: clamp(2rem, 3.7vw, 3.6rem);
+    font-weight: 900;
+
+    letter-spacing: -0.085em;
+    line-height: 1;
+}
+
+.separador {
+    width: 2px;
+    height: 48px;
+
+    background: var(--negro);
+}
+
+.nombre {
+    font-size: clamp(0.6rem, 0.95vw, 0.95rem);
+    font-weight: 600;
+
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+}
+
+/* =====================================
+   NAVEGACIÓN
+===================================== */
+
+.navegacion {
+    display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding-bottom: 5vh;
-    z-index: 1000;
-  }
+
+    flex: 1;
+    gap: clamp(12px, 1.8vw, 28px);
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: clamp(0.65rem, 0.95vw, 0.95rem);
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.navLink span {
+    font-weight: 700;
+}
+
+.navLink:hover {
+    background: var(--lima);
+}
+
+/* =====================================
+   BOTONES
+===================================== */
+
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.iconButton {
+    display: grid;
+    place-items: center;
+
+    width: 30px;
+    height: 34px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 0;
+
+    background: transparent;
+    color: var(--negro);
+
+    font-size: 1.7rem;
+
+    cursor: pointer;
+}
+
+.iconButton:hover {
+    background: var(--lima);
+}
+
+/* =====================================
+   MENÚ Y BUSCADOR
+===================================== */
+
+.menuDesplegable,
+.buscador {
+    position: absolute;
+
+    right: 2.7vw;
+    top: calc(100% + 8px);
+
+    width: min(360px, 90vw);
+
+    padding: 15px;
+
+    background: var(--papel);
+
+    border: 2px solid var(--negro);
+    border-radius: 8px;
+
+    box-shadow: 6px 6px 0 var(--negro);
+}
+
+.menuDesplegable,
+.resultados {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuDesplegable a,
+.resultados a {
+    padding: 13px 8px;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    border-bottom: 1px solid var(--negro);
+}
+
+.menuDesplegable a:last-child,
+.resultados a:last-child {
+    border-bottom: none;
+}
+
+.menuDesplegable a:hover,
+.resultados a:hover {
+    background: var(--lima);
+}
+
+.buscador input {
+    width: 100%;
+
+    padding: 12px;
+
+    font-family: inherit;
+    font-size: 0.9rem;
+
+    background: var(--papel);
+    color: var(--negro);
+
+    border: 2px solid var(--negro);
+    border-radius: 0;
+}
+
+.resultados {
+    margin-top: 12px;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 1250px) {
+
+    .navegacion {
+        gap: 12px;
+    }
+
+    .identidad {
+        gap: 12px;
+    }
+
+    .contenedor {
+        gap: 16px;
+    }
+
+}
+
+@media (max-width: 1100px) {
+
+    .navegacion {
+        display: none;
+    }
+
+    .logo {
+        font-size: 3rem;
+    }
+
+    .nombre {
+        font-size: 0.75rem;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .appBar {
+        padding: 0 18px;
+    }
+
+    .contenedor {
+        min-height: 75px;
+        padding: 12px 0;
+        gap: 10px;
+    }
+
+    .identidad {
+        gap: 9px;
+    }
+
+    .logo {
+        font-size: 2.1rem;
+    }
+
+    .nombre {
+        font-size: 0.55rem;
+    }
+
+    .separador {
+        height: 34px;
+    }
+
+    .acciones {
+        gap: 10px;
+    }
+
+    .iconButton {
+        font-size: 1.4rem;
+        width: 24px;
+    }
+
 }
